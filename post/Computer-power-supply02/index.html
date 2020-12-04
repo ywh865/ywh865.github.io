@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <script src="/js/search.js"></script>
+
+    <!--Description-->
+    
+        <meta name="description" content="心之所愿 愿之所系">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="ywh865">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="电源内部笔记"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="八神鬼嗣の文庫"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>电源内部笔记 - 八神鬼嗣の文庫</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/sass/main.css">
+
+
+    <!--[if lt IE 8]>
+        
+<script src="/js/ie/html5shiv.js"></script>
+
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        
+<link rel="stylesheet" href="/sass/ie8.css">
+
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        
+<link rel="stylesheet" href="/sass/ie9.css">
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">八神鬼嗣の文庫</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">书架首柜</a>
+            </li>
+        
+            <li>
+                <a href="/search/">目录搜索</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E6%96%87%E7%AB%A0%E4%B8%93%E6%9F%9C/">文章专柜</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E7%9B%B8%E5%86%8C%E5%9B%BE%E9%9B%86/">相册图集</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E8%90%8C%E9%9F%B3%E6%94%B6%E8%97%8F/">萌音收藏</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E4%BC%A0%E9%80%81%E8%B4%A7%E6%9E%B6/">传送货架</a>
+            </li>
+        
+            <li>
+                <a href="/links/">友军链接</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1 class="title">电源内部笔记</h1>
+    <div class="meta">
+        2019-03-22
+    </div>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>电源内部</p>
+<p>电源之所以难挑，就是因为他是一个黑盒子，零件全部在内部，有很多东西，比如输出稳定性、安全保护、用料等，在盒子外面是看不出来的。而且众所周知，还有虚标这个的问题。</p>
+<p>首先220v的电进来会先经过一次emi滤波，由圆形的电容(Y电容）和方形的电容（X电容）组成，主要用途如名字，就是滤掉市电中的杂波。作为输入的第一道屏障来说是非常重要的。 根据电源的设计，这部分可能放放在主板上，也有可能和二次合并。到达主板之后会进行第二次滤波，一般由几个电感（线圈）方形电容圆形电容组成。一般来说零件越多是越好的。同样保险丝或者自动恢复保险丝也在这附近，不过不用太在意，因为emi明显比保险丝贵多了，山寨电源有见过省EMI的但是保险丝还是会有。然后要达到整流桥，将220V的交流电变为直流，方便后面处理。然后到达PFC，这个主要是减少电网的供电需求，PFC目前来说分两种，主动PFC和被动PFC。</p>
+<p>被动PFC：<br>这个实际上就是一大块电感，然后用两根线接到主板上。国家3C认证的要求是主机电源不管被动还是主动，必须要有PFC。如果这玩意没有，那么说明这个电源八成就是作假实际上没过3C认证。更有严重的比如水泥PFC，那对于电源来说就是非常危险的。一般低于150块的全新电源用的都是被动PFC，因为这玩意制作成本较低，不需要芯片什么的，一个大线圈就行。</p>
+<p>主动pfc：<br>比较明显确定的就是在EMI滤波和大大的主电源中间的PFC电感。但是怎么确定是PFC电感而不是EMI的电感呢？自然就是找整流桥了，除非特殊设计的奇葩电路，不然主动PFC会设置在整流桥的后面。</p>
+<p>PFC再过来是主电容（也可以说是PFC电容），基本上电源内部最大的电容就是它了，根据电路设计会有一个或者多个主电容。它的作用一是滤波，二是把一定的电存起来，万一突然断电，它就持续供电一定的时候确保机器进行一些保护性的操作，也就是说前面的保持时间和他直接关联，容量过小的话保持时间自然达不到合格标准。电容主要分几个参数：耐压值、容量、耐高温。耐压如名字，能承认多大电压，我们市电是220v，但是滤波电容有个副作用会升压，实际上到达这里之后会变成300V多点（但是我没有找到任何资料说明主电容是专门为了升压而设置的），所以一般都会采用400V左右耐压的电容。容量指的是存电的量，一般来说450W的标准配置是270μf，600W大概450μf，到了850W、1000W以上，很多大牌子都是采用1W 1μf的配置。 按照比例算的话极限最低的数值是每瓦0.5μf，不过只要极个别电源这么低还能达标，实际要看电路设计，很多0.6μf / W都不一定能过关。于是0.5都达不到的基本要boom。耐高温，这个不用说也是越高越好，主要有105度和85度。主电容是看电源拆解最容易看清楚参数的，本身也有较高的成本，所以对于电源用料如何、有没缩水来说，是一个很有参考价值的地方。除了上面说的容量以外，电容由谁生产也很重要，基本上是日本电容 &gt; 台湾电容 &gt; 大陆电容。当然主电容不缩不代表其他地方不缩，只不过是这个最容易看而已。很多时候你好不容易找到拆解，会发现只有这一个东西能看清楚。对于多个电容的，会有并联和串联两种方式（实际上还是作为一个来用）。两电容并联耐压为两者中耐压最低的那个值，容量为二者之和。两电容串联耐压为两者之和，容量为两者的倒数和分之一，实际上，在这里要变压之前要先将直流重新打为高频脉冲电流，而且频率要比市电220V的60hz高很多。这一点是使用开关管来实现的，这也是它们的完整名字叫作“开关电源”的原因。</p>
+<p>老式半桥：老式半桥的特征就是一大两小的三个变压器，是很老的一种电源结构，它的转换率不理想，但是生产简单，技术水平要求较低，成本也低，同时一般也会使用同样成本较低的被动PFC，或者因为出厂时间久远而没有PFC。自然也拿不到80plus认证。</p>
+<p>单管正激和双管正激：<br>它们最明显特征就是一大一小两个变压器。其中单管正激和双管正激实际说的并不是电压器的数量，而是开关管。正是通过它（们）的通断来实际直流到高频的变化。双管要强于单管。开管关会锁在散热片上面。双管正激架构对比老式半桥有明显提升，一般都能拿到80plus铜牌，甚至好一点的都会有银牌，但是要做到更高的金牌和白金就比较困难。正激结构也用一种叫有源钳位正激 的“加强版，做到金牌以上效率也没问题，但是实际使用可能因为成本或者效率或者其他原因，现在只有比较少的电源使用。这种在外观上普通的双管正激是很像的，还以评测为准。</p>
+<p>LLC半桥：<br>一大两小三个变压器，使用LLC半桥的电源很容易做到金牌以上的效率，LLC的弱点是动态性能不好，不过这几年随着技术发展，而且实际影响也不是那么大。在这方面正激结构反而有一定优势，所以做到高瓦数的正激结构也不是不可以的，LLC的外观和老式半桥有点像，不过使用这种结构的一般会和同步整流以及DC-DC配合这样的高配置，所以结合起来还是比较好判断的。</p>
+<p>LLC全桥：<br>而LLC全桥因为结构复杂，基本上没几个电源在用，看起来和LLC半桥很难区分</p>
+<p>最后就是输出部分。</p>
+<p>这里有几个步骤要做。一是整流，之前在变压的时候的高频脉冲电流显然是不能供给硬件用的，需要重新变回直流。二是稳压，确保输出电压稳定。三是滤波，和前面主电容的功能一样，整流之后不够干净的电流需要重新过滤一次。他们的顺序根据结构会有些差异。整流目前主要是两种方案：</p>
+<p>肖特基整流：<br>主要由锁在散热片上面的多枚肖特基二极管完成。</p>
+<p>同步整流：<br>简单来讲可以认为就是MOS管代替肖特基管来整流，使用这种的主要目的是为了提升转换效率，肖特基管的电阻还是要高一些的。</p>
+<p>这方面其实不用太在意，因为对于性能来说是直接体现在转换率上的，只要能达到金牌管他是啥了。另外一个部分就是稳压，目前主要有三个方案，单路磁放大、双路磁放大、DC-DC。这里要重点注意。</p>
+<p>单路磁放大：<br>这个实际上就是将3.3V单独一路输出，特征是一小两大三个线圈。而12V和5V都是由PWM芯片来管理，所以瓦数大了之后交叉负载会非常差，比如12V高负载之后5V就会电压过高或者过低这样，有可能你单机玩的正爽突然间硬盘就挂了或者特别快出坏道。单路磁的极限基本是在500W这样。</p>
+<p>双路磁放大：<br>这个就是将3.3v和5v都独立出来，稳定性对面上面的会更好一些，特征是两小三大 五个线圈。双路磁放大可以做到1000W以上，在dc-dc出来之前是高瓦数电源的标准方案。</p>
+<p>DC-DC（直流转直流）：<br>3.3v和5v都从12V转出来，这样12V可以做到最大，都是12V出来的，也不用担心交叉负载的问题了。特征是在输出侧会有一个竖起来的PCB版，上面有双线圈和一堆元件。</p>
+<p>输出的最后一个工序就简单了<br>通过电容进行滤波，电容容量大、牌子好、数量多，那自然出来的纹波就小，电源使用寿命也长。这边只要确认产地即可，实际输出性能直接参考纹波方面的评测就好了。</p>
+<p>总结：<br>无PFC / 假PFC &lt; 被动PFC &lt; 主动PFC<br>老式半桥 &lt; 单管正激 &lt; 双管正激 、LLC半桥/全桥 （效率成本动态响应等各方面互有胜负）<br>单路磁放大 &lt; 双路磁放大 &lt; DC-DC</p>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/八神鬼嗣/" class="ywh_button small">八神鬼嗣</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>留言:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank" ><span class="label">Telegram</span></a></li>
+                
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 八神鬼嗣  All rights reserved</li>
+            <li>IPFS Links <a href="https://onioni.net/" style="text-decoration:none;">onioni.net</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- skel -->
+
+<script src="/js/skel.min.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/util.js"></script>
+
+
+<!--[if lte IE 8]>
+
+<script src="/js/ie/respond.min.js"></script>
+
+<![endif]-->
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'onioni-net';
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+<script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="Σ(°Д°;网站崩溃了！！！",clearTimeout(st)):(document.title="(๑¯ิε ¯ิ๑)好像自己又好了",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/like.js"></script>

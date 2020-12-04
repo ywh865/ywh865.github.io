@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <script src="/js/search.js"></script>
+
+    <!--Description-->
+    
+        <meta name="description" content="心之所愿 愿之所系">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="ywh865">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Linux 指令笔记（四）"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="八神鬼嗣の文庫"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Linux 指令笔记（四） - 八神鬼嗣の文庫</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/sass/main.css">
+
+
+    <!--[if lt IE 8]>
+        
+<script src="/js/ie/html5shiv.js"></script>
+
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        
+<link rel="stylesheet" href="/sass/ie8.css">
+
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        
+<link rel="stylesheet" href="/sass/ie9.css">
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">八神鬼嗣の文庫</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">书架首柜</a>
+            </li>
+        
+            <li>
+                <a href="/search/">目录搜索</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E6%96%87%E7%AB%A0%E4%B8%93%E6%9F%9C/">文章专柜</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E7%9B%B8%E5%86%8C%E5%9B%BE%E9%9B%86/">相册图集</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E8%90%8C%E9%9F%B3%E6%94%B6%E8%97%8F/">萌音收藏</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E4%BC%A0%E9%80%81%E8%B4%A7%E6%9E%B6/">传送货架</a>
+            </li>
+        
+            <li>
+                <a href="/links/">友军链接</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1 class="title">Linux 指令笔记（四）</h1>
+    <div class="meta">
+        2019-02-07
+    </div>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<h3 id="查看-编辑文件-操作"><a href="#查看-编辑文件-操作" class="headerlink" title="查看/编辑文件 操作"></a>查看/编辑文件 操作</h3><h4 id="ls-显示目录中文件"><a href="#ls-显示目录中文件" class="headerlink" title="ls 显示目录中文件"></a>ls 显示目录中文件</h4><h4 id="ls命令说明"><a href="#ls命令说明" class="headerlink" title="ls命令说明"></a>ls命令说明</h4><h5 id="显示当前目录下的所有文件"><a href="#显示当前目录下的所有文件" class="headerlink" title="显示当前目录下的所有文件"></a>显示当前目录下的所有文件</h5><p><code>ls -a</code></p>
+<h6 id="命令后面加上-绝对路径-相对路径-就会显示指定文件夹内的所有文件"><a href="#命令后面加上-绝对路径-相对路径-就会显示指定文件夹内的所有文件" class="headerlink" title="命令后面加上 绝对路径/相对路径 就会显示指定文件夹内的所有文件"></a>命令后面加上 绝对路径/相对路径 就会显示指定文件夹内的所有文件</h6><p><code>ls -a bash/log</code></p>
+<h6 id="相对路径，当前目录是-root-，欲查看的目录是-root-bash-log"><a href="#相对路径，当前目录是-root-，欲查看的目录是-root-bash-log" class="headerlink" title="相对路径，当前目录是 /root ，欲查看的目录是 /root/bash/log"></a>相对路径，当前目录是 /root ，欲查看的目录是 /root/bash/log</h6><p><code>ls -a /root/bash/log</code></p>
+<h6 id="绝对路径，-当前目录是-root-，欲查看的目录是-root-bash-log"><a href="#绝对路径，-当前目录是-root-，欲查看的目录是-root-bash-log" class="headerlink" title="绝对路径， 当前目录是 /root ，欲查看的目录是 /root/bash/log"></a>绝对路径， 当前目录是 /root ，欲查看的目录是 /root/bash/log</h6><h4 id="更多的命令可以用-ls-–help-来查看。"><a href="#更多的命令可以用-ls-–help-来查看。" class="headerlink" title="更多的命令可以用 ls –help 来查看。"></a>更多的命令可以用 ls –help 来查看。</h4><hr>
+<h3 id="du-查看-文件-文件夹-占用磁盘空间的大小"><a href="#du-查看-文件-文件夹-占用磁盘空间的大小" class="headerlink" title="du 查看 文件/文件夹 占用磁盘空间的大小"></a>du 查看 文件/文件夹 占用磁盘空间的大小</h3><p>####du命令说明</p>
+<p>#####参数介绍：<br><code>-h ：以人类易读的方式显示</code><br><code>-a ：显示 目录占用的磁盘空间大小，并显示其下目录和文件占用磁盘空间的大小</code><br><code>-s ：显示 目录占用的磁盘空间大小，但不显示其下子目录和文件占用的磁盘空间大小</code><br><code>-c ：显示几个目录或文件占用的磁盘空间大小，还要统计它们的总和</code><br><code>--apparent-size：显示目录或文件自身的大小</code><br><code>-l ：统计硬链接占用磁盘空间的大小</code><br><code>-L ：统计符号链接所指向的文件占用的磁盘空间大小</code></p>
+<h4 id="更多的命令可以用-du-–help-来查看。"><a href="#更多的命令可以用-du-–help-来查看。" class="headerlink" title="更多的命令可以用 du –help 来查看。"></a>更多的命令可以用 du –help 来查看。</h4><hr>
+<h5 id="使用示例："><a href="#使用示例：" class="headerlink" title="使用示例："></a>使用示例：</h5><h6 id="假设当前位于-root-目录下，则显示-root-文件夹的大小，但不显示其子目录和文件的大小"><a href="#假设当前位于-root-目录下，则显示-root-文件夹的大小，但不显示其子目录和文件的大小" class="headerlink" title="假设当前位于 /root 目录下，则显示 /root 文件夹的大小，但不显示其子目录和文件的大小"></a>假设当前位于 /root 目录下，则显示 /root 文件夹的大小，但不显示其子目录和文件的大小</h6><p><code>du -sh</code></p>
+<h6 id="假设当前位于-root-目录下，则显示-root-文件夹的大小，并显示其子目录和文件的大小"><a href="#假设当前位于-root-目录下，则显示-root-文件夹的大小，并显示其子目录和文件的大小" class="headerlink" title="假设当前位于 /root 目录下，则显示 /root 文件夹的大小，并显示其子目录和文件的大小"></a>假设当前位于 /root 目录下，则显示 /root 文件夹的大小，并显示其子目录和文件的大小</h6><p><code>du -ah</code></p>
+<h6 id="假设当前位于-root-目录下，则显示-root-文件夹下的所有文件夹的大小及其总和"><a href="#假设当前位于-root-目录下，则显示-root-文件夹下的所有文件夹的大小及其总和" class="headerlink" title="假设当前位于 /root 目录下，则显示 /root 文件夹下的所有文件夹的大小及其总和"></a>假设当前位于 /root 目录下，则显示 /root 文件夹下的所有文件夹的大小及其总和</h6><p><code>du -lh --max-depth=1</code></p>
+<h4 id="更多的命令可以用-du-–help-来查看。-1"><a href="#更多的命令可以用-du-–help-来查看。-1" class="headerlink" title="更多的命令可以用 du –help 来查看。"></a>更多的命令可以用 du –help 来查看。</h4><hr>
+<h3 id="cat-查看文件内容"><a href="#cat-查看文件内容" class="headerlink" title="cat 查看文件内容"></a>cat 查看文件内容</h3><h4 id="cat命令说明"><a href="#cat命令说明" class="headerlink" title="cat命令说明"></a>cat命令说明</h4><h5 id="查看文件："><a href="#查看文件：" class="headerlink" title="查看文件："></a>查看文件：</h5><h6 id="查看-log-txt文件的所有内容"><a href="#查看-log-txt文件的所有内容" class="headerlink" title="查看 log.txt文件的所有内容"></a>查看 log.txt文件的所有内容</h6><p><code>cat log.txt</code></p>
+<h6 id="查看-log-txt文件的所有内容，并对所有行编号"><a href="#查看-log-txt文件的所有内容，并对所有行编号" class="headerlink" title="查看 log.txt文件的所有内容，并对所有行编号"></a>查看 log.txt文件的所有内容，并对所有行编号</h6><p>cat -n log.txt</p>
+<h6 id="查看-log-txt文件的所有内容，并对非空行编号"><a href="#查看-log-txt文件的所有内容，并对非空行编号" class="headerlink" title="查看 log.txt文件的所有内容，并对非空行编号"></a>查看 log.txt文件的所有内容，并对非空行编号</h6><p><code>cat -b log.txt</code></p>
+<h6 id="查看-log-txt文件的所有内容，并对非空行编号，且不输出多行空行"><a href="#查看-log-txt文件的所有内容，并对非空行编号，且不输出多行空行" class="headerlink" title="查看 log.txt文件的所有内容，并对非空行编号，且不输出多行空行"></a>查看 log.txt文件的所有内容，并对非空行编号，且不输出多行空行</h6><p><code>cat -bs log.txt</code></p>
+<h5 id="清空文件："><a href="#清空文件：" class="headerlink" title="清空文件："></a>清空文件：</h5><h6 id="清空当前目录中的-log-txt-文件"><a href="#清空当前目录中的-log-txt-文件" class="headerlink" title="清空当前目录中的 log.txt 文件"></a>清空当前目录中的 log.txt 文件</h6><p><code>cat /dev/null &gt; log.txt</code></p>
+<h1 id="清空-var目录中的-log-txt-文件"><a href="#清空-var目录中的-log-txt-文件" class="headerlink" title="清空 /var目录中的 log.txt 文件"></a>清空 /var目录中的 log.txt 文件</h1><p><code>cat /dev/null &gt; /var/log.txt</code></p>
+<h5 id="写入文件："><a href="#写入文件：" class="headerlink" title="写入文件："></a>写入文件：</h5><h6 id="写入文本到当前目录中的-log-txt文件中-加入文本到文件内容最后"><a href="#写入文本到当前目录中的-log-txt文件中-加入文本到文件内容最后" class="headerlink" title="写入文本到当前目录中的 log.txt文件中(加入文本到文件内容最后)"></a>写入文本到当前目录中的 log.txt文件中(加入文本到文件内容最后)</h6><p><code>cat &gt;&gt; log.txt &lt;&lt;-EOF</code></p>
+<h6 id="清空文件并写入文本到-var目录中的-log-txt文件中-先清空后写入"><a href="#清空文件并写入文本到-var目录中的-log-txt文件中-先清空后写入" class="headerlink" title="清空文件并写入文本到 /var目录中的 log.txt文件中(先清空后写入)"></a>清空文件并写入文本到 /var目录中的 log.txt文件中(先清空后写入)</h6><p><code>cat &gt; /var/log.txt &lt;&lt;-EOF</code></p>
+<h4 id="更多的命令可以用-cat-–help-来查看。"><a href="#更多的命令可以用-cat-–help-来查看。" class="headerlink" title="更多的命令可以用 cat –help 来查看。"></a>更多的命令可以用 cat –help 来查看。</h4><hr>
+<h4 id="head-查看文件内容（主要用于正查）"><a href="#head-查看文件内容（主要用于正查）" class="headerlink" title="head 查看文件内容（主要用于正查）"></a>head 查看文件内容（主要用于正查）</h4><h5 id="点击展开-查看-head命令说明"><a href="#点击展开-查看-head命令说明" class="headerlink" title="点击展开 查看 head命令说明"></a>点击展开 查看 head命令说明</h5><h5 id="参数介绍："><a href="#参数介绍：" class="headerlink" title="参数介绍："></a>参数介绍：</h5><p><code>-c 数字：显示指定文件的前 xx 字节的内容（bytes）</code><br><code>-n 数字：显示指定文件的前 xx 行的内容</code><br><code>-q ：不显示包含指定文件名的文件头（当使用 head打开多个文件的时候，会去在每个文件输出结果的顶部添加一个包含文件名的文件头用于区分</code></p>
+<h4 id="更多的命令可以用-head-–help-来查看。"><a href="#更多的命令可以用-head-–help-来查看。" class="headerlink" title="更多的命令可以用 head –help 来查看。"></a>更多的命令可以用 head –help 来查看。</h4><hr>
+<h4 id="使用示例：-1"><a href="#使用示例：-1" class="headerlink" title="使用示例："></a>使用示例：</h4><h6 id="查看-log-txt文件的全部内容"><a href="#查看-log-txt文件的全部内容" class="headerlink" title="查看 log.txt文件的全部内容"></a>查看 log.txt文件的全部内容</h6><p><code>head log.txt</code></p>
+<h6 id="查看-log-txt文件的前-3字节的内容"><a href="#查看-log-txt文件的前-3字节的内容" class="headerlink" title="查看 log.txt文件的前 3字节的内容"></a>查看 log.txt文件的前 3字节的内容</h6><p><code>head -c 3 log.txt</code></p>
+<h6 id="输出示例"><a href="#输出示例" class="headerlink" title="输出示例"></a>输出示例</h6><p><code>dou</code></p>
+<h6 id="查看-log-txt文件的前-2行的内容"><a href="#查看-log-txt文件的前-2行的内容" class="headerlink" title="查看 log.txt文件的前 2行的内容"></a>查看 log.txt文件的前 2行的内容</h6><p><code>head -n 2 log.txt</code></p>
+<h6 id="查看-log-txt文件的从倒数第2行到行首的内容"><a href="#查看-log-txt文件的从倒数第2行到行首的内容" class="headerlink" title="查看 log.txt文件的从倒数第2行到行首的内容"></a>查看 log.txt文件的从倒数第2行到行首的内容</h6><p><code>head -n -2 log.txt</code></p>
+<h6 id="查看-log-txt-log1-txt-log2-txt文件的前-3行内容"><a href="#查看-log-txt-log1-txt-log2-txt文件的前-3行内容" class="headerlink" title="查看 log.txt log1.txt log2.txt文件的前 3行内容"></a>查看 log.txt log1.txt log2.txt文件的前 3行内容</h6><p><code>head -n 3 log.txt log1.txt log2.txt</code></p>
+<h4 id="更多的命令可以用-head-–help-来查看。-1"><a href="#更多的命令可以用-head-–help-来查看。-1" class="headerlink" title="更多的命令可以用 head –help 来查看。"></a>更多的命令可以用 head –help 来查看。</h4><hr>
+<h5 id="tail-查看文件内容（主要用于倒查）"><a href="#tail-查看文件内容（主要用于倒查）" class="headerlink" title="tail 查看文件内容（主要用于倒查）"></a>tail 查看文件内容（主要用于倒查）</h5><h6 id="查看-tail命令说明"><a href="#查看-tail命令说明" class="headerlink" title="查看 tail命令说明"></a>查看 tail命令说明</h6><p><code>-c 数字：如果数字为正数(例如 -c +5)，显示指定文件从行首第 xx 字节到最后的内容；如果数字为负数(例如 -c -5)，显示指定文件从行尾第 xx 字节到最后内容。</code><br><code>-n 数字：如果数字为正数(例如 -c +3)，显示指定文件从行首第 xx 行到最后的内容；如果数字为负数(例如 -c -3)，显示指定文件从行尾第 xx 行到最后的内容。</code><br><code>-f ：即时输出文件变化后增加的内容，也就是监视一个文件的内容变化（常用于监视日志输出），使用 Ctrl＋C 终止</code></p>
+<h4 id="更多的命令可以用-tail-–help-来查看。"><a href="#更多的命令可以用-tail-–help-来查看。" class="headerlink" title="更多的命令可以用 tail –help 来查看。"></a>更多的命令可以用 tail –help 来查看。</h4><hr>
+<h5 id="使用示例：-2"><a href="#使用示例：-2" class="headerlink" title="使用示例："></a>使用示例：</h5><h6 id="查看-log-txt文件的全部内容-1"><a href="#查看-log-txt文件的全部内容-1" class="headerlink" title="查看 log.txt文件的全部内容"></a>查看 log.txt文件的全部内容</h6><p><code>tail log.txt</code></p>
+<h6 id="查看-log-txt文件从行首-第25字节到最后的内容"><a href="#查看-log-txt文件从行首-第25字节到最后的内容" class="headerlink" title="查看 log.txt文件从行首 第25字节到最后的内容"></a>查看 log.txt文件从行首 第25字节到最后的内容</h6><p><code>tail -c +25 log.txt</code></p>
+<h6 id="查看-log-txt文件从行尾-第4字节到最前面的内容"><a href="#查看-log-txt文件从行尾-第4字节到最前面的内容" class="headerlink" title="查看 log.txt文件从行尾 第4字节到最前面的内容"></a>查看 log.txt文件从行尾 第4字节到最前面的内容</h6><p><code>tail -c -4 log.txt</code></p>
+<h6 id="查看-log-txt文件的从第2行到最后一行的内容"><a href="#查看-log-txt文件的从第2行到最后一行的内容" class="headerlink" title="查看 log.txt文件的从第2行到最后一行的内容"></a>查看 log.txt文件的从第2行到最后一行的内容</h6><p><code>tail -n +2 log.txt</code></p>
+<h6 id="查看-log-txt文件的后-2行的内容"><a href="#查看-log-txt文件的后-2行的内容" class="headerlink" title="查看 log.txt文件的后 2行的内容"></a>查看 log.txt文件的后 2行的内容</h6><p><code>tail -n -2 log.txt</code></p>
+<h6 id="持续查看（监视）-log-txt文件的变化内容（新增加的内容），使用-Ctrl＋C-终止"><a href="#持续查看（监视）-log-txt文件的变化内容（新增加的内容），使用-Ctrl＋C-终止" class="headerlink" title="持续查看（监视） log.txt文件的变化内容（新增加的内容），使用 Ctrl＋C 终止"></a>持续查看（监视） log.txt文件的变化内容（新增加的内容），使用 Ctrl＋C 终止</h6><p><code>tail -f log.txt</code></p>
+<h6 id="查看-log-txt-log1-txt-log2-txt文件的前-3行内容-1"><a href="#查看-log-txt-log1-txt-log2-txt文件的前-3行内容-1" class="headerlink" title="查看 log.txt log1.txt log2.txt文件的前 3行内容"></a>查看 log.txt log1.txt log2.txt文件的前 3行内容</h6><p><code>tail -n 3 log.txt log1.txt log2.txt</code></p>
+<h4 id="更多的命令可以用-tail-–help-来查看。-1"><a href="#更多的命令可以用-tail-–help-来查看。-1" class="headerlink" title="更多的命令可以用 tail –help 来查看。"></a>更多的命令可以用 tail –help 来查看。</h4><hr>
+<h3 id="sed-查看-编辑文件内容"><a href="#sed-查看-编辑文件内容" class="headerlink" title="sed 查看/编辑文件内容"></a>sed 查看/编辑文件内容</h3><h4 id="查看-sed命令说明"><a href="#查看-sed命令说明" class="headerlink" title="查看 sed命令说明"></a>查看 sed命令说明</h4><h6 id="参数介绍：-1"><a href="#参数介绍：-1" class="headerlink" title="参数介绍："></a>参数介绍：</h6><p><code>-i ：操作后应用保存到原文件（如果不加这个参数，那么任何修改都不会影响原文件里的内容，只会把结果输出）</code><br><code>-e ：仅显示处理后的结果</code></p>
+<h4 id="更多的命令可以用-sed-–help-来查看。"><a href="#更多的命令可以用-sed-–help-来查看。" class="headerlink" title="更多的命令可以用 sed –help 来查看。"></a>更多的命令可以用 sed –help 来查看。</h4><hr>
+<h4 id="使用示例：-3"><a href="#使用示例：-3" class="headerlink" title="使用示例："></a>使用示例：</h4><h4 id="查看-log-txt-第3行的内容"><a href="#查看-log-txt-第3行的内容" class="headerlink" title="查看 log.txt 第3行的内容"></a>查看 log.txt 第3行的内容</h4><p><code>sed -n &#39;3p&#39; log.txt</code></p>
+<h6 id="查看-log-txt-第2-8行的内容"><a href="#查看-log-txt-第2-8行的内容" class="headerlink" title="查看 log.txt 第2-8行的内容"></a>查看 log.txt 第2-8行的内容</h6><p><code>sed -n &#39;2,8p&#39; log.txt</code></p>
+<h6 id="删除-log-txt-第1行（首行）"><a href="#删除-log-txt-第1行（首行）" class="headerlink" title="删除 log.txt 第1行（首行）"></a>删除 log.txt 第1行（首行）</h6><p><code>sed -i &#39;1d&#39; log.txt</code></p>
+<h6 id="删除-log-txt-第3-7行"><a href="#删除-log-txt-第3-7行" class="headerlink" title="删除 log.txt 第3-7行"></a>删除 log.txt 第3-7行</h6><p><code>sed -i &#39;3,7d&#39; log.txt</code></p>
+<h6 id="删除-log-txt-最后1行（尾行）"><a href="#删除-log-txt-最后1行（尾行）" class="headerlink" title="删除 log.txt 最后1行（尾行）"></a>删除 log.txt 最后1行（尾行）</h6><p><code>sed -i &#39;$d&#39; log.txt</code></p>
+<h6 id="删除-log-txt-中所有空白行"><a href="#删除-log-txt-中所有空白行" class="headerlink" title="删除 log.txt 中所有空白行"></a>删除 log.txt 中所有空白行</h6><p><code>sed -i &#39;/^$/d&#39; log.txt</code></p>
+<h6 id="删除-log-txt-开头是-doubi-的行"><a href="#删除-log-txt-开头是-doubi-的行" class="headerlink" title="删除 log.txt 开头是 doubi 的行"></a>删除 log.txt 开头是 doubi 的行</h6><p><code>sed -i &#39;/^doubi/&#39;d log.txt</code></p>
+<h6 id="删除-log-txt-结尾是-doubi-的行"><a href="#删除-log-txt-结尾是-doubi-的行" class="headerlink" title="删除 log.txt 结尾是 doubi 的行"></a>删除 log.txt 结尾是 doubi 的行</h6><p><code>sed -i &#39;/doubi$/&#39;d log.txt</code></p>
+<h6 id="删除-log-txt-文件中所有包含-233内容的行"><a href="#删除-log-txt-文件中所有包含-233内容的行" class="headerlink" title="删除 log.txt 文件中所有包含 233内容的行"></a>删除 log.txt 文件中所有包含 233内容的行</h6><p><code>sed -i &#39;/233/d&#39; log.txt</code></p>
+<h6 id="删除-log-txt-文件中第一个-233文本"><a href="#删除-log-txt-文件中第一个-233文本" class="headerlink" title="删除 log.txt 文件中第一个 233文本"></a>删除 log.txt 文件中第一个 233文本</h6><p><code>sed -i &#39;s/233//&#39; log.txt</code></p>
+<h6 id="删除-log-txt-文件中所有-233文本-g-代表操作所有匹配规则的文本"><a href="#删除-log-txt-文件中所有-233文本-g-代表操作所有匹配规则的文本" class="headerlink" title="删除 log.txt 文件中所有 233文本(g 代表操作所有匹配规则的文本)"></a>删除 log.txt 文件中所有 233文本(g 代表操作所有匹配规则的文本)</h6><p><code>sed -i &#39;s/233//g&#39; log.txt</code></p>
+<h6 id="删除-log-txt-文件中所有-第5个233文本-5g-代表第五个匹配规则的文本"><a href="#删除-log-txt-文件中所有-第5个233文本-5g-代表第五个匹配规则的文本" class="headerlink" title="删除 log.txt 文件中所有 第5个233文本(5g 代表第五个匹配规则的文本)"></a>删除 log.txt 文件中所有 第5个233文本(5g 代表第五个匹配规则的文本)</h6><p><code>sed -i &#39;s/233//5g&#39; log.txt</code></p>
+<h6 id="替换-log-txt-文件中第一个-233为666"><a href="#替换-log-txt-文件中第一个-233为666" class="headerlink" title="替换 log.txt 文件中第一个 233为666"></a>替换 log.txt 文件中第一个 233为666</h6><p><code>sed -i &#39;s/233/666/&#39; log.txt</code></p>
+<h6 id="替换-log-txt-文件中所有-233为666-g-代表操作所有匹配规则的文本"><a href="#替换-log-txt-文件中所有-233为666-g-代表操作所有匹配规则的文本" class="headerlink" title="替换 log.txt 文件中所有 233为666(g 代表操作所有匹配规则的文本)"></a>替换 log.txt 文件中所有 233为666(g 代表操作所有匹配规则的文本)</h6><p><code>sed -i &#39;s/233/666/g&#39; log.txt</code></p>
+<h6 id="替换-log-txt-文件中所有-ver-为-doubi-，因为有斜杠，所以需要使用-转义，但是单引号会导致无法转义，所以要改成双引号。"><a href="#替换-log-txt-文件中所有-ver-为-doubi-，因为有斜杠，所以需要使用-转义，但是单引号会导致无法转义，所以要改成双引号。" class="headerlink" title="替换 log.txt 文件中所有 /ver 为 doubi/，因为有斜杠，所以需要使用 \ 转义，但是单引号会导致无法转义，所以要改成双引号。"></a>替换 log.txt 文件中所有 /ver 为 doubi/，因为有斜杠，所以需要使用 \ 转义，但是单引号会导致无法转义，所以要改成双引号。</h6><p><code>sed -i &quot;s/\/ver/doubi\//&quot; log.txt</code></p>
+<h6 id="显示-log-txt-文件中的奇数行或偶数行"><a href="#显示-log-txt-文件中的奇数行或偶数行" class="headerlink" title="显示 log.txt 文件中的奇数行或偶数行"></a>显示 log.txt 文件中的奇数行或偶数行</h6><p><code>sed -n &#39;p;n&#39; log.txt #奇数行</code><br><code>sed -n &#39;n;p&#39; log.txt #偶数行</code></p>
+<h4 id="更多的命令可以用-sed-–help-来查看。-1"><a href="#更多的命令可以用-sed-–help-来查看。-1" class="headerlink" title="更多的命令可以用 sed –help 来查看。"></a>更多的命令可以用 sed –help 来查看。</h4><hr>
+<h3 id="VI、VIM、Nano-编辑文件内容"><a href="#VI、VIM、Nano-编辑文件内容" class="headerlink" title="VI、VIM、Nano 编辑文件内容"></a>VI、VIM、Nano 编辑文件内容</h3><h4 id="vi-vim-none命令说明"><a href="#vi-vim-none命令说明" class="headerlink" title="vi vim none命令说明"></a>vi vim none命令说明</h4><h4 id="VI-介绍"><a href="#VI-介绍" class="headerlink" title="VI 介绍"></a>VI 介绍</h4><p><code>VI 是Linux很棒的一个文本编辑器，不过也存在一些缺点，比如操作麻烦。而 vim就相当于 VI 的加强版，主要介绍 VIM。</code></p>
+<h4 id="VIM-介绍"><a href="#VIM-介绍" class="headerlink" title="VIM 介绍"></a>VIM 介绍</h4><p><code>使用教程：Linux 文本编辑器 VIM 真 · 简单使用教程</code></p>
+<h6 id="打开当前目录下的-log-txt文件，如果没有那么会新建-log-txt文件（安装vim后，使用-vi和-vim打开文件没区别）"><a href="#打开当前目录下的-log-txt文件，如果没有那么会新建-log-txt文件（安装vim后，使用-vi和-vim打开文件没区别）" class="headerlink" title="打开当前目录下的 log.txt文件，如果没有那么会新建 log.txt文件（安装vim后，使用 vi和 vim打开文件没区别）"></a>打开当前目录下的 log.txt文件，如果没有那么会新建 log.txt文件（安装vim后，使用 vi和 vim打开文件没区别）</h6><p><code>vi log.txt</code><br><code>vim log.txt</code></p>
+<h5 id="在命令行模式下，直接输入以下-符号和字母-区分大小写"><a href="#在命令行模式下，直接输入以下-符号和字母-区分大小写" class="headerlink" title="在命令行模式下，直接输入以下 符号和字母(区分大小写)"></a>在命令行模式下，直接输入以下 符号和字母(区分大小写)</h5><h6 id="进入编辑模式（插入模式，按-Esc键-即可返回命令行模式）"><a href="#进入编辑模式（插入模式，按-Esc键-即可返回命令行模式）" class="headerlink" title="进入编辑模式（插入模式，按 Esc键 即可返回命令行模式）"></a>进入编辑模式（插入模式，按 Esc键 即可返回命令行模式）</h6><p><code>i</code></p>
+<h6 id="删除光标当前所在的一行"><a href="#删除光标当前所在的一行" class="headerlink" title="删除光标当前所在的一行"></a>删除光标当前所在的一行</h6><p><code>dd</code></p>
+<h6 id="删除文件内所有内容"><a href="#删除文件内所有内容" class="headerlink" title="删除文件内所有内容"></a>删除文件内所有内容</h6><p><code>dddG</code></p>
+<h6 id="复制光标当前所在的一行"><a href="#复制光标当前所在的一行" class="headerlink" title="复制光标当前所在的一行"></a>复制光标当前所在的一行</h6><p><code>yy</code></p>
+<h6 id="粘贴刚才复制的一行内容"><a href="#粘贴刚才复制的一行内容" class="headerlink" title="粘贴刚才复制的一行内容"></a>粘贴刚才复制的一行内容</h6><p><code>p</code></p>
+<h6 id="撤销上个操作（误操作可以用这个恢复）"><a href="#撤销上个操作（误操作可以用这个恢复）" class="headerlink" title="撤销上个操作（误操作可以用这个恢复）"></a>撤销上个操作（误操作可以用这个恢复）</h6><p><code>u</code></p>
+<h6 id="保存当前文件（-是英文的冒号）"><a href="#保存当前文件（-是英文的冒号）" class="headerlink" title="保存当前文件（ : 是英文的冒号）"></a>保存当前文件（ : 是英文的冒号）</h6><p><code>:w</code></p>
+<h6 id="另存当前文件内容为-log2-txt"><a href="#另存当前文件内容为-log2-txt" class="headerlink" title="另存当前文件内容为 log2.txt"></a>另存当前文件内容为 log2.txt</h6><p><code>:w log2.txt</code></p>
+<h6 id="退出当前文件"><a href="#退出当前文件" class="headerlink" title="退出当前文件"></a>退出当前文件</h6><p><code>:q</code></p>
+<h6 id="不保存-并强制退出当前文件"><a href="#不保存-并强制退出当前文件" class="headerlink" title="不保存 并强制退出当前文件"></a>不保存 并强制退出当前文件</h6><p><code>:q!</code></p>
+<h6 id="保存并退出当前文件"><a href="#保存并退出当前文件" class="headerlink" title="保存并退出当前文件"></a>保存并退出当前文件</h6><p><code>:wq</code></p>
+<h4 id="更多的命令可以用-vi-–help-vim-–help-来查看。"><a href="#更多的命令可以用-vi-–help-vim-–help-来查看。" class="headerlink" title="更多的命令可以用 vi –help / vim –help 来查看。"></a>更多的命令可以用 vi –help / vim –help 来查看。</h4><hr>
+<h3 id="Nano-介绍"><a href="#Nano-介绍" class="headerlink" title="Nano 介绍"></a>Nano 介绍</h3><h4 id="使用教程：Linux-更适合新手的文本编辑器"><a href="#使用教程：Linux-更适合新手的文本编辑器" class="headerlink" title="使用教程：Linux 更适合新手的文本编辑器"></a>使用教程：Linux 更适合新手的文本编辑器</h4><h6 id="打开当前目录下的-log-txt文件，如果没有那么会新建-log-txt文件"><a href="#打开当前目录下的-log-txt文件，如果没有那么会新建-log-txt文件" class="headerlink" title="打开当前目录下的 log.txt文件，如果没有那么会新建 log.txt文件"></a>打开当前目录下的 log.txt文件，如果没有那么会新建 log.txt文件</h6><p><code>nano log.txt</code></p>
+<h6 id="进入后直接就可以输入修改文本内容了，修改后我们可以使用这个-按键保存内容"><a href="#进入后直接就可以输入修改文本内容了，修改后我们可以使用这个-按键保存内容" class="headerlink" title="进入后直接就可以输入修改文本内容了，修改后我们可以使用这个 按键保存内容"></a>进入后直接就可以输入修改文本内容了，修改后我们可以使用这个 按键保存内容</h6><p><code>Ctrl+O</code></p>
+<h6 id="如果不需要编辑了，那么可以用这个-按键退出当前文件"><a href="#如果不需要编辑了，那么可以用这个-按键退出当前文件" class="headerlink" title="如果不需要编辑了，那么可以用这个 按键退出当前文件"></a>如果不需要编辑了，那么可以用这个 按键退出当前文件</h6><p><code>Ctrl+X</code></p>
+<h6 id="如果你在退出前已经修改但没有保存，那么会提醒你是否保存，如果保存就输入-y-，不保存输入-n"><a href="#如果你在退出前已经修改但没有保存，那么会提醒你是否保存，如果保存就输入-y-，不保存输入-n" class="headerlink" title="如果你在退出前已经修改但没有保存，那么会提醒你是否保存，如果保存就输入 y ，不保存输入 n"></a>如果你在退出前已经修改但没有保存，那么会提醒你是否保存，如果保存就输入 y ，不保存输入 n</h6><h6 id="然后就会让你输入要保存的文件名（默认原文件名，所以直接按-Enter回车即可，除非你要另存为其他文件名）"><a href="#然后就会让你输入要保存的文件名（默认原文件名，所以直接按-Enter回车即可，除非你要另存为其他文件名）" class="headerlink" title="然后就会让你输入要保存的文件名（默认原文件名，所以直接按 Enter回车即可，除非你要另存为其他文件名）"></a>然后就会让你输入要保存的文件名（默认原文件名，所以直接按 Enter回车即可，除非你要另存为其他文件名）</h6><p><code>Enter</code></p>
+<h4 id="更多的命令可以在-nano-编辑界面中按-F1键-查看。"><a href="#更多的命令可以在-nano-编辑界面中按-F1键-查看。" class="headerlink" title="更多的命令可以在 nano 编辑界面中按 F1键 查看。"></a>更多的命令可以在 nano 编辑界面中按 F1键 查看。</h4>
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/八神鬼嗣/" class="ywh_button small">八神鬼嗣</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>留言:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank" ><span class="label">Telegram</span></a></li>
+                
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 八神鬼嗣  All rights reserved</li>
+            <li>IPFS Links <a href="https://onioni.net/" style="text-decoration:none;">onioni.net</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- skel -->
+
+<script src="/js/skel.min.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/util.js"></script>
+
+
+<!--[if lte IE 8]>
+
+<script src="/js/ie/respond.min.js"></script>
+
+<![endif]-->
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'onioni-net';
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+<script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="Σ(°Д°;网站崩溃了！！！",clearTimeout(st)):(document.title="(๑¯ิε ¯ิ๑)好像自己又好了",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/like.js"></script>

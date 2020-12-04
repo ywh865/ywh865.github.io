@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <script src="/js/search.js"></script>
+
+    <!--Description-->
+    
+        <meta name="description" content="心之所愿 愿之所系">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="ywh865">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Linux 指令笔记（五）"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="八神鬼嗣の文庫"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Linux 指令笔记（五） - 八神鬼嗣の文庫</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/sass/main.css">
+
+
+    <!--[if lt IE 8]>
+        
+<script src="/js/ie/html5shiv.js"></script>
+
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        
+<link rel="stylesheet" href="/sass/ie8.css">
+
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        
+<link rel="stylesheet" href="/sass/ie9.css">
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">八神鬼嗣の文庫</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">书架首柜</a>
+            </li>
+        
+            <li>
+                <a href="/search/">目录搜索</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E6%96%87%E7%AB%A0%E4%B8%93%E6%9F%9C/">文章专柜</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E7%9B%B8%E5%86%8C%E5%9B%BE%E9%9B%86/">相册图集</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E8%90%8C%E9%9F%B3%E6%94%B6%E8%97%8F/">萌音收藏</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E4%BC%A0%E9%80%81%E8%B4%A7%E6%9E%B6/">传送货架</a>
+            </li>
+        
+            <li>
+                <a href="/links/">友军链接</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1 class="title">Linux 指令笔记（五）</h1>
+    <div class="meta">
+        2019-02-25
+    </div>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<h3 id="解压缩-操作"><a href="#解压缩-操作" class="headerlink" title="解压缩 操作"></a>解压缩 操作</h3><h4 id="在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如-zip、rar、gz、xz、tar-gz、tar-xz等。"><a href="#在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如-zip、rar、gz、xz、tar-gz、tar-xz等。" class="headerlink" title="在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如 zip、rar、gz、xz、tar.gz、tar.xz等。"></a>在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如 zip、rar、gz、xz、tar.gz、tar.xz等。</h4><h4 id="比较常见的就是各种-tar、-tar-xz、-tar-gz、-tar-bz、-tar-bz2、-tar-Z-后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。"><a href="#比较常见的就是各种-tar、-tar-xz、-tar-gz、-tar-bz、-tar-bz2、-tar-Z-后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。" class="headerlink" title="比较常见的就是各种 .tar、.tar.xz、.tar.gz、.tar.bz、.tar.bz2、.tar.Z 后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。"></a>比较常见的就是各种 .tar、.tar.xz、.tar.gz、.tar.bz、.tar.bz2、.tar.Z 后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。</h4><h5 id="tar-本身只是一个打包的作用，而-tar-后面的-zx-gz-bz-等等才是压缩格式，也就是比如-log-tar-gz-压缩包，就是先用-tar-把指定文件-文件夹打包到一起，然后再用-gz-来压缩打包后的-tar-为-tar-gz-。"><a href="#tar-本身只是一个打包的作用，而-tar-后面的-zx-gz-bz-等等才是压缩格式，也就是比如-log-tar-gz-压缩包，就是先用-tar-把指定文件-文件夹打包到一起，然后再用-gz-来压缩打包后的-tar-为-tar-gz-。" class="headerlink" title="tar 本身只是一个打包的作用，而 .tar 后面的 .zx / .gz / .bz 等等才是压缩格式，也就是比如 log.tar.gz 压缩包，就是先用 .tar 把指定文件/文件夹打包到一起，然后再用 gz 来压缩打包后的 .tar 为 .tar.gz 。"></a>tar 本身只是一个打包的作用，而 .tar 后面的 .zx / .gz / .bz 等等才是压缩格式，也就是比如 log.tar.gz 压缩包，就是先用 .tar 把指定文件/文件夹打包到一起，然后再用 gz 来压缩打包后的 .tar 为 .tar.gz 。</h5><p><code>-x 是从压缩文件提取(解压)文件出来，所以在解压命令中都有这个参数。</code><br><code>-c ：创建一个新的压缩包文件，所以在压缩命令中都有这个参数。</code><br><code>-f ：指定要解压的压缩包文件或要压缩的文件/文件夹，所以这个参数必须放在 解压缩命令参数的最后，然后后面跟着 要解压到压缩包文件或要压缩的文件/文件夹。</code><br><code>-j ：解压缩 bz / bz2 格式的参数</code><br><code>-J ：解压缩 xz / lzip 格式的参数</code><br><code>-z ：解压缩 gz / tgz 格式的参数</code><br><code>-Z ：解压缩 Z 格式的参数</code><br><code>-v ：详细列出解压缩过程中处理的文件</code></p>
+<h4 id="更多的命令可以用-tar-–help-来查看。"><a href="#更多的命令可以用-tar-–help-来查看。" class="headerlink" title="更多的命令可以用 tar –help 来查看。"></a>更多的命令可以用 tar –help 来查看。</h4><hr>
+<h3 id="tar-gz-zip等-解压-压缩包-示例"><a href="#tar-gz-zip等-解压-压缩包-示例" class="headerlink" title="tar gz zip等 解压 压缩包 示例"></a>tar gz zip等 解压 压缩包 示例</h3><h4 id="解压压缩包说明"><a href="#解压压缩包说明" class="headerlink" title="解压压缩包说明"></a>解压压缩包说明</h4><h6 id="解压后缀为-tar-的压缩包"><a href="#解压后缀为-tar-的压缩包" class="headerlink" title="解压后缀为 .tar 的压缩包"></a>解压后缀为 .tar 的压缩包</h6><p><code>tar -xf log.tar</code></p>
+<h6 id="解压后缀为-tar-xz-的压缩包"><a href="#解压后缀为-tar-xz-的压缩包" class="headerlink" title="解压后缀为 .tar.xz 的压缩包"></a>解压后缀为 .tar.xz 的压缩包</h6><p><code>tar -xJf log.tar.xz</code></p>
+<h6 id="解压后缀为-tar-gz-的压缩包，两个方法"><a href="#解压后缀为-tar-gz-的压缩包，两个方法" class="headerlink" title="解压后缀为 .tar.gz 的压缩包，两个方法"></a>解压后缀为 .tar.gz 的压缩包，两个方法</h6><p><code>tar -xzf log.tar.gz</code></p>
+<h6 id="解压后缀为-gz-的压缩包，两个方法，如提示命令不存在，请安装-yum-install-gzip-y-apt-get-install-gzip-y"><a href="#解压后缀为-gz-的压缩包，两个方法，如提示命令不存在，请安装-yum-install-gzip-y-apt-get-install-gzip-y" class="headerlink" title="解压后缀为 .gz 的压缩包，两个方法，如提示命令不存在，请安装 yum install gzip -y / apt-get install gzip -y"></a>解压后缀为 .gz 的压缩包，两个方法，如提示命令不存在，请安装 yum install gzip -y / apt-get install gzip -y</h6><p><code>gzip -d log.gz</code><br><code>gunzip log.gz</code></p>
+<h6 id="解压后缀为-bz-bz2-tar-bz2-的压缩包，两个方法"><a href="#解压后缀为-bz-bz2-tar-bz2-的压缩包，两个方法" class="headerlink" title="解压后缀为 .bz / .bz2 / tar.bz2 的压缩包，两个方法"></a>解压后缀为 .bz / .bz2 / tar.bz2 的压缩包，两个方法</h6><p><code>bzip2 -d log.bz</code><br><code>bunzip2 log.bz</code><br><code>tar -jxf log.tar.bz</code></p>
+<p><code>bzip2 -d log.bz2</code><br><code>bunzip2 log.bz2</code><br><code>tar -jxf log.tar.bz2</code></p>
+<h6 id="解压后缀为-Z-tar-Z-的压缩包，两个方法"><a href="#解压后缀为-Z-tar-Z-的压缩包，两个方法" class="headerlink" title="解压后缀为 .Z / tar.Z 的压缩包，两个方法"></a>解压后缀为 .Z / tar.Z 的压缩包，两个方法</h6><p><code>uncompress log.Z log.txt</code><br><code>uncompress log.Z log</code></p>
+<p><code>tar xZf log.tar.Z log.txt</code><br><code>tar xZf log.tar.Z log</code></p>
+<h6 id="解压后缀为-rar-的压缩包，如提示命令不存在，请安装-yum-install-unrar-y-apt-get-install-unrar-y-，注意-rar-和-unrar-是分开的"><a href="#解压后缀为-rar-的压缩包，如提示命令不存在，请安装-yum-install-unrar-y-apt-get-install-unrar-y-，注意-rar-和-unrar-是分开的" class="headerlink" title="解压后缀为 .rar 的压缩包，如提示命令不存在，请安装 yum install unrar -y / apt-get install unrar -y ，注意 rar 和 unrar 是分开的"></a>解压后缀为 .rar 的压缩包，如提示命令不存在，请安装 yum install unrar -y / apt-get install unrar -y ，注意 rar 和 unrar 是分开的</h6><p><code>unrar x log.rar</code></p>
+<h6 id="解压后缀为-zip-的压缩包，如提示命令不存在，请安装-yum-install-unzip-y-apt-get-install-unzip-y，注意-zip-和-unzip-是分开的"><a href="#解压后缀为-zip-的压缩包，如提示命令不存在，请安装-yum-install-unzip-y-apt-get-install-unzip-y，注意-zip-和-unzip-是分开的" class="headerlink" title="解压后缀为 .zip 的压缩包，如提示命令不存在，请安装 yum install unzip -y / apt-get install unzip -y，注意 zip 和 unzip 是分开的"></a>解压后缀为 .zip 的压缩包，如提示命令不存在，请安装 yum install unzip -y / apt-get install unzip -y，注意 zip 和 unzip 是分开的</h6><p><code>unzip log.zip</code></p>
+<h4 id="更多的命令可以用-tar-–help-gzip-–help-unrar-–help-unzip-–help-来查看。"><a href="#更多的命令可以用-tar-–help-gzip-–help-unrar-–help-unzip-–help-来查看。" class="headerlink" title="更多的命令可以用 tar –help / gzip –help / unrar –help / unzip –help 来查看。"></a>更多的命令可以用 tar –help / gzip –help / unrar –help / unzip –help 来查看。</h4><hr>
+<h3 id="压缩-文件-文件夹-示例"><a href="#压缩-文件-文件夹-示例" class="headerlink" title="压缩 文件/文件夹 示例"></a>压缩 文件/文件夹 示例</h3><h4 id="压缩文件-文件夹说明"><a href="#压缩文件-文件夹说明" class="headerlink" title="压缩文件/文件夹说明"></a>压缩文件/文件夹说明</h4><h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar 压缩包"></a>分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar 压缩包</h6><p><code>tar -cf log.tar log.txt</code><br><code>tar -cf log.tar log</code></p>
+<h6 id="如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可"><a href="#如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可" class="headerlink" title="如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可"></a>如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可</h6><p><code>tar -cf log.tar log.txt doub.txt log bash</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-xz-压缩包，以下的其他后缀压缩命令都是一样"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-xz-压缩包，以下的其他后缀压缩命令都是一样" class="headerlink" title="分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar.xz 压缩包，以下的其他后缀压缩命令都是一样"></a>分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar.xz 压缩包，以下的其他后缀压缩命令都是一样</h6><p><code>tar -cJf log.tar.xz log.txt</code><br><code>tar -cJf log.tar.xz log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-gz-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-gz-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar.gz 压缩包"></a>分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar.gz 压缩包</h6><p><code>tar -czf log.tar.gz log.txt</code><br><code>tar -czf log.tar.gz log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-gz-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-gz-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 / log文件夹为 log.gz 压缩包"></a>分别压缩当前目录下的 log.txt文件 / log文件夹为 log.gz 压缩包</h6><p><code>gzip log.gz log.txt</code><br><code>gzip log.gz log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-bz-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-bz-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar.bz 压缩包"></a>分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar.bz 压缩包</h6><p><code>暂时没找到解决方法</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-bz-log-tar-bz-log-bz2-log-tar-bz2压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-bz-log-tar-bz-log-bz2-log-tar-bz2压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 / log文件夹为 log.bz / log.tar.bz / log.bz2 / log.tar.bz2压缩包"></a>分别压缩当前目录下的 log.txt文件 / log文件夹为 log.bz / log.tar.bz / log.bz2 / log.tar.bz2压缩包</h6><p><code>bzip2 -z log.txt</code><br><code>bzip2 -z log</code></p>
+<p><code>tar cjf log.tar.bz2 log.txt</code><br><code>tar cjf log.tar.bz2 log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-Z-log-tar-Z-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-Z-log-tar-Z-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 / log文件夹为 log.Z / log.tar.Z 压缩包"></a>分别压缩当前目录下的 log.txt文件 / log文件夹为 log.Z / log.tar.Z 压缩包</h6><p><code>compress log.txt</code><br><code>compress log</code></p>
+<p><code>tar cZf log.tar.Z log.txt</code><br><code>tar cZf log.tar.Z log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-rar-压缩包，如提示命令不存在，请安装-yum-install-rar-y-apt-get-install-rar-y-，注意-rar-和-unrar-是分开的"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-rar-压缩包，如提示命令不存在，请安装-yum-install-rar-y-apt-get-install-rar-y-，注意-rar-和-unrar-是分开的" class="headerlink" title="分别压缩当前目录下的 log.txt文件 / log文件夹为 log.rar 压缩包，如提示命令不存在，请安装 yum install rar -y / apt-get install rar -y ，注意 rar 和 unrar 是分开的"></a>分别压缩当前目录下的 log.txt文件 / log文件夹为 log.rar 压缩包，如提示命令不存在，请安装 yum install rar -y / apt-get install rar -y ，注意 rar 和 unrar 是分开的</h6><p><code>unrar a log.rar log.txt</code><br><code>unrar a log.rar log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-zip-压缩包，如提示命令不存在，请安装-yum-install-zip-y-apt-get-install-zip-y-，注意-zip-和-unzip-是分开的"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-zip-压缩包，如提示命令不存在，请安装-yum-install-zip-y-apt-get-install-zip-y-，注意-zip-和-unzip-是分开的" class="headerlink" title="分别压缩当前目录下的 log.txt文件 / log文件夹为 log.zip 压缩包，如提示命令不存在，请安装 yum install zip -y / apt-get install zip -y ，注意 zip 和 unzip 是分开的"></a>分别压缩当前目录下的 log.txt文件 / log文件夹为 log.zip 压缩包，如提示命令不存在，请安装 yum install zip -y / apt-get install zip -y ，注意 zip 和 unzip 是分开的</h6><p><code>zip log.zip log.txt</code><br><code>zip log.zip log</code></p>
+<h4 id="更多的命令可以用-tar-–help-gzip-–help-rar-–help-zip-–help-来查看。"><a href="#更多的命令可以用-tar-–help-gzip-–help-rar-–help-zip-–help-来查看。" class="headerlink" title="更多的命令可以用 tar –help / gzip –help / rar –help / zip –help 来查看。"></a>更多的命令可以用 tar –help / gzip –help / rar –help / zip –help 来查看。</h4>
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/八神鬼嗣/" class="ywh_button small">八神鬼嗣</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>留言:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank" ><span class="label">Telegram</span></a></li>
+                
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 八神鬼嗣  All rights reserved</li>
+            <li>IPFS Links <a href="https://onioni.net/" style="text-decoration:none;">onioni.net</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- skel -->
+
+<script src="/js/skel.min.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/util.js"></script>
+
+
+<!--[if lte IE 8]>
+
+<script src="/js/ie/respond.min.js"></script>
+
+<![endif]-->
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'onioni-net';
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+<script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="Σ(°Д°;网站崩溃了！！！",clearTimeout(st)):(document.title="(๑¯ิε ¯ิ๑)好像自己又好了",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/like.js"></script>

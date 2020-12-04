@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <script src="/js/search.js"></script>
+
+    <!--Description-->
+    
+        <meta name="description" content="心之所愿 愿之所系">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="ywh865">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Linux 指令笔记（三）"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="八神鬼嗣の文庫"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Linux 指令笔记（三） - 八神鬼嗣の文庫</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/sass/main.css">
+
+
+    <!--[if lt IE 8]>
+        
+<script src="/js/ie/html5shiv.js"></script>
+
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        
+<link rel="stylesheet" href="/sass/ie8.css">
+
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        
+<link rel="stylesheet" href="/sass/ie9.css">
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">八神鬼嗣の文庫</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">书架首柜</a>
+            </li>
+        
+            <li>
+                <a href="/search/">目录搜索</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E6%96%87%E7%AB%A0%E4%B8%93%E6%9F%9C/">文章专柜</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E7%9B%B8%E5%86%8C%E5%9B%BE%E9%9B%86/">相册图集</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E8%90%8C%E9%9F%B3%E6%94%B6%E8%97%8F/">萌音收藏</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E4%BC%A0%E9%80%81%E8%B4%A7%E6%9E%B6/">传送货架</a>
+            </li>
+        
+            <li>
+                <a href="/links/">友军链接</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1 class="title">Linux 指令笔记（三）</h1>
+    <div class="meta">
+        2019-02-06
+    </div>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<h3 id="文件-文件夹-操作"><a href="#文件-文件夹-操作" class="headerlink" title="文件/文件夹 操作"></a>文件/文件夹 操作</h3><p><code>以下除特殊说明，都以当前目录为 /root 示例。</code></p>
+<h4 id="mkdir-新建-文件夹"><a href="#mkdir-新建-文件夹" class="headerlink" title="mkdir 新建 文件夹"></a>mkdir 新建 文件夹</h4><h6 id="在当前文件夹新建一个-bash-文件夹，完整的绝对路径就是-root-bash"><a href="#在当前文件夹新建一个-bash-文件夹，完整的绝对路径就是-root-bash" class="headerlink" title="在当前文件夹新建一个 bash 文件夹，完整的绝对路径就是 /root/bash"></a>在当前文件夹新建一个 bash 文件夹，完整的绝对路径就是 /root/bash</h6><p><code>mkdir bash</code></p>
+<h5 id="更多的命令可以用-mkdir-–help-查看。"><a href="#更多的命令可以用-mkdir-–help-查看。" class="headerlink" title="更多的命令可以用 mkdir –help 查看。"></a>更多的命令可以用 mkdir –help 查看。</h5><hr>
+<h4 id="cp-复制或重命名-文件-文件夹"><a href="#cp-复制或重命名-文件-文件夹" class="headerlink" title="cp 复制或重命名 文件/文件夹"></a>cp 复制或重命名 文件/文件夹</h4><h5 id="cp命令说明"><a href="#cp命令说明" class="headerlink" title="cp命令说明"></a>cp命令说明</h5><h6 id="复制当前目录内的-log-txt文件到-var目录"><a href="#复制当前目录内的-log-txt文件到-var目录" class="headerlink" title="复制当前目录内的 log.txt文件到 /var目录"></a>复制当前目录内的 log.txt文件到 /var目录</h6><p><code>cp log.txt /var/log.txt</code></p>
+<h6 id="复制当前目录内的-bash文件夹到-home目录"><a href="#复制当前目录内的-bash文件夹到-home目录" class="headerlink" title="复制当前目录内的 bash文件夹到 /home目录"></a>复制当前目录内的 bash文件夹到 /home目录</h6><p><code>cp -R bash /home/bash</code></p>
+<h6 id="复制当前目录内的所有-txt后缀的文件到-var-log目录"><a href="#复制当前目录内的所有-txt后缀的文件到-var-log目录" class="headerlink" title="复制当前目录内的所有.txt后缀的文件到 /var/log目录"></a>复制当前目录内的所有.txt后缀的文件到 /var/log目录</h6><p><code>cp *.txt /var/log</code></p>
+<h6 id="复制当前目录内的所有以-onioni开头的文件到-var-log目录"><a href="#复制当前目录内的所有以-onioni开头的文件到-var-log目录" class="headerlink" title="复制当前目录内的所有以 onioni开头的文件到 /var/log目录"></a>复制当前目录内的所有以 onioni开头的文件到 /var/log目录</h6><p><code>cp onioni* /var/log</code></p>
+<h6 id="复制当前目录内的所有以-onioni开头-以-txt后缀结尾的文件到-var-log目录"><a href="#复制当前目录内的所有以-onioni开头-以-txt后缀结尾的文件到-var-log目录" class="headerlink" title="复制当前目录内的所有以 onioni开头 以.txt后缀结尾的文件到 /var/log目录"></a>复制当前目录内的所有以 onioni开头 以.txt后缀结尾的文件到 /var/log目录</h6><p><code>cp onioni*.txt /var/log</code></p>
+<h6 id="假设当前目录是-root-onioni-log，要把这个目录中的所有-txt后缀的文件复制到上一级目录-root-onioni，那么这样做"><a href="#假设当前目录是-root-onioni-log，要把这个目录中的所有-txt后缀的文件复制到上一级目录-root-onioni，那么这样做" class="headerlink" title="假设当前目录是 /root/onioni/log，要把这个目录中的所有.txt后缀的文件复制到上一级目录 /root/onioni，那么这样做"></a>假设当前目录是 /root/onioni/log，要把这个目录中的所有.txt后缀的文件复制到上一级目录 /root/onioni，那么这样做</h6><p><code>cp *.txt ..</code></p>
+<h6 id="就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错"><a href="#就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错" class="headerlink" title=".. 就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错"></a>.. 就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错</h6><p><code>cp *.txt /root/onioni</code></p>
+<h6 id="重命名当前目录内的-log-txt文件为-log2-txt"><a href="#重命名当前目录内的-log-txt文件为-log2-txt" class="headerlink" title="重命名当前目录内的 log.txt文件为 log2.txt"></a>重命名当前目录内的 log.txt文件为 log2.txt</h6><p><code>cp log.txt log2.txt</code></p>
+<h6 id="复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt"><a href="#复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt" class="headerlink" title="复制当前目录内的 log.txt文件到 /var目录并重命名为 log1.txt"></a>复制当前目录内的 log.txt文件到 /var目录并重命名为 log1.txt</h6><p><code>cp log.txt /var/log1.txt</code></p>
+<h6 id="复制当前目录内的-bash文件夹到-home目录并重命名为-bash2"><a href="#复制当前目录内的-bash文件夹到-home目录并重命名为-bash2" class="headerlink" title="复制当前目录内的 bash文件夹到 /home目录并重命名为 bash2"></a>复制当前目录内的 bash文件夹到 /home目录并重命名为 bash2</h6><p><code>cp -R bash /home/bash2</code></p>
+<h6 id="复制当前目录内的-log-txt文件到-var目录，但是-var-目录中已经存着-log-txt，那么会提示-cp-overwrite-var-log-txt’-可以用-f-强制覆盖"><a href="#复制当前目录内的-log-txt文件到-var目录，但是-var-目录中已经存着-log-txt，那么会提示-cp-overwrite-var-log-txt’-可以用-f-强制覆盖" class="headerlink" title="复制当前目录内的 log.txt文件到 /var目录，但是 /var 目录中已经存着 log.txt，那么会提示 cp: overwrite `/var/log.txt’? 可以用 -f 强制覆盖"></a>复制当前目录内的 log.txt文件到 /var目录，但是 /var 目录中已经存着 log.txt，那么会提示 cp: overwrite `/var/log.txt’? 可以用 -f 强制覆盖</h6><p><code>cp -f log /var/log.txt</code></p>
+<h6 id="大家可能会发现，当你使用-cp-f-强制覆盖的时候，依然会询问你是否覆盖，这是因为-CP-为了避免你手误，默认加上了-i-参数（该参数代表每次覆盖必须询问）。"><a href="#大家可能会发现，当你使用-cp-f-强制覆盖的时候，依然会询问你是否覆盖，这是因为-CP-为了避免你手误，默认加上了-i-参数（该参数代表每次覆盖必须询问）。" class="headerlink" title="大家可能会发现，当你使用 cp -f 强制覆盖的时候，依然会询问你是否覆盖，这是因为 CP 为了避免你手误，默认加上了 -i 参数（该参数代表每次覆盖必须询问）。"></a>大家可能会发现，当你使用 cp -f 强制覆盖的时候，依然会询问你是否覆盖，这是因为 CP 为了避免你手误，默认加上了 -i 参数（该参数代表每次覆盖必须询问）。</h6><h6 id="所以想要避免-CP-默认的-i-参数，只需要在-CP-命令前面加上斜杠即可-“-”"><a href="#所以想要避免-CP-默认的-i-参数，只需要在-CP-命令前面加上斜杠即可-“-”" class="headerlink" title="所以想要避免 CP 默认的 -i 参数，只需要在 CP 命令前面加上斜杠即可 “/”"></a>所以想要避免 CP 默认的 -i 参数，只需要在 CP 命令前面加上斜杠即可 “/”</h6><p><code>/cp -f log /var/log.txt</code></p>
+<h6 id="复制当前目录内的-log-txt-log1-txt-log2-txt文件和-log233目录到-home-log目录中"><a href="#复制当前目录内的-log-txt-log1-txt-log2-txt文件和-log233目录到-home-log目录中" class="headerlink" title="复制当前目录内的 log.txt log1.txt log2.txt文件和 log233目录到 /home/log目录中"></a>复制当前目录内的 log.txt log1.txt log2.txt文件和 log233目录到 /home/log目录中</h6><p><code>cp -R log.txt log1.txt log2.txt log233 /home/log</code></p>
+<h4 id="更多的命令可以用-cp-–help-查看。"><a href="#更多的命令可以用-cp-–help-查看。" class="headerlink" title="更多的命令可以用 cp –help 查看。"></a>更多的命令可以用 cp –help 查看。</h4><hr>
+<h4 id="mv-移动或重命名-文件-文件夹"><a href="#mv-移动或重命名-文件-文件夹" class="headerlink" title="mv 移动或重命名 文件/文件夹"></a>mv 移动或重命名 文件/文件夹</h4><h5 id="mv命令说明"><a href="#mv命令说明" class="headerlink" title="mv命令说明"></a>mv命令说明</h5><h5 id="关于-mv-命令，可以参考上面-cp-的使用方法，没什么区别，只是一个是复制，一个是移动，把上面-cp-命令改成-mv-就能套用了。"><a href="#关于-mv-命令，可以参考上面-cp-的使用方法，没什么区别，只是一个是复制，一个是移动，把上面-cp-命令改成-mv-就能套用了。" class="headerlink" title="关于 mv 命令，可以参考上面 cp 的使用方法，没什么区别，只是一个是复制，一个是移动，把上面 cp 命令改成 mv 就能套用了。"></a>关于 mv 命令，可以参考上面 cp 的使用方法，没什么区别，只是一个是复制，一个是移动，把上面 cp 命令改成 mv 就能套用了。</h5><h6 id="移动当前目录内的-log-txt文件到-var目录"><a href="#移动当前目录内的-log-txt文件到-var目录" class="headerlink" title="移动当前目录内的 log.txt文件到 /var目录"></a>移动当前目录内的 log.txt文件到 /var目录</h6><p><code>mv log.txt /var/log.txt</code></p>
+<h6 id="移动当前目录内的-bash文件夹到-home目录"><a href="#移动当前目录内的-bash文件夹到-home目录" class="headerlink" title="移动当前目录内的 bash文件夹到 /home目录"></a>移动当前目录内的 bash文件夹到 /home目录</h6><p><code>mv bash /home/bash</code></p>
+<h6 id="重命名当前目录内的-log-txt文件为-log2-txt-1"><a href="#重命名当前目录内的-log-txt文件为-log2-txt-1" class="headerlink" title="重命名当前目录内的 log.txt文件为 log2.txt"></a>重命名当前目录内的 log.txt文件为 log2.txt</h6><p><code>mv log.txt log2.txt</code></p>
+<h6 id="复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt-1"><a href="#复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt-1" class="headerlink" title="复制当前目录内的 log.txt文件到 /var目录并重命名为 log1.txt"></a>复制当前目录内的 log.txt文件到 /var目录并重命名为 log1.txt</h6><p><code>mv log.txt /var/log1.txt</code></p>
+<h6 id="复制当前目录内的-bash文件夹到-home目录并重命名为-bash2-1"><a href="#复制当前目录内的-bash文件夹到-home目录并重命名为-bash2-1" class="headerlink" title="复制当前目录内的 bash文件夹到 /home目录并重命名为 bash2"></a>复制当前目录内的 bash文件夹到 /home目录并重命名为 bash2</h6><p><code>mv bash /home/bash2</code></p>
+<h4 id="更多的命令可以用-mv-–help-查看。"><a href="#更多的命令可以用-mv-–help-查看。" class="headerlink" title="更多的命令可以用 mv –help 查看。"></a>更多的命令可以用 mv –help 查看。</h4><hr>
+<h4 id="rm-删除-文件-文件夹"><a href="#rm-删除-文件-文件夹" class="headerlink" title="rm 删除 文件/文件夹"></a>rm 删除 文件/文件夹</h4><h5 id="rm命令说明"><a href="#rm命令说明" class="headerlink" title="rm命令说明"></a>rm命令说明</h5><h6 id="删除当前目录下的-log-txt文件"><a href="#删除当前目录下的-log-txt文件" class="headerlink" title="删除当前目录下的 log.txt文件"></a>删除当前目录下的 log.txt文件</h6><p><code>rm log.txt</code></p>
+<h6 id="删除当前目录下所有-txt后缀的文件"><a href="#删除当前目录下所有-txt后缀的文件" class="headerlink" title="删除当前目录下所有.txt后缀的文件"></a>删除当前目录下所有.txt后缀的文件</h6><p><code>rm *.txt</code></p>
+<h6 id="使用-rm-命令删除时，会提示你是否确定删除，输入-y-即删除，输入-n-则取消"><a href="#使用-rm-命令删除时，会提示你是否确定删除，输入-y-即删除，输入-n-则取消" class="headerlink" title="使用 rm 命令删除时，会提示你是否确定删除，输入 y 即删除，输入 n 则取消"></a>使用 rm 命令删除时，会提示你是否确定删除，输入 y 即删除，输入 n 则取消</h6><h6 id="rm-remove-regular-file-log-txt’-y"><a href="#rm-remove-regular-file-log-txt’-y" class="headerlink" title="rm: remove regular file `log.txt’? y"></a>rm: remove regular file `log.txt’? y</h6><h6 id="删除当前目录下所有-txt后缀的文件-1"><a href="#删除当前目录下所有-txt后缀的文件-1" class="headerlink" title="删除当前目录下所有.txt后缀的文件"></a>删除当前目录下所有.txt后缀的文件</h6><p><code>rm *.txt</code></p>
+<h6 id="删除当前目录下所有以-onioni开头的文件"><a href="#删除当前目录下所有以-onioni开头的文件" class="headerlink" title="删除当前目录下所有以 onioni开头的文件"></a>删除当前目录下所有以 onioni开头的文件</h6><p><code>rm onioni*</code></p>
+<h6 id="删除当前目录下所有以-onioni开头-以-txt后缀结尾的文件"><a href="#删除当前目录下所有以-onioni开头-以-txt后缀结尾的文件" class="headerlink" title="删除当前目录下所有以 onioni开头 以.txt后缀结尾的文件"></a>删除当前目录下所有以 onioni开头 以.txt后缀结尾的文件</h6><p><code>rm onioni*.txt</code></p>
+<h6 id="当你用-rm-删除目录的时候会发现提示这不是一个文件"><a href="#当你用-rm-删除目录的时候会发现提示这不是一个文件" class="headerlink" title="当你用 rm 删除目录的时候会发现提示这不是一个文件"></a>当你用 rm 删除目录的时候会发现提示这不是一个文件</h6><h6 id="rm-bash"><a href="#rm-bash" class="headerlink" title="rm bash"></a>rm bash</h6><h6 id="rm-cannot-remove-bash’-Is-a-directory"><a href="#rm-cannot-remove-bash’-Is-a-directory" class="headerlink" title="rm: cannot remove `bash’: Is a directory"></a>rm: cannot remove `bash’: Is a directory</h6><h6 id="可以加上-r-来归递删除目录及其目录下的内容"><a href="#可以加上-r-来归递删除目录及其目录下的内容" class="headerlink" title="可以加上 -r 来归递删除目录及其目录下的内容"></a>可以加上 -r 来归递删除目录及其目录下的内容</h6><p><code>rm -r bash</code></p>
+<h6 id="因为为了避免手误删除错误，rm默认加上了-i-的参数，每一次删除文件-目录都会提示，如果觉得烦可以用-rf-参数"><a href="#因为为了避免手误删除错误，rm默认加上了-i-的参数，每一次删除文件-目录都会提示，如果觉得烦可以用-rf-参数" class="headerlink" title="因为为了避免手误删除错误，rm默认加上了 -i 的参数，每一次删除文件/目录都会提示，如果觉得烦可以用 -rf 参数"></a>因为为了避免手误删除错误，rm默认加上了 -i 的参数，每一次删除文件/目录都会提示，如果觉得烦可以用 -rf 参数</h6><p><code>rm -rf bash</code></p>
+<h6 id="rm-rf-这个命令请慎重使用，而且千万不要使用-rm-rf-或者-rm-rf-之类的命令-系统自杀-，可能会让你直接跑路，所以使用请慎重！"><a href="#rm-rf-这个命令请慎重使用，而且千万不要使用-rm-rf-或者-rm-rf-之类的命令-系统自杀-，可能会让你直接跑路，所以使用请慎重！" class="headerlink" title="rm -rf 这个命令请慎重使用，而且千万不要使用 rm -rf / 或者 rm -rf /* 之类的命令(系统自杀)，可能会让你直接跑路，所以使用请慎重！"></a><font color="#dd0000">rm -rf 这个命令请慎重使用，而且千万不要使用 rm -rf / 或者 rm -rf /* 之类的命令(系统自杀)，可能会让你直接跑路，所以使用请慎重！</font></h6><h4 id="更多的命令可以用-rm-–help-查看。"><a href="#更多的命令可以用-rm-–help-查看。" class="headerlink" title="更多的命令可以用 rm –help 查看。"></a>更多的命令可以用 rm –help 查看。</h4>
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/八神鬼嗣/" class="ywh_button small">八神鬼嗣</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>留言:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank" ><span class="label">Telegram</span></a></li>
+                
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 八神鬼嗣  All rights reserved</li>
+            <li>IPFS Links <a href="https://onioni.net/" style="text-decoration:none;">onioni.net</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- skel -->
+
+<script src="/js/skel.min.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/util.js"></script>
+
+
+<!--[if lte IE 8]>
+
+<script src="/js/ie/respond.min.js"></script>
+
+<![endif]-->
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'onioni-net';
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+<script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="Σ(°Д°;网站崩溃了！！！",clearTimeout(st)):(document.title="(๑¯ิε ¯ิ๑)好像自己又好了",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/like.js"></script>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <script src="/js/search.js"></script>
+
+    <!--Description-->
+    
+        <meta name="description" content="心之所愿 愿之所系">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="ywh865">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="套用 Cloudflare CDN"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="八神鬼嗣の文庫"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>套用 Cloudflare CDN - 八神鬼嗣の文庫</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/sass/main.css">
+
+
+    <!--[if lt IE 8]>
+        
+<script src="/js/ie/html5shiv.js"></script>
+
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        
+<link rel="stylesheet" href="/sass/ie8.css">
+
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        
+<link rel="stylesheet" href="/sass/ie9.css">
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">八神鬼嗣の文庫</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">书架首柜</a>
+            </li>
+        
+            <li>
+                <a href="/search/">目录搜索</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E6%96%87%E7%AB%A0%E4%B8%93%E6%9F%9C/">文章专柜</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E7%9B%B8%E5%86%8C%E5%9B%BE%E9%9B%86/">相册图集</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E8%90%8C%E9%9F%B3%E6%94%B6%E8%97%8F/">萌音收藏</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E4%BC%A0%E9%80%81%E8%B4%A7%E6%9E%B6/">传送货架</a>
+            </li>
+        
+            <li>
+                <a href="/links/">友军链接</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1 class="title">套用 Cloudflare CDN</h1>
+    <div class="meta">
+        2019-12-03
+    </div>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<h1 id="使用-Hexo-套用-Cloudflare-免费-CDN"><a href="#使用-Hexo-套用-Cloudflare-免费-CDN" class="headerlink" title="使用 Hexo 套用 Cloudflare 免费 CDN"></a>使用 Hexo 套用 Cloudflare 免费 CDN</h1><h2 id="Cloudflare"><a href="#Cloudflare" class="headerlink" title="Cloudflare"></a>Cloudflare</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://cloudflare.com/">https://cloudflare.com</a></li>
+</ul>
+<h3 id="Cloudflare-是什么？"><a href="#Cloudflare-是什么？" class="headerlink" title="Cloudflare 是什么？"></a>Cloudflare 是什么？</h3><p> Cloudflare 是一间总部位于旧金山的美国跨国 IT 企业，以向客户提供基于反向代理的内容分发网络及分布式域名解析服务为主要业务。 Cloudflare 可以帮助受保护站点抵御包拒绝服务攻击等网络攻击，确保该网站长期在线，同时提升网站的性能、加载速度以改善访客体验。</p>
+<p>因为 GitHub Pages 的服务器都远在美国，而且被 <em>照顾</em> 的厉害，所以导致在中国直接访问速度非常慢。使用免费的 Cloudflare 反代 + 缓存 GitHub Pages ，可以明显的提高全球访问速度，包括中国。</p>
+<h3 id="Cloudflare-添加域名"><a href="#Cloudflare-添加域名" class="headerlink" title="Cloudflare 添加域名"></a>Cloudflare 添加域名</h3><p>进入 <a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">https://dash.cloudflare.com</a> ，点击 Add a Site ， 输入域名然后点击 Add site 。在购买域名服务商处，设置域名的解析 DNS 服务地址为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cleo.ns.cloudflare.com</span><br><span class="line">lila.ns.cloudflare.com</span><br></pre></td></tr></table></figure>
+
+<p>等待全球 DNS 缓存刷新，绑定成功后会收到 Cloudflare 的确认邮件。</p>
+<h4 id="添加-A-记录"><a href="#添加-A-记录" class="headerlink" title="添加 A 记录"></a>添加 A 记录</h4><p>添加 A 记录，绑定 GitHub Pages 地址：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">185.199.108.153</span><br><span class="line">185.199.109.153</span><br><span class="line">185.199.110.153</span><br><span class="line">185.199.111.153</span><br></pre></td></tr></table></figure>
+
+<h4 id="HTTPS-配置"><a href="#HTTPS-配置" class="headerlink" title="HTTPS 配置"></a>HTTPS 配置</h4><p>在 Cloudflare Dash 点击域名进入配置，点击顶部 SSL/TLS ，点击 SSL 一栏右侧下拉菜单选择 Flexible 。<br>在 GitHub Pages 仓库网页点击 Settings ，下拉到 GitHub Pages ，点击取消勾选 Enforce HTTPS 。</p>
+<h4 id="添加缓存规则"><a href="#添加缓存规则" class="headerlink" title="添加缓存规则"></a>添加缓存规则</h4><p>在 Cloudflare Dash 点击域名进入配置，点击顶部 Page Rules ，然后点击 Create Page Rule ， If the URL matches 一栏中填写你的域名，不带 wwww ，域名结尾 /* ，比如 <code>abc.com/*</code> 。然后在下方点击 Add a Setting 添加规则：</p>
+<ul>
+<li>Auto Minify / HTML CSS JavaScript</li>
+<li>Rocket Loader On</li>
+<li>Browser Cache TTL 2 hours</li>
+<li>Always Online On</li>
+<li>Cache Level Cache Everything</li>
+<li>Edge Cache TTL 2 hours</li>
+<li>Automatic HTTPS Rewrites On</li>
+</ul>
+<p>然后点击右下方 Save and Deploy ，保存与部署规则。</p>
+<h4 id="访问测试"><a href="#访问测试" class="headerlink" title="访问测试"></a>访问测试</h4><p>等待 Cloudflare HTTPS 证书下发，然后在游览器输入绑定的域名地址访问。如果一切设置正确，应该会打开发布到 GitHub Pages 的 Hexo Blog 。</p>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/八神鬼嗣/" class="ywh_button small">八神鬼嗣</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>留言:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank" ><span class="label">Telegram</span></a></li>
+                
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 八神鬼嗣  All rights reserved</li>
+            <li>IPFS Links <a href="https://onioni.net/" style="text-decoration:none;">onioni.net</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- skel -->
+
+<script src="/js/skel.min.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/util.js"></script>
+
+
+<!--[if lte IE 8]>
+
+<script src="/js/ie/respond.min.js"></script>
+
+<![endif]-->
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'onioni-net';
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+<script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="Σ(°Д°;网站崩溃了！！！",clearTimeout(st)):(document.title="(๑¯ิε ¯ิ๑)好像自己又好了",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/like.js"></script>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[音乐]]></title>
+    <url>%2Fpost%2Fmusic%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>萌音收藏</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[套用 Cloudflare CDN]]></title>
+    <url>%2Fpost%2FCloudflare%2F</url>
+    <content type="text"><![CDATA[使用 Hexo 套用 Cloudflare 免费 CDNCloudflare https://cloudflare.com Cloudflare 是什么？ Cloudflare 是一间总部位于旧金山的美国跨国 IT 企业，以向客户提供基于反向代理的内容分发网络及分布式域名解析服务为主要业务。 Cloudflare 可以帮助受保护站点抵御包拒绝服务攻击等网络攻击，确保该网站长期在线，同时提升网站的性能、加载速度以改善访客体验。 因为 GitHub Pages 的服务器都远在美国，而且被 照顾 的厉害，所以导致在中国直接访问速度非常慢。使用免费的 Cloudflare 反代 + 缓存 GitHub Pages ，可以明显的提高全球访问速度，包括中国。 Cloudflare 添加域名进入 https://dash.cloudflare.com ，点击 Add a Site ， 输入域名然后点击 Add site 。在购买域名服务商处，设置域名的解析 DNS 服务地址为： 12cleo.ns.cloudflare.comlila.ns.cloudflare.com 等待全球 DNS 缓存刷新，绑定成功后会收到 Cloudflare 的确认邮件。 添加 A 记录添加 A 记录，绑定 GitHub Pages 地址： 1234185.199.108.153185.199.109.153185.199.110.153185.199.111.153 HTTPS 配置在 Cloudflare Dash 点击域名进入配置，点击顶部 SSL/TLS ，点击 SSL 一栏右侧下拉菜单选择 Flexible 。在 GitHub Pages 仓库网页点击 Settings ，下拉到 GitHub Pages ，点击取消勾选 Enforce HTTPS 。 添加缓存规则在 Cloudflare Dash 点击域名进入配置，点击顶部 Page Rules ，然后点击 Create Page Rule ， If the URL matches 一栏中填写你的域名，不带 wwww ，域名结尾 /* ，比如 abc.com/* 。然后在下方点击 Add a Setting 添加规则： Auto Minify / HTML CSS JavaScript Rocket Loader On Browser Cache TTL 2 hours Always Online On Cache Level Cache Everything Edge Cache TTL 2 hours Automatic HTTPS Rewrites On 然后点击右下方 Save and Deploy ，保存与部署规则。 访问测试等待 Cloudflare HTTPS 证书下发，然后在游览器输入绑定的域名地址访问。如果一切设置正确，应该会打开发布到 GitHub Pages 的 Hexo Blog 。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用 Hexo 搭建 Blog]]></title>
+    <url>%2Fpost%2Fhexo%2F</url>
+    <content type="text"><![CDATA[使用 Hexo 在 GitHub Pages 上免费搭建 BlogHexo https://hexo.io Hexo 是什么？ Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 环境依赖安装 Hexo 相当简单。然而在安装前，必须先在电脑中安装： Node.js / 至少需要 6.9 版本https://nodejs.org/en/ Git / 用来同步生成好的静态页面https://git-scm.com/download/win 验证 Node.js 与 Git 安装 12$node -v$git --version 安装 Hexo CLI 工具npm install -g hexo-cli 创建 Blog在电脑桌面新建一个文件夹 Blog ，用来存放博客。然后打开 PowerShell 进入刚才新建的文件夹初始化并创建一个新的 Blog : 12cd ~/Desktop/Blog # 进入 Blog 目录hexo init # 初始化 Blog 目录介绍1234567├── _config.yml # 网站的配置信息├── package.json├── scaffolds # 模版文件夹├── source # 资源文件夹| ├── _drafts # 草稿文件| └── _posts # 文章 Markdowm 文件└── themes # 主题文件夹 设置语言打开目录中的 _config.yml 文件，修改： 1language: zh-Hans 创建新文章 在博文根目录的 Source 文件夹的 Post 文件夹下直接新建一个 .md 文件。 在博文根目录打来 PowerShell ，然后输入 hexo new &quot;你的标题&quot; 回车在你的 Post 文件夹下就新建了一个 .md 文件，打开编辑即可。 生成静态页面hexo g # 本地生成静态文件 本地访问测试hexo s # 启动 Hexo 本地 HTTP 服务 打开游览器进入 http://localhost:4000 ,就可以即时预览 Blog 。返回 PowerShell 使用快捷键 Ctrl+c 即可关闭 hexo s 。 GitHub https://github.com GitHub 是什么？ GitHub 是通过 Git 进行版本控制的软件源代码托管服务平台，由GitHub公司的开发者 Chris Wanstrath 、 PJ Hyett 和 Tom Preston-Werner 使用 uby on Rails 编写而成。 GitHub Pages 是什么？ GitHub Pages 是 GitHub 提供的一个网页寄存服务，可以用于存放静态网页，包括博客、项目文档甚至整本书。 Jekyll 软体可以用于将文档转换成静态网页，该软体提供了将网页上传到 GitHub Pages 的功能。 部署到Coding以及GitHub上部署之前需要安装 Git 部署插件，否则会提示 Deployer not found 错误。npm install hexo-deployer-git --save 在 Github 上创建名字为 ****.github.io 的项目， **** 为自己的 Github 用户名，打开本地的 Blog 文件夹项目内的 _config.yml 配置文件，将其中的 type 设置为 git 。 1234deploy: type: git repository: https://github.com/****/****.github.io.git branch: master hexo d # 将本地静态文件推送至Github 注：要配置好配置 SSH key ， id_rsa 是你这台电脑的私人秘钥， id_rsa.pub 是公共秘钥。把公钥放在 GitHub 上，当你连接自己的 Github 账号时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过 Git 上传你的文件到 GitHub 上。 绑定域名网站已经搭建好，虽然能通过 GitHub 的域名访问，但是如果想要用自己的域名，我们还需要设置将自己的域名绑定到 GitHub 这个博客项目上。 在 GitHub Pages 仓库网页点击 Settings ，下拉到 GitHub Pages ，在 Custom domain 中填入自己的域名地址，然后点击 Save 保存。 添加 A 记录添加 A 记录，绑定 GitHub Pages 地址： 1234@ A 185.199.108.153@ A 185.199.109.153@ A 185.199.110.153@ A 185.199.111.153 添加 CNAME 记录，绑定 GitHub Pages 地址：www CNAME username.github.io 添加 CNAME 文件添加完 A 记录和 CNAME 记录解析后，进入博客目录，在 source 目录下新建 CNAME 文件，写入你自己的域名，然后重新然后再部署到 GitHub 上。 HTTPS 配置在 GitHub Pages 仓库网页点击 Settings ，下拉到 GitHub Pages ，勾选 Enforce HTTPS 可设置强制 Https 访问，一般为默认开启不需要设置。 访问测试在游览器输入绑定的域名地址访问，如果一切设置正确，会打开发布到 GitHub Pages 的 Hexo Blog 。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WLAN笔记（五）]]></title>
+    <url>%2Fpost%2Fwifi05%2F</url>
+    <content type="text"><![CDATA[FAT AP能够独自承担无线用户接入、用户数据加密和转发等功能，而FIT AP必须依赖于AC才能共同完成这些功能。AC在协同FIT AP共同工作之前，必先要实现FIT AP在AC中上线的过程。FIT AP就必须到DHCP Server获取IP地址。 AP获取IP地址：AP的IP地址可以是静态配置的，也可以是通过DHCP动态获取的。如果是静态配置的，AP的IP地址立即就确定了，这一步也就结束了。如果是通过DHCP动态获取，AP不知道谁是DHCP Server，会以广播discovery报文的方式去发现DHCP Server，所有收到这个广播信息的DHCP Server都会单播offer回应AP。AP只接收第一个到达的offer，并广播request告诉所有人，我已经选择好了一个DHCP Server了，其他人不需要再准备为我提供DHCP Server服务了。AP选择的DHCP Server会把AP的IP地址、租期日期、网关地址、DNS Server的IP地址等信息用ACK报文反馈给AP。值得注意的是这个ACK报文里面有个option43字段，里面可以用来填充AC的IP地址。作用就是直接告诉AP有AC的IP地址可用。有的时候AP与DHCP Server不在同一个VLAN中，AP通过广播discovery报文不能直接发现DHCP Server，这个时候，可以通过DHCP Relay来发现DHCP Server。AP获取IP地址的流程就变成原来只需要直接和DHCP Server交流，现在变成了和DHCP Relay直接交流，由DHCP Relay将AP的请求单播给DHCP Server，DHCP Server回复给AP的消息也要通过DHCP Relay来转达。 AP发现AC: 静态方式：AP上是支持静态配置AC的IP地址的，如果静态配置了AC的IP地址，AP就会向所有配置的AC单播发送发现请求报文，然后根据AC的回复，根据优先级，选择一个AC，准备进行下一个阶段的建立CAPWAP隧道。 动态方式：如果AP上没有配置AC的IP地址，AP会根据当前的情况来决定是使用单播方式还是广播方式来发现AC。首先，AP会查看AP获取IP地址阶段中DHCP Server回复的ACK报文中的option43字段是否存在AC的IP地址，这个字段是可选择配置的，如果有AC的IP地址，AP就会向这个地址单播发送发现请求报文。在AC和网络都正常的情况下，AC会回应AP的请求，至此，AP就完成了发现AC的过程。我们可以把这种发现AC的方式称为DHCP方式。与DHCP方式类似的还有DNS方式，与DHCP方式不同的是，DNS方式中，DHCP Server回复的ACK报文中存放的不是AC的IP地址，而是AC的域名和DNS服务器的IP地址，并且报文中携带的option15字段用来存放AC的域名，AP先通过获取的域名和DNS服务器进行域名解析，获取AC IP地址，然后向AC单播发送发现请求。之后的过程就和DHCP方式一致了。无论是DHCP方式还是DNS方式，都是属于单播方式，AP都是发送的单播报文给AC。 如果AP上没有配置静态的AC IP地址、DHCP Server回复的ACK报文中没有AC的信息、或者AP单播发送的发现请求报文都没有响应，此时AP就会通过广播报文来发现AC。和AP处于同一个网段的所有AC都会响应AP的请求，AP会选择优先级最高的AC来作为待关联的AC，如果优先级相同，则继续比较AC的负载，负载轻的作为待关联AC，如果负载也相同，则选择IP地址小的作为待关联AC。然后准备进行下一阶段的CAPWAP隧道建立。 注：Option 43在AC和AP间的网络是二层的场景下，存在的作用不明显，因为通过单播发现不了AC，可以再次通过广播来发现，但是如果AC和AP间的网络是三层的，广播报文是无法直接传递到AC的，所以必须要通过Option43来告知AP要找的AC是哪个。 CAPWAP隧道建链： CAPWAP全称是Control And Provisioning of Wireless Access Points，中文名叫无线接入点控制与规范，CAPWAP是由RFC5415协议定义的实现AP和AC之间的互通的通用封装和传输机制。CAPWAP隧道又细分为控制隧道和数据隧道。控制隧道是用来传输AC管理控制AP的报文、业务配置以及AC与AP间的状态维护报文；数据隧道则只有在隧道转发（又称集中转发）方式下才用来传输业务数据。AP发现了AC后，就可以开始CAPWAP隧道的建立了。 AP接入控制： 不是每一个AP都是符合入门要求的AP。为了保证入门AP的合法性，防止有外人或间谍（非法AP）混入，AC设置了一系列的考核要求进行检验，AP在找到AC后，会向AC发送加入请求，（如果配置了CAPWAP隧道的DTLS加密功能，会先建立DTLS链路，此后CAPWAP控制报文都要进行DTLS加解密。）请求的内容中会包含AP的版本和胖瘦模式信息。AC收到AP的加入请求后，会判断是否允许AP接入，然后AC进行回应。如果AC上有对应的升级配置，则AC还会在回应的报文中携带AP的版本升级信息（升级版本、升级方式等）。 AC判断AP是否能够接入的流程： 第一关，首先查看AP是否被列入了黑名单，如果在黑名单中能匹配上AP，则不允许AP接入，然后就没有然后了。如果很幸运，没有匹配上黑名单，那么将进入第二关。 第二关，判断AP的认证模式，如果AC上对AP上线要求不严格，认证方式为不认证，则到这一关的AP都将闯关成功，允许接入。实际使用场景还是建议使用MAC或SN认证，严格控制AP的接入。如果是MAC或SN认证，还需要继续闯关。 第三关，本关MAC或SN认证分别要验证MAC或SN对应的AP是否离线添加，如果已添加，则允许AP接入，否则进入下一关。 第四关，查看AP的MAC或SN是否能在白名单中匹配上，如果匹配上，则允许接入，否则AP被放入到未认证列表中。 第五关，未认证列表中的AP可以通过手动配置的方式，允许其接入，如果不对其进行手动确认，AP也无法接入。 AP版本升级： AP收到前一阶段AC回应的报文后，如果发现里面有指定了AP的版本，并且指定的版本与AP当前的版本不一致，会进行AP版本升级。升级完成后，AP自动重新启动，并且重复之前的所有上线过程。如果AP发现AC回应的报文里面指定的AP版本和自身的版本一致，或者没有指定AP的版本，则AP不需要进行版本升级。直接进入下一个阶段。 CAPWAP隧道维持： 根据CAPWAP协议的要求，AP和AC间还需要进行一些其它报文的交互，然后AP和AC间开始通过keepalive和echo报文来检测数据隧道和控制隧道的连通性。Keepalive报文的出现，标志着数据隧道已经建立起来，echo报文的出现，则标志着控制隧道的已经建立。配置下发，CAPWAP隧道建立完成后，AC就可以把配置下发给AP了。AP收到AC的配置信息后，就能以AC上配置的业务来展开WLAN业务了。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WLAN笔记（四）]]></title>
+    <url>%2Fpost%2Fwifi04%2F</url>
+    <content type="text"><![CDATA[WLAN术语SSID，SSID的全称是Service Set Identifier，也就是服务集标识符，用于标识一个服务集，按照大部分人的理解，也就是用来标识一个可用的网路。而所谓服务集，就是一组互相有联系的无线设备。在提供的无线网络中，我们的无线终端（在WLAN中称之为工作站STA，Station）只要连上AP，实际上就构成了一个服务集。在这个服务集内，只要终端和AP关联，终端就能够相互通信，也可以通过AP访问外部网络。如果只有一个AP，也就是说这个服务集中只有一个AP，那么这个服务集就可以被认为一个基本服务集BSS。BSS是无线网络的基本服务单元。所有的终端关联到一个AP上，该AP连接其他有线设备，并且控制和主导整个BSS中的全部数据的传输过程。如果存在多个AP，一个BSS所覆盖的地理范围有限，直径不超过100米，这个时候就会有一个扩展服务集ESS（Extend Service Set）的概念。 ESS简单理解，就是多个使用相同SSID的BSS组成，但是这中间隐含2个条件： 1.这些BSS是要比邻安置。2.这些BSS通过各种分布系统互联，有线无线都可以，不过一般都是以太网。 只有满足上述条件后，才认为这些BSS可以被统一为一个ESS。由于使用的是相同的SSID，我们根本感觉不到我们是接在多个BSS上，而是如同接在同一个AP上一样。终端在ESS内的通信和在BSS中类似，不过如果BSS中终端A想和另一个BSS中的终端B通信，则是需要经过2个接入点AP1和AP2，即A-&gt;AP1-&gt;AP2-&gt;B。特别的，在同一个ESS中的不同BSS之间切换的过程称为漫游。上图也画出了终端A从BSS1域漫游到BSS2（图上的A’的位置），此时A仍然可以保持和B的通信，不过A在漫游前后的接入点AP改变了。SSID通常是一个不超过32个字符的字符串，这个SSID又叫ESSID，是对ESS的标识。在同一个ESS中，我们是不知道接在哪个BSS上，但终端设备会用BSSID标识BSS得知你所在哪一个BSS，这个标识符是一个长度为48位的二进制标识符，通常是这个BSS里面AP的MAC地址。 有些设备还可以配置VAP，为用户提供差异化的WLAN业务。所谓VAP就是在一个物理实体AP上虚拟出多个虚拟的AP，每一个被虚拟出的AP就是一个VAP，每个VAP提供和物理实体AP一样的功能。VAP的优势显而易见，多个虚拟的AP工作在同一个硬件平台，提高了硬件的利用率；网络管理员可以为不同VAP设置不同SSID，安全设置，QoS设置等策略和功能，也增加了网络的灵活性。那VAP在一个ESS中怎么区分BSS，其实VAP也是用BSSID来区分的，但是这是BSSID不是用的物理AP的MAC地址，而是用的VAP的MAC地址。而这个VAP的MAC地址实际上和物理AP的MAC地址是有影射关系的。一般第一个VAP的MAC是跟AP的MAC地址一样的，后面的VAP的MAC地址是在AP的MAC的最后一位顺序加一。当然BSSID没有ESSID来的好记，毕竟是一串无序数据，所以也会为VAP添加一个SSID来方便记忆。 补充：基本服务集BSS（Basic Service Set）无线网络的基本服务单元，通常由一个AP和若干无线终端组成。扩展服务集ESS（Extend Service Set）由多个使用相同SSID的BSS组成，解决BSS覆盖范围有限的问题。服务集标识符SSID（Service Set Identifier）用来区分不同的无线网络。扩展服务集标识符ESSID（Extended Service Set Identifier）一个或一组无线网络的标识，和SSID是相同的。基本服务集标识符BSSID（Basic Service Set Identifier）在链路层上用来区分同一个AP上的不同VAP，也可以用来区分同一个ESS中的BSS。虚拟接入点VAP（Virtual Access Point）AP设备上虚拟出来的业务功能实体。用户可以在一个AP上创建不同的VAP来为不同的用户群体提供无线接入服务。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WLAN笔记（三）]]></title>
+    <url>%2Fpost%2Fwifi03%2F</url>
+    <content type="text"><![CDATA[WLAN领域被大规模推广和商用是IEEE 802.11系列标准协议，WLAN也被定义成基于IEEE 802.11标准协议的无线局域网。802.11主要的具有里程碑意义的标准协议：802.11a、802.11b、802.11g、802.11n和802.11ac。WLAN和有线局域网最大的区别就是“无线”，WLAN通信媒介是射频，射频和有线局域网的媒介（电缆或光纤）相比具有完全不一样的物理特性，这就导致WLAN的物理层（PHY）和媒介访问控制层（MAC）不同于有线局域网。所以，802.11协议主要定义的就是WLAN的物理层和MAC层。 在20世纪90年代初为了满足人们对WLAN日益增长的需求，IEEE成立了专门的802.11工作组，专门研究和定制WLAN的标准协议，并在1997年6月推出了第一代WLAN协议——IEEE 802.11-1997，协议定义了物理层工作在ISM的2.4G频段，数据传输速率设计为2Mbps。该协议由于在速率和传输距离上的设计不能满足人们的需求，并未被大规模使用。随后，IEEE在1999年推出了802.11a和802.11b。802.11a工作在5GHz的ISM频段上，并且选择了正交频分复用OFDM（Orthogonal Frequency Division Multiplexing）技术，能有效降低多路径衰减的影响和提高频谱的利用率，使802.11a的物理层速率可达54Mbps。802.11b则依然工作在2.4GHz的ISM频段，但在802.11的基础上进行了技术改进，使802.11b的通信速率达到11Mbps。OFMD是一种多载波调制技术，主要是将指定信道分成若干子信道，在每个子信道上使用一个子载波进行调制，并且各子载波是并行传输，可以有效提高信道的频谱利用率。虽然802.11b提供的接入速率比802.11a低，但当时5GHz芯片研制过慢，待芯片推出时802.11b已被广泛应用。由于802.11a不能兼容802.11b，再加上5GHz芯片价格较高和地方规定的限制等原因，使得802.11a没有被广泛采用。在2000年初，IEEE 802.11g工作组开始开发一项既能提供54Mbps速率，又能向下兼容802.11b的协议标准。并在2001年11月提出了第一个IEEE 802.11g草案，该草案在2003年正式成为标准。802.11g兼容了802.11b，继续使用2.4GHz频段。为了达到54Mbps的速率，802.11g借用了802.11a的成果，在2.4GHz频段采用了正交频分复用（OFDM）技术。IEEE 802.11g的推出。 注：在1999年讨论802.11b的时候，OFDM技术确实被提出应用到802.11b标准中，但当时美国联邦通信协会（FCC）禁止在2.4GHz频段使用OFDM，这条禁令直到2001年5月才被撤销，6个月后，采用OFDM技术的802.11g草案才得以顺利出台。 在急速发展的网络世界54Mbps的速率不会永远满用户需求。在2002年一个新的IEEE工作组——IEEE 802.11任务组N即TGn（Task Group n）成立，开始研究一种更快的WLAN技术，目标是达到100Mbps的速率。该目标的实现一波三折，由于小组内两个阵营对协议标准的争论不休，新的协议直到2009年9月才被敲定并批准，这个协议就是802.11n。在长达7年的制定过程中，802.11n的速率也从最初设计的100Mbps，完善到了最高可达600Mbps，802.11n采用了双频工作模式，支持2.4GHz和5GHz，且兼容802.11a/b/g。802.11n标准刚刚尘埃落定后， IEEE就开始了下一代的WLAN标准协议——802.11ac的制定工作。并在2013年正式推出了802.11ac标准协议，802.11ac工作在5GHz频段，向后兼容802.11n和802.11a，80.211ac沿用了802.11n的诸多技术并做了技术改进，使速率达到1.3Gbps。当前在802.11各协议中由于802.11ac刚推出，大众终端产品支持802.11ac的还不多，802.11n产品仍旧是主流产品。802.11n较之前的标准协议主要有如下优势：更多的子载波、更高的编码率、更短的GI（Guard Interval）、更宽的信道、更多的空间流和MAC层的报文聚合功能等，而获取这些优势的技术802.11ac也有沿用。 更多的子载波：802.11n比802.11a/g多了4个有效子载波（802.11b没有使用OFMD技术不做对比），用户无需配置只要使用802.11n通信即可获得802.11n的此项优势。下图中58.5Mbps是802.11n较之前的标准更多的子载波可以带来的理论速率。 更高的编码率：WLAN使用射频传输数据时，除了用户的有效传输数据外，还需附有更错码FEC（Forward Error Correction），当有效数据在传递过程中因衰减、干扰等因素而导致数据错误时，通过更错码可将数据更正、还原成正确数据。802.11n将之前3/4的有效编码率提高到5/6，此项改进点使得802.11n的速率提升了11%。用户无需配置只要使用802.11n通信也可以直接获得802.11n的此项优势。 更短的GI（Short Guard Interval）：使用802.11a/b/g发送数据时，必须要保证在数据之间存在800 ns的时间间隔以避免数据帧间的干扰，这个间隔被称为Guard Interval (GI)。802.11n缺省仍然使用800ns的GI，但在空间环境较好时，可以将该间隔配置为400ns，此项改进可以将吞吐提高近10%（约72.2Mbps）。 更宽的信道：802.11n支持将相邻两个20MHz的信道绑定成40MHz的信道，信道更宽传输能力就更大，可以带来2倍以上的提升。在射频视图下执行命令channel命令可以配置40MHz信道。 更多的空间流：802.11a/b/g技术的无线接入点和客户端是通过单个天线单个空间流以单入单出SISO（Single Input Single Output）的方式来实现数据传送的。在802.11n支持最大4个空间流的多入多出MIMO（Multiple Input and Multiple Output）方式传输数据（802.11ac最大支持88的MIMO）。华为多天线AP都支持MIMO，如AP5130、AP7110、AP5030支持33 MIMO，AP3010、AP6510、AP6610支持2*2 MIMO。 MAC层的报文聚合：在802.11的MAC层协议中，有很多固定的开销，尤其在两个帧之间的确认信息。在最高数据率的传输下，这些多余的开销甚至比需要传输的整个数据帧还要长。例如：802.11g理论传输速率为54Mbps，实际上却只有22Mbps，将近有一半多的速率浪费了。802.11n的MAC协议数据单元MPDU（MAC Protocol Data Unit）帧汇聚功能，可以将多个MPDU聚合为一个物理层报文，只需要进行一次信道竞争或退避，就可完成N个MPDU的同时发送，从而减少了发送N-1个MPDU报文所带来的信道资源消耗。执行命令80211n a-mpdu enable可以使能802.11n的MPDU帧汇聚功能，然后执行80211n a-mpdu max-length-exponent命令可以配置汇聚帧的最大长度，802.11n的汇聚帧最大长度为65535字节。 注:并不是所有的环境都适合配置short GI。在复杂的空间环境里，射频遇到障碍物可能会产生反射等现象，会造成AP和STA之间的多路径传输（多径效应）。在多径环境中，前一个数据块还没有发送完成，后一个数据块可能通过不同的路径先到达了，合理的GI长度能够避免相互干扰。如果GI时长不合理，会降低链路的使用效率。 802.11ac默认支持MPDU功能，且支持最大长度为1048575字节的汇聚帧。另外，802.11ac还支持MAC服务数据单元MSDU（Mac Service Data Units）汇聚，大大提高了数据的传输效率，除了802.11标准协议外，在WLAN领域还有一个更常见更常用的名词——Wi-Fi。WiFi是无线保真（Wireless Fidelity）的英文缩写。在802.11b时代，虽然所有的802.11b产品都使用相同的802.11b标准，但为了保证不同厂商的产品能够具有良好的兼容性，1999年一些WLAN设备生产厂商一起成立了一个工业联盟——无线以太网兼容性联盟WECA（Wireless Ethernet Compatibility Alliance），后更名为Wi-Fi联盟。Wi-Fi联盟建立了一套验证802.11b产品兼容性的测试程序，称为Wi-Fi认证，通过该程序认证的产品可以使用Wi-Fi认证标签。后来，Wi-Fi认证的范围逐步扩展到802.11a，802.11g和802.11n。另外，由于忍受不了802.11n漫长的标准化进程和市场需求的推动，Wi-Fi联盟以802.11n 2.0版草案作为产品认证的依据，在802.11n标准推出之前已经认证批准了数百个802.11n产品。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WLAN笔记（二）]]></title>
+    <url>%2Fpost%2Fwifi02%2F</url>
+    <content type="text"><![CDATA[WLAN跟日常生活中的无线广播、无线电视、手机通信一样，都是用射频作为载体。射频是频率介于3赫兹（Hz）和约300G赫兹（Hz）之间的电磁波，也可以称为射频电波或射电。人们为这段电磁波又定义了无线频谱，按照频率范围划分为极低频、超低频、中频、高频、超高频等，WLAN使用的射频频率范围是2.4GHz频段（2.4GHz～2.4835GHz）和5GHz频段（频率范围是5.150GHz～5.350GHz和5.725GHz～5.850GHz），分别属于特高频(300**z～3GHz)和超高频(3GHz～30GHz)，各个国家使用的频宽范围不一样，5GHz频段的5.150GHz～5.350GHz和5.725GHz～5.850GHz为中国使用。 WLAN使用的2.4GHz频段和5GHz频段属于ISM频段。ISM，即工业（Industrial）、科学（Scientific）与医疗（Medical）。ISM频段主要开放给工业、科学、医疗三个机构使用，只要设备的功率符合限制，不需要申请许可证（Free License）即可使用这些频段。 过射频传输信息的基本调制方式：调频、调相和调幅，发送端将信息调制到载波上，通过改变载波的频率、相位和振幅传递信息，接收端收到信息后，再解调还原信息。通过这样一个调制解调的过程，就实现了信息的传递。WLAN射频传输信息的基础也是调频、调相或调幅。只不过调频、调相和调幅通常用在模拟信号的传输，在数字通信领域射频的调制方式较为复杂，主要有：振幅键控、频率键控、相位键控和正交幅度调制（一种幅度、相位联合调制的技术，它同时利用了载波的幅度和相位来传递信息）。 有线通信其实也是将信号调制成电脉冲或光脉冲，然后放到电缆或光缆上传输。只不过射频需要解决更多的问题，如射频的反射、衍射等问题。无论是使用射频通信还是使用有线媒介的通信，其过程都可以简单的看成是信源-&gt;信道-&gt;信宿，信源是信息的发送者，信宿是信息的接收者。那有线的信道我可以简单的理解为线缆，WLAN的信道是不是可以简单的理解为射频呢？根据“信源-&gt;信道-&gt;信宿”的描述，信道就是发送者和接收者的中间部分，那可不就是射频了。 WLAN的信道是具有一定频宽的射频，以便可以承载要传输的信息。对于2.4GHz频段来说，2.4GHz频段的频宽是2.4835GHz-2.4GHz=0.0835GHz=83.5**z，WLAN不是使用全部的83.5**z的频宽作为一个信道，同一条波如果遇到频率相同的波会产生干扰，会根据相位差进行叠加或衰减（如：频率相同，相位相差180°的波彼此会抵消）。如果WLAN使用整个2.4GHz频段作为一个信道，当同一覆盖范围内有两个及两个以上的AP，大家都用相同的信道，会造成严重的干扰，两个AP都无法有效提供WLAN服务。所以，在WLAN标准协议里将2.4GHz频段划分出13个相互交叠的信道，每个信道的频宽是20**z（802.11g、802.11n每个信道占用20**z，802.11b每个信道占用22**z），每个信道都有自己的中心频率。 14信道是特别针对日本定义的，各个国家2.4GHz频段开放的信道不一样，北美地区（美国，加拿大）开放1～11信道，欧洲开放1～13信道，中国同样开放1～13信道。一般，我们更多的讲述是2.4GHz频段分13个相互交叠的信道。这13个信道可以找出3个独立信道，即没有相互交叠的信道。独立信道由于没有频率的交叠区，相邻AP使用这3个独立信道不会彼此产生干扰。在部署WLAN时，为避免相邻AP产生同频干扰，多采用蜂窝式信道布局。蜂窝式布局中相邻AP间使用不交叠的独立信道，可以有效避免同频干扰。2.4GHz频段射频在各个国家已经放开使用，越来越多的无线设备都工作在2.4GHz频段（如蓝牙设备），使得2.4GHz频段日益拥挤，信道干扰严重，有时会影响WLAN用户的正常业务。 华为AP产品2.4G射频默认使用1信道，如果用户在部署WLAN时忘了配置信道，可能会造成某些AP覆盖重合的区域产生同频干扰，使用户无法上线。但是，为众多AP配置信道也是件很累人的事情，华为产品支持射频信道的自动模式。AP上线后，AC会根据AP周围的无线环境，自动为AP射频设置信道，避免了用户为多个AP配置信道的繁杂工作。还支持射频调优功能，可以根据射频周围的无线环境自动调整信道和发射功率，保持整个无线网络处于一个最佳的状态。在WLAN初次部署完成后，建议执行一次射频调优。比如周围的卖场也有WLAN，很可能会和我们自己部署的WLAN有部分区域的射频冲突，射频调优可以让WLAN自己根据无线环境调整信道部署和发射功率，减少射频的冲突。而且无线环境可能是变化的，在低峰时段执行定期的射频调优也是有必要的。华为产品在V2R3C00版本开始支持频谱分析功能，频谱分析可以分析出AP周围存在的干扰设备，如婴儿监视器、微波炉、蓝牙设备等。 WLAN 可以使用的另一个频段——5GHz频段，有更高的频率和频宽，可以提供更高的速率和更小的信道干扰。WLAN标准协议将5GHz频段分为24个20**z宽的信道，且每个信道都为独立信道。这为WLAN提供了丰富的信道资源，更多的独立信道也使得信道绑定更有价值，信道绑定是将两个信道绑定成一个信道使用，能提供更大的带宽。如两个20**z的独立信道绑定在一起可以获得20**z两倍的吞吐量，这好比将两条道路合并成一条使用，自然就提高了道路的通过能力。802.11n支持通过将相邻的两个20**z信道绑定成40**z，使传输速率成倍提高。802.11n也同时定义了2.4GHz频段的信道绑定，但由于2.4GHz频段较拥挤的信道资源，降低了2.4GHz频段信道绑定的实用性，一般不推荐使用2.4GHz频段的信道绑定。 UNII-2e为5GHz新增频段，该频段中国尚未放开使用。目前中国已放开使用的信道有36, 40, 44, 48, 52, 56, 60, 64, 149, 153, 157, 161, 165。各个国家开放的信道不一样，可以参照国家信道顺从表。5GHz频段并非只有WLAN设备在使用，很多国家的军用雷达也在使用5GHz频段，使用该频段的民用无线设备很可能对雷达等重要设施产生干扰。为了解决这一安全顾虑，在一些国家出售的WLAN产品必须具备TPS和DFS这两个功能，即发射功率控制和动态频率选择。TPS是为了防止无线产品发放过大的功率来干扰军方雷达。DFS是为了使无线产品能主动探测军方使用的频率，如频率冲突并主动选择另一个频率，以避开军方频率。在这些国家这两个功能是属于强制性的，不符合标准的产品将不会获得这些国家的上市许可。 dBm和dB的含义：dBm的含义是分贝毫瓦，通俗的说就是每1毫瓦产生多少分贝能量。dB是个相对值是增益的意思，X (dBm) - Y (dBm) = Z (dB)，如:10dB=20dBm-10dBm。dBm和毫瓦的换算关系是：P(dBm)=10logP(mW)，也就是100mW=10Log102=20dBm。功率减少10倍，换算出来的dBm降低10dB。功率减少一半，换算出来的dBm降低3dB。如：50mW=17dBm，25mW=14dBm，5mW=7dBm。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WLAN笔记（一）]]></title>
+    <url>%2Fpost%2Fwifi01%2F</url>
+    <content type="text"><![CDATA[WLAN的定义：WLAN的全称是Wireless Local Area Network，中文含义是无线局域网，WLAN的定义有广义和狭义两种：广义上讲WLAN是以各种无线电波（如激光、红外线等）的无线信道来代替有线局域网中的部分或全部传输介质所构成的网络。WLAN的狭义定义是基于IEEE 802.11系列标准，利用高频无线射频（如2.4GHz或5GHz频段的无线电磁波）作为传输介质的无线局域网。我们日常生活中的WLAN，就是指的WLAN的狭义定义。现技术标准有很多，如蓝牙、802.11系列、HyperLAN2等。而802.11系列标准由于其实现技术相对简单、通信可靠、灵活性高和实现成本相对较低等特点，成为了WLAN的主流技术标准，且802.11系列标准也成为了WLAN技术标准的代名词。 WLAN有两种基本架构 FAT AP架构：FAT AP架构又称自治式网络架构。FAT AP英文全称是FAT Access Point，中文称为胖接入点，也有很多人直接称为胖AP。FAT AP不仅可以发射射频提供无线信号供无线终端接入，还能独立完成安全加密、用户认证和用户管理等管控功能。密码WLAN设置，配置黑名单或白名单控制用户接入，管理接入的用户（如设置用户的接入速率）等这些都符合FAT AP的特征。FAT AP功能强大，独立性强，具备自治能力，因此FAT AP架构人们又称为自治式网络架构。不需要介入专门的管控设备，独自就可以完成无线用户的接入，业务数据的加密和业务数据报文的转发等功能。独立自治是FAT AP的特点，也是FAT AP的缺点。当单个部署时，由于FAT AP具备较好的独立性，不需要另外部署管控设备，部署起来很方便，成本也较低廉，在类如家庭WLAN或者小企业WLAN的使用场景中，FAT AP往往是最适合的选择。给我们感受最深刻的就是我们在家里使用一个无线路由器就能享受WLAN带给我们的便捷。但是，在大的使用场景中，如我们上面提到的候车厅，FAT AP的独立自治就变成了自身的缺点。由于WLAN覆盖面积较大，接入用户较多，需要部署许多FAT AP设备，而每个FAT AP又是独立自治的，缺少统一的管控设备，管理这些设备就变得十分麻烦。不说别的，光为这些FAT AP升一次级就是一场灾难。所以，在大量部署的情况下，FAT AP会带来巨大的管理维护成本。而且由于独自控制用户的接入，FAT AP无法解决用户的漫游问题。 AC+FIT AP架构：AC+FIT AP又称集中式网络架构。FIT AP英文全称是FIT Access Point，中文称为瘦接入点，也有很多人直接称为瘦AP。和胖AP不同，瘦AP除了提供无线射频信号外，基本不具备管控功能。也正是因为这一点，它被称为瘦AP，而上面具备管控功能的AP被称为了胖AP。为了实现WLAN的功能，除了FIT AP外，还需要具备管理控制功能的设备——AC。AC英文全称是Access Controller，中文称为无线接入控制器。AC的主要功能是对WLAN中的所有FIT AP进行管理和控制，AC不具备射频（AC只是管理控制设备，不能发射无线射频信号），它和FIT AP配合共同完成WLAN功能。根据AC所管控的区域和吞吐量的不同，AC可以出现在汇聚层，也可以出现在核心层。而FIT AP一般部署在接入层和企业分支。这种层级分明的协同分工，更能体现出AC+FIT AP架构的集中控制的特点，这种架构又被大家称为集中式网络架构。使用AC+FIT AP架构为大型场所部署WLAN时，比使用FAT AP架构更经济、高效。在AC+FIT AP架构下，可以统一为FIT AP下发配置，统一为FIT AP进行软件升级，还可以按照时段控制FIT AP的工作数量等等，这些大大降低了WLAN的管控和维护的成本。而且，由于用户的接入认证可以由AC统一管理，解决用户漫游的问题就变得很容易。 综上所述，AC+FIT AP架构适用于中大型使用场景，而FAT AP架构适用于小型使用场景。AP根据应用场景可分为室内AP、室分AP和室外AP。 室内AP:室内放装型AP设备。对于建筑结构较简单、面积相对较小、用户相对集中的场合及对容量需求较大的区域，如小型会议室、酒吧、休闲中心等场景宜选用室内放装型AP设备，该类型设备可根据不同环境灵活实施分布，也可同时工作在AP和桥接等混合模式下。室内AP都有一个共同的特点，就是美观大方，因为它们要做到布放在室内不影响室内装潢的美观。 室分AP：这里我们需要解释下什么叫室分AP，室分AP即室内分布型AP设备。对于建筑面积较大、用户分布较广且已建有多系统合用的室内分布系统的场合，如大型办公楼、商住楼、酒店、宾馆、机场、车站等场景宜选用室内分布型AP设备，该类型设备接入室内分布系统作为WLAN系统的信号源，以实现对室内WLAN信号的覆盖。 室外AP：室外分布型AP设备。对于接入点多，用户量大，且用户分布较为集中的场合下，如学校、大型会展中心等大型场所，宜选用室外AP设备组网。室外AP都具有卓越的室外覆盖性能及超强的防护，以适应风吹雨淋的室外环境，具有IP67的防护等级。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[电源内部笔记]]></title>
+    <url>%2Fpost%2FComputer-power-supply02%2F</url>
+    <content type="text"><![CDATA[电源内部 电源之所以难挑，就是因为他是一个黑盒子，零件全部在内部，有很多东西，比如输出稳定性、安全保护、用料等，在盒子外面是看不出来的。而且众所周知，还有虚标这个的问题。 首先220v的电进来会先经过一次emi滤波，由圆形的电容(Y电容）和方形的电容（X电容）组成，主要用途如名字，就是滤掉市电中的杂波。作为输入的第一道屏障来说是非常重要的。 根据电源的设计，这部分可能放放在主板上，也有可能和二次合并。到达主板之后会进行第二次滤波，一般由几个电感（线圈）方形电容圆形电容组成。一般来说零件越多是越好的。同样保险丝或者自动恢复保险丝也在这附近，不过不用太在意，因为emi明显比保险丝贵多了，山寨电源有见过省EMI的但是保险丝还是会有。然后要达到整流桥，将220V的交流电变为直流，方便后面处理。然后到达PFC，这个主要是减少电网的供电需求，PFC目前来说分两种，主动PFC和被动PFC。 被动PFC：这个实际上就是一大块电感，然后用两根线接到主板上。国家3C认证的要求是主机电源不管被动还是主动，必须要有PFC。如果这玩意没有，那么说明这个电源八成就是作假实际上没过3C认证。更有严重的比如水泥PFC，那对于电源来说就是非常危险的。一般低于150块的全新电源用的都是被动PFC，因为这玩意制作成本较低，不需要芯片什么的，一个大线圈就行。 主动pfc：比较明显确定的就是在EMI滤波和大大的主电源中间的PFC电感。但是怎么确定是PFC电感而不是EMI的电感呢？自然就是找整流桥了，除非特殊设计的奇葩电路，不然主动PFC会设置在整流桥的后面。 PFC再过来是主电容（也可以说是PFC电容），基本上电源内部最大的电容就是它了，根据电路设计会有一个或者多个主电容。它的作用一是滤波，二是把一定的电存起来，万一突然断电，它就持续供电一定的时候确保机器进行一些保护性的操作，也就是说前面的保持时间和他直接关联，容量过小的话保持时间自然达不到合格标准。电容主要分几个参数：耐压值、容量、耐高温。耐压如名字，能承认多大电压，我们市电是220v，但是滤波电容有个副作用会升压，实际上到达这里之后会变成300V多点（但是我没有找到任何资料说明主电容是专门为了升压而设置的），所以一般都会采用400V左右耐压的电容。容量指的是存电的量，一般来说450W的标准配置是270μf，600W大概450μf，到了850W、1000W以上，很多大牌子都是采用1W 1μf的配置。 按照比例算的话极限最低的数值是每瓦0.5μf，不过只要极个别电源这么低还能达标，实际要看电路设计，很多0.6μf / W都不一定能过关。于是0.5都达不到的基本要boom。耐高温，这个不用说也是越高越好，主要有105度和85度。主电容是看电源拆解最容易看清楚参数的，本身也有较高的成本，所以对于电源用料如何、有没缩水来说，是一个很有参考价值的地方。除了上面说的容量以外，电容由谁生产也很重要，基本上是日本电容 &gt; 台湾电容 &gt; 大陆电容。当然主电容不缩不代表其他地方不缩，只不过是这个最容易看而已。很多时候你好不容易找到拆解，会发现只有这一个东西能看清楚。对于多个电容的，会有并联和串联两种方式（实际上还是作为一个来用）。两电容并联耐压为两者中耐压最低的那个值，容量为二者之和。两电容串联耐压为两者之和，容量为两者的倒数和分之一，实际上，在这里要变压之前要先将直流重新打为高频脉冲电流，而且频率要比市电220V的60hz高很多。这一点是使用开关管来实现的，这也是它们的完整名字叫作“开关电源”的原因。 老式半桥：老式半桥的特征就是一大两小的三个变压器，是很老的一种电源结构，它的转换率不理想，但是生产简单，技术水平要求较低，成本也低，同时一般也会使用同样成本较低的被动PFC，或者因为出厂时间久远而没有PFC。自然也拿不到80plus认证。 单管正激和双管正激：它们最明显特征就是一大一小两个变压器。其中单管正激和双管正激实际说的并不是电压器的数量，而是开关管。正是通过它（们）的通断来实际直流到高频的变化。双管要强于单管。开管关会锁在散热片上面。双管正激架构对比老式半桥有明显提升，一般都能拿到80plus铜牌，甚至好一点的都会有银牌，但是要做到更高的金牌和白金就比较困难。正激结构也用一种叫有源钳位正激 的“加强版，做到金牌以上效率也没问题，但是实际使用可能因为成本或者效率或者其他原因，现在只有比较少的电源使用。这种在外观上普通的双管正激是很像的，还以评测为准。 LLC半桥：一大两小三个变压器，使用LLC半桥的电源很容易做到金牌以上的效率，LLC的弱点是动态性能不好，不过这几年随着技术发展，而且实际影响也不是那么大。在这方面正激结构反而有一定优势，所以做到高瓦数的正激结构也不是不可以的，LLC的外观和老式半桥有点像，不过使用这种结构的一般会和同步整流以及DC-DC配合这样的高配置，所以结合起来还是比较好判断的。 LLC全桥：而LLC全桥因为结构复杂，基本上没几个电源在用，看起来和LLC半桥很难区分 最后就是输出部分。 这里有几个步骤要做。一是整流，之前在变压的时候的高频脉冲电流显然是不能供给硬件用的，需要重新变回直流。二是稳压，确保输出电压稳定。三是滤波，和前面主电容的功能一样，整流之后不够干净的电流需要重新过滤一次。他们的顺序根据结构会有些差异。整流目前主要是两种方案： 肖特基整流：主要由锁在散热片上面的多枚肖特基二极管完成。 同步整流：简单来讲可以认为就是MOS管代替肖特基管来整流，使用这种的主要目的是为了提升转换效率，肖特基管的电阻还是要高一些的。 这方面其实不用太在意，因为对于性能来说是直接体现在转换率上的，只要能达到金牌管他是啥了。另外一个部分就是稳压，目前主要有三个方案，单路磁放大、双路磁放大、DC-DC。这里要重点注意。 单路磁放大：这个实际上就是将3.3V单独一路输出，特征是一小两大三个线圈。而12V和5V都是由PWM芯片来管理，所以瓦数大了之后交叉负载会非常差，比如12V高负载之后5V就会电压过高或者过低这样，有可能你单机玩的正爽突然间硬盘就挂了或者特别快出坏道。单路磁的极限基本是在500W这样。 双路磁放大：这个就是将3.3v和5v都独立出来，稳定性对面上面的会更好一些，特征是两小三大 五个线圈。双路磁放大可以做到1000W以上，在dc-dc出来之前是高瓦数电源的标准方案。 DC-DC（直流转直流）：3.3v和5v都从12V转出来，这样12V可以做到最大，都是12V出来的，也不用担心交叉负载的问题了。特征是在输出侧会有一个竖起来的PCB版，上面有双线圈和一堆元件。 输出的最后一个工序就简单了通过电容进行滤波，电容容量大、牌子好、数量多，那自然出来的纹波就小，电源使用寿命也长。这边只要确认产地即可，实际输出性能直接参考纹波方面的评测就好了。 总结：无PFC / 假PFC &lt; 被动PFC &lt; 主动PFC老式半桥 &lt; 单管正激 &lt; 双管正激 、LLC半桥/全桥 （效率成本动态响应等各方面互有胜负）单路磁放大 &lt; 双路磁放大 &lt; DC-DC]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[电源参数指标笔记]]></title>
+    <url>%2Fpost%2FComputer-power-supply01%2F</url>
+    <content type="text"><![CDATA[1.电源参数 要选购一个合适的电源，最最最基本的要求就是输出功率能达到主机配置的需求，带得动你的硬件。 很多之前已经有主机想升级的人，都会问自己的电源实际是多少瓦，升级能带动什么等等，而这些都会标在电源的铭牌上面，所以先来讲一下电源的参数怎么看。在不考虑虚标的情况实际使用中不能把电脑各种硬件的功率加起来然后觉得不超过实际功率就OK，因为主机电源将交流电转换之后会分为几种不同电压的输出，不同硬件使用的电压是不一样的。电源输出分为：+12V、+5V、+3.3V、-12V、+5VSB台式主机中：CPU 全部为+12V供电显卡 绝大部分+12V电脑中电力消耗最大的地方主板 12V、+5V、+3.3V都有，不过较小，一般也就几十瓦的功耗3.5寸硬盘 +12V和+5V2.5寸硬盘 +5V 和 +3.3VUSB设备 +5V供电PCI设备 5V和3.3V供电PCIE设备 主要使用12V供电，也留有3.3V的供电供其他设备使用，PCIE槽至少要给显卡提供75W的+12V供电 注： -12V只有部分电路会使用，5VSB是待机电压，这两个功率都很小，不需要太多关注。 tdp实际上是散热设计功耗，一般是极限满负载的情况下的最大发热量，根据能量守恒，供给CPU的电力除了极小的部分变为电磁辐射外，基本上都会转化为热能，所以一般也和极限功耗相近，是一种粗略的估算方式 机械硬盘，虽然运行起来之后只有10W左右的功率，但是启动的时候最大功率会上到30W左右，主要是+12V，马达启动功耗，所以如果是带多个硬盘这点也要考虑进去的。当然开机的时候CPU和显卡负载比较低，并不会和硬盘一起产生较大的功率需求，电源输出满足硬盘数*30 + 100W这样基本就不会出现开了机的问题了。 额定输出和峰值的问题国内讲的额定就是指在这个功率范围内，可以连续长时间输出，而峰值或者最大功率，则是在较短的时间内可以提供输出（国际上铭牌比较正规的标识方法是要写上时间的，一般不会长于一分钟），高于这个时间就会断电保护，所以对我们来说只看额定即可，峰值可以说几乎没有参考意义。另外这里的输出不需要考虑转换率的问题，标明100W就必须能输出这么多，转换率是用来计算插座那边的功率，也即是要交多少电费的。 注：某些电源的12V与众不同，12v分成了12V1和12V2。做成这样是为了防止12V电流过大烧线，也是一种出于安全的考虑，其中12v1是给显卡供电，12V2是给CPU供电（按照intel的标准，12v2只能供给cpu，不能供给其他东西）。不过上面这个电源12V1依然限制了最大电流输出，所以如果要上大火炉显卡的话依然没这么方便。选电源的话挑单路输出的用起来可以不用考虑这么多。至于烧线的问题，早期大瓦数的电源都会分多路，现在新标准新技术之后，已经可以说比较安全，不需要考虑太多了。对于更多的三路或者四路甚至六路+12V的电源，这个情况就比较混乱了。 2.80PLUS / 牌。 平时买电源的时候，经常会看到铜牌 银牌 金牌什么的，这个其实指的是80plus认证。台式机电源有一个转换率的问题，假如你的电脑功耗是300W，那么插座那边占用的功率实际要比这个大，电源自身要消耗一些功率，常见的电源的转换率会是80%+。而80plus就是美国定制的一套环保标准，如果你的电源转换率较高，那么考虑到对环保的供献会有奖励同时给你发个牌子。这里有一个常见的误区，很多人买电源会优先看金牌的，但是，80plus仅仅是一个节能的认证，对于做工用料输出稳定性等其他东西，一概不会去管。80plus金牌不等于电源是一个好电源。 早期80plus基本来说有两个要求：1.同时支持110V和220V2.在不同负载下达到要求转换效率 以白牌为例，假如你的电脑硬件是300W功耗，那么插座那边的消耗会是300 / 0.8 = 375W。14年的时候推出了新版的80plus认正，增加了230V的版本，也就是说有牌的也不一定就是110~220V全幅。使用新标准的电源都是15年才出的，数量比较少，但是确实是有的，购买的时候一定要仔细看铭牌和参数介绍。同时可以说80plus的含金量也开始变少，越来越不能反应电源内部的用料情况了。 3.线材 CPU供电一般来说分为4pin和8pin两种。之所以有两种，是因为早期CPU功耗较小，只使用4pin就足够，随着CPU性能提长，电力要求也越来越大，所以标准改为8pin，实际目的是为了将供电线加粗，减少线阻和发热，降低烧线的可能性。所以除非主板有特殊规定，不然只插一半的4pin依然是可以正常启动。8pin的电源线插4pin主板一样是只插能插进去的一半就行。这个问题主要是在老电源带新主板或者反过来，新出的一般都是按照8pin标准了。 对于要求一定要插够8pin的主板而你又只有4pin电源，也可以去购买转换线。很多双路主板都会要求两个，当然有些只插一个也能工作，具体要看主板。对于只用一个CPU插头但是主板需要两个的同样有转换线可以买，当然电源原生支持依然是最好的。 主板供电插头同样考虑到新老标准的问题，很老的主板和电源都是20pin供电，后来额外增加了4pin。因为考虑到兼容性，新出的电源都是采用魔术扣，额外的4针可以拆下来，给老主板供电的时候只插20pin就可以了。对于老电源带新主板，也是靠一边将20针插上，额外的4针空出来即可。新增的这4pin主要是给pcie槽进行供电，里面包含3.3V和+12V，不插的话如果要上不带外接供电的独立显卡有可能会出现带不起的情况，实际上连24pin都不提供的老电源，一般+12V输出也比较低，可以考虑让他退休了。 大4PIN或者说D型供电头主要是用来给IDE硬盘或者光驱供电，现在IDE基本上已经淘汰，更多是用来给机箱风扇供电，也有部分主板为了满足PCIE槽供电在主板上设置这个供电口，看到这个口最好插上，防止不带外置供电的显卡供电不足。还有一些pci扩展卡（比如usb3.0)，也会用他来确保额外的电力。 sata供电口主要是给硬盘和光驱供电，其他用途的见得比较少。sata口和大4pin可以互转 PCIE接头一般是6针或者是 6针外加一个2针的魔术扣，这个主要是给显卡进行供电。对于具体多少针支持多少功率其实不用刻意去记，因为电源带的起的都会提供对应的插头，只要显卡上面的供电插头插满就行了。550W以内一般只提供两个6+2。这是因为单个6pin或者8pin是有供电限制的，厂家不提供这么多也是怕你用低瓦数电源去带多卡，具体可以看参数和介绍页的说明。pcie也可以由大4pin转过来，显卡也会附带转换线，但是少一层转接还是少一点风险（做工好的转换线一般问题不大，差一点的时间久了可能会生锈接触不良等等）。 软驱供电，这种已经用的很少了，IDE转SATA卡上会用到。 4.模组 随着供电的增加，也会提供更多的接口，这个时候如果一台机器用不上那么多接口，多出来的线就会很麻烦，于是就有了模组这样的设计，将线材独立出来，同时电源本身做好插头，这样只接上需要的线材，那么对于机箱理线会方便非常非常多。主要来说分为三种：非模组、半模组、全模组。 非模组：所有的线材都是焊死在电源PCB上，不能拆，500W以内大部分都是这样的设计。 半模组：CPU和主板线这种肯定要插上的依然留焊死，剩下的硬盘显卡等线材设计成插头的模式。 全模组：包括CPU、主板全部设计成插拔式，高端高瓦数的电源基本上都是全模组设计，对于想使用定制线的DIY玩家，全模组的效果明显更统一一些，同时使用特殊机箱的话也能更换更长的线材防止够不到。 5.电源的性能指标和评测应该怎么看 除了上面功率等参数外，衡量电源性能的其他还有其他的一些数据，而这些东西铭牌是不会标上的，需要经过仪器来检测，主要有下面这些： 转换效率：虽然标有80plus的能大致知道转换率，但是实际上电源在不同负载的时候转换效率是不一样的，一般来说负载在中间位置的时候效率最高，在220V下转换效率比110V下高。 电压偏离：或者说电压稳定性，虽然铭牌上面标了+12V，+5V什么的，但是实际因为电路等问题，输出会有一定的偏差，比如+12V可能是12.15V这样。Intel规定的偏移是上下不超过5%越好的电源电压输出越准确。 纹波：因为电源在变压过程中要把电流转换成高频脉冲，所以实际输出的时候虽然要经过滤波，但是不一定能滤的干净。Intel规定，+12V上限120mv，+5V和3.3V是50mv。 交叉负载：这个测试的目的就是检查，当12V 5V 3.3V功耗占用比例不同的时候，他们是不是还能保持准确的电压。 保持时间：在外部断电之后，电源还需要提供一段时间的供电。一是用来确保硬件进行一些保护性操作，比如硬盘磁头归位，SSD掉电保护等等。还有就是UPS响应是有时间的，大概是市电一个周期，也就是16ms，intel标准也正是16ms，电源必须要坚持到UPS过来救场。如果保持时间不足，是有可能影响到硬件寿命的，以及就算上了UPS也可能导致自动关机以致于不能保存你重要的文件。 动态响应：也就是当功耗发生变化的时候电源“跟上”的速度，表现为负载变化之后电压的稳定性，不过这项目前来说其实影响不是特别大，大牌子电源基本上都是合格的，我也想像不出正常使用有什么场景会让功率“快速抽搐”。 注：除了电压之外，其他的都需要专门的仪器，比如纹波要用示波器等（贵）。另外电压是不能用软件测的，主板那边的电压识别不是特别准确，还有识别错误的可能性。所以要看上面这些“隐藏”但是又比较重要的参数，只能看大网站的评测，国内来说，比较靠谱的是 超能网、玩家堂、泡泡网、CHH这几个网站，当然还是国外比较严谨，比如tech power up、junny guru这几家。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 指令笔记（五）]]></title>
+    <url>%2Fpost%2Flinux05%2F</url>
+    <content type="text"><![CDATA[解压缩 操作在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如 zip、rar、gz、xz、tar.gz、tar.xz等。比较常见的就是各种 .tar、.tar.xz、.tar.gz、.tar.bz、.tar.bz2、.tar.Z 后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。tar 本身只是一个打包的作用，而 .tar 后面的 .zx / .gz / .bz 等等才是压缩格式，也就是比如 log.tar.gz 压缩包，就是先用 .tar 把指定文件/文件夹打包到一起，然后再用 gz 来压缩打包后的 .tar 为 .tar.gz 。-x 是从压缩文件提取(解压)文件出来，所以在解压命令中都有这个参数。-c ：创建一个新的压缩包文件，所以在压缩命令中都有这个参数。-f ：指定要解压的压缩包文件或要压缩的文件/文件夹，所以这个参数必须放在 解压缩命令参数的最后，然后后面跟着 要解压到压缩包文件或要压缩的文件/文件夹。-j ：解压缩 bz / bz2 格式的参数-J ：解压缩 xz / lzip 格式的参数-z ：解压缩 gz / tgz 格式的参数-Z ：解压缩 Z 格式的参数-v ：详细列出解压缩过程中处理的文件 更多的命令可以用 tar –help 来查看。 tar gz zip等 解压 压缩包 示例解压压缩包说明解压后缀为 .tar 的压缩包tar -xf log.tar 解压后缀为 .tar.xz 的压缩包tar -xJf log.tar.xz 解压后缀为 .tar.gz 的压缩包，两个方法tar -xzf log.tar.gz 解压后缀为 .gz 的压缩包，两个方法，如提示命令不存在，请安装 yum install gzip -y / apt-get install gzip -ygzip -d log.gzgunzip log.gz 解压后缀为 .bz / .bz2 / tar.bz2 的压缩包，两个方法bzip2 -d log.bzbunzip2 log.bztar -jxf log.tar.bz bzip2 -d log.bz2bunzip2 log.bz2tar -jxf log.tar.bz2 解压后缀为 .Z / tar.Z 的压缩包，两个方法uncompress log.Z log.txtuncompress log.Z log tar xZf log.tar.Z log.txttar xZf log.tar.Z log 解压后缀为 .rar 的压缩包，如提示命令不存在，请安装 yum install unrar -y / apt-get install unrar -y ，注意 rar 和 unrar 是分开的unrar x log.rar 解压后缀为 .zip 的压缩包，如提示命令不存在，请安装 yum install unzip -y / apt-get install unzip -y，注意 zip 和 unzip 是分开的unzip log.zip 更多的命令可以用 tar –help / gzip –help / unrar –help / unzip –help 来查看。 压缩 文件/文件夹 示例压缩文件/文件夹说明分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar 压缩包tar -cf log.tar log.txttar -cf log.tar log 如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可tar -cf log.tar log.txt doub.txt log bash 分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar.xz 压缩包，以下的其他后缀压缩命令都是一样tar -cJf log.tar.xz log.txttar -cJf log.tar.xz log 分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar.gz 压缩包tar -czf log.tar.gz log.txttar -czf log.tar.gz log 分别压缩当前目录下的 log.txt文件 / log文件夹为 log.gz 压缩包gzip log.gz log.txtgzip log.gz log 分别压缩当前目录下的 log.txt文件 / log文件夹为 log.tar.bz 压缩包暂时没找到解决方法 分别压缩当前目录下的 log.txt文件 / log文件夹为 log.bz / log.tar.bz / log.bz2 / log.tar.bz2压缩包bzip2 -z log.txtbzip2 -z log tar cjf log.tar.bz2 log.txttar cjf log.tar.bz2 log 分别压缩当前目录下的 log.txt文件 / log文件夹为 log.Z / log.tar.Z 压缩包compress log.txtcompress log tar cZf log.tar.Z log.txttar cZf log.tar.Z log 分别压缩当前目录下的 log.txt文件 / log文件夹为 log.rar 压缩包，如提示命令不存在，请安装 yum install rar -y / apt-get install rar -y ，注意 rar 和 unrar 是分开的unrar a log.rar log.txtunrar a log.rar log 分别压缩当前目录下的 log.txt文件 / log文件夹为 log.zip 压缩包，如提示命令不存在，请安装 yum install zip -y / apt-get install zip -y ，注意 zip 和 unzip 是分开的zip log.zip log.txtzip log.zip log 更多的命令可以用 tar –help / gzip –help / rar –help / zip –help 来查看。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 指令笔记（四）]]></title>
+    <url>%2Fpost%2Flinux04%2F</url>
+    <content type="text"><![CDATA[查看/编辑文件 操作ls 显示目录中文件ls命令说明显示当前目录下的所有文件ls -a 命令后面加上 绝对路径/相对路径 就会显示指定文件夹内的所有文件ls -a bash/log 相对路径，当前目录是 /root ，欲查看的目录是 /root/bash/logls -a /root/bash/log 绝对路径， 当前目录是 /root ，欲查看的目录是 /root/bash/log更多的命令可以用 ls –help 来查看。 du 查看 文件/文件夹 占用磁盘空间的大小####du命令说明 #####参数介绍：-h ：以人类易读的方式显示-a ：显示 目录占用的磁盘空间大小，并显示其下目录和文件占用磁盘空间的大小-s ：显示 目录占用的磁盘空间大小，但不显示其下子目录和文件占用的磁盘空间大小-c ：显示几个目录或文件占用的磁盘空间大小，还要统计它们的总和--apparent-size：显示目录或文件自身的大小-l ：统计硬链接占用磁盘空间的大小-L ：统计符号链接所指向的文件占用的磁盘空间大小 更多的命令可以用 du –help 来查看。 使用示例：假设当前位于 /root 目录下，则显示 /root 文件夹的大小，但不显示其子目录和文件的大小du -sh 假设当前位于 /root 目录下，则显示 /root 文件夹的大小，并显示其子目录和文件的大小du -ah 假设当前位于 /root 目录下，则显示 /root 文件夹下的所有文件夹的大小及其总和du -lh --max-depth=1 更多的命令可以用 du –help 来查看。 cat 查看文件内容cat命令说明查看文件：查看 log.txt文件的所有内容cat log.txt 查看 log.txt文件的所有内容，并对所有行编号cat -n log.txt 查看 log.txt文件的所有内容，并对非空行编号cat -b log.txt 查看 log.txt文件的所有内容，并对非空行编号，且不输出多行空行cat -bs log.txt 清空文件：清空当前目录中的 log.txt 文件cat /dev/null &gt; log.txt 清空 /var目录中的 log.txt 文件cat /dev/null &gt; /var/log.txt 写入文件：写入文本到当前目录中的 log.txt文件中(加入文本到文件内容最后)cat &gt;&gt; log.txt &lt;&lt;-EOF 清空文件并写入文本到 /var目录中的 log.txt文件中(先清空后写入)cat &gt; /var/log.txt &lt;&lt;-EOF 更多的命令可以用 cat –help 来查看。 head 查看文件内容（主要用于正查）点击展开 查看 head命令说明参数介绍：-c 数字：显示指定文件的前 xx 字节的内容（bytes）-n 数字：显示指定文件的前 xx 行的内容-q ：不显示包含指定文件名的文件头（当使用 head打开多个文件的时候，会去在每个文件输出结果的顶部添加一个包含文件名的文件头用于区分 更多的命令可以用 head –help 来查看。 使用示例：查看 log.txt文件的全部内容head log.txt 查看 log.txt文件的前 3字节的内容head -c 3 log.txt 输出示例dou 查看 log.txt文件的前 2行的内容head -n 2 log.txt 查看 log.txt文件的从倒数第2行到行首的内容head -n -2 log.txt 查看 log.txt log1.txt log2.txt文件的前 3行内容head -n 3 log.txt log1.txt log2.txt 更多的命令可以用 head –help 来查看。 tail 查看文件内容（主要用于倒查）查看 tail命令说明-c 数字：如果数字为正数(例如 -c +5)，显示指定文件从行首第 xx 字节到最后的内容；如果数字为负数(例如 -c -5)，显示指定文件从行尾第 xx 字节到最后内容。-n 数字：如果数字为正数(例如 -c +3)，显示指定文件从行首第 xx 行到最后的内容；如果数字为负数(例如 -c -3)，显示指定文件从行尾第 xx 行到最后的内容。-f ：即时输出文件变化后增加的内容，也就是监视一个文件的内容变化（常用于监视日志输出），使用 Ctrl＋C 终止 更多的命令可以用 tail –help 来查看。 使用示例：查看 log.txt文件的全部内容tail log.txt 查看 log.txt文件从行首 第25字节到最后的内容tail -c +25 log.txt 查看 log.txt文件从行尾 第4字节到最前面的内容tail -c -4 log.txt 查看 log.txt文件的从第2行到最后一行的内容tail -n +2 log.txt 查看 log.txt文件的后 2行的内容tail -n -2 log.txt 持续查看（监视） log.txt文件的变化内容（新增加的内容），使用 Ctrl＋C 终止tail -f log.txt 查看 log.txt log1.txt log2.txt文件的前 3行内容tail -n 3 log.txt log1.txt log2.txt 更多的命令可以用 tail –help 来查看。 sed 查看/编辑文件内容查看 sed命令说明参数介绍：-i ：操作后应用保存到原文件（如果不加这个参数，那么任何修改都不会影响原文件里的内容，只会把结果输出）-e ：仅显示处理后的结果 更多的命令可以用 sed –help 来查看。 使用示例：查看 log.txt 第3行的内容sed -n &#39;3p&#39; log.txt 查看 log.txt 第2-8行的内容sed -n &#39;2,8p&#39; log.txt 删除 log.txt 第1行（首行）sed -i &#39;1d&#39; log.txt 删除 log.txt 第3-7行sed -i &#39;3,7d&#39; log.txt 删除 log.txt 最后1行（尾行）sed -i &#39;$d&#39; log.txt 删除 log.txt 中所有空白行sed -i &#39;/^$/d&#39; log.txt 删除 log.txt 开头是 doubi 的行sed -i &#39;/^doubi/&#39;d log.txt 删除 log.txt 结尾是 doubi 的行sed -i &#39;/doubi$/&#39;d log.txt 删除 log.txt 文件中所有包含 233内容的行sed -i &#39;/233/d&#39; log.txt 删除 log.txt 文件中第一个 233文本sed -i &#39;s/233//&#39; log.txt 删除 log.txt 文件中所有 233文本(g 代表操作所有匹配规则的文本)sed -i &#39;s/233//g&#39; log.txt 删除 log.txt 文件中所有 第5个233文本(5g 代表第五个匹配规则的文本)sed -i &#39;s/233//5g&#39; log.txt 替换 log.txt 文件中第一个 233为666sed -i &#39;s/233/666/&#39; log.txt 替换 log.txt 文件中所有 233为666(g 代表操作所有匹配规则的文本)sed -i &#39;s/233/666/g&#39; log.txt 替换 log.txt 文件中所有 /ver 为 doubi/，因为有斜杠，所以需要使用 \ 转义，但是单引号会导致无法转义，所以要改成双引号。sed -i &quot;s/\/ver/doubi\//&quot; log.txt 显示 log.txt 文件中的奇数行或偶数行sed -n &#39;p;n&#39; log.txt #奇数行sed -n &#39;n;p&#39; log.txt #偶数行 更多的命令可以用 sed –help 来查看。 VI、VIM、Nano 编辑文件内容vi vim none命令说明VI 介绍VI 是Linux很棒的一个文本编辑器，不过也存在一些缺点，比如操作麻烦。而 vim就相当于 VI 的加强版，主要介绍 VIM。 VIM 介绍使用教程：Linux 文本编辑器 VIM 真 · 简单使用教程 打开当前目录下的 log.txt文件，如果没有那么会新建 log.txt文件（安装vim后，使用 vi和 vim打开文件没区别）vi log.txtvim log.txt 在命令行模式下，直接输入以下 符号和字母(区分大小写)进入编辑模式（插入模式，按 Esc键 即可返回命令行模式）i 删除光标当前所在的一行dd 删除文件内所有内容dddG 复制光标当前所在的一行yy 粘贴刚才复制的一行内容p 撤销上个操作（误操作可以用这个恢复）u 保存当前文件（ : 是英文的冒号）:w 另存当前文件内容为 log2.txt:w log2.txt 退出当前文件:q 不保存 并强制退出当前文件:q! 保存并退出当前文件:wq 更多的命令可以用 vi –help / vim –help 来查看。 Nano 介绍使用教程：Linux 更适合新手的文本编辑器打开当前目录下的 log.txt文件，如果没有那么会新建 log.txt文件nano log.txt 进入后直接就可以输入修改文本内容了，修改后我们可以使用这个 按键保存内容Ctrl+O 如果不需要编辑了，那么可以用这个 按键退出当前文件Ctrl+X 如果你在退出前已经修改但没有保存，那么会提醒你是否保存，如果保存就输入 y ，不保存输入 n然后就会让你输入要保存的文件名（默认原文件名，所以直接按 Enter回车即可，除非你要另存为其他文件名）Enter 更多的命令可以在 nano 编辑界面中按 F1键 查看。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 指令笔记（三）]]></title>
+    <url>%2Fpost%2Flinux03%2F</url>
+    <content type="text"><![CDATA[文件/文件夹 操作以下除特殊说明，都以当前目录为 /root 示例。 mkdir 新建 文件夹在当前文件夹新建一个 bash 文件夹，完整的绝对路径就是 /root/bashmkdir bash 更多的命令可以用 mkdir –help 查看。 cp 复制或重命名 文件/文件夹cp命令说明复制当前目录内的 log.txt文件到 /var目录cp log.txt /var/log.txt 复制当前目录内的 bash文件夹到 /home目录cp -R bash /home/bash 复制当前目录内的所有.txt后缀的文件到 /var/log目录cp *.txt /var/log 复制当前目录内的所有以 onioni开头的文件到 /var/log目录cp onioni* /var/log 复制当前目录内的所有以 onioni开头 以.txt后缀结尾的文件到 /var/log目录cp onioni*.txt /var/log 假设当前目录是 /root/onioni/log，要把这个目录中的所有.txt后缀的文件复制到上一级目录 /root/onioni，那么这样做cp *.txt .. .. 就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错cp *.txt /root/onioni 重命名当前目录内的 log.txt文件为 log2.txtcp log.txt log2.txt 复制当前目录内的 log.txt文件到 /var目录并重命名为 log1.txtcp log.txt /var/log1.txt 复制当前目录内的 bash文件夹到 /home目录并重命名为 bash2cp -R bash /home/bash2 复制当前目录内的 log.txt文件到 /var目录，但是 /var 目录中已经存着 log.txt，那么会提示 cp: overwrite `/var/log.txt’? 可以用 -f 强制覆盖cp -f log /var/log.txt 大家可能会发现，当你使用 cp -f 强制覆盖的时候，依然会询问你是否覆盖，这是因为 CP 为了避免你手误，默认加上了 -i 参数（该参数代表每次覆盖必须询问）。所以想要避免 CP 默认的 -i 参数，只需要在 CP 命令前面加上斜杠即可 “/”/cp -f log /var/log.txt 复制当前目录内的 log.txt log1.txt log2.txt文件和 log233目录到 /home/log目录中cp -R log.txt log1.txt log2.txt log233 /home/log 更多的命令可以用 cp –help 查看。 mv 移动或重命名 文件/文件夹mv命令说明关于 mv 命令，可以参考上面 cp 的使用方法，没什么区别，只是一个是复制，一个是移动，把上面 cp 命令改成 mv 就能套用了。移动当前目录内的 log.txt文件到 /var目录mv log.txt /var/log.txt 移动当前目录内的 bash文件夹到 /home目录mv bash /home/bash 重命名当前目录内的 log.txt文件为 log2.txtmv log.txt log2.txt 复制当前目录内的 log.txt文件到 /var目录并重命名为 log1.txtmv log.txt /var/log1.txt 复制当前目录内的 bash文件夹到 /home目录并重命名为 bash2mv bash /home/bash2 更多的命令可以用 mv –help 查看。 rm 删除 文件/文件夹rm命令说明删除当前目录下的 log.txt文件rm log.txt 删除当前目录下所有.txt后缀的文件rm *.txt 使用 rm 命令删除时，会提示你是否确定删除，输入 y 即删除，输入 n 则取消rm: remove regular file `log.txt’? y删除当前目录下所有.txt后缀的文件rm *.txt 删除当前目录下所有以 onioni开头的文件rm onioni* 删除当前目录下所有以 onioni开头 以.txt后缀结尾的文件rm onioni*.txt 当你用 rm 删除目录的时候会发现提示这不是一个文件rm bashrm: cannot remove `bash’: Is a directory可以加上 -r 来归递删除目录及其目录下的内容rm -r bash 因为为了避免手误删除错误，rm默认加上了 -i 的参数，每一次删除文件/目录都会提示，如果觉得烦可以用 -rf 参数rm -rf bash rm -rf 这个命令请慎重使用，而且千万不要使用 rm -rf / 或者 rm -rf /* 之类的命令(系统自杀)，可能会让你直接跑路，所以使用请慎重！更多的命令可以用 rm –help 查看。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 指令笔记（二）]]></title>
+    <url>%2Fpost%2Flinux02%2F</url>
+    <content type="text"><![CDATA[包管理器yum CentOS系统包管理器yum 是CentOS系统中 一个用于快速下载/安装的简单命令行管理工具！ yum 参数介绍命令:update - 检索 新的包列表upgrade - 升级 软件包search - 搜索 软件包install - 安装 软件包list - 列出 软件包或者软件包组info - 显示软件包或者软件包组的详细信息erase - 删除 软件包（这两个命令一样）remove - 删除 软件包（这两个命令一样）groupinfo - 显示 有关包组的详细信息groupinstall - 安装 软件包组（就像一种软件合集）grouplist - 列出 可用的软件包组groupremove - 删除 软件包组check - 检查 软件包check-update - 检查 可更新的软件包clean - 清除 缓存目录内的软件包deplist - 列出 一个包的依赖关系distribution-synchronization - 同步 已安装的软件包到最新的版本downgrad - 降级 一个软件包reinstall - 重新安装 软件包（自动删除重装）repolist - 显示 配置的软件包仓库resolvedep - 确定 软件包需要的依赖关系 选项：-t ：容忍错误-C ：完全从系统缓存运行，不要更新缓存-R 分钟 ：最大命令等待时间-q ：安静的操作-y ：对于所有问题回答是--nogpgcheck ：禁用gpg签名检查 更多的命令可以用 apt-get –help 查看。 使用示例：检索 新的包列表yum update 安装 Nginx 软件包yum install nginx 安装 Development Tools 软件包组（这个软件包组中包含了编译所需的软件）yum groupinstall &quot;Development Tools&quot; 卸载 Nginx 软件包yum erase nginx / yum remove nginx 卸载 Development Tools 软件包组yum groupremove &quot;Development Tools&quot; 升级 所有可更新的软件包yum upgrade 升级 Nginx 可更新的软件包yum upgrade nginx 安装 Nginx 软件包 并不显示确定提示yum install nginx -y 卸载 Nginx 软件包 并不显示确定提示yum erase nginx -y / yum remove nginx -y 搜索 Nginx 软件包是否存着yum search nginx 列出 可用的软件包yum list 列出 可用的软件包组yum grouplist 清除 缓存目录中的所有软件包yum clean 清除 缓存目录中的 Nginx 软件包yum clean nginx 重装 Nginx 软件包yum reinstall nginx 更多的命令可以用 yum –help 查看。 注： 在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数 当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 指令笔记（一）]]></title>
+    <url>%2Fpost%2Flinux01%2F</url>
+    <content type="text"><![CDATA[包管理器apt-get Debian/Ubuntu系统包管理器apt-get 是Debian/Ubuntu系统中 一个用于快速下载/安装的简单命令行管理工具！ apt-get命令说明命令:update - 检索 新的包列表upgrade - 升级 可更新的所有软件包install - 安装 新软件包（pkg是libc6不是libc6.deb）remove - 删除 软件包autoremove - 自动删除 所有未使用的软件包purge - 删除 软件包和配置文件clean - 清除 已下载的归档文件autoclean - 清除 旧的下载的档案文件check - 验证 是否有损坏的依赖download - 下载 二进制包到当前目录 选项：-q ：不输出任何信息-qq ：除了错误之外，没有输出-d ：仅下载，不要安装或解压缩存档-y ：对所有确定询问都选择 Yes，并且不提示-f ：尝试纠正 被破坏依赖关系的系统-m ：如果存档是可定位的，则尝试继续-u ：显示升级包的列表-b ：在获取源代码包后构建源包 更多的命令可以用 apt-get –help 查看。 使用示例：检索 新的包列表apt-get update 升级 可更新的所有软件包（注意这个命令会升级所有的软件包，所以会升级很长时间）apt-get upgrade 安装 Nginx 软件包apt-get install nginx 卸载 Nginx 软件包apt-get remove nginx 卸载 Nginx 软件包 并删除所有相关配置文件apt-get remove --purge nginx 安装 Nginx 软件包 并不显示确定提示apt-get install nginx -y 卸载 Nginx 软件包，删除所有相关配置文件 并不显示提示apt-get remove --purge nginx -y 清除 旧的/无用 的软件包apt-get clean &amp;&amp; apt-get autoclean 下载 Nginx 二进制软件包到当前目录，但不解压和安装apt-get download nginx -d 更多的命令可以用 apt-get –help 查看。 ###注： 在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ミカヅキBIGWAVE - FRESH!!]]></title>
+    <url>%2Fpost%2Fav21173145%2F</url>
+    <content type="text"><![CDATA[Your browser does not support the video tag.]]></content>
+      <categories>
+        <category>萌音收藏</category>
+      </categories>
+      <tags>
+        <tag>Niko</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[刀剑神域剧场版 -序列之争-]]></title>
+    <url>%2Fpost%2Fsao-will-return%2F</url>
+    <content type="text"><![CDATA[《刀剑神域剧场版 -序列之争 -》（日语：劇場版 ソードアート・オンライン -オーディナル・スケール-，英文：Sword Art Online The Movie Ordinal Scale）《刀剑神域剧场版 -序列之争 -》本作品为2017年上映动画版电影，由动漫的原班人马A-1 Pictures制作，伊藤智彦执导。《刀剑神域》轻小说作者川原砾与伊藤智彦共同依据《刀剑神域》小说第7卷圣母圣咏篇为基础的后续新的作品。继《AmuSphere》安全性强化版的机种问世之后，于2026年又一新机种问世，一款名为《Augma》的新机种，并号称采用安全的扩张现实 （AR）模式，装置取消“完全潜行”功能并将扩张现实功能发挥到极致进行游戏。 许多人都认为《刀剑神域》是无可挑剔的神作，那是因为《刀剑神域》爱情故事的一切都是这么美好，打斗情节完美得无可挑剔，满足了众多人的中二心理，想必正是如此《刀剑神域》才会是作为众多人的入宅番吧。同时本次《刀剑神域剧场版 -序列之争 -》加入了偶像元素，原创人物偶像尤娜的灵感来源于虚拟歌姬，那位虚拟歌姬就是当今有名世界第一公主殿下的初音未来，另外考虑到剧本需要，还加入了约会电影的要素。 《刀剑神域剧场版 -序列之争 -》从时间线来看，剧情主轴承接动画版第二季的时间序之后。剧场版以AR为主题展开的桐人与亚丝娜情侣故事，作为一部未来网络与现实科幻相互结合作品来展现给大家，桐人与亚丝娜情爱情故事还是一如往常的完美，动画的一切都是这么美好。“戰鬥”也同样是《刀剑神域剧场版 -序列之争 -》的看点之一，打斗情节的精彩是数一数二的完美，总能让人心头一震。战斗场面在这方面的制作，A-1 Pictures它向我们证明了他们是制作战斗场面的专家中的专家，就凭着这点来说，《刀剑神域剧场版 -序列之争 -》就有着跟其他动画不一样的地方。 有人曾经问我刀剑神域是一部后宫番吗？至少我觉得刀剑神域这一部动画不像是后宫番，后宫番的男主一般来说都是跟身边所有妹子保持若即若离的关系，可是在《刀剑神域剧场版 -序列之争 -》中再次声明了桐人心中明日奈地位是不可侵犯。也正是桐人心中的明日奈地位是不可侵犯，使得整剧的爱情故事还是一如往常的完美，其实很多人都很清楚，这样的经历遇到的概率非常小，但是并不是不可能发生的，现实中也存在不少在游戏里相识结婚的人，也正因为这样的几率很小，这种爱情才是最令人羡慕的，刀剑神域正正是给了我们这一个假想。 其实看完《刀剑神域剧场版 -序列之争 -》有所失望，当我看到提出AR这个概念的时候，感觉眼前有种眼前一亮的感觉，但是剧情却只是借用了AR的外壳，讲述了一个老旧的故事，甚至说感到有点无聊和乏味。虽然是已经出现的老套路，但是并不牵强，还是引申出许多让人值得思考的问题。VR和AR对现实生活的影响，虚拟和现实之间的界限等等，这些问题都是从桐人等人的身上引申出来种种疑团。 在《刀剑神域剧场版 -序列之争 -》的末尾出现了一个彩蛋，提到了“《刀剑神域》将回归”等字眼，这说明《刀剑神域》还将推出新的动画，看到这个彩蛋真让人指日可待《刀剑神域》的下一部的作品。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[少女们向荒野进发]]></title>
+    <url>%2Fpost%2Fshojo-tachi-wa-koya-o-mezasu%2F</url>
+    <content type="text"><![CDATA[《少女们向荒野进发》（日语：少女たちは荒野を目指す）是由タカヒロ企划，MINATOSOFT开发制作的一款WINDOWS电脑游戏。2015年10月宣布电视动画化，并在2016年1月开始动画播放，日文简称“しょこめざ”（SHOKOMEZA）。于2016年3月25日发售。《少女们向荒野进发》和MINATOSOFT的第一作《你是主人我是仆》以及第二作《认真和我谈恋爱！》略有不同。因为该《少女们向荒野进发》不是成人向作品，是以美少女游戏制作社团题材的校园恋爱作品。 《少女们向荒野进发》在题材方面虽然是后宫番，但是并没有那种老套的剧情，而是以创业为题材的后宫番，在当时来说可以说是一种比较新奇的剧情。剧情中主要突出并不是技术层面的东西，而且在实际制作过程中人与人之间各种各样的问题，让人感到时而轻松又时而让人着急。就比如拿《不起眼女主角培育法》这一相似题材的动画来说，给人的感受确是完全不同的。但是《少女们向荒野进发》可能只是把原作（游戏）某些精彩的部分展现出来，从而显露出不足剧情上面有些美中不足。 我们应该如何面对未来，应怀着一颗怎么样的心态去迎接未来？面对现在的生活，不但没有企业家的野心，而且也没有出众的一技之长，内心怀着的焦躁。似乎看着《少女们向荒野进发》这样的男主角，内心也许想到的是这可能是曾经的你，或许是现在的你，与朋友过着的每一天中都还在摸索自己的将来，没有明确的梦想，似乎只能见一步走一步。并不知道将来的自己想要做些什么，也并不知道将来自己会变成什么样，就像是制作者在哭述自己曾经遭遇的事情，可能还有在制作游戏上的种种困难与艰辛。 可能大家都在关注《少女们向荒野进发》的他们向着无尽的荒野迈出了脚步，游戏能成功地制作出来吗？能卖得出去吗？也许这只是表面的信息，剧中真的就只是在说他们向着无尽的荒野迈出了脚步吗？在无尽的荒野是残酷的，人为了赚钱，出卖良知，抛弃善良，惟利是图，甚至可以不择手段。可能我们生存在大千世界里，求生存是万物的本能，也是我们人的本能，人为了活下去使出任何手段，可能这都正常的，是不可耻的。虽然这样的剧情有着不小的说服力，但是难免有点正剧与喜剧两不沾，使整部动画显得有点尴尬。 以创业为题材的后宫番的动画，的确是挺新鲜的，但是矛盾化解得显得太过僵硬，可能第一次看的时候会感觉很无趣，但是如果你用另外一种眼光去看的话可能是另一部能让人琢磨的动画。在最后我只想说：将吾之人生，祭献给二次元。 这个世界是个荒野，太单纯会被弱肉强食，只靠爱好是无法存活下去的，只有内心抱有“野心”的人，才能在这个荒野上挑战梦想。 – 黑田砂雪]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[借东西的小人阿莉埃蒂]]></title>
+    <url>%2Fpost%2Fthe-secret-world-of-arrietty%2F</url>
+    <content type="text"><![CDATA[《借东西的小人阿莉埃蒂》（日语：借りぐらしのアリエッティ，英语：THE SECRET WORLD OF ARRIETTY），日语原意为借居的阿丽埃蒂。《借东西的小人阿莉埃蒂》是日本吉卜力工作室在2010年7月17日在日本上映的动画电影，原作为《地板下的小矮人》是小说家玛丽·诺顿于1952年发表的小说作品。在阅读过《地板下的小矮人》后的宫崎骏与高畑勋，引起了相当大的兴趣，并将此故事改编为动画电影。曾经被宫崎骏称赞为“世界通用的动画师”的米林宏昌，被制作人铃木敏夫提议下执起导演筒，这也是米林宏昌首次是执导的首部动画电影。 一块方糖一个夹子的约定，不管阿莉埃蒂和翔两人之间萌生出的爱情还是友情，看完之后总有一种从心低里升起的温暖。或许有想知道翔的手术最后有成功吗？阿莉埃蒂搬家去哪里了呢？似乎这些都已不重要了，可能很快就会忘记曾经如何相识如何互生情愫如何在一起的时光。但是如果偶然收拾房间，也许看到那一个小夹子就会想起那时候的你，想起那段永远的留在的记忆中的时光。就如同那一句话一样“你是我心的一部分，我不会忘记的，永远…” 可能《借东西的小人阿莉埃蒂》没能达到《千与千寻》那样高得高度，但是吉卜力工作室的优点都有在这一部动画电影里面很好的呈现出来。这部动画电影在看似浅显又充满童趣的剧情却从中不经意的透露出深沉而又现实的问题，人与自然的关系是怎么样的呢？ 人与大自然的关系干丝万缕，人类为了在大自然生活，便要克服各种限制, 我们就习以为常的在大自然借取资源，或许我们会感到质疑，我们所做的不正正和《借东西的小人阿莉埃蒂》的小人所作所为一样吗？ 也许借东西，可能只是一种“道德的”偷窃。也许借东西的小人阿莉埃蒂的“偷窃”很让人同情，可能由于自身的弱小，只能去依靠着比自己强大的物种生存下去，虽然这本身是没有错的，但是为了生存的偷窃就是正义的吗？就好像我们人类向大自然无偿地“借东西”呢？我们人类又何时归还过大自然？《借东西的小人阿莉埃蒂》这一部动画电影像极了对我们人类的说教，述说着我们人类只会为了自身的利益和私欲不断的去向大自然“借东西”，我们人类甚至不知道去敬畏自然，只会一味索取。是的，可能人类才是最坏的小偷。 向来日本吉卜力工作室很难让人失望，总是为你奉献一部有色有声动画。细腻的情感，细致的手绘，充满异国风情却又不突兀的配乐，用那独特的微观视角把《借东西的小人阿莉埃蒂》呈现我们的眼前。虽然负责企划及剧本编写的是宫崎骏，但是真正担当导演的是初次执导的米林宏昌。尽管米林宏昌在细节、人设、风格、配乐等等都做得非常近似宫崎骏，但是整体叙事太过匆忙，就如同像蜻蜓点水般让人看完后心里有种很不是滋味的感觉。可能结局是世界上最美好的告别，但是又缺少了一种失去了打动人心的力量。 不能被人类发现，是我们生存的定律──（人間に見られてはいけない，それが床下の小人たちの掟だった）]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[你的名字。]]></title>
+    <url>%2Fpost%2Fyour-name-8%2F</url>
+    <content type="text"><![CDATA[《你的名字。》（日语：君の名は。）是由日本动画家新海诚第一次采用制作委员会方式的作品，并亲自编剧和执导该影片。虽然新海诚一度对于“你的名字。”和同样原名为“君の名は”的名影剧《请问芳名》撞名而无法决定，在重读多次剧本下才确定此片名与内容相符，并要求要加上句号与《请问芳名》有别。该影片于2016年8月26日在日本首映，上映后连霸日本数周票房冠军，是目前唯一除吉卜力工作室作品以外超越百亿日圆票房的日本动画电影，并获得西班牙锡切斯电影节最佳动画长片奖等电影奖荣誉。 《你的名字。》被日媒称“一秒钟都不觉得无聊”可不是浪得虚名的，相比之前的动画来说，剧情的这一方面可谓是下足了功夫，就比如动画中不少有趣的生活细节，男女身体差异上等等，使男女主角的行为举止等等都非常符合学生的思想逻辑。新海诚重视现实，更重视一些难以存在但是又实际存在的悲欢离合，相知相遇。善于提取美感与古文句加深作品的深度还有幻想感，轻度幻想。从虚幻中体现现实，使整部作品与众不同。 被称为壁纸狂魔的新海诚，让整部《你的名字。》每一帧都变得如此细腻。再加上通过无数的细节为接下来的剧情埋下伏笔。以种种主线剧情以外的事情与情感来衬托，不但没有使剧情变得杂乱无章，反而巧妙的烘托了整部动画的剧情。其中有一个细节值得注意的是《你的名字》中的阿雪老师，虽然本名不详，但是似乎在样貌、穿着等等的方面上，都让人感觉《你的名字》中的阿雪老师就是《言叶之庭》中的雪野百香里。恰巧上一部作品《言叶之庭》中的结局里，女主角雪野百香里决定回到乡下，并且声优也同样是花泽香菜。虽然不知道新海诚的用意是什么，但是这个问题真的是令人值得思考。 当然《你的名字。》这部动画的成功，也离不开由摇滚乐团RADWIMPS所担当的音乐，据了解男女主角互换身体，彼此针锋相对这一幕，两人通过手上写“别自恋了”、在脸上写“笨蛋”来交流的片段，是新海诚听着RADWIMPS的《君と羊と青》借助这首歌曲的疾走感和气势，才构思出如此精彩的剧本。可能在新海诚的的心里，RADWIMPS的音乐已经是与《你的名字。》这一部动画中的一个关键点，相互结合，缺一不可。 有人曾经问我，新海诚会成为下一个宫崎骏吗？我得回答是：NO 。 因为我觉得宫崎骏和新海诚根本就是两个不同的导演，虽然新海诚的动画可以几乎说每一帧都是一张精美的壁纸，但是却做不到宫崎骏的艺术高度。新海诚是运用动画讲了好故事的人，那么宫崎骏是展现了动画的最高点的人。但是我还是相信不久得将来新海诚还是会达到新的高度，因为这些都只是目前看来，未来的事谁也说不准。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[秒速5厘米]]></title>
+    <url>%2Fpost%2F5-centimeters-per-second%2F</url>
+    <content type="text"><![CDATA[《秒速5厘米》（日语：秒速5センチメートル -A CHAIN OF SHORT STORIES ABOUT THEIR DISTANCE-），由新海诚导演， 2007年上映的日本动画电影，同年在亚洲太平洋电影奖中获得最佳动画长篇奖。《秒速5厘米》是新海诚《她和她的猫》、《星之声》和《云之彼端，约定的地方》之后的第四部作品。该部作品表达了不同于之前三部的剧情，没有科幻与幻想，用真实而又平淡的生活画面来讲述贵树的故事。《秒速5厘米》更特地找寻不少实景作为素材，可以几乎说每一帧都是一张精美的壁纸。景物的细腻再加上拟物的代入感，对这种真实而又寂寞的剧情来说，更让人觉得这可能是真实发生过的事情。 《秒速5厘米》一共分为三个短片组成，分别是《樱花抄》、《太空人》、《秒速五公分》 全篇一共一个小时多些，前两小篇大概20到30分钟之间，而第三小篇则是10分钟左右。 由标题来说，三个篇章看似没有任何联系，但是三个篇章环环相扣缺一不可。 当然如果看过轻小说或者漫画就会知道，第三个篇章其实动画相比轻小说和漫画是削减了不少的东西，就比如与长大后贵树交往了三年的女性水野理纱走进贵树内心让贵树说出自己真心话的这一片段。值得一提的是声优与动画中的水野理纱同姓同名。 《秒速5厘米》这一部动画的景物和剧情紧紧相扣，就如同内心的读白一样触及心灵。我相信讲一大段的内心独白，也比不过一些触动人心的场景那般能带起人的思绪过往，也绝对讲不出你心中的空虚、寂寞、凄凉。就比如《樱花抄》中，在暴风雪中也依然止不住相见的欲望贵树和明理，还有那雪变为樱花再变为雪的一幕，相对于樱花而言，雪的美更为短暂和脆弱，也更徒凄凉之意，很好的表显出了这段爱情的短暂和结局。 年少时青涩而纯净的爱恋，使两个人即使冒雪也要相会。虽然最终还是分开了，但是他们分开了13年，却在又同一个地点同一个地方相遇。不断变化却毫无变化的车厢，就如同是命运的重逢。13年的时间，速度是秒速5厘米，13年的时间与这个速度的乘积是20498.4公里，刚好是绕地球半圈的距离，地球上最远的距离，也就是南极和北极的距离。当然也许这只是个巧合，但是她左手无名指的戒指仿佛在说，他们错过的已不仅仅是那秒速五厘米的距离。 想必新海诚想表达出的是曾经的美好的感情不会因为时间的流逝而逝去，即使这一段感情仍有遗憾，但是它必定是心目中一段美好的回忆。人生不可能一帆风顺，顺心如意。时光不能倒流，过去亦不能重来，但如果你还是沉浸在那一段美好的回忆之中，而无法让自己释怀过往，重新迈步向前。空虚与寂寞都将会不断的侵蚀你的心灵，你的时间如同你的心一样冰封了起来，永远停滞。 最终随着《秒速5厘米》的结尾逐渐响起来的《ONE MORE TIME,ONE MORE CHANCE》中的ONE MORE TIME ONE MORE CHANCE，可能这一句歌词就是他们两人之间的真实写照。也许在看这一部动画的时候，你会发现曾经的你，也或许是现在的你。不知道现在的你是忧伤还是喜悦，但却总要面对现实并向前走去。 毕竟，在数十亿同类之中的我们，却是那么的空虚与寂寞。 ================================END==============================]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[日常生活中的異能戰鬥]]></title>
+    <url>%2Fpost%2Fino-battle-nichijo-kei-no-haka-de%2F</url>
+    <content type="text"><![CDATA[《日常系的异能战斗》（日语：異能バトルは日常系のなかで）是由望公太著作，029绘制插画，SB CREATIVE的GA文库所发行的日本轻小说作品。2013年5月广播剧CD化，同年7月漫画化，漫画版由黑濑浩介作画。2014年3月宣布改编成电视动画，由TRIGGER制作，于2014年10月6日起东京电视台等播出。(以上来自维基百科) 作为一部14年的番来说，虽然在14年里面并不算出众，但是相对于14年来说它拥有着一个不错的动画表现。想必是因为在14年里面出来了不少神番，所以才埋没了这一部相当有趣的番吧。就比如《四月是你的谎言》、《FATE/STAY NIGHT [UNLIMITED BLADE WORKS]第二季》、《东京食尸鬼》等等，任何一部都可能比《日常系的异能战斗》好上不少。 作为一部14年的番来说，虽然在14年里面并不算出众，但是相对于14年来说它拥有着一个不错的动画表现。想必是因为在14年里面出来了不少神番，所以才埋没了这一部相当有趣的番吧。就比如《四月是你的谎言》、《FATE/STAY NIGHT [UNLIMITED BLADE WORKS]第二季》、《东京食尸鬼》等等，任何一部都可能比《日常系的异能战斗》好上不少。 虽然这一部番的剧情前面的吐槽与欢乐的气氛感觉非常不错，但是后面修罗场倒是感觉如同突如其来的暴风雨一般。感觉可能结合一下轻小说和漫画一起，可能会更容易里面剧情吧。虽然剧情上欠缺了一些，但是它作为一个日常番，它并没有脱离，毕竟修罗场也是日常啊！虽然永远不会发生在我身上。 我认为这一个番男主是作为这一个番的亮点，这一点肯定是无可否认的，刚开始看这部番的时候对男主的第一印象就是中二到已经神经大条的家伙…吾乃混沌的霸王…(以下省略114个字)，想必能想出一大串的咏唱的家伙肯定中二到无法挽救了吧。说到这里我也不禁想起以后自己小的时候中二的时候，吾乃天之…咳咳…相信不少人也都会想起自己的黑历史吧。 我想在这一个番里，有一个不可不看的地方，就是栉川鸠子剧中与男主角的一段对话，阿寿你说的话我完全不懂…（以下省略761个字） ，说白了不就是老娘吃醋了！青梅竹马永远是悲剧的一方，也不知道从哪一年开始就有的风潮…在这一段里面有着两分钟不间断台词，声优考量的标准永远是演技，看到这里应该没有人去怀疑演技报表的早见沙织的吧。幸苦了早见纱织… 百分之九十九的日常，百分之一的异能，就如同神崎灯代所说我们都是普通的高中生和小学生，虽然有拥有着特别的力量，但谁都会跟别人有不一样的地方，但是也同样烦恼着、愤怒着、欢笑着重复着相同有有点不一样的每一天。]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+</search>

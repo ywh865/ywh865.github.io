@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <script src="/js/search.js"></script>
+
+    <!--Description-->
+    
+        <meta name="description" content="心之所愿 愿之所系">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="ywh865">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Linux 指令笔记（一）"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="八神鬼嗣の文庫"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Linux 指令笔记（一） - 八神鬼嗣の文庫</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/sass/main.css">
+
+
+    <!--[if lt IE 8]>
+        
+<script src="/js/ie/html5shiv.js"></script>
+
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        
+<link rel="stylesheet" href="/sass/ie8.css">
+
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        
+<link rel="stylesheet" href="/sass/ie9.css">
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">八神鬼嗣の文庫</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">书架首柜</a>
+            </li>
+        
+            <li>
+                <a href="/search/">目录搜索</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E6%96%87%E7%AB%A0%E4%B8%93%E6%9F%9C/">文章专柜</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E7%9B%B8%E5%86%8C%E5%9B%BE%E9%9B%86/">相册图集</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E8%90%8C%E9%9F%B3%E6%94%B6%E8%97%8F/">萌音收藏</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E4%BC%A0%E9%80%81%E8%B4%A7%E6%9E%B6/">传送货架</a>
+            </li>
+        
+            <li>
+                <a href="/links/">友军链接</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1 class="title">Linux 指令笔记（一）</h1>
+    <div class="meta">
+        2019-02-04
+    </div>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<h3 id="包管理器"><a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h3><h4 id="apt-get-Debian-Ubuntu系统包管理器"><a href="#apt-get-Debian-Ubuntu系统包管理器" class="headerlink" title="apt-get Debian/Ubuntu系统包管理器"></a>apt-get Debian/Ubuntu系统包管理器</h4><p><code>apt-get 是Debian/Ubuntu系统中 一个用于快速下载/安装的简单命令行管理工具！</code></p>
+<h4 id="apt-get命令说明"><a href="#apt-get命令说明" class="headerlink" title="apt-get命令说明"></a>apt-get命令说明</h4><h5 id="命令"><a href="#命令" class="headerlink" title="命令:"></a>命令:</h5><p><code>update - 检索 新的包列表</code><br><code>upgrade - 升级 可更新的所有软件包</code><br><code>install - 安装 新软件包（pkg是libc6不是libc6.deb）</code><br><code>remove - 删除 软件包</code><br><code>autoremove - 自动删除 所有未使用的软件包</code><br><code>purge - 删除 软件包和配置文件</code><br><code>clean - 清除 已下载的归档文件</code><br><code>autoclean - 清除 旧的下载的档案文件</code><br><code>check - 验证 是否有损坏的依赖</code><br><code>download - 下载 二进制包到当前目录</code></p>
+<h5 id="选项："><a href="#选项：" class="headerlink" title="选项："></a>选项：</h5><p><code>-q ：不输出任何信息</code><br><code>-qq ：除了错误之外，没有输出</code><br><code>-d ：仅下载，不要安装或解压缩存档</code><br><code>-y ：对所有确定询问都选择 Yes，并且不提示</code><br><code>-f ：尝试纠正 被破坏依赖关系的系统</code><br><code>-m ：如果存档是可定位的，则尝试继续</code><br><code>-u ：显示升级包的列表</code><br><code>-b ：在获取源代码包后构建源包</code></p>
+<h5 id="更多的命令可以用-apt-get-–help-查看。"><a href="#更多的命令可以用-apt-get-–help-查看。" class="headerlink" title="更多的命令可以用 apt-get –help 查看。"></a>更多的命令可以用 apt-get –help 查看。</h5><hr>
+<h4 id="使用示例："><a href="#使用示例：" class="headerlink" title="使用示例："></a>使用示例：</h4><h6 id="检索-新的包列表"><a href="#检索-新的包列表" class="headerlink" title="检索 新的包列表"></a>检索 新的包列表</h6><p><code>apt-get update</code></p>
+<h6 id="升级-可更新的所有软件包（注意这个命令会升级所有的软件包，所以会升级很长时间）"><a href="#升级-可更新的所有软件包（注意这个命令会升级所有的软件包，所以会升级很长时间）" class="headerlink" title="升级 可更新的所有软件包（注意这个命令会升级所有的软件包，所以会升级很长时间）"></a>升级 可更新的所有软件包（注意这个命令会升级所有的软件包，所以会升级很长时间）</h6><p><code>apt-get upgrade</code></p>
+<h6 id="安装-Nginx-软件包"><a href="#安装-Nginx-软件包" class="headerlink" title="安装 Nginx 软件包"></a>安装 Nginx 软件包</h6><p><code>apt-get install nginx</code></p>
+<h6 id="卸载-Nginx-软件包"><a href="#卸载-Nginx-软件包" class="headerlink" title="卸载 Nginx 软件包"></a>卸载 Nginx 软件包</h6><p><code>apt-get remove nginx</code></p>
+<h6 id="卸载-Nginx-软件包-并删除所有相关配置文件"><a href="#卸载-Nginx-软件包-并删除所有相关配置文件" class="headerlink" title="卸载 Nginx 软件包 并删除所有相关配置文件"></a>卸载 Nginx 软件包 并删除所有相关配置文件</h6><p><code>apt-get remove --purge nginx</code></p>
+<h6 id="安装-Nginx-软件包-并不显示确定提示"><a href="#安装-Nginx-软件包-并不显示确定提示" class="headerlink" title="安装 Nginx 软件包 并不显示确定提示"></a>安装 Nginx 软件包 并不显示确定提示</h6><p><code>apt-get install nginx -y</code></p>
+<h6 id="卸载-Nginx-软件包，删除所有相关配置文件-并不显示提示"><a href="#卸载-Nginx-软件包，删除所有相关配置文件-并不显示提示" class="headerlink" title="卸载 Nginx 软件包，删除所有相关配置文件 并不显示提示"></a>卸载 Nginx 软件包，删除所有相关配置文件 并不显示提示</h6><p><code>apt-get remove --purge nginx -y</code></p>
+<h6 id="清除-旧的-无用-的软件包"><a href="#清除-旧的-无用-的软件包" class="headerlink" title="清除 旧的/无用 的软件包"></a>清除 旧的/无用 的软件包</h6><p><code>apt-get clean &amp;&amp; apt-get autoclean</code></p>
+<h6 id="下载-Nginx-二进制软件包到当前目录，但不解压和安装"><a href="#下载-Nginx-二进制软件包到当前目录，但不解压和安装" class="headerlink" title="下载 Nginx 二进制软件包到当前目录，但不解压和安装"></a>下载 Nginx 二进制软件包到当前目录，但不解压和安装</h6><p><code>apt-get download nginx -d</code></p>
+<h4 id="更多的命令可以用-apt-get-–help-查看。-1"><a href="#更多的命令可以用-apt-get-–help-查看。-1" class="headerlink" title="更多的命令可以用 apt-get –help 查看。"></a>更多的命令可以用 apt-get –help 查看。</h4><hr>
+<p>###注：</p>
+<ul>
+<li><h6 id="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数"><a href="#在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数" class="headerlink" title="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数"></a><font color="#dd0000">在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数</font></h6></li>
+</ul>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/八神鬼嗣/" class="ywh_button small">八神鬼嗣</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>留言:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank" ><span class="label">Telegram</span></a></li>
+                
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 八神鬼嗣  All rights reserved</li>
+            <li>IPFS Links <a href="https://onioni.net/" style="text-decoration:none;">onioni.net</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- skel -->
+
+<script src="/js/skel.min.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/util.js"></script>
+
+
+<!--[if lte IE 8]>
+
+<script src="/js/ie/respond.min.js"></script>
+
+<![endif]-->
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'onioni-net';
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+<script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="Σ(°Д°;网站崩溃了！！！",clearTimeout(st)):(document.title="(๑¯ิε ¯ิ๑)好像自己又好了",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/like.js"></script>

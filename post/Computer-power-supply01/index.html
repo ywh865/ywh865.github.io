@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <script src="/js/search.js"></script>
+
+    <!--Description-->
+    
+        <meta name="description" content="心之所愿 愿之所系">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="ywh865">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="电源参数指标笔记"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="八神鬼嗣の文庫"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>电源参数指标笔记 - 八神鬼嗣の文庫</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/sass/main.css">
+
+
+    <!--[if lt IE 8]>
+        
+<script src="/js/ie/html5shiv.js"></script>
+
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        
+<link rel="stylesheet" href="/sass/ie8.css">
+
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        
+<link rel="stylesheet" href="/sass/ie9.css">
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">八神鬼嗣の文庫</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">书架首柜</a>
+            </li>
+        
+            <li>
+                <a href="/search/">目录搜索</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E6%96%87%E7%AB%A0%E4%B8%93%E6%9F%9C/">文章专柜</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E7%9B%B8%E5%86%8C%E5%9B%BE%E9%9B%86/">相册图集</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E8%90%8C%E9%9F%B3%E6%94%B6%E8%97%8F/">萌音收藏</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E4%BC%A0%E9%80%81%E8%B4%A7%E6%9E%B6/">传送货架</a>
+            </li>
+        
+            <li>
+                <a href="/links/">友军链接</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1 class="title">电源参数指标笔记</h1>
+    <div class="meta">
+        2019-03-21
+    </div>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>1.电源参数</p>
+<p>要选购一个合适的电源，最最最基本的要求就是输出功率能达到主机配置的需求，带得动你的硬件。 很多之前已经有主机想升级的人，都会问自己的电源实际是多少瓦，升级能带动什么等等，而这些都会标在电源的铭牌上面，所以先来讲一下电源的参数怎么看。在不考虑虚标的情况实际使用中不能把电脑各种硬件的功率加起来然后觉得不超过实际功率就OK，因为主机电源将交流电转换之后会分为几种不同电压的输出，不同硬件使用的电压是不一样的。<br>电源输出分为：<br>+12V、+5V、+3.3V、-12V、+5VSB<br>台式主机中：<br>CPU 全部为+12V供电<br>显卡 绝大部分+12V电脑中电力消耗最大的地方<br>主板 12V、+5V、+3.3V都有，不过较小，一般也就几十瓦的功耗<br>3.5寸硬盘 +12V和+5V<br>2.5寸硬盘 +5V 和 +3.3V<br>USB设备 +5V供电<br>PCI设备 5V和3.3V供电<br>PCIE设备 主要使用12V供电，也留有3.3V的供电供其他设备使用，PCIE槽至少要给显卡提供75W的+12V供电</p>
+<p>注：</p>
+<ul>
+<li>-12V只有部分电路会使用，5VSB是待机电压，这两个功率都很小，不需要太多关注。</li>
+<li>tdp实际上是散热设计功耗，一般是极限满负载的情况下的最大发热量，根据能量守恒，供给CPU的电力除了极小的部分变为电磁辐射外，基本上都会转化为热能，所以一般也和极限功耗相近，是一种粗略的估算方式</li>
+<li>机械硬盘，虽然运行起来之后只有10W左右的功率，但是启动的时候最大功率会上到30W左右，主要是+12V，马达启动功耗，所以如果是带多个硬盘这点也要考虑进去的。当然开机的时候CPU和显卡负载比较低，并不会和硬盘一起产生较大的功率需求，电源输出满足硬盘数*30 + 100W这样基本就不会出现开了机的问题了。</li>
+</ul>
+<p>额定输出和峰值的问题<br>国内讲的额定就是指在这个功率范围内，可以连续长时间输出，而峰值或者最大功率，则是在较短的时间内可以提供输出（国际上铭牌比较正规的标识方法是要写上时间的，一般不会长于一分钟），高于这个时间就会断电保护，所以对我们来说只看额定即可，峰值可以说几乎没有参考意义。另外这里的输出不需要考虑转换率的问题，标明100W就必须能输出这么多，转换率是用来计算插座那边的功率，也即是要交多少电费的。</p>
+<p>注：某些电源的12V与众不同，12v分成了12V1和12V2。做成这样是为了防止12V电流过大烧线，也是一种出于安全的考虑，其中12v1是给显卡供电，12V2是给CPU供电（按照intel的标准，12v2只能供给cpu，不能供给其他东西）。不过上面这个电源12V1依然限制了最大电流输出，所以如果要上大火炉显卡的话依然没这么方便。选电源的话挑单路输出的用起来可以不用考虑这么多。至于烧线的问题，早期大瓦数的电源都会分多路，现在新标准新技术之后，已经可以说比较安全，不需要考虑太多了。对于更多的三路或者四路甚至六路+12V的电源，这个情况就比较混乱了。</p>
+<p>2.80PLUS / 牌。</p>
+<p>平时买电源的时候，经常会看到铜牌 银牌 金牌什么的，这个其实指的是80plus认证。台式机电源有一个转换率的问题，假如你的电脑功耗是300W，那么插座那边占用的功率实际要比这个大，电源自身要消耗一些功率，常见的电源的转换率会是80%+。而80plus就是美国定制的一套环保标准，如果你的电源转换率较高，那么考虑到对环保的供献会有奖励同时给你发个牌子。这里有一个常见的误区，很多人买电源会优先看金牌的，但是，80plus仅仅是一个节能的认证，对于做工用料输出稳定性等其他东西，一概不会去管。80plus金牌不等于电源是一个好电源。</p>
+<p>早期80plus基本来说有两个要求：<br>1.同时支持110V和220V<br>2.在不同负载下达到要求转换效率</p>
+<p>以白牌为例，假如你的电脑硬件是300W功耗，那么插座那边的消耗会是300 / 0.8 = 375W。14年的时候推出了新版的80plus认正，增加了230V的版本，也就是说有牌的也不一定就是110~220V全幅。使用新标准的电源都是15年才出的，数量比较少，但是确实是有的，购买的时候一定要仔细看铭牌和参数介绍。同时可以说80plus的含金量也开始变少，越来越不能反应电源内部的用料情况了。</p>
+<p>3.线材</p>
+<p>CPU供电<br>一般来说分为4pin和8pin两种。之所以有两种，是因为早期CPU功耗较小，只使用4pin就足够，随着CPU性能提长，电力要求也越来越大，所以标准改为8pin，实际目的是为了将供电线加粗，减少线阻和发热，降低烧线的可能性。<br>所以除非主板有特殊规定，不然只插一半的4pin依然是可以正常启动。8pin的电源线插4pin主板一样是只插能插进去的一半就行。这个问题主要是在老电源带新主板或者反过来，新出的一般都是按照8pin标准了。 对于要求一定要插够8pin的主板而你又只有4pin电源，也可以去购买转换线。很多双路主板都会要求两个，当然有些只插一个也能工作，具体要看主板。对于只用一个CPU插头但是主板需要两个的同样有转换线可以买，当然电源原生支持依然是最好的。</p>
+<p>主板供电插头<br>同样考虑到新老标准的问题，很老的主板和电源都是20pin供电，后来额外增加了4pin。因为考虑到兼容性，新出的电源都是采用魔术扣，额外的4针可以拆下来，给老主板供电的时候只插20pin就可以了。对于老电源带新主板，也是靠一边将20针插上，额外的4针空出来即可。新增的这4pin主要是给pcie槽进行供电，里面包含3.3V和+12V，不插的话如果要上不带外接供电的独立显卡有可能会出现带不起的情况，实际上连24pin都不提供的老电源，一般+12V输出也比较低，可以考虑让他退休了。</p>
+<p>大4PIN或者说D型供电头<br>主要是用来给IDE硬盘或者光驱供电，现在IDE基本上已经淘汰，更多是用来给机箱风扇供电，也有部分主板为了满足PCIE槽供电在主板上设置这个供电口，看到这个口最好插上，防止不带外置供电的显卡供电不足。还有一些pci扩展卡（比如usb3.0)，也会用他来确保额外的电力。</p>
+<p>sata供电口<br>主要是给硬盘和光驱供电，其他用途的见得比较少。sata口和大4pin可以互转</p>
+<p>PCIE接头<br>一般是6针或者是 6针外加一个2针的魔术扣，这个主要是给显卡进行供电。对于具体多少针支持多少功率其实不用刻意去记，因为电源带的起的都会提供对应的插头，只要显卡上面的供电插头插满就行了。550W以内一般只提供两个6+2。这是因为单个6pin或者8pin是有供电限制的，厂家不提供这么多也是怕你用低瓦数电源去带多卡，具体可以看参数和介绍页的说明。pcie也可以由大4pin转过来，显卡也会附带转换线，但是少一层转接还是少一点风险（做工好的转换线一般问题不大，差一点的时间久了可能会生锈接触不良等等）。</p>
+<p>软驱供电，<br>这种已经用的很少了，IDE转SATA卡上会用到。</p>
+<p>4.模组</p>
+<p>随着供电的增加，也会提供更多的接口，这个时候如果一台机器用不上那么多接口，多出来的线就会很麻烦，于是就有了模组这样的设计，将线材独立出来，同时电源本身做好插头，这样只接上需要的线材，那么对于机箱理线会方便非常非常多。主要来说分为三种：非模组、半模组、全模组。</p>
+<p>非模组：所有的线材都是焊死在电源PCB上，不能拆，500W以内大部分都是这样的设计。</p>
+<p>半模组：CPU和主板线这种肯定要插上的依然留焊死，剩下的硬盘显卡等线材设计成插头的模式。</p>
+<p>全模组：包括CPU、主板全部设计成插拔式，高端高瓦数的电源基本上都是全模组设计，对于想使用定制线的DIY玩家，全模组的效果明显更统一一些，同时使用特殊机箱的话也能更换更长的线材防止够不到。</p>
+<p>5.电源的性能指标和评测应该怎么看</p>
+<p>除了上面功率等参数外，衡量电源性能的其他还有其他的一些数据，而这些东西铭牌是不会标上的，需要经过仪器来检测，主要有下面这些：</p>
+<p>转换效率：虽然标有80plus的能大致知道转换率，但是实际上电源在不同负载的时候转换效率是不一样的，一般来说负载在中间位置的时候效率最高，在220V下转换效率比110V下高。</p>
+<p>电压偏离：或者说电压稳定性，虽然铭牌上面标了+12V，+5V什么的，但是实际因为电路等问题，输出会有一定的偏差，比如+12V可能是12.15V这样。Intel规定的偏移是上下不超过5%越好的电源电压输出越准确。 </p>
+<p>纹波：因为电源在变压过程中要把电流转换成高频脉冲，所以实际输出的时候虽然要经过滤波，但是不一定能滤的干净。Intel规定，+12V上限120mv，+5V和3.3V是50mv。</p>
+<p>交叉负载：这个测试的目的就是检查，当12V 5V 3.3V功耗占用比例不同的时候，他们是不是还能保持准确的电压。</p>
+<p>保持时间：在外部断电之后，电源还需要提供一段时间的供电。一是用来确保硬件进行一些保护性操作，比如硬盘磁头归位，SSD掉电保护等等。还有就是UPS响应是有时间的，大概是市电一个周期，也就是16ms，intel标准也正是16ms，电源必须要坚持到UPS过来救场。如果保持时间不足，是有可能影响到硬件寿命的，以及就算上了UPS也可能导致自动关机以致于不能保存你重要的文件。</p>
+<p>动态响应：也就是当功耗发生变化的时候电源“跟上”的速度，表现为负载变化之后电压的稳定性，不过这项目前来说其实影响不是特别大，大牌子电源基本上都是合格的，我也想像不出正常使用有什么场景会让功率“快速抽搐”。</p>
+<p>注：除了电压之外，其他的都需要专门的仪器，比如纹波要用示波器等（贵）。另外电压是不能用软件测的，主板那边的电压识别不是特别准确，还有识别错误的可能性。所以要看上面这些“隐藏”但是又比较重要的参数，只能看大网站的评测，国内来说，比较靠谱的是 超能网、玩家堂、泡泡网、CHH这几个网站，当然还是国外比较严谨，比如tech power up、junny guru这几家。</p>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/八神鬼嗣/" class="ywh_button small">八神鬼嗣</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>留言:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank" ><span class="label">Telegram</span></a></li>
+                
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 八神鬼嗣  All rights reserved</li>
+            <li>IPFS Links <a href="https://onioni.net/" style="text-decoration:none;">onioni.net</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- skel -->
+
+<script src="/js/skel.min.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/util.js"></script>
+
+
+<!--[if lte IE 8]>
+
+<script src="/js/ie/respond.min.js"></script>
+
+<![endif]-->
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'onioni-net';
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+<script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="Σ(°Д°;网站崩溃了！！！",clearTimeout(st)):(document.title="(๑¯ิε ¯ิ๑)好像自己又好了",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/like.js"></script>

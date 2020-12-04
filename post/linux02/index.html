@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <script src="/js/search.js"></script>
+
+    <!--Description-->
+    
+        <meta name="description" content="心之所愿 愿之所系">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="ywh865">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Linux 指令笔记（二）"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="八神鬼嗣の文庫"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Linux 指令笔记（二） - 八神鬼嗣の文庫</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/sass/main.css">
+
+
+    <!--[if lt IE 8]>
+        
+<script src="/js/ie/html5shiv.js"></script>
+
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        
+<link rel="stylesheet" href="/sass/ie8.css">
+
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        
+<link rel="stylesheet" href="/sass/ie9.css">
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">八神鬼嗣の文庫</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">书架首柜</a>
+            </li>
+        
+            <li>
+                <a href="/search/">目录搜索</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E6%96%87%E7%AB%A0%E4%B8%93%E6%9F%9C/">文章专柜</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E7%9B%B8%E5%86%8C%E5%9B%BE%E9%9B%86/">相册图集</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E8%90%8C%E9%9F%B3%E6%94%B6%E8%97%8F/">萌音收藏</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E4%BC%A0%E9%80%81%E8%B4%A7%E6%9E%B6/">传送货架</a>
+            </li>
+        
+            <li>
+                <a href="/links/">友军链接</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1 class="title">Linux 指令笔记（二）</h1>
+    <div class="meta">
+        2019-02-05
+    </div>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<h3 id="包管理器"><a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h3><h4 id="yum-CentOS系统包管理器"><a href="#yum-CentOS系统包管理器" class="headerlink" title="yum CentOS系统包管理器"></a>yum CentOS系统包管理器</h4><p><code>yum 是CentOS系统中 一个用于快速下载/安装的简单命令行管理工具！</code></p>
+<h4 id="yum-参数介绍"><a href="#yum-参数介绍" class="headerlink" title="yum 参数介绍"></a>yum 参数介绍</h4><h5 id="命令"><a href="#命令" class="headerlink" title="命令:"></a>命令:</h5><p><code>update - 检索 新的包列表</code><br><code>upgrade - 升级 软件包</code><br><code>search - 搜索 软件包</code><br><code>install - 安装 软件包</code><br><code>list - 列出 软件包或者软件包组</code><br><code>info - 显示软件包或者软件包组的详细信息</code><br><code>erase - 删除 软件包（这两个命令一样）</code><br><code>remove - 删除 软件包（这两个命令一样）</code><br><code>groupinfo - 显示 有关包组的详细信息</code><br><code>groupinstall - 安装 软件包组（就像一种软件合集）</code><br><code>grouplist - 列出 可用的软件包组</code><br><code>groupremove - 删除 软件包组</code><br><code>check - 检查 软件包</code><br><code>check-update - 检查 可更新的软件包</code><br><code>clean - 清除 缓存目录内的软件包</code><br><code>deplist - 列出 一个包的依赖关系</code><br><code>distribution-synchronization - 同步 已安装的软件包到最新的版本</code><br><code>downgrad - 降级 一个软件包</code><br><code>reinstall - 重新安装 软件包（自动删除重装）</code><br><code>repolist - 显示 配置的软件包仓库</code><br><code>resolvedep - 确定 软件包需要的依赖关系</code></p>
+<h5 id="选项："><a href="#选项：" class="headerlink" title="选项："></a>选项：</h5><p><code>-t ：容忍错误</code><br><code>-C ：完全从系统缓存运行，不要更新缓存</code><br><code>-R 分钟 ：最大命令等待时间</code><br><code>-q ：安静的操作</code><br><code>-y ：对于所有问题回答是</code><br><code>--nogpgcheck ：禁用gpg签名检查</code></p>
+<h5 id="更多的命令可以用-apt-get-–help-查看。"><a href="#更多的命令可以用-apt-get-–help-查看。" class="headerlink" title="更多的命令可以用 apt-get –help 查看。"></a>更多的命令可以用 apt-get –help 查看。</h5><hr>
+<h4 id="使用示例："><a href="#使用示例：" class="headerlink" title="使用示例："></a>使用示例：</h4><h6 id="检索-新的包列表"><a href="#检索-新的包列表" class="headerlink" title="检索 新的包列表"></a>检索 新的包列表</h6><p><code>yum update</code></p>
+<h6 id="安装-Nginx-软件包"><a href="#安装-Nginx-软件包" class="headerlink" title="安装 Nginx 软件包"></a>安装 Nginx 软件包</h6><p><code>yum install nginx</code></p>
+<h6 id="安装-Development-Tools-软件包组（这个软件包组中包含了编译所需的软件）"><a href="#安装-Development-Tools-软件包组（这个软件包组中包含了编译所需的软件）" class="headerlink" title="安装 Development Tools 软件包组（这个软件包组中包含了编译所需的软件）"></a>安装 Development Tools 软件包组（这个软件包组中包含了编译所需的软件）</h6><p><code>yum groupinstall &quot;Development Tools&quot;</code></p>
+<h6 id="卸载-Nginx-软件包"><a href="#卸载-Nginx-软件包" class="headerlink" title="卸载 Nginx 软件包"></a>卸载 Nginx 软件包</h6><p><code>yum erase nginx / yum remove nginx</code></p>
+<h6 id="卸载-Development-Tools-软件包组"><a href="#卸载-Development-Tools-软件包组" class="headerlink" title="卸载 Development Tools 软件包组"></a>卸载 Development Tools 软件包组</h6><p><code>yum groupremove &quot;Development Tools&quot;</code></p>
+<h6 id="升级-所有可更新的软件包"><a href="#升级-所有可更新的软件包" class="headerlink" title="升级 所有可更新的软件包"></a>升级 所有可更新的软件包</h6><p><code>yum upgrade</code></p>
+<h6 id="升级-Nginx-可更新的软件包"><a href="#升级-Nginx-可更新的软件包" class="headerlink" title="升级 Nginx 可更新的软件包"></a>升级 Nginx 可更新的软件包</h6><p><code>yum upgrade nginx</code></p>
+<h6 id="安装-Nginx-软件包-并不显示确定提示"><a href="#安装-Nginx-软件包-并不显示确定提示" class="headerlink" title="安装 Nginx 软件包 并不显示确定提示"></a>安装 Nginx 软件包 并不显示确定提示</h6><p><code>yum install nginx -y</code></p>
+<h6 id="卸载-Nginx-软件包-并不显示确定提示"><a href="#卸载-Nginx-软件包-并不显示确定提示" class="headerlink" title="卸载 Nginx 软件包 并不显示确定提示"></a>卸载 Nginx 软件包 并不显示确定提示</h6><p><code>yum erase nginx -y / yum remove nginx -y</code></p>
+<h6 id="搜索-Nginx-软件包是否存着"><a href="#搜索-Nginx-软件包是否存着" class="headerlink" title="搜索 Nginx 软件包是否存着"></a>搜索 Nginx 软件包是否存着</h6><p><code>yum search nginx</code></p>
+<h6 id="列出-可用的软件包"><a href="#列出-可用的软件包" class="headerlink" title="列出 可用的软件包"></a>列出 可用的软件包</h6><p><code>yum list</code></p>
+<h6 id="列出-可用的软件包组"><a href="#列出-可用的软件包组" class="headerlink" title="列出 可用的软件包组"></a>列出 可用的软件包组</h6><p><code>yum grouplist</code></p>
+<h6 id="清除-缓存目录中的所有软件包"><a href="#清除-缓存目录中的所有软件包" class="headerlink" title="清除 缓存目录中的所有软件包"></a>清除 缓存目录中的所有软件包</h6><p><code>yum clean</code></p>
+<h6 id="清除-缓存目录中的-Nginx-软件包"><a href="#清除-缓存目录中的-Nginx-软件包" class="headerlink" title="清除 缓存目录中的 Nginx 软件包"></a>清除 缓存目录中的 Nginx 软件包</h6><p><code>yum clean nginx</code></p>
+<h6 id="重装-Nginx-软件包"><a href="#重装-Nginx-软件包" class="headerlink" title="重装 Nginx 软件包"></a>重装 Nginx 软件包</h6><p><code>yum reinstall nginx</code></p>
+<h4 id="更多的命令可以用-yum-–help-查看。"><a href="#更多的命令可以用-yum-–help-查看。" class="headerlink" title="更多的命令可以用 yum –help 查看。"></a>更多的命令可以用 yum –help 查看。</h4><hr>
+<h3 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h3><ul>
+<li><h6 id="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数"><a href="#在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数" class="headerlink" title="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数"></a><font color="#dd0000">在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数</font></h6></li>
+<li><h6 id="当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！"><a href="#当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！" class="headerlink" title="当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！"></a><font color="#dd0000">当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！</font></h6></li>
+</ul>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/八神鬼嗣/" class="ywh_button small">八神鬼嗣</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>留言:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank" ><span class="label">Telegram</span></a></li>
+                
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 八神鬼嗣  All rights reserved</li>
+            <li>IPFS Links <a href="https://onioni.net/" style="text-decoration:none;">onioni.net</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- skel -->
+
+<script src="/js/skel.min.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/util.js"></script>
+
+
+<!--[if lte IE 8]>
+
+<script src="/js/ie/respond.min.js"></script>
+
+<![endif]-->
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'onioni-net';
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+<script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="Σ(°Д°;网站崩溃了！！！",clearTimeout(st)):(document.title="(๑¯ิε ¯ิ๑)好像自己又好了",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/like.js"></script>
