@@ -148,7 +148,7 @@
 
 
 <!-- Content -->
-<p>FAT AP能够独自承担无线用户接入、用户数据加密和转发等功能，而FIT AP必须依赖于AC才能共同完成这些功能。AC在协同FIT AP共同工作之前，必先要实现FIT AP在AC中上线的过程。FIT AP就必须到DHCP Server获取IP地址。</p>
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>FAT AP能够独自承担无线用户接入、用户数据加密和转发等功能，而FIT AP必须依赖于AC才能共同完成这些功能。AC在协同FIT AP共同工作之前，必先要实现FIT AP在AC中上线的过程。FIT AP就必须到DHCP Server获取IP地址。</p>
 <p>AP获取IP地址：<br>AP的IP地址可以是静态配置的，也可以是通过DHCP动态获取的。如果是静态配置的，AP的IP地址立即就确定了，这一步也就结束了。如果是通过DHCP动态获取，AP不知道谁是DHCP Server，会以广播discovery报文的方式去发现DHCP Server，所有收到这个广播信息的DHCP Server都会单播offer回应AP。AP只接收第一个到达的offer，并广播request告诉所有人，我已经选择好了一个DHCP Server了，其他人不需要再准备为我提供DHCP Server服务了。AP选择的DHCP Server会把AP的IP地址、租期日期、网关地址、DNS Server的IP地址等信息用ACK报文反馈给AP。值得注意的是这个ACK报文里面有个option43字段，里面可以用来填充AC的IP地址。作用就是直接告诉AP有AC的IP地址可用。有的时候AP与DHCP Server不在同一个VLAN中，AP通过广播discovery报文不能直接发现DHCP Server，这个时候，可以通过DHCP Relay来发现DHCP Server。AP获取IP地址的流程就变成原来只需要直接和DHCP Server交流，现在变成了和DHCP Relay直接交流，由DHCP Relay将AP的请求单播给DHCP Server，DHCP Server回复给AP的消息也要通过DHCP Relay来转达。</p>
 <p>AP发现AC:</p>
 <p>静态方式：<br>AP上是支持静态配置AC的IP地址的，如果静态配置了AC的IP地址，AP就会向所有配置的AC单播发送发现请求报文，然后根据AC的回复，根据优先级，选择一个AC，准备进行下一个阶段的建立CAPWAP隧道。</p>
