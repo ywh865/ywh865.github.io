@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[音乐]]></title>
     <url>%2Fpost%2Fmusic%2F</url>
-    <content type="text"><![CDATA[.aplayer { margin: 0 auto; } @media screen and (max-device-width: 400px) { .aplayer { width: 100%; } }]]></content>
+    <content type="text"><![CDATA[]]></content>
       <categories>
         <category>萌音收藏</category>
       </categories>
