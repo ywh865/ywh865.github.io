@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <script src="/js/search.js"></script>
+
+    <!--Description-->
+    
+        <meta name="description" content="心之所愿 愿之所系">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="ywh865">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="测试中的废案"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="八神鬼嗣の文庫"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>测试中的废案 - 八神鬼嗣の文庫</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/sass/main.css">
+
+
+    <!--[if lt IE 8]>
+        
+<script src="/js/ie/html5shiv.js"></script>
+
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        
+<link rel="stylesheet" href="/sass/ie8.css">
+
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        
+<link rel="stylesheet" href="/sass/ie9.css">
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">八神鬼嗣の文庫</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">书架首柜</a>
+            </li>
+        
+            <li>
+                <a href="/search/">目录搜索</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E6%96%87%E7%AB%A0%E4%B8%93%E6%9F%9C/">文章专柜</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E7%9B%B8%E5%86%8C%E5%9B%BE%E9%9B%86/">相册图集</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E8%90%8C%E9%9F%B3%E6%94%B6%E8%97%8F/">萌音收藏</a>
+            </li>
+        
+            <li>
+                <a href="/categories/%E4%BC%A0%E9%80%81%E8%B4%A7%E6%9E%B6/">传送货架</a>
+            </li>
+        
+            <li>
+                <a href="/links/">友军链接</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1 class="title">测试中的废案</h1>
+    <div class="meta">
+        2022-08-19
+    </div>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<h3 id="404-文字特效"><a href="#404-文字特效" class="headerlink" title="404 文字特效"></a>404 文字特效</h3><script src="//cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.5/pixi.min.js"></script>
+
+<div id="yun"></div>
+
+<script>
+    /**
+     *  404 页面
+     */
+    (function() {
+         var lastTime = 0;
+         var vendors = ['ms', 'moz', 'webkit', 'o'];
+         for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+           window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+           window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+         }
+
+         if (!window.requestAnimationFrame)
+           window.requestAnimationFrame = function(callback, element) {
+             var currTime = new Date().getTime();
+             var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+             var id = window.setTimeout(function() {
+                 callback(currTime + timeToCall);
+               },
+               timeToCall);
+             lastTime = currTime + timeToCall;
+             return id;
+           };
+
+         if (!window.cancelAnimationFrame)
+           window.cancelAnimationFrame = function(id) {
+             clearTimeout(id);
+           };
+       }());
+
+    //math2 utils
+    var Math2={};
+    Math2.random = function (t, n) {
+      return Math.random() * (n - t) + t
+    }, Math2.map = function (t, n, r, a, o) {
+      return (o - a) * ((t - n) / (r - n)) + a
+    }, Math2.randomPlusMinus = function (t) {
+      return t = t ? t : .5, Math.random() > t ? -1 : 1
+    }, Math2.randomInt = function (t, n) {
+      return n += 1, Math.floor(Math.random() * (n - t) + t)
+    }, Math2.randomBool = function (t) {
+      return t = t ? t : .5, Math.random() < t ? !0 : !1
+    }, Math2.degToRad = function (t) {
+      return rad = t * Math.PI / 180, rad
+    }, Math2.radToDeg = function (t) {
+      return deg = 180 / (Math.PI * t), deg
+    }, Math2.rgbToHex = function (t) {
+      function n(t) {
+        return ("0" + parseInt(t).toString(16)).slice(-2)
+      }
+      t = t.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+      var r = n(t[1]) + n(t[2]) + n(t[3]);
+      return r.toUpperCase()
+    }, Math2.distance = function (t, n, r, a) {
+      return Math.sqrt((r - t) * (r - t) + (a - n) * (a - n))
+    };
+    //mouse
+    var mousePos={
+      x:0,
+      y:0
+    };
+    window.onmousemove = function(e) {
+      e = e || window.event;
+
+      var pageX = e.pageX - 300;
+      var pageY = e.pageY + 350;
+      if (pageX === undefined) {
+        pageX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - 300;
+        pageY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop + 350;
+      }
+      mousePos = {
+        x: pageX,
+        y: pageY,
+      };
+    };
+
+    var options = {
+      width: 1000,
+      height: 1000,
+      keyword: "404",
+      density: 8,
+      densityText: 2,
+      minDist: 20,
+    };
+
+    // initialize canvas
+    var canvas = document.createElement('canvas');
+    canvas.width = options.width;
+    canvas.height = options.height;
+    canvas.style.width = options.width/2;
+    canvas.style.height = options.height/2;
+    canvas.getContext('2d').scale(2,2)
+
+    var renderer = new PIXI.autoDetectRenderer(options.width, options.height, {
+      transparent: true
+    });
+    var stage = new PIXI.Container("0X000000", true);
+    document.getElementById("yun").appendChild(renderer.view);
+    renderer.view.id = "notFound";
+
+    var imageData = false;
+    var particles =[];
+
+    function init() {
+      positionParticles();
+      positionText();
+    }
+
+    function positionParticles() {
+      var canvas = document.createElement("canvas");
+      canvas.width = 500;
+      canvas.height = 350;
+      var context = canvas.getContext("2d");
+      context.fillStyle = "#000000";
+      context.font = "300px 'Arial', sans-serif";
+      context.fillText(options.keyword, 0, 250);
+
+      var imageData = context.getImageData(0, 0, 350, 500);
+      data = imageData.data;
+
+      // Iterate each row and column
+      for (var i = 0; i < imageData.height; i += options.density) {
+        for (var j = 0; j < imageData.width; j += options.density) {
+
+          // Get the color of the pixel
+          var color = data[((j * (imageData.width * 4)) + (i * 4)) - 1];
+
+          // If the color is black, draw pixels
+          if (color == 255) {
+            var newPar = particle();
+            newPar.setPosition(i, j);
+            particles.push(newPar);
+            stage.addChild(newPar);
+          }
+        }
+      }
+    }
+
+    function positionText() {
+      var canvas = document.createElement("canvas");
+      canvas.width = 400;
+      canvas.height = 120;
+      var context = canvas.getContext("2d");
+      context.fillStyle = "#000000";
+      context.font = "80px 'Arial', sans-serif";
+      context.fillText("Not Found", 0, 80);
+
+      var imageData = context.getImageData(0, 0, 400, 400);
+      data = imageData.data;
+
+      // Iterate each row and column
+      for (var i = 0; i < imageData.height; i += options.densityText) {
+        for (var j = 0; j < imageData.width; j += options.densityText) {
+
+          // Get the color of the pixel
+          var color = data[((j * (imageData.width * 4)) + (i * 4)) - 1];
+
+          // If the color is black, draw pixels
+          if (color == 255) {
+            var newPar = particle(true);
+            newPar.setPosition(i, j);
+            particles.push(newPar);
+            stage.addChild(newPar);
+          }
+        }
+      }
+    }
+
+    function particle(text) {
+      $this = new PIXI.Graphics();
+
+      if (text == true) {
+        $this.text = true;
+      }
+
+      $this.beginFill(0X5CC9F5);
+
+      var radius;
+      $this.radius = radius = $this.text ? Math.random() * 3.5 : Math.random() * 10.5;
+
+      $this.drawCircle(0, 0, radius);
+
+      $this.size = this.radius;
+      $this.x = -this.width;
+      $this.y = -this.height;
+      $this.free = false;
+
+      $this.timer = Math2.randomInt(0, 100);
+      $this.v = Math2.randomPlusMinus() * Math2.random(.5, 1);
+      $this.hovered = false
+
+      $this.alpha = Math2.randomInt(10, 100) / 100;
+
+      $this.vy = -5 + parseInt(Math.random() * 10) / 2;
+      $this.vx = -4 + parseInt(Math.random() * 8);
+
+      $this.setPosition = function(x, y) {
+        if ($this.text) {
+          $this.x = x + (options.width / 2 - 180);
+          $this.y = y + (options.height / 2 + 100);
+        } else {
+          $this.x = x + (options.width / 2 - 250);
+          $this.y = y + (options.height / 2 - 175);
+        }
+      };
+
+      return $this;
+    }
+
+    function update() {
+      renderer.render(stage);
+
+      for (i = 0; i < particles.length; i++) {
+        var p = particles[i];
+
+        if (mousePos.x > p.x && mousePos.x < p.x + p.size && mousePos.y > p.y && mousePos.y < p.y + p.size) {
+          p.hovered = true;
+        }
+
+        p.scale.x = p.scale.y = scale = Math.max(Math.min(2.5 - (Math2.distance(p.x, p.y, mousePos.x, mousePos.y) / 160), 160), 1);
+
+
+        p.x = p.x + .2 * Math.sin(p.timer * .15)
+        p.y = p.y + .2 * Math.cos(p.timer * .15)
+        p.timer = p.timer + p.v;
+
+      }
+      window.requestAnimationFrame(update);
+    }
+
+    init();
+    update();
+</script>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;pixi.js&#x2F;4.5.5&#x2F;pixi.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id&#x3D;&quot;yun&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     *  404 页面</span><br><span class="line">     *&#x2F;</span><br><span class="line">    (function() &#123;</span><br><span class="line">         var lastTime &#x3D; 0;</span><br><span class="line">         var vendors &#x3D; [&#39;ms&#39;, &#39;moz&#39;, &#39;webkit&#39;, &#39;o&#39;];</span><br><span class="line">         for (var x &#x3D; 0; x &lt; vendors.length &amp;&amp; !window.requestAnimationFrame; ++x) &#123;</span><br><span class="line">           window.requestAnimationFrame &#x3D; window[vendors[x] + &#39;RequestAnimationFrame&#39;];</span><br><span class="line">           window.cancelAnimationFrame &#x3D; window[vendors[x] + &#39;CancelAnimationFrame&#39;] || window[vendors[x] + &#39;CancelRequestAnimationFrame&#39;];</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         if (!window.requestAnimationFrame)</span><br><span class="line">           window.requestAnimationFrame &#x3D; function(callback, element) &#123;</span><br><span class="line">             var currTime &#x3D; new Date().getTime();</span><br><span class="line">             var timeToCall &#x3D; Math.max(0, 16 - (currTime - lastTime));</span><br><span class="line">             var id &#x3D; window.setTimeout(function() &#123;</span><br><span class="line">                 callback(currTime + timeToCall);</span><br><span class="line">               &#125;,</span><br><span class="line">               timeToCall);</span><br><span class="line">             lastTime &#x3D; currTime + timeToCall;</span><br><span class="line">             return id;</span><br><span class="line">           &#125;;</span><br><span class="line"></span><br><span class="line">         if (!window.cancelAnimationFrame)</span><br><span class="line">           window.cancelAnimationFrame &#x3D; function(id) &#123;</span><br><span class="line">             clearTimeout(id);</span><br><span class="line">           &#125;;</span><br><span class="line">       &#125;());</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;math2 utils</span><br><span class="line">    var Math2&#x3D;&#123;&#125;;</span><br><span class="line">    Math2.random &#x3D; function (t, n) &#123;</span><br><span class="line">      return Math.random() * (n - t) + t</span><br><span class="line">    &#125;, Math2.map &#x3D; function (t, n, r, a, o) &#123;</span><br><span class="line">      return (o - a) * ((t - n) &#x2F; (r - n)) + a</span><br><span class="line">    &#125;, Math2.randomPlusMinus &#x3D; function (t) &#123;</span><br><span class="line">      return t &#x3D; t ? t : .5, Math.random() &gt; t ? -1 : 1</span><br><span class="line">    &#125;, Math2.randomInt &#x3D; function (t, n) &#123;</span><br><span class="line">      return n +&#x3D; 1, Math.floor(Math.random() * (n - t) + t)</span><br><span class="line">    &#125;, Math2.randomBool &#x3D; function (t) &#123;</span><br><span class="line">      return t &#x3D; t ? t : .5, Math.random() &lt; t ? !0 : !1</span><br><span class="line">    &#125;, Math2.degToRad &#x3D; function (t) &#123;</span><br><span class="line">      return rad &#x3D; t * Math.PI &#x2F; 180, rad</span><br><span class="line">    &#125;, Math2.radToDeg &#x3D; function (t) &#123;</span><br><span class="line">      return deg &#x3D; 180 &#x2F; (Math.PI * t), deg</span><br><span class="line">    &#125;, Math2.rgbToHex &#x3D; function (t) &#123;</span><br><span class="line">      function n(t) &#123;</span><br><span class="line">        return (&quot;0&quot; + parseInt(t).toString(16)).slice(-2)</span><br><span class="line">      &#125;</span><br><span class="line">      t &#x3D; t.match(&#x2F;^rgb\((\d+),\s*(\d+),\s*(\d+)\)$&#x2F;);</span><br><span class="line">      var r &#x3D; n(t[1]) + n(t[2]) + n(t[3]);</span><br><span class="line">      return r.toUpperCase()</span><br><span class="line">    &#125;, Math2.distance &#x3D; function (t, n, r, a) &#123;</span><br><span class="line">      return Math.sqrt((r - t) * (r - t) + (a - n) * (a - n))</span><br><span class="line">    &#125;;</span><br><span class="line">    &#x2F;&#x2F;mouse</span><br><span class="line">    var mousePos&#x3D;&#123;</span><br><span class="line">      x:0,</span><br><span class="line">      y:0</span><br><span class="line">    &#125;;</span><br><span class="line">    window.onmousemove &#x3D; function(e) &#123;</span><br><span class="line">      e &#x3D; e || window.event;</span><br><span class="line"></span><br><span class="line">      var pageX &#x3D; e.pageX - 300;</span><br><span class="line">      var pageY &#x3D; e.pageY + 350;</span><br><span class="line">      if (pageX &#x3D;&#x3D;&#x3D; undefined) &#123;</span><br><span class="line">        pageX &#x3D; e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft - 300;</span><br><span class="line">        pageY &#x3D; e.clientY + document.body.scrollTop + document.documentElement.scrollTop + 350;</span><br><span class="line">      &#125;</span><br><span class="line">      mousePos &#x3D; &#123;</span><br><span class="line">        x: pageX,</span><br><span class="line">        y: pageY,</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    var options &#x3D; &#123;</span><br><span class="line">      width: 1000,</span><br><span class="line">      height: 1000,</span><br><span class="line">      keyword: &quot;404&quot;,</span><br><span class="line">      density: 8,</span><br><span class="line">      densityText: 2,</span><br><span class="line">      minDist: 20,</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; initialize canvas</span><br><span class="line">    var canvas &#x3D; document.createElement(&#39;canvas&#39;);</span><br><span class="line">    canvas.width &#x3D; options.width;</span><br><span class="line">    canvas.height &#x3D; options.height;</span><br><span class="line">    canvas.style.width &#x3D; options.width&#x2F;2;</span><br><span class="line">    canvas.style.height &#x3D; options.height&#x2F;2;</span><br><span class="line">    canvas.getContext(&#39;2d&#39;).scale(2,2)</span><br><span class="line"></span><br><span class="line">    var renderer &#x3D; new PIXI.autoDetectRenderer(options.width, options.height, &#123;</span><br><span class="line">      transparent: true</span><br><span class="line">    &#125;);</span><br><span class="line">    var stage &#x3D; new PIXI.Container(&quot;0X000000&quot;, true);</span><br><span class="line">    document.getElementById(&quot;yun&quot;).appendChild(renderer.view);</span><br><span class="line">    renderer.view.id &#x3D; &quot;notFound&quot;;</span><br><span class="line"></span><br><span class="line">    var imageData &#x3D; false;</span><br><span class="line">    var particles &#x3D;[];</span><br><span class="line"></span><br><span class="line">    function init() &#123;</span><br><span class="line">      positionParticles();</span><br><span class="line">      positionText();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function positionParticles() &#123;</span><br><span class="line">      var canvas &#x3D; document.createElement(&quot;canvas&quot;);</span><br><span class="line">      canvas.width &#x3D; 500;</span><br><span class="line">      canvas.height &#x3D; 350;</span><br><span class="line">      var context &#x3D; canvas.getContext(&quot;2d&quot;);</span><br><span class="line">      context.fillStyle &#x3D; &quot;#000000&quot;;</span><br><span class="line">      context.font &#x3D; &quot;300px &#39;Arial&#39;, sans-serif&quot;;</span><br><span class="line">      context.fillText(options.keyword, 0, 250);</span><br><span class="line"></span><br><span class="line">      var imageData &#x3D; context.getImageData(0, 0, 350, 500);</span><br><span class="line">      data &#x3D; imageData.data;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; Iterate each row and column</span><br><span class="line">      for (var i &#x3D; 0; i &lt; imageData.height; i +&#x3D; options.density) &#123;</span><br><span class="line">        for (var j &#x3D; 0; j &lt; imageData.width; j +&#x3D; options.density) &#123;</span><br><span class="line"></span><br><span class="line">          &#x2F;&#x2F; Get the color of the pixel</span><br><span class="line">          var color &#x3D; data[((j * (imageData.width * 4)) + (i * 4)) - 1];</span><br><span class="line"></span><br><span class="line">          &#x2F;&#x2F; If the color is black, draw pixels</span><br><span class="line">          if (color &#x3D;&#x3D; 255) &#123;</span><br><span class="line">            var newPar &#x3D; particle();</span><br><span class="line">            newPar.setPosition(i, j);</span><br><span class="line">            particles.push(newPar);</span><br><span class="line">            stage.addChild(newPar);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function positionText() &#123;</span><br><span class="line">      var canvas &#x3D; document.createElement(&quot;canvas&quot;);</span><br><span class="line">      canvas.width &#x3D; 400;</span><br><span class="line">      canvas.height &#x3D; 120;</span><br><span class="line">      var context &#x3D; canvas.getContext(&quot;2d&quot;);</span><br><span class="line">      context.fillStyle &#x3D; &quot;#000000&quot;;</span><br><span class="line">      context.font &#x3D; &quot;80px &#39;Arial&#39;, sans-serif&quot;;</span><br><span class="line">      context.fillText(&quot;Not Found&quot;, 0, 80);</span><br><span class="line"></span><br><span class="line">      var imageData &#x3D; context.getImageData(0, 0, 400, 400);</span><br><span class="line">      data &#x3D; imageData.data;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; Iterate each row and column</span><br><span class="line">      for (var i &#x3D; 0; i &lt; imageData.height; i +&#x3D; options.densityText) &#123;</span><br><span class="line">        for (var j &#x3D; 0; j &lt; imageData.width; j +&#x3D; options.densityText) &#123;</span><br><span class="line"></span><br><span class="line">          &#x2F;&#x2F; Get the color of the pixel</span><br><span class="line">          var color &#x3D; data[((j * (imageData.width * 4)) + (i * 4)) - 1];</span><br><span class="line"></span><br><span class="line">          &#x2F;&#x2F; If the color is black, draw pixels</span><br><span class="line">          if (color &#x3D;&#x3D; 255) &#123;</span><br><span class="line">            var newPar &#x3D; particle(true);</span><br><span class="line">            newPar.setPosition(i, j);</span><br><span class="line">            particles.push(newPar);</span><br><span class="line">            stage.addChild(newPar);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function particle(text) &#123;</span><br><span class="line">      $this &#x3D; new PIXI.Graphics();</span><br><span class="line"></span><br><span class="line">      if (text &#x3D;&#x3D; true) &#123;</span><br><span class="line">        $this.text &#x3D; true;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      $this.beginFill(0X5CC9F5);</span><br><span class="line"></span><br><span class="line">      var radius;</span><br><span class="line">      $this.radius &#x3D; radius &#x3D; $this.text ? Math.random() * 3.5 : Math.random() * 10.5;</span><br><span class="line"></span><br><span class="line">      $this.drawCircle(0, 0, radius);</span><br><span class="line"></span><br><span class="line">      $this.size &#x3D; this.radius;</span><br><span class="line">      $this.x &#x3D; -this.width;</span><br><span class="line">      $this.y &#x3D; -this.height;</span><br><span class="line">      $this.free &#x3D; false;</span><br><span class="line"></span><br><span class="line">      $this.timer &#x3D; Math2.randomInt(0, 100);</span><br><span class="line">      $this.v &#x3D; Math2.randomPlusMinus() * Math2.random(.5, 1);</span><br><span class="line">      $this.hovered &#x3D; false</span><br><span class="line"></span><br><span class="line">      $this.alpha &#x3D; Math2.randomInt(10, 100) &#x2F; 100;</span><br><span class="line"></span><br><span class="line">      $this.vy &#x3D; -5 + parseInt(Math.random() * 10) &#x2F; 2;</span><br><span class="line">      $this.vx &#x3D; -4 + parseInt(Math.random() * 8);</span><br><span class="line"></span><br><span class="line">      $this.setPosition &#x3D; function(x, y) &#123;</span><br><span class="line">        if ($this.text) &#123;</span><br><span class="line">          $this.x &#x3D; x + (options.width &#x2F; 2 - 180);</span><br><span class="line">          $this.y &#x3D; y + (options.height &#x2F; 2 + 100);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          $this.x &#x3D; x + (options.width &#x2F; 2 - 250);</span><br><span class="line">          $this.y &#x3D; y + (options.height &#x2F; 2 - 175);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      return $this;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function update() &#123;</span><br><span class="line">      renderer.render(stage);</span><br><span class="line"></span><br><span class="line">      for (i &#x3D; 0; i &lt; particles.length; i++) &#123;</span><br><span class="line">        var p &#x3D; particles[i];</span><br><span class="line"></span><br><span class="line">        if (mousePos.x &gt; p.x &amp;&amp; mousePos.x &lt; p.x + p.size &amp;&amp; mousePos.y &gt; p.y &amp;&amp; mousePos.y &lt; p.y + p.size) &#123;</span><br><span class="line">          p.hovered &#x3D; true;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        p.scale.x &#x3D; p.scale.y &#x3D; scale &#x3D; Math.max(Math.min(2.5 - (Math2.distance(p.x, p.y, mousePos.x, mousePos.y) &#x2F; 160), 160), 1);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        p.x &#x3D; p.x + .2 * Math.sin(p.timer * .15)</span><br><span class="line">        p.y &#x3D; p.y + .2 * Math.cos(p.timer * .15)</span><br><span class="line">        p.timer &#x3D; p.timer + p.v;</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">      window.requestAnimationFrame(update);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    init();</span><br><span class="line">    update();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改样式-themes-yelee-source-css-partial-article-styl，在-article-entry-子级中加上如下样式"><a href="#修改样式-themes-yelee-source-css-partial-article-styl，在-article-entry-子级中加上如下样式" class="headerlink" title="修改样式: themes/yelee/source/css/_partial/article.styl，在 .article-entry 子级中加上如下样式:"></a>修改样式: themes/yelee/source/css/_partial/article.styl，在 .article-entry 子级中加上如下样式:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#notFound &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 50%;</span><br><span class="line">  left: 50%;</span><br><span class="line">  transform: translateY(-50%) translateX(-50%);</span><br><span class="line">  width: 80%;</span><br><span class="line">  height: auto;</span><br><span class="line">&#125;</span><br><span class="line">#yun &#123;</span><br><span class="line">  height: 320px;</span><br><span class="line">  width: 100%;</span><br><span class="line">  position: relative;</span><br><span class="line">&#125;</span><br><span class="line">@media only screen and (max-width: 768px) &#123;</span><br><span class="line">  #yun &#123;</span><br><span class="line">    height: 300px;</span><br><span class="line">  &#125;</span><br><span class="line">  #notFound &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@media only screen and (max-width: 425px) &#123;</span><br><span class="line">  #yun &#123;</span><br><span class="line">    height: 200px;</span><br><span class="line">  &#125;</span><br><span class="line">  #notFound &#123;</span><br><span class="line">    width: 120%;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="如果不想主题文件修改你添加的单页面内容，需要在站点配置文件中配置如下："><a href="#如果不想主题文件修改你添加的单页面内容，需要在站点配置文件中配置如下：" class="headerlink" title="如果不想主题文件修改你添加的单页面内容，需要在站点配置文件中配置如下："></a>如果不想主题文件修改你添加的单页面内容，需要在站点配置文件中配置如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;  单个文件夹下全部文件：skip_render: test&#x2F;*</span><br><span class="line">&#x2F;&#x2F;  单个文件夹下指定类型文件：skip_render: test&#x2F;*.html</span><br><span class="line">&#x2F;&#x2F;  单个文件夹下全部文件以及子目录:skip_render: test&#x2F;**</span><br><span class="line">&#x2F;&#x2F;  多个文件夹以及各种复杂情况：</span><br><span class="line">&#x2F;&#x2F;  skip_render:</span><br><span class="line">&#x2F;&#x2F;      - &#96;test1&#x2F;*.html&#96;</span><br><span class="line">&#x2F;&#x2F;      - &#96;test2&#x2F;**&#96;</span><br><span class="line">比如 skip_render: pages&#x2F;** 代表 source&#x2F;pages&#x2F; 目录下所有东西都不会被修改</span><br></pre></td></tr></table></figure>
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/八神鬼嗣/" class="ywh_button small">八神鬼嗣</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>留言:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank" ><span class="label">Telegram</span></a></li>
+                
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; 八神鬼嗣  All rights reserved</li>
+            <li>IPFS Links <a href="https://onioni.net/" style="text-decoration:none;">onioni.net</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- skel -->
+
+<script src="/js/skel.min.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/util.js"></script>
+
+
+<!--[if lte IE 8]>
+
+<script src="/js/ie/respond.min.js"></script>
+
+<![endif]-->
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'onioni-net';
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+<script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="Σ(°Д°;网站崩溃了！！！",clearTimeout(st)):(document.title="(๑¯ิε ¯ิ๑)好像自己又好了",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/like.js"></script>
