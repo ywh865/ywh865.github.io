@@ -148,7 +148,14 @@
 
 
 <!-- Content -->
-<p><img src="https://onioni-1253893681.cos.ap-hongkong.myqcloud.com/images/test/test.jpg"></p>
+<p><img src="https://onioni-1253893681.cos.ap-hongkong.myqcloud.com/images/test/test.jpg"><br><br /><br>    預計將在約 <span id="timeout">5</span> 秒後返回首頁</p>
+</div>
+<script>
+let countTime = 5;
+
+<p>function count() {</p>
+<p>  document.getElementById(‘timeout’).textContent = countTime;<br>  countTime -= 1;<br>  if(countTime === -1){<br>    location.href = ‘<a href="https://onioni.net/&#39;">https://onioni.net/&#39;</a>; // Url<br>  }<br>  setTimeout(() =&gt; {<br>    count();<br>  }, 1000);<br>}</p>
+<p>count();<br></script></p>
 
 
 <!-- Comments -->
