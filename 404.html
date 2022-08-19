@@ -1,0 +1,33 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script>
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>你要找的页面不存在呀</title>
+<div align="center">
+    <img src="https://onioni-1253893681.cos.ap-hongkong.myqcloud.com/images/404/404.png" border="0" height=""/>
+    <br />
+    找不到这个页面啊！是不是呆萌搞错啦!
+    <br />
+    預計將在約 <span id="timeout">5</span> 秒後返回首頁
+    <br />
+    <br />
+    <br />
+    <br />
+    &copy; 八神鬼嗣 <a style="color:#000; text-decoration:none;" href="https://onioni.net/">onioni.net</a>
+</div>
+<script>
+let countTime = 6;
+
+function count() {
+  
+  document.getElementById('timeout').textContent = countTime;
+  countTime -= 1;
+  if(countTime === 0){
+    location.href = 'https://onioni.net/'; // Url
+  }
+  setTimeout(() => {
+    count();
+  }, 1000);
+}
+
+count();
+</script>
