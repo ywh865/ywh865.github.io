@@ -1,46 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- 站点根布局：所有页面均继承自此模板 -->
+<html lang="zh-CN">
 
-<!-- Head tag -->
+<!-- 引入 head 片段（meta、title、css、js 等） -->
 <head>
-
+    <!-- 基础 meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 站点 favicon -->
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 
-    <script src="/js/search.js"></script>
-
-    <!--Description-->
+    <!-- 页面描述：优先使用 page.description，其次 config.description、摘要、正文前 150 字 -->
     
         <meta name="description" content="心之所愿 愿之所系">
     
 
-    <!--Author-->
+    <!-- 作者信息 -->
     
         <meta name="author" content="ywh865">
     
 
-    <!--Open Graph Title-->
+    <!-- Open Graph 标题 -->
     
 
-    <!--Open Graph Site Name-->
+    <!-- Open Graph 站点名称 -->
     <meta property="og:site_name" content="八神鬼嗣の文庫"/>
 
-    <!--Page Cover-->
+    <!-- Open Graph 封面图 -->
     
-        <meta property="og:image" content=""/>
+    
+        <meta property="og:image" content="/images/404/404-not-found.png" />
     
 
-    <!-- Title -->
+    <!-- 页面标题：按“分页/标题/分类/标签/归档/站点名”顺序组合 -->
     
     <title>page - 八神鬼嗣の文庫</title>
 
-    <!-- Custom CSS -->
+    <!-- 主题主样式表 -->
     
 <link rel="stylesheet" href="/sass/main.css">
 
 
+    <!-- IE 兼容样式与脚本 -->
     <!--[if lt IE 8]>
         
 <script src="/js/ie/html5shiv.js"></script>
@@ -59,30 +62,35 @@
 
     <![endif]-->
 
-    <!-- Gallery -->
+    <!-- 图片灯箱样式 -->
     <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
 
-    <!-- Google Analytics -->
-    
+    <!-- Google Analytics 跟踪代码 -->
+    <!-- Google Analytics 统计代码（仅在配置 tracking ID 时加载） -->
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+
 
 <body>
-
+    <!-- 页面外层容器 -->
     <div id="wrapper">
 
-        <!-- Menu -->
-        <!-- Header -->
+        <!-- 引入顶部菜单 -->
+        <!-- 顶部页眉 -->
 <header id="header">
     <div class="inner">
 
-        <!-- Logo -->
+        <!-- 站点 Logo 与标题 -->
         <a href="/" class="logo">
-            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">八神鬼嗣の文庫</span>
+            <span class="symbol">
+                <img src="/images/logo.svg" alt="" />
+            </span>
+            <span class="title">八神鬼嗣の文庫</span>
         </a>
 
-        <!-- Nav -->
+        <!-- 移动端菜单触发按钮 -->
         <nav>
             <ul>
                 <li><a href="#menu">Menu</a></li>
@@ -92,7 +100,7 @@
     </div>
 </header>
 
-<!-- Menu -->
+<!-- 侧边栏菜单 -->
 <nav id="menu">
     <h2>Menu</h2>
     <ul>
@@ -129,23 +137,33 @@
 </nav>
 
 
+        <!-- 主体内容区域 -->
         <div id="main">
             <div class="inner">
+                <!-- 各页面具体内容由 Hexo 注入 -->
+                <!-- 首页布局：展示首页大标题与文章卡片网格 -->
 
-                <!-- Main Content -->
-                <header>
+<!-- 首页头部 banner -->
+<header>
+    <!-- 主标题 -->
     <h1>「ダンタリアンの書架」</h1>
+    <!-- 二级副标题 -->
     <p>“ああ シェオール，无慈悲な冥界の神 死の姿よ 私の声を闻きたまえ、叹く子供の悲しい行きを闻きたまえ。 あなたが捕らえた蝶の死骸が、たとえ青ざめ破れようとも その鳞粉の一片を求め 命を赌してもがく者がここにいる。见よ、猛々しい虫けらを 再び高く天空に舞い上る様を。溃えようとするのなら 自分の夕日の惨死さよ 目映い光に変换して，微笑みを口に移す 飒爽と羽を広げろ。”</p>
 </header>
 
+<!-- 文章卡片网格 -->
 <section class="tiles">
     
+        <!-- 引入单个文章卡片片段，传入文章对象与索引（用于样式循环） -->
         
 
 <article class="style1">
+    <!-- 封面图 -->
     <span class="image">
-        <img src="https://onioni-1253893681.cos.ap-hongkong.myqcloud.com/images/5_centimeters_per_second/5_centimeters_per_second.png" alt="" />
+        <img src="/images/5-centimeters-per-second/0.png" alt="" />
     </span>
+
+    <!-- 文章标题与副标题链接 -->
     <a href="/post/5-centimeters-per-second/">
         <h2>秒速5厘米</h2>
         <div class="content">
@@ -153,13 +171,18 @@
         </div>
     </a>
 </article>
+
     
+        <!-- 引入单个文章卡片片段，传入文章对象与索引（用于样式循环） -->
         
 
 <article class="style2">
+    <!-- 封面图 -->
     <span class="image">
-        <img src="https://onioni-1253893681.cos.ap-hongkong.myqcloud.com/images/ino_battle_nichijo_kei_no_haka_de/ino_battle_nichijo_kei_no_haka_de.png" alt="" />
+        <img src="/images/ino-battle-nichijo-kei-no-haka-de/0.png" alt="" />
     </span>
+
+    <!-- 文章标题与副标题链接 -->
     <a href="/post/ino-battle-nichijo-kei-no-haka-de/">
         <h2>日常生活中的異能戰鬥</h2>
         <div class="content">
@@ -167,13 +190,27 @@
         </div>
     </a>
 </article>
+
     
 </section>
 
+<!-- 分页导航 -->
+<!-- 分页导航：仅在存在上一页或下一页时显示 -->
 
     <div class="pagination-container">
-        <div class="pagination "><a href="/page/2/"><i class="icon fa-caret-left"></i></a></div>
-        <div class="pagination disabled"><a href="/"><i class="icon fa-caret-right"></i></a></div>
+        <!-- 上一页 -->
+        <div class="pagination ">
+            <a href="/page/2/">
+                <i class="icon fa-caret-left"></i>
+            </a>
+        </div>
+
+        <!-- 下一页 -->
+        <div class="pagination disabled">
+            <a href="/">
+                <i class="icon fa-caret-right"></i>
+            </a>
+        </div>
     </div>
 
 
@@ -181,96 +218,152 @@
             </div>
         </div>
 
-        <!-- Footer -->
+        <!-- 引入页脚 -->
+        <!-- 页脚 -->
 <footer id="footer">
     <div class="inner">
+
+        <!-- 关于站点 -->
         <section>
             <h2>About</h2>
             <div>
                 Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
             </div>
         </section>
+
+        <!-- 社交链接图标 -->
         <section>
             <h2>Follow</h2>
             <ul class="icons">
                 
-                    <li><a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                    <li>
+                        <a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank">
+                            <span class="label">Twitter</span>
+                        </a>
+                    </li>
                 
+
                 
-                    <li><a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank" ><span class="label">Telegram</span></a></li>
+                    <li>
+                        <a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank">
+                            <span class="label">Telegram</span>
+                        </a>
+                    </li>
                 
+
                 
+
                 
+
                 
+
                 
+
                 
+
                 
-                    <li><a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                    <li>
+                        <a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank">
+                            <span class="label">GitHub</span>
+                        </a>
+                    </li>
                 
+
                 
+
                 
+
                 
+
                 
+
                 
             </ul>
         </section>
+
+        <!-- 版权信息 -->
         <ul class="copyright">
             <li>&copy; 八神鬼嗣  All rights reserved</li>
             <li>IPFS Links <a href="https://onioni.net/" style="text-decoration:none;">onioni.net</a></li>
         </ul>
     </div>
 </footer>
+
     </div>
 
-    <!-- After footer scripts -->
-    
+    <!-- 引入页脚后的脚本（jQuery、主题 js、评论等） -->
+    <!-- 页脚脚本：jQuery、主题主逻辑、灯箱、评论等 -->
+
 <!-- jQuery -->
 
 <script src="/js/jquery.min.js"></script>
 
 
-<!-- skel -->
+<!-- Skel 响应式框架 -->
 
 <script src="/js/skel.min.js"></script>
 
 
-<!-- Custom Code -->
+<!-- 主题工具函数 -->
 
 <script src="/js/util.js"></script>
 
 
 <!--[if lte IE 8]>
-
+    
 <script src="/js/ie/respond.min.js"></script>
 
 <![endif]-->
 
-<!-- Custom Code -->
+<!-- 主题主脚本 -->
 
 <script src="/js/main.js"></script>
 
 
-<!-- Gallery -->
+<!-- 本地搜索脚本（依赖 jQuery，放在 jQuery 之后加载） -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- 图片灯箱脚本 -->
 <script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 
-<!-- Disqus Comments -->
+<!-- Disqus 评论脚本 -->
 
-<script type="text/javascript">
-    var disqus_shortname = 'onioni-net';
-    (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
+    <script type="text/javascript">
+        (function () {
+            var disqus_shortname = 'onioni-net';
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
 
-<script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="Σ(°Д°;网站崩溃了！！！",clearTimeout(st)):(document.title="(๑¯ิε ¯ิ๑)好像自己又好了",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+    <!-- 页面标题搞怪动画：切换标签页时改变标题 -->
+    <script type="text/javascript">
+        (function () {
+            var originTitle = document.title;
+            var timer;
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    document.title = 'Σ(°Д°;网站崩溃了！！！';
+                    clearTimeout(timer);
+                } else {
+                    document.title = '(๑¯ิε ¯ิ๑)好像自己又好了';
+                    timer = setTimeout(function () {
+                        document.title = originTitle;
+                    }, 3000);
+                }
+            });
+        })();
+    </script>
+
+    <!-- 页面点击小红心特效 -->
+    <script type="text/javascript" src="/js/like.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"react":{"opacity":0.9},"log":false});</script></body>
 
 </html>
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/like.js"></script>

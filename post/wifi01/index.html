@@ -1,48 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- 站点根布局：所有页面均继承自此模板 -->
+<html lang="zh-CN">
 
-<!-- Head tag -->
+<!-- 引入 head 片段（meta、title、css、js 等） -->
 <head>
-
+    <!-- 基础 meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 站点 favicon -->
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 
-    <script src="/js/search.js"></script>
-
-    <!--Description-->
+    <!-- 页面描述：优先使用 page.description，其次 config.description、摘要、正文前 150 字 -->
     
         <meta name="description" content="心之所愿 愿之所系">
     
 
-    <!--Author-->
+    <!-- 作者信息 -->
     
         <meta name="author" content="ywh865">
     
 
-    <!--Open Graph Title-->
+    <!-- Open Graph 标题 -->
     
         <meta property="og:title" content="WLAN笔记（一）"/>
     
 
-    <!--Open Graph Site Name-->
+    <!-- Open Graph 站点名称 -->
     <meta property="og:site_name" content="八神鬼嗣の文庫"/>
 
-    <!--Page Cover-->
+    <!-- Open Graph 封面图 -->
     
-        <meta property="og:image" content=""/>
+    
+        <meta property="og:image" content="/images/404/404-not-found.png" />
     
 
-    <!-- Title -->
+    <!-- 页面标题：按“分页/标题/分类/标签/归档/站点名”顺序组合 -->
     
     <title>WLAN笔记（一） - 八神鬼嗣の文庫</title>
 
-    <!-- Custom CSS -->
+    <!-- 主题主样式表 -->
     
 <link rel="stylesheet" href="/sass/main.css">
 
 
+    <!-- IE 兼容样式与脚本 -->
     <!--[if lt IE 8]>
         
 <script src="/js/ie/html5shiv.js"></script>
@@ -61,30 +64,35 @@
 
     <![endif]-->
 
-    <!-- Gallery -->
+    <!-- 图片灯箱样式 -->
     <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
 
-    <!-- Google Analytics -->
-    
+    <!-- Google Analytics 跟踪代码 -->
+    <!-- Google Analytics 统计代码（仅在配置 tracking ID 时加载） -->
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+
 
 <body>
-
+    <!-- 页面外层容器 -->
     <div id="wrapper">
 
-        <!-- Menu -->
-        <!-- Header -->
+        <!-- 引入顶部菜单 -->
+        <!-- 顶部页眉 -->
 <header id="header">
     <div class="inner">
 
-        <!-- Logo -->
+        <!-- 站点 Logo 与标题 -->
         <a href="/" class="logo">
-            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">八神鬼嗣の文庫</span>
+            <span class="symbol">
+                <img src="/images/logo.svg" alt="" />
+            </span>
+            <span class="title">八神鬼嗣の文庫</span>
         </a>
 
-        <!-- Nav -->
+        <!-- 移动端菜单触发按钮 -->
         <nav>
             <ul>
                 <li><a href="#menu">Menu</a></li>
@@ -94,7 +102,7 @@
     </div>
 </header>
 
-<!-- Menu -->
+<!-- 侧边栏菜单 -->
 <nav id="menu">
     <h2>Menu</h2>
     <ul>
@@ -131,11 +139,15 @@
 </nav>
 
 
+        <!-- 主体内容区域 -->
         <div id="main">
             <div class="inner">
+                <!-- 各页面具体内容由 Hexo 注入 -->
+                <!-- 文章详情页布局 -->
+<!-- 传入当前页面 page 对象给 article-full 片段渲染 -->
+<!-- 文章详情页内容片段 -->
 
-                <!-- Main Content -->
-                
+<!-- 文章标题与日期 -->
 
     <h1 class="title">WLAN笔记（一）</h1>
     <div class="meta">
@@ -143,11 +155,13 @@
     </div>
 
 
+<!-- 文章顶部大图 -->
 
-<!-- Gallery -->
+
+<!-- 相册图集 -->
 
 
-<!-- Content -->
+<!-- 正文内容 -->
 <p>WLAN的定义：<br>WLAN的全称是Wireless Local Area Network，中文含义是无线局域网，WLAN的定义有广义和狭义两种：广义上讲WLAN是以各种无线电波（如激光、红外线等）的无线信道来代替有线局域网中的部分或全部传输介质所构成的网络。WLAN的狭义定义是基于IEEE 802.11系列标准，利用高频无线射频（如2.4GHz或5GHz频段的无线电磁波）作为传输介质的无线局域网。我们日常生活中的WLAN，就是指的WLAN的狭义定义。现技术标准有很多，如蓝牙、802.11系列、HyperLAN2等。而802.11系列标准由于其实现技术相对简单、通信可靠、灵活性高和实现成本相对较低等特点，成为了WLAN的主流技术标准，且802.11系列标准也成为了WLAN技术标准的代名词。</p>
 <p>WLAN有两种基本架构</p>
 <p>FAT AP架构：<br>FAT AP架构又称自治式网络架构。FAT AP英文全称是FAT Access Point，中文称为胖接入点，也有很多人直接称为胖AP。FAT AP不仅可以发射射频提供无线信号供无线终端接入，还能独立完成安全加密、用户认证和用户管理等管控功能。密码WLAN设置，配置黑名单或白名单控制用户接入，管理接入的用户（如设置用户的接入速率）等这些都符合FAT AP的特征。FAT AP功能强大，独立性强，具备自治能力，因此FAT AP架构人们又称为自治式网络架构。不需要介入专门的管控设备，独自就可以完成无线用户的接入，业务数据的加密和业务数据报文的转发等功能。<br>独立自治是FAT AP的特点，也是FAT AP的缺点。当单个部署时，由于FAT AP具备较好的独立性，不需要另外部署管控设备，部署起来很方便，成本也较低廉，在类如家庭WLAN或者小企业WLAN的使用场景中，FAT AP往往是最适合的选择。给我们感受最深刻的就是我们在家里使用一个无线路由器就能享受WLAN带给我们的便捷。但是，在大的使用场景中，如我们上面提到的候车厅，FAT AP的独立自治就变成了自身的缺点。由于WLAN覆盖面积较大，接入用户较多，需要部署许多FAT AP设备，而每个FAT AP又是独立自治的，缺少统一的管控设备，管理这些设备就变得十分麻烦。不说别的，光为这些FAT AP升一次级就是一场灾难。所以，在大量部署的情况下，FAT AP会带来巨大的管理维护成本。而且由于独自控制用户的接入，FAT AP无法解决用户的漫游问题。</p>
@@ -158,124 +172,188 @@
 <p>室外AP：室外分布型AP设备。对于接入点多，用户量大，且用户分布较为集中的场合下，如学校、大型会展中心等大型场所，宜选用室外AP设备组网。室外AP都具有卓越的室外覆盖性能及超强的防护，以适应风吹雨淋的室外环境，具有IP67的防护等级。</p>
 
 
-<!-- Tags -->
+<!-- 标签 -->
+<!-- 文章标签列表 -->
 
 
 
-<div class="tags">
-    <a href="/tags/八神鬼嗣/" class="ywh_button small">八神鬼嗣</a>
-</div>
 
-
-
-<!-- Comments -->
-<div>
-    
-    <hr />
-    <h3>留言:</h3>
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <div class="tags">
+        <a href="/tags/八神鬼嗣/" class="ywh_button small">八神鬼嗣</a>
     </div>
 
 
 
-</div>
+<!-- 评论区域 -->
+<div>
+    <!-- 评论系统区域：支持 Disqus 与 Facebook -->
 
+<!-- Disqus 评论 -->
+
+    <hr />
+    <h3>留言:</h3>
+    <div id="disqus_thread">
+        <noscript>
+            Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+
+
+<!-- Facebook 评论 -->
+
+
+</div>
 
 
             </div>
         </div>
 
-        <!-- Footer -->
+        <!-- 引入页脚 -->
+        <!-- 页脚 -->
 <footer id="footer">
     <div class="inner">
+
+        <!-- 关于站点 -->
         <section>
             <h2>About</h2>
             <div>
                 Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
             </div>
         </section>
+
+        <!-- 社交链接图标 -->
         <section>
             <h2>Follow</h2>
             <ul class="icons">
                 
-                    <li><a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                    <li>
+                        <a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank">
+                            <span class="label">Twitter</span>
+                        </a>
+                    </li>
                 
+
                 
-                    <li><a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank" ><span class="label">Telegram</span></a></li>
+                    <li>
+                        <a href="https://t.me/ywh865" class="icon style2 fa-telegram" target="_blank">
+                            <span class="label">Telegram</span>
+                        </a>
+                    </li>
                 
+
                 
+
                 
+
                 
+
                 
+
                 
+
                 
-                    <li><a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                    <li>
+                        <a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank">
+                            <span class="label">GitHub</span>
+                        </a>
+                    </li>
                 
+
                 
+
                 
+
                 
+
                 
+
                 
             </ul>
         </section>
+
+        <!-- 版权信息 -->
         <ul class="copyright">
             <li>&copy; 八神鬼嗣  All rights reserved</li>
             <li>IPFS Links <a href="https://onioni.net/" style="text-decoration:none;">onioni.net</a></li>
         </ul>
     </div>
 </footer>
+
     </div>
 
-    <!-- After footer scripts -->
-    
+    <!-- 引入页脚后的脚本（jQuery、主题 js、评论等） -->
+    <!-- 页脚脚本：jQuery、主题主逻辑、灯箱、评论等 -->
+
 <!-- jQuery -->
 
 <script src="/js/jquery.min.js"></script>
 
 
-<!-- skel -->
+<!-- Skel 响应式框架 -->
 
 <script src="/js/skel.min.js"></script>
 
 
-<!-- Custom Code -->
+<!-- 主题工具函数 -->
 
 <script src="/js/util.js"></script>
 
 
 <!--[if lte IE 8]>
-
+    
 <script src="/js/ie/respond.min.js"></script>
 
 <![endif]-->
 
-<!-- Custom Code -->
+<!-- 主题主脚本 -->
 
 <script src="/js/main.js"></script>
 
 
-<!-- Gallery -->
+<!-- 本地搜索脚本（依赖 jQuery，放在 jQuery 之后加载） -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- 图片灯箱脚本 -->
 <script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 
-<!-- Disqus Comments -->
+<!-- Disqus 评论脚本 -->
 
-<script type="text/javascript">
-    var disqus_shortname = 'onioni-net';
-    (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
+    <script type="text/javascript">
+        (function () {
+            var disqus_shortname = 'onioni-net';
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
 
-<script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="Σ(°Д°;网站崩溃了！！！",clearTimeout(st)):(document.title="(๑¯ิε ¯ิ๑)好像自己又好了",st=setTimeout(function(){document.title=OriginTitile},3e3))})</script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+    <!-- 页面标题搞怪动画：切换标签页时改变标题 -->
+    <script type="text/javascript">
+        (function () {
+            var originTitle = document.title;
+            var timer;
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    document.title = 'Σ(°Д°;网站崩溃了！！！';
+                    clearTimeout(timer);
+                } else {
+                    document.title = '(๑¯ิε ¯ิ๑)好像自己又好了';
+                    timer = setTimeout(function () {
+                        document.title = originTitle;
+                    }, 3000);
+                }
+            });
+        })();
+    </script>
+
+    <!-- 页面点击小红心特效 -->
+    <script type="text/javascript" src="/js/like.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"react":{"opacity":0.9},"log":false});</script></body>
 
 </html>
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/like.js"></script>

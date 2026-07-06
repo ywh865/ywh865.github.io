@@ -1,3 +1,16 @@
+@charset "UTF-8";
+/**
+ * 主题变量集合
+ * 包含：杂项、动画时长、尺寸、字体、配色
+ */
+/**
+ * SCSS 取值函数
+ * 通过 key 路径从对应 map 变量中获取值
+ */
+/**
+ * SCSS 混合宏与工具函数
+ * 包含：FontAwesome 图标、自适应 padding、SVG URL 编码
+ */
 /*
 	Phantom by HTML5 UP
 	html5up.net | @n33co
@@ -5,25 +18,29 @@
 */
 /* Tiles */
 .tiles:after {
-  content: '';
+  content: "";
   display: block;
-  clear: both; }
-
+  clear: both;
+}
 .tiles article {
-  float: left; }
-  .tiles article > a {
-    padding-top: 50%;
-    margin-top: -1.75em; }
-  body:not(.is-touch) .tiles article:hover > .image {
-    -moz-transform: none;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none; }
+  float: left;
+}
+.tiles article > a {
+  padding-top: 50%;
+  margin-top: -1.75em;
+}
+body:not(.is-touch) .tiles article:hover > .image {
+  -moz-transform: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
 
 /* Footer */
 #footer > .inner section {
-  float: left; }
-
+  float: left;
+}
 #footer > .inner .copyright {
   clear: both;
-  padding-top: 4em; }
+  padding-top: 4em;
+}

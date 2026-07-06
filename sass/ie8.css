@@ -1,3 +1,16 @@
+@charset "UTF-8";
+/**
+ * 主题变量集合
+ * 包含：杂项、动画时长、尺寸、字体、配色
+ */
+/**
+ * SCSS 取值函数
+ * 通过 key 路径从对应 map 变量中获取值
+ */
+/**
+ * SCSS 混合宏与工具函数
+ * 包含：FontAwesome 图标、自适应 padding、SVG URL 编码
+ */
 /*
 	Phantom by HTML5 UP
 	html5up.net | @n33co
@@ -7,47 +20,56 @@
 form .field {
   float: none !important;
   width: 100% !important;
-  padding-left: 0 !important; }
+  padding-left: 0 !important;
+}
 
 /* Button */
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
+input[type=submit],
+input[type=reset],
+input[type=button],
 button,
 .button {
-  border: solid 2px #585858 !important; }
-  input[type="submit"]:hover,
-  input[type="reset"]:hover,
-  input[type="button"]:hover,
-  button:hover,
-  .button:hover {
-    border-color: #f2849e !important; }
-  input[type="submit"].special,
-  input[type="reset"].special,
-  input[type="button"].special,
-  button.special,
-  .button.special {
-    border: none !important; }
+  border: solid 2px #585858 !important;
+}
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover,
+button:hover,
+.button:hover {
+  border-color: #f2849e !important;
+}
+input[type=submit].special,
+input[type=reset].special,
+input[type=button].special,
+button.special,
+.button.special {
+  border: none !important;
+}
 
 /* Tiles */
 .tiles article > .image:before, .tiles article > .image:after {
-  display: none; }
+  display: none;
+}
 
 /* Header */
 #header .logo .symbol {
-  display: none; }
-
+  display: none;
+}
 #header nav ul li a[href="#menu"] {
   text-indent: 0;
   width: auto;
-  font-size: 0.8em; }
-  #header nav ul li a[href="#menu"]:before, #header nav ul li a[href="#menu"]:after {
-    display: none; }
+  font-size: 0.8em;
+}
+#header nav ul li a[href="#menu"]:before, #header nav ul li a[href="#menu"]:after {
+  display: none;
+}
 
 /* Footer */
 #footer > .inner section {
   width: 50%;
-  margin-left: 3em; }
-  #footer > .inner section:first-child {
-    margin-left: 0;
-    width: 40%; }
+  margin-left: 3em;
+}
+#footer > .inner section:first-child {
+  margin-left: 0;
+  width: 40%;
+}
