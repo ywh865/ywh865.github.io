@@ -3233,6 +3233,15 @@ body.is-touch .tiles article .content {
 .pagination-container .pagination.disabled a:hover {
   color: #f6f6f6 !important;
 }
+@media screen and (max-width: 736px) {
+  .pagination-container {
+    margin-top: 50px;
+  }
+  .pagination-container .pagination a {
+    font-size: 28px;
+    padding: 12px;
+  }
+}
 
 /**
  * 相册图集样式
