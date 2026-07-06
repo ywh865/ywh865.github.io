@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Black Clover Ending 11 Full</title>
+    <url>/post/Answer-KAF_Lyrics/</url>
+    <content><![CDATA[<video width=100% height=100% controls>
+  <source src="/videos/movie/Answer-KAF_Lyrics/Answer-KAF_Lyrics.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+]]></content>
+      <categories>
+        <category>萌音收藏</category>
+      </categories>
+      <tags>
+        <tag>花譜</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>秒速5厘米</title>
     <url>/post/5-centimeters-per-second/</url>
     <content><![CDATA[<p>《秒速5厘米》（日语：秒速5センチメートル -A CHAIN OF SHORT STORIES ABOUT THEIR DISTANCE-），由新海诚导演， 2007年上映的日本动画电影，同年在亚洲太平洋电影奖中获得最佳动画长篇奖。《秒速5厘米》是新海诚《她和她的猫》、《星之声》和《云之彼端，约定的地方》之后的第四部作品。该部作品表达了不同于之前三部的剧情，没有科幻与幻想，用真实而又平淡的生活画面来讲述贵树的故事。《秒速5厘米》更特地找寻不少实景作为素材，可以几乎说每一帧都是一张精美的壁纸。景物的细腻再加上拟物的代入感，对这种真实而又寂寞的剧情来说，更让人觉得这可能是真实发生过的事情。</p>
@@ -23,18 +38,39 @@
       </tags>
   </entry>
   <entry>
-    <title>Black Clover Ending 11 Full</title>
-    <url>/post/Answer-KAF_Lyrics/</url>
-    <content><![CDATA[<video width=100% height=100% controls>
-  <source src="/videos/movie/Answer-KAF_Lyrics/Answer-KAF_Lyrics.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+    <title>套用 Cloudflare CDN</title>
+    <url>/post/Cloudflare/</url>
+    <content><![CDATA[<h1 id="使用-Hexo-套用-Cloudflare-免费-CDN"><a href="#使用-Hexo-套用-Cloudflare-免费-CDN" class="headerlink" title="使用 Hexo 套用 Cloudflare 免费 CDN"></a>使用 Hexo 套用 Cloudflare 免费 CDN</h1><h2 id="Cloudflare"><a href="#Cloudflare" class="headerlink" title="Cloudflare"></a>Cloudflare</h2><ul>
+<li><a href="https://cloudflare.com/">https://cloudflare.com</a></li>
+</ul>
+<h3 id="Cloudflare-是什么？"><a href="#Cloudflare-是什么？" class="headerlink" title="Cloudflare 是什么？"></a>Cloudflare 是什么？</h3><p> Cloudflare 是一间总部位于旧金山的美国跨国 IT 企业，以向客户提供基于反向代理的内容分发网络及分布式域名解析服务为主要业务。 Cloudflare 可以帮助受保护站点抵御包拒绝服务攻击等网络攻击，确保该网站长期在线，同时提升网站的性能、加载速度以改善访客体验。</p>
+<p>因为 GitHub Pages 的服务器都远在美国，而且被 <em>照顾</em> 的厉害，所以导致在中国直接访问速度非常慢。使用免费的 Cloudflare 反代 + 缓存 GitHub Pages ，可以明显的提高全球访问速度，包括中国。</p>
+<h3 id="Cloudflare-添加域名"><a href="#Cloudflare-添加域名" class="headerlink" title="Cloudflare 添加域名"></a>Cloudflare 添加域名</h3><p>进入 <a href="https://dash.cloudflare.com/">https://dash.cloudflare.com</a> ，点击 Add a Site ， 输入域名然后点击 Add site 。在购买域名服务商处，设置域名的解析 DNS 服务地址为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cleo.ns.cloudflare.com</span><br><span class="line">lila.ns.cloudflare.com</span><br></pre></td></tr></table></figure>
+
+<p>等待全球 DNS 缓存刷新，绑定成功后会收到 Cloudflare 的确认邮件。</p>
+<h4 id="添加-A-记录"><a href="#添加-A-记录" class="headerlink" title="添加 A 记录"></a>添加 A 记录</h4><p>添加 A 记录，绑定 GitHub Pages 地址：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">185.199.108.153</span><br><span class="line">185.199.109.153</span><br><span class="line">185.199.110.153</span><br><span class="line">185.199.111.153</span><br></pre></td></tr></table></figure>
+
+<h4 id="HTTPS-配置"><a href="#HTTPS-配置" class="headerlink" title="HTTPS 配置"></a>HTTPS 配置</h4><p>在 Cloudflare Dash 点击域名进入配置，点击顶部 SSL&#x2F;TLS ，点击 SSL 一栏右侧下拉菜单选择 Flexible 。<br>在 GitHub Pages 仓库网页点击 Settings ，下拉到 GitHub Pages ，点击取消勾选 Enforce HTTPS 。</p>
+<h4 id="添加缓存规则"><a href="#添加缓存规则" class="headerlink" title="添加缓存规则"></a>添加缓存规则</h4><p>在 Cloudflare Dash 点击域名进入配置，点击顶部 Page Rules ，然后点击 Create Page Rule ， If the URL matches 一栏中填写你的域名，不带 wwww ，域名结尾 &#x2F;* ，比如 <code>abc.com/*</code> 。然后在下方点击 Add a Setting 添加规则：</p>
+<ul>
+<li>Auto Minify &#x2F; HTML CSS JavaScript</li>
+<li>Rocket Loader On</li>
+<li>Browser Cache TTL 2 hours</li>
+<li>Always Online On</li>
+<li>Cache Level Cache Everything</li>
+<li>Edge Cache TTL 2 hours</li>
+<li>Automatic HTTPS Rewrites On</li>
+</ul>
+<p>然后点击右下方 Save and Deploy ，保存与部署规则。</p>
+<h4 id="访问测试"><a href="#访问测试" class="headerlink" title="访问测试"></a>访问测试</h4><p>等待 Cloudflare HTTPS 证书下发，然后在游览器输入绑定的域名地址访问。如果一切设置正确，应该会打开发布到 GitHub Pages 的 Hexo Blog 。</p>
 ]]></content>
       <categories>
-        <category>萌音收藏</category>
+        <category>文章专柜</category>
       </categories>
       <tags>
-        <tag>花譜</tag>
+        <tag>八神鬼嗣</tag>
       </tags>
   </entry>
   <entry>
@@ -84,71 +120,6 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
-    <title>套用 Cloudflare CDN</title>
-    <url>/post/Cloudflare/</url>
-    <content><![CDATA[<h1 id="使用-Hexo-套用-Cloudflare-免费-CDN"><a href="#使用-Hexo-套用-Cloudflare-免费-CDN" class="headerlink" title="使用 Hexo 套用 Cloudflare 免费 CDN"></a>使用 Hexo 套用 Cloudflare 免费 CDN</h1><h2 id="Cloudflare"><a href="#Cloudflare" class="headerlink" title="Cloudflare"></a>Cloudflare</h2><ul>
-<li><a href="https://cloudflare.com/">https://cloudflare.com</a></li>
-</ul>
-<h3 id="Cloudflare-是什么？"><a href="#Cloudflare-是什么？" class="headerlink" title="Cloudflare 是什么？"></a>Cloudflare 是什么？</h3><p> Cloudflare 是一间总部位于旧金山的美国跨国 IT 企业，以向客户提供基于反向代理的内容分发网络及分布式域名解析服务为主要业务。 Cloudflare 可以帮助受保护站点抵御包拒绝服务攻击等网络攻击，确保该网站长期在线，同时提升网站的性能、加载速度以改善访客体验。</p>
-<p>因为 GitHub Pages 的服务器都远在美国，而且被 <em>照顾</em> 的厉害，所以导致在中国直接访问速度非常慢。使用免费的 Cloudflare 反代 + 缓存 GitHub Pages ，可以明显的提高全球访问速度，包括中国。</p>
-<h3 id="Cloudflare-添加域名"><a href="#Cloudflare-添加域名" class="headerlink" title="Cloudflare 添加域名"></a>Cloudflare 添加域名</h3><p>进入 <a href="https://dash.cloudflare.com/">https://dash.cloudflare.com</a> ，点击 Add a Site ， 输入域名然后点击 Add site 。在购买域名服务商处，设置域名的解析 DNS 服务地址为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cleo.ns.cloudflare.com</span><br><span class="line">lila.ns.cloudflare.com</span><br></pre></td></tr></table></figure>
-
-<p>等待全球 DNS 缓存刷新，绑定成功后会收到 Cloudflare 的确认邮件。</p>
-<h4 id="添加-A-记录"><a href="#添加-A-记录" class="headerlink" title="添加 A 记录"></a>添加 A 记录</h4><p>添加 A 记录，绑定 GitHub Pages 地址：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">185.199.108.153</span><br><span class="line">185.199.109.153</span><br><span class="line">185.199.110.153</span><br><span class="line">185.199.111.153</span><br></pre></td></tr></table></figure>
-
-<h4 id="HTTPS-配置"><a href="#HTTPS-配置" class="headerlink" title="HTTPS 配置"></a>HTTPS 配置</h4><p>在 Cloudflare Dash 点击域名进入配置，点击顶部 SSL&#x2F;TLS ，点击 SSL 一栏右侧下拉菜单选择 Flexible 。<br>在 GitHub Pages 仓库网页点击 Settings ，下拉到 GitHub Pages ，点击取消勾选 Enforce HTTPS 。</p>
-<h4 id="添加缓存规则"><a href="#添加缓存规则" class="headerlink" title="添加缓存规则"></a>添加缓存规则</h4><p>在 Cloudflare Dash 点击域名进入配置，点击顶部 Page Rules ，然后点击 Create Page Rule ， If the URL matches 一栏中填写你的域名，不带 wwww ，域名结尾 &#x2F;* ，比如 <code>abc.com/*</code> 。然后在下方点击 Add a Setting 添加规则：</p>
-<ul>
-<li>Auto Minify &#x2F; HTML CSS JavaScript</li>
-<li>Rocket Loader On</li>
-<li>Browser Cache TTL 2 hours</li>
-<li>Always Online On</li>
-<li>Cache Level Cache Everything</li>
-<li>Edge Cache TTL 2 hours</li>
-<li>Automatic HTTPS Rewrites On</li>
-</ul>
-<p>然后点击右下方 Save and Deploy ，保存与部署规则。</p>
-<h4 id="访问测试"><a href="#访问测试" class="headerlink" title="访问测试"></a>访问测试</h4><p>等待 Cloudflare HTTPS 证书下发，然后在游览器输入绑定的域名地址访问。如果一切设置正确，应该会打开发布到 GitHub Pages 的 Hexo Blog 。</p>
-]]></content>
-      <categories>
-        <category>文章专柜</category>
-      </categories>
-      <tags>
-        <tag>八神鬼嗣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Promise Full Version</title>
-    <url>/post/Promise_Full_Version/</url>
-    <content><![CDATA[<video width=100% height=100% controls>
-  <source src="https://disk.onioni.workers.dev/video/Promise%20_Full_Version.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>]]></content>
-      <categories>
-        <category>萌音收藏</category>
-      </categories>
-      <tags>
-        <tag>Epic Seven</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ミカヅキBIGWAVE FRESH!!</title>
-    <url>/post/av21173145/</url>
-    <content><![CDATA[<video width=100% height=100% controls>
-  <source src="/videos/movie/av21173145/av21173145.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-]]></content>
-      <categories>
-        <category>萌音收藏</category>
-      </categories>
-      <tags>
-        <tag>Niko</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>电源内部笔记</title>
     <url>/post/Computer-power-supply02/</url>
     <content><![CDATA[<p>电源内部</p>
@@ -177,6 +148,20 @@ Your browser does not support the video tag.
       </categories>
       <tags>
         <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Promise Full Version</title>
+    <url>/post/Promise_Full_Version/</url>
+    <content><![CDATA[<video width=100% height=100% controls>
+  <source src="https://disk.onioni.workers.dev/video/Promise%20_Full_Version.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>]]></content>
+      <categories>
+        <category>萌音收藏</category>
+      </categories>
+      <tags>
+        <tag>Epic Seven</tag>
       </tags>
   </entry>
   <entry>
@@ -257,15 +242,47 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
-    <title>日常生活中的異能戰鬥</title>
-    <url>/post/ino-battle-nichijo-kei-no-haka-de/</url>
-    <content><![CDATA[<p>《日常系的异能战斗》（日语：異能バトルは日常系のなかで）是由望公太著作，029绘制插画，SB CREATIVE的GA文库所发行的日本轻小说作品。2013年5月广播剧CD化，同年7月漫画化，漫画版由黑濑浩介作画。2014年3月宣布改编成电视动画，由TRIGGER制作，于2014年10月6日起东京电视台等播出。(以上来自维基百科)</p>
-<p>作为一部14年的番来说，虽然在14年里面并不算出众，但是相对于14年来说它拥有着一个不错的动画表现。想必是因为在14年里面出来了不少神番，所以才埋没了这一部相当有趣的番吧。就比如《四月是你的谎言》、《FATE&#x2F;STAY NIGHT [UNLIMITED BLADE WORKS]第二季》、《东京食尸鬼》等等，任何一部都可能比《日常系的异能战斗》好上不少。</p>
-<p>作为一部14年的番来说，虽然在14年里面并不算出众，但是相对于14年来说它拥有着一个不错的动画表现。想必是因为在14年里面出来了不少神番，所以才埋没了这一部相当有趣的番吧。就比如《四月是你的谎言》、《FATE&#x2F;STAY NIGHT [UNLIMITED BLADE WORKS]第二季》、《东京食尸鬼》等等，任何一部都可能比《日常系的异能战斗》好上不少。</p>
-<p>虽然这一部番的剧情前面的吐槽与欢乐的气氛感觉非常不错，但是后面修罗场倒是感觉如同突如其来的暴风雨一般。感觉可能结合一下轻小说和漫画一起，可能会更容易里面剧情吧。虽然剧情上欠缺了一些，但是它作为一个日常番，它并没有脱离，毕竟修罗场也是日常啊！虽然永远不会发生在我身上。</p>
-<p>我认为这一个番男主是作为这一个番的亮点，这一点肯定是无可否认的，刚开始看这部番的时候对男主的第一印象就是中二到已经神经大条的家伙…吾乃混沌的霸王…(以下省略114个字)，想必能想出一大串的咏唱的家伙肯定中二到无法挽救了吧。说到这里我也不禁想起以后自己小的时候中二的时候，吾乃天之…咳咳…相信不少人也都会想起自己的黑历史吧。</p>
-<p>我想在这一个番里，有一个不可不看的地方，就是栉川鸠子剧中与男主角的一段对话，阿寿你说的话我完全不懂…（以下省略761个字） ，说白了不就是老娘吃醋了！青梅竹马永远是悲剧的一方，也不知道从哪一年开始就有的风潮…在这一段里面有着两分钟不间断台词，声优考量的标准永远是演技，看到这里应该没有人去怀疑演技报表的早见沙织的吧。幸苦了早见纱织…</p>
-<p>百分之九十九的日常，百分之一的异能，就如同神崎灯代所说我们都是普通的高中生和小学生，虽然有拥有着特别的力量，但谁都会跟别人有不一样的地方，但是也同样烦恼着、愤怒着、欢笑着重复着相同有有点不一样的每一天。</p>
+    <title>ミカヅキBIGWAVE FRESH!!</title>
+    <url>/post/av21173145/</url>
+    <content><![CDATA[<video width=100% height=100% controls>
+  <source src="/videos/movie/av21173145/av21173145.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+]]></content>
+      <categories>
+        <category>萌音收藏</category>
+      </categories>
+      <tags>
+        <tag>Niko</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 指令笔记（二）</title>
+    <url>/post/linux02/</url>
+    <content><![CDATA[<h3 id="包管理器"><a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h3><h4 id="yum-CentOS系统包管理器"><a href="#yum-CentOS系统包管理器" class="headerlink" title="yum CentOS系统包管理器"></a>yum CentOS系统包管理器</h4><p><code>yum 是CentOS系统中 一个用于快速下载/安装的简单命令行管理工具！</code></p>
+<h4 id="yum-参数介绍"><a href="#yum-参数介绍" class="headerlink" title="yum 参数介绍"></a>yum 参数介绍</h4><h5 id="命令"><a href="#命令" class="headerlink" title="命令:"></a>命令:</h5><p><code>update - 检索 新的包列表</code><br><code>upgrade - 升级 软件包</code><br><code>search - 搜索 软件包</code><br><code>install - 安装 软件包</code><br><code>list - 列出 软件包或者软件包组</code><br><code>info - 显示软件包或者软件包组的详细信息</code><br><code>erase - 删除 软件包（这两个命令一样）</code><br><code>remove - 删除 软件包（这两个命令一样）</code><br><code>groupinfo - 显示 有关包组的详细信息</code><br><code>groupinstall - 安装 软件包组（就像一种软件合集）</code><br><code>grouplist - 列出 可用的软件包组</code><br><code>groupremove - 删除 软件包组</code><br><code>check - 检查 软件包</code><br><code>check-update - 检查 可更新的软件包</code><br><code>clean - 清除 缓存目录内的软件包</code><br><code>deplist - 列出 一个包的依赖关系</code><br><code>distribution-synchronization - 同步 已安装的软件包到最新的版本</code><br><code>downgrad - 降级 一个软件包</code><br><code>reinstall - 重新安装 软件包（自动删除重装）</code><br><code>repolist - 显示 配置的软件包仓库</code><br><code>resolvedep - 确定 软件包需要的依赖关系</code></p>
+<h5 id="选项："><a href="#选项：" class="headerlink" title="选项："></a>选项：</h5><p><code>-t ：容忍错误</code><br><code>-C ：完全从系统缓存运行，不要更新缓存</code><br><code>-R 分钟 ：最大命令等待时间</code><br><code>-q ：安静的操作</code><br><code>-y ：对于所有问题回答是</code><br><code>--nogpgcheck ：禁用gpg签名检查</code></p>
+<h5 id="更多的命令可以用-apt-get-–help-查看。"><a href="#更多的命令可以用-apt-get-–help-查看。" class="headerlink" title="更多的命令可以用 apt-get –help 查看。"></a>更多的命令可以用 apt-get –help 查看。</h5><hr>
+<h4 id="使用示例："><a href="#使用示例：" class="headerlink" title="使用示例："></a>使用示例：</h4><h6 id="检索-新的包列表"><a href="#检索-新的包列表" class="headerlink" title="检索 新的包列表"></a>检索 新的包列表</h6><p><code>yum update</code></p>
+<h6 id="安装-Nginx-软件包"><a href="#安装-Nginx-软件包" class="headerlink" title="安装 Nginx 软件包"></a>安装 Nginx 软件包</h6><p><code>yum install nginx</code></p>
+<h6 id="安装-Development-Tools-软件包组（这个软件包组中包含了编译所需的软件）"><a href="#安装-Development-Tools-软件包组（这个软件包组中包含了编译所需的软件）" class="headerlink" title="安装 Development Tools 软件包组（这个软件包组中包含了编译所需的软件）"></a>安装 Development Tools 软件包组（这个软件包组中包含了编译所需的软件）</h6><p><code>yum groupinstall &quot;Development Tools&quot;</code></p>
+<h6 id="卸载-Nginx-软件包"><a href="#卸载-Nginx-软件包" class="headerlink" title="卸载 Nginx 软件包"></a>卸载 Nginx 软件包</h6><p><code>yum erase nginx / yum remove nginx</code></p>
+<h6 id="卸载-Development-Tools-软件包组"><a href="#卸载-Development-Tools-软件包组" class="headerlink" title="卸载 Development Tools 软件包组"></a>卸载 Development Tools 软件包组</h6><p><code>yum groupremove &quot;Development Tools&quot;</code></p>
+<h6 id="升级-所有可更新的软件包"><a href="#升级-所有可更新的软件包" class="headerlink" title="升级 所有可更新的软件包"></a>升级 所有可更新的软件包</h6><p><code>yum upgrade</code></p>
+<h6 id="升级-Nginx-可更新的软件包"><a href="#升级-Nginx-可更新的软件包" class="headerlink" title="升级 Nginx 可更新的软件包"></a>升级 Nginx 可更新的软件包</h6><p><code>yum upgrade nginx</code></p>
+<h6 id="安装-Nginx-软件包-并不显示确定提示"><a href="#安装-Nginx-软件包-并不显示确定提示" class="headerlink" title="安装 Nginx 软件包 并不显示确定提示"></a>安装 Nginx 软件包 并不显示确定提示</h6><p><code>yum install nginx -y</code></p>
+<h6 id="卸载-Nginx-软件包-并不显示确定提示"><a href="#卸载-Nginx-软件包-并不显示确定提示" class="headerlink" title="卸载 Nginx 软件包 并不显示确定提示"></a>卸载 Nginx 软件包 并不显示确定提示</h6><p><code>yum erase nginx -y / yum remove nginx -y</code></p>
+<h6 id="搜索-Nginx-软件包是否存着"><a href="#搜索-Nginx-软件包是否存着" class="headerlink" title="搜索 Nginx 软件包是否存着"></a>搜索 Nginx 软件包是否存着</h6><p><code>yum search nginx</code></p>
+<h6 id="列出-可用的软件包"><a href="#列出-可用的软件包" class="headerlink" title="列出 可用的软件包"></a>列出 可用的软件包</h6><p><code>yum list</code></p>
+<h6 id="列出-可用的软件包组"><a href="#列出-可用的软件包组" class="headerlink" title="列出 可用的软件包组"></a>列出 可用的软件包组</h6><p><code>yum grouplist</code></p>
+<h6 id="清除-缓存目录中的所有软件包"><a href="#清除-缓存目录中的所有软件包" class="headerlink" title="清除 缓存目录中的所有软件包"></a>清除 缓存目录中的所有软件包</h6><p><code>yum clean</code></p>
+<h6 id="清除-缓存目录中的-Nginx-软件包"><a href="#清除-缓存目录中的-Nginx-软件包" class="headerlink" title="清除 缓存目录中的 Nginx 软件包"></a>清除 缓存目录中的 Nginx 软件包</h6><p><code>yum clean nginx</code></p>
+<h6 id="重装-Nginx-软件包"><a href="#重装-Nginx-软件包" class="headerlink" title="重装 Nginx 软件包"></a>重装 Nginx 软件包</h6><p><code>yum reinstall nginx</code></p>
+<h4 id="更多的命令可以用-yum-–help-查看。"><a href="#更多的命令可以用-yum-–help-查看。" class="headerlink" title="更多的命令可以用 yum –help 查看。"></a>更多的命令可以用 yum –help 查看。</h4><hr>
+<h3 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h3><ul>
+<li><h6 id="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数"><a href="#在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数" class="headerlink" title="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数"></a><font color="#dd0000">在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数</font></h6></li>
+<li><h6 id="当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！"><a href="#当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！" class="headerlink" title="当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！"></a><font color="#dd0000">当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！</font></h6></li>
+</ul>
 ]]></content>
       <categories>
         <category>文章专柜</category>
@@ -337,41 +354,6 @@ Your browser does not support the video tag.
 <h6 id="当你用-rm-删除目录的时候会发现提示这不是一个文件"><a href="#当你用-rm-删除目录的时候会发现提示这不是一个文件" class="headerlink" title="当你用 rm 删除目录的时候会发现提示这不是一个文件"></a>当你用 rm 删除目录的时候会发现提示这不是一个文件</h6><h6 id="rm-bash"><a href="#rm-bash" class="headerlink" title="rm bash"></a>rm bash</h6><h6 id="rm-cannot-remove-bash’-Is-a-directory"><a href="#rm-cannot-remove-bash’-Is-a-directory" class="headerlink" title="rm: cannot remove &#96;bash’: Is a directory"></a>rm: cannot remove &#96;bash’: Is a directory</h6><h6 id="可以加上-r-来归递删除目录及其目录下的内容"><a href="#可以加上-r-来归递删除目录及其目录下的内容" class="headerlink" title="可以加上 -r 来归递删除目录及其目录下的内容"></a>可以加上 -r 来归递删除目录及其目录下的内容</h6><p><code>rm -r bash</code></p>
 <h6 id="因为为了避免手误删除错误，rm默认加上了-i-的参数，每一次删除文件-目录都会提示，如果觉得烦可以用-rf-参数"><a href="#因为为了避免手误删除错误，rm默认加上了-i-的参数，每一次删除文件-目录都会提示，如果觉得烦可以用-rf-参数" class="headerlink" title="因为为了避免手误删除错误，rm默认加上了 -i 的参数，每一次删除文件&#x2F;目录都会提示，如果觉得烦可以用 -rf 参数"></a>因为为了避免手误删除错误，rm默认加上了 -i 的参数，每一次删除文件&#x2F;目录都会提示，如果觉得烦可以用 -rf 参数</h6><p><code>rm -rf bash</code></p>
 <h6 id="rm-rf-这个命令请慎重使用，而且千万不要使用-rm-rf-或者-rm-rf-之类的命令-系统自杀-，可能会让你直接跑路，所以使用请慎重！"><a href="#rm-rf-这个命令请慎重使用，而且千万不要使用-rm-rf-或者-rm-rf-之类的命令-系统自杀-，可能会让你直接跑路，所以使用请慎重！" class="headerlink" title="rm -rf 这个命令请慎重使用，而且千万不要使用 rm -rf &#x2F; 或者 rm -rf &#x2F;* 之类的命令(系统自杀)，可能会让你直接跑路，所以使用请慎重！"></a><font color="#dd0000">rm -rf 这个命令请慎重使用，而且千万不要使用 rm -rf &#x2F; 或者 rm -rf &#x2F;* 之类的命令(系统自杀)，可能会让你直接跑路，所以使用请慎重！</font></h6><h4 id="更多的命令可以用-rm-–help-查看。"><a href="#更多的命令可以用-rm-–help-查看。" class="headerlink" title="更多的命令可以用 rm –help 查看。"></a>更多的命令可以用 rm –help 查看。</h4>]]></content>
-      <categories>
-        <category>文章专柜</category>
-      </categories>
-      <tags>
-        <tag>八神鬼嗣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux 指令笔记（二）</title>
-    <url>/post/linux02/</url>
-    <content><![CDATA[<h3 id="包管理器"><a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h3><h4 id="yum-CentOS系统包管理器"><a href="#yum-CentOS系统包管理器" class="headerlink" title="yum CentOS系统包管理器"></a>yum CentOS系统包管理器</h4><p><code>yum 是CentOS系统中 一个用于快速下载/安装的简单命令行管理工具！</code></p>
-<h4 id="yum-参数介绍"><a href="#yum-参数介绍" class="headerlink" title="yum 参数介绍"></a>yum 参数介绍</h4><h5 id="命令"><a href="#命令" class="headerlink" title="命令:"></a>命令:</h5><p><code>update - 检索 新的包列表</code><br><code>upgrade - 升级 软件包</code><br><code>search - 搜索 软件包</code><br><code>install - 安装 软件包</code><br><code>list - 列出 软件包或者软件包组</code><br><code>info - 显示软件包或者软件包组的详细信息</code><br><code>erase - 删除 软件包（这两个命令一样）</code><br><code>remove - 删除 软件包（这两个命令一样）</code><br><code>groupinfo - 显示 有关包组的详细信息</code><br><code>groupinstall - 安装 软件包组（就像一种软件合集）</code><br><code>grouplist - 列出 可用的软件包组</code><br><code>groupremove - 删除 软件包组</code><br><code>check - 检查 软件包</code><br><code>check-update - 检查 可更新的软件包</code><br><code>clean - 清除 缓存目录内的软件包</code><br><code>deplist - 列出 一个包的依赖关系</code><br><code>distribution-synchronization - 同步 已安装的软件包到最新的版本</code><br><code>downgrad - 降级 一个软件包</code><br><code>reinstall - 重新安装 软件包（自动删除重装）</code><br><code>repolist - 显示 配置的软件包仓库</code><br><code>resolvedep - 确定 软件包需要的依赖关系</code></p>
-<h5 id="选项："><a href="#选项：" class="headerlink" title="选项："></a>选项：</h5><p><code>-t ：容忍错误</code><br><code>-C ：完全从系统缓存运行，不要更新缓存</code><br><code>-R 分钟 ：最大命令等待时间</code><br><code>-q ：安静的操作</code><br><code>-y ：对于所有问题回答是</code><br><code>--nogpgcheck ：禁用gpg签名检查</code></p>
-<h5 id="更多的命令可以用-apt-get-–help-查看。"><a href="#更多的命令可以用-apt-get-–help-查看。" class="headerlink" title="更多的命令可以用 apt-get –help 查看。"></a>更多的命令可以用 apt-get –help 查看。</h5><hr>
-<h4 id="使用示例："><a href="#使用示例：" class="headerlink" title="使用示例："></a>使用示例：</h4><h6 id="检索-新的包列表"><a href="#检索-新的包列表" class="headerlink" title="检索 新的包列表"></a>检索 新的包列表</h6><p><code>yum update</code></p>
-<h6 id="安装-Nginx-软件包"><a href="#安装-Nginx-软件包" class="headerlink" title="安装 Nginx 软件包"></a>安装 Nginx 软件包</h6><p><code>yum install nginx</code></p>
-<h6 id="安装-Development-Tools-软件包组（这个软件包组中包含了编译所需的软件）"><a href="#安装-Development-Tools-软件包组（这个软件包组中包含了编译所需的软件）" class="headerlink" title="安装 Development Tools 软件包组（这个软件包组中包含了编译所需的软件）"></a>安装 Development Tools 软件包组（这个软件包组中包含了编译所需的软件）</h6><p><code>yum groupinstall &quot;Development Tools&quot;</code></p>
-<h6 id="卸载-Nginx-软件包"><a href="#卸载-Nginx-软件包" class="headerlink" title="卸载 Nginx 软件包"></a>卸载 Nginx 软件包</h6><p><code>yum erase nginx / yum remove nginx</code></p>
-<h6 id="卸载-Development-Tools-软件包组"><a href="#卸载-Development-Tools-软件包组" class="headerlink" title="卸载 Development Tools 软件包组"></a>卸载 Development Tools 软件包组</h6><p><code>yum groupremove &quot;Development Tools&quot;</code></p>
-<h6 id="升级-所有可更新的软件包"><a href="#升级-所有可更新的软件包" class="headerlink" title="升级 所有可更新的软件包"></a>升级 所有可更新的软件包</h6><p><code>yum upgrade</code></p>
-<h6 id="升级-Nginx-可更新的软件包"><a href="#升级-Nginx-可更新的软件包" class="headerlink" title="升级 Nginx 可更新的软件包"></a>升级 Nginx 可更新的软件包</h6><p><code>yum upgrade nginx</code></p>
-<h6 id="安装-Nginx-软件包-并不显示确定提示"><a href="#安装-Nginx-软件包-并不显示确定提示" class="headerlink" title="安装 Nginx 软件包 并不显示确定提示"></a>安装 Nginx 软件包 并不显示确定提示</h6><p><code>yum install nginx -y</code></p>
-<h6 id="卸载-Nginx-软件包-并不显示确定提示"><a href="#卸载-Nginx-软件包-并不显示确定提示" class="headerlink" title="卸载 Nginx 软件包 并不显示确定提示"></a>卸载 Nginx 软件包 并不显示确定提示</h6><p><code>yum erase nginx -y / yum remove nginx -y</code></p>
-<h6 id="搜索-Nginx-软件包是否存着"><a href="#搜索-Nginx-软件包是否存着" class="headerlink" title="搜索 Nginx 软件包是否存着"></a>搜索 Nginx 软件包是否存着</h6><p><code>yum search nginx</code></p>
-<h6 id="列出-可用的软件包"><a href="#列出-可用的软件包" class="headerlink" title="列出 可用的软件包"></a>列出 可用的软件包</h6><p><code>yum list</code></p>
-<h6 id="列出-可用的软件包组"><a href="#列出-可用的软件包组" class="headerlink" title="列出 可用的软件包组"></a>列出 可用的软件包组</h6><p><code>yum grouplist</code></p>
-<h6 id="清除-缓存目录中的所有软件包"><a href="#清除-缓存目录中的所有软件包" class="headerlink" title="清除 缓存目录中的所有软件包"></a>清除 缓存目录中的所有软件包</h6><p><code>yum clean</code></p>
-<h6 id="清除-缓存目录中的-Nginx-软件包"><a href="#清除-缓存目录中的-Nginx-软件包" class="headerlink" title="清除 缓存目录中的 Nginx 软件包"></a>清除 缓存目录中的 Nginx 软件包</h6><p><code>yum clean nginx</code></p>
-<h6 id="重装-Nginx-软件包"><a href="#重装-Nginx-软件包" class="headerlink" title="重装 Nginx 软件包"></a>重装 Nginx 软件包</h6><p><code>yum reinstall nginx</code></p>
-<h4 id="更多的命令可以用-yum-–help-查看。"><a href="#更多的命令可以用-yum-–help-查看。" class="headerlink" title="更多的命令可以用 yum –help 查看。"></a>更多的命令可以用 yum –help 查看。</h4><hr>
-<h3 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h3><ul>
-<li><h6 id="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数"><a href="#在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数" class="headerlink" title="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数"></a><font color="#dd0000">在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数</font></h6></li>
-<li><h6 id="当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！"><a href="#当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！" class="headerlink" title="当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！"></a><font color="#dd0000">当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！</font></h6></li>
-</ul>
-]]></content>
       <categories>
         <category>文章专柜</category>
       </categories>
@@ -468,6 +450,41 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
+    <title>刀剑神域剧场版 -序列之争-</title>
+    <url>/post/sao-will-return/</url>
+    <content><![CDATA[<p>《刀剑神域剧场版 -序列之争 -》（日语：劇場版 ソードアート・オンライン -オーディナル・スケール-，英文：Sword Art Online The Movie Ordinal Scale）《刀剑神域剧场版 -序列之争 -》本作品为2017年上映动画版电影，由动漫的原班人马A-1 Pictures制作，伊藤智彦执导。《刀剑神域》轻小说作者川原砾与伊藤智彦共同依据《刀剑神域》小说第7卷圣母圣咏篇为基础的后续新的作品。继《AmuSphere》安全性强化版的机种问世之后，于2026年又一新机种问世，一款名为《Augma》的新机种，并号称采用安全的扩张现实 （AR）模式，装置取消“完全潜行”功能并将扩张现实功能发挥到极致进行游戏。</p>
+<p>许多人都认为《刀剑神域》是无可挑剔的神作，那是因为《刀剑神域》爱情故事的一切都是这么美好，打斗情节完美得无可挑剔，满足了众多人的中二心理，想必正是如此《刀剑神域》才会是作为众多人的入宅番吧。同时本次《刀剑神域剧场版 -序列之争 -》加入了偶像元素，原创人物偶像尤娜的灵感来源于虚拟歌姬，那位虚拟歌姬就是当今有名世界第一公主殿下的初音未来，另外考虑到剧本需要，还加入了约会电影的要素。</p>
+<p>《刀剑神域剧场版 -序列之争 -》从时间线来看，剧情主轴承接动画版第二季的时间序之后。剧场版以AR为主题展开的桐人与亚丝娜情侣故事，作为一部未来网络与现实科幻相互结合作品来展现给大家，桐人与亚丝娜情爱情故事还是一如往常的完美，动画的一切都是这么美好。“戰鬥”也同样是《刀剑神域剧场版 -序列之争 -》的看点之一，打斗情节的精彩是数一数二的完美，总能让人心头一震。战斗场面在这方面的制作，A-1 Pictures它向我们证明了他们是制作战斗场面的专家中的专家，就凭着这点来说，《刀剑神域剧场版 -序列之争 -》就有着跟其他动画不一样的地方。</p>
+<p>有人曾经问我刀剑神域是一部后宫番吗？至少我觉得刀剑神域这一部动画不像是后宫番，后宫番的男主一般来说都是跟身边所有妹子保持若即若离的关系，可是在《刀剑神域剧场版 -序列之争 -》中再次声明了桐人心中明日奈地位是不可侵犯。也正是桐人心中的明日奈地位是不可侵犯，使得整剧的爱情故事还是一如往常的完美，其实很多人都很清楚，这样的经历遇到的概率非常小，但是并不是不可能发生的，现实中也存在不少在游戏里相识结婚的人，也正因为这样的几率很小，这种爱情才是最令人羡慕的，刀剑神域正正是给了我们这一个假想。</p>
+<p>其实看完《刀剑神域剧场版 -序列之争 -》有所失望，当我看到提出AR这个概念的时候，感觉眼前有种眼前一亮的感觉，但是剧情却只是借用了AR的外壳，讲述了一个老旧的故事，甚至说感到有点无聊和乏味。虽然是已经出现的老套路，但是并不牵强，还是引申出许多让人值得思考的问题。VR和AR对现实生活的影响，虚拟和现实之间的界限等等，这些问题都是从桐人等人的身上引申出来种种疑团。</p>
+<p>在《刀剑神域剧场版 -序列之争 -》的末尾出现了一个彩蛋，提到了“《刀剑神域》将回归”等字眼，这说明《刀剑神域》还将推出新的动画，看到这个彩蛋真让人指日可待《刀剑神域》的下一部的作品。</p>
+]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日常生活中的異能戰鬥</title>
+    <url>/post/ino-battle-nichijo-kei-no-haka-de/</url>
+    <content><![CDATA[<p>《日常系的异能战斗》（日语：異能バトルは日常系のなかで）是由望公太著作，029绘制插画，SB CREATIVE的GA文库所发行的日本轻小说作品。2013年5月广播剧CD化，同年7月漫画化，漫画版由黑濑浩介作画。2014年3月宣布改编成电视动画，由TRIGGER制作，于2014年10月6日起东京电视台等播出。(以上来自维基百科)</p>
+<p>作为一部14年的番来说，虽然在14年里面并不算出众，但是相对于14年来说它拥有着一个不错的动画表现。想必是因为在14年里面出来了不少神番，所以才埋没了这一部相当有趣的番吧。就比如《四月是你的谎言》、《FATE&#x2F;STAY NIGHT [UNLIMITED BLADE WORKS]第二季》、《东京食尸鬼》等等，任何一部都可能比《日常系的异能战斗》好上不少。</p>
+<p>作为一部14年的番来说，虽然在14年里面并不算出众，但是相对于14年来说它拥有着一个不错的动画表现。想必是因为在14年里面出来了不少神番，所以才埋没了这一部相当有趣的番吧。就比如《四月是你的谎言》、《FATE&#x2F;STAY NIGHT [UNLIMITED BLADE WORKS]第二季》、《东京食尸鬼》等等，任何一部都可能比《日常系的异能战斗》好上不少。</p>
+<p>虽然这一部番的剧情前面的吐槽与欢乐的气氛感觉非常不错，但是后面修罗场倒是感觉如同突如其来的暴风雨一般。感觉可能结合一下轻小说和漫画一起，可能会更容易里面剧情吧。虽然剧情上欠缺了一些，但是它作为一个日常番，它并没有脱离，毕竟修罗场也是日常啊！虽然永远不会发生在我身上。</p>
+<p>我认为这一个番男主是作为这一个番的亮点，这一点肯定是无可否认的，刚开始看这部番的时候对男主的第一印象就是中二到已经神经大条的家伙…吾乃混沌的霸王…(以下省略114个字)，想必能想出一大串的咏唱的家伙肯定中二到无法挽救了吧。说到这里我也不禁想起以后自己小的时候中二的时候，吾乃天之…咳咳…相信不少人也都会想起自己的黑历史吧。</p>
+<p>我想在这一个番里，有一个不可不看的地方，就是栉川鸠子剧中与男主角的一段对话，阿寿你说的话我完全不懂…（以下省略761个字） ，说白了不就是老娘吃醋了！青梅竹马永远是悲剧的一方，也不知道从哪一年开始就有的风潮…在这一段里面有着两分钟不间断台词，声优考量的标准永远是演技，看到这里应该没有人去怀疑演技报表的早见沙织的吧。幸苦了早见纱织…</p>
+<p>百分之九十九的日常，百分之一的异能，就如同神崎灯代所说我们都是普通的高中生和小学生，虽然有拥有着特别的力量，但谁都会跟别人有不一样的地方，但是也同样烦恼着、愤怒着、欢笑着重复着相同有有点不一样的每一天。</p>
+]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>音乐</title>
     <url>/post/music/</url>
     <content><![CDATA[<style>
@@ -495,84 +512,16 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
-    <title>刀剑神域剧场版 -序列之争-</title>
-    <url>/post/sao-will-return/</url>
-    <content><![CDATA[<p>《刀剑神域剧场版 -序列之争 -》（日语：劇場版 ソードアート・オンライン -オーディナル・スケール-，英文：Sword Art Online The Movie Ordinal Scale）《刀剑神域剧场版 -序列之争 -》本作品为2017年上映动画版电影，由动漫的原班人马A-1 Pictures制作，伊藤智彦执导。《刀剑神域》轻小说作者川原砾与伊藤智彦共同依据《刀剑神域》小说第7卷圣母圣咏篇为基础的后续新的作品。继《AmuSphere》安全性强化版的机种问世之后，于2026年又一新机种问世，一款名为《Augma》的新机种，并号称采用安全的扩张现实 （AR）模式，装置取消“完全潜行”功能并将扩张现实功能发挥到极致进行游戏。</p>
-<p>许多人都认为《刀剑神域》是无可挑剔的神作，那是因为《刀剑神域》爱情故事的一切都是这么美好，打斗情节完美得无可挑剔，满足了众多人的中二心理，想必正是如此《刀剑神域》才会是作为众多人的入宅番吧。同时本次《刀剑神域剧场版 -序列之争 -》加入了偶像元素，原创人物偶像尤娜的灵感来源于虚拟歌姬，那位虚拟歌姬就是当今有名世界第一公主殿下的初音未来，另外考虑到剧本需要，还加入了约会电影的要素。</p>
-<p>《刀剑神域剧场版 -序列之争 -》从时间线来看，剧情主轴承接动画版第二季的时间序之后。剧场版以AR为主题展开的桐人与亚丝娜情侣故事，作为一部未来网络与现实科幻相互结合作品来展现给大家，桐人与亚丝娜情爱情故事还是一如往常的完美，动画的一切都是这么美好。“戰鬥”也同样是《刀剑神域剧场版 -序列之争 -》的看点之一，打斗情节的精彩是数一数二的完美，总能让人心头一震。战斗场面在这方面的制作，A-1 Pictures它向我们证明了他们是制作战斗场面的专家中的专家，就凭着这点来说，《刀剑神域剧场版 -序列之争 -》就有着跟其他动画不一样的地方。</p>
-<p>有人曾经问我刀剑神域是一部后宫番吗？至少我觉得刀剑神域这一部动画不像是后宫番，后宫番的男主一般来说都是跟身边所有妹子保持若即若离的关系，可是在《刀剑神域剧场版 -序列之争 -》中再次声明了桐人心中明日奈地位是不可侵犯。也正是桐人心中的明日奈地位是不可侵犯，使得整剧的爱情故事还是一如往常的完美，其实很多人都很清楚，这样的经历遇到的概率非常小，但是并不是不可能发生的，现实中也存在不少在游戏里相识结婚的人，也正因为这样的几率很小，这种爱情才是最令人羡慕的，刀剑神域正正是给了我们这一个假想。</p>
-<p>其实看完《刀剑神域剧场版 -序列之争 -》有所失望，当我看到提出AR这个概念的时候，感觉眼前有种眼前一亮的感觉，但是剧情却只是借用了AR的外壳，讲述了一个老旧的故事，甚至说感到有点无聊和乏味。虽然是已经出现的老套路，但是并不牵强，还是引申出许多让人值得思考的问题。VR和AR对现实生活的影响，虚拟和现实之间的界限等等，这些问题都是从桐人等人的身上引申出来种种疑团。</p>
-<p>在《刀剑神域剧场版 -序列之争 -》的末尾出现了一个彩蛋，提到了“《刀剑神域》将回归”等字眼，这说明《刀剑神域》还将推出新的动画，看到这个彩蛋真让人指日可待《刀剑神域》的下一部的作品。</p>
-]]></content>
-      <categories>
-        <category>文章专柜</category>
-      </categories>
-      <tags>
-        <tag>八神鬼嗣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>少女们向荒野进发</title>
-    <url>/post/shojo-tachi-wa-koya-o-mezasu/</url>
-    <content><![CDATA[<p>《少女们向荒野进发》（日语：少女たちは荒野を目指す）是由タカヒロ企划，MINATOSOFT开发制作的一款WINDOWS电脑游戏。2015年10月宣布电视动画化，并在2016年1月开始动画播放，日文简称“しょこめざ”（SHOKOMEZA）。于2016年3月25日发售。《少女们向荒野进发》和MINATOSOFT的第一作《你是主人我是仆》以及第二作《认真和我谈恋爱！》略有不同。因为该《少女们向荒野进发》不是成人向作品，是以美少女游戏制作社团题材的校园恋爱作品。</p>
-<p>《少女们向荒野进发》在题材方面虽然是后宫番，但是并没有那种老套的剧情，而是以创业为题材的后宫番，在当时来说可以说是一种比较新奇的剧情。剧情中主要突出并不是技术层面的东西，而且在实际制作过程中人与人之间各种各样的问题，让人感到时而轻松又时而让人着急。就比如拿《不起眼女主角培育法》这一相似题材的动画来说，给人的感受确是完全不同的。但是《少女们向荒野进发》可能只是把原作（游戏）某些精彩的部分展现出来，从而显露出不足剧情上面有些美中不足。</p>
-<p>我们应该如何面对未来，应怀着一颗怎么样的心态去迎接未来？面对现在的生活，不但没有企业家的野心，而且也没有出众的一技之长，内心怀着的焦躁。似乎看着《少女们向荒野进发》这样的男主角，内心也许想到的是这可能是曾经的你，或许是现在的你，与朋友过着的每一天中都还在摸索自己的将来，没有明确的梦想，似乎只能见一步走一步。并不知道将来的自己想要做些什么，也并不知道将来自己会变成什么样，就像是制作者在哭述自己曾经遭遇的事情，可能还有在制作游戏上的种种困难与艰辛。</p>
-<p>可能大家都在关注《少女们向荒野进发》的他们向着无尽的荒野迈出了脚步，游戏能成功地制作出来吗？能卖得出去吗？也许这只是表面的信息，剧中真的就只是在说他们向着无尽的荒野迈出了脚步吗？在无尽的荒野是残酷的，人为了赚钱，出卖良知，抛弃善良，惟利是图，甚至可以不择手段。可能我们生存在大千世界里，求生存是万物的本能，也是我们人的本能，人为了活下去使出任何手段，可能这都正常的，是不可耻的。虽然这样的剧情有着不小的说服力，但是难免有点正剧与喜剧两不沾，使整部动画显得有点尴尬。</p>
-<p>以创业为题材的后宫番的动画，的确是挺新鲜的，但是矛盾化解得显得太过僵硬，可能第一次看的时候会感觉很无趣，但是如果你用另外一种眼光去看的话可能是另一部能让人琢磨的动画。在最后我只想说：将吾之人生，祭献给二次元。</p>
-<p>这个世界是个荒野，太单纯会被弱肉强食，只靠爱好是无法存活下去的，只有内心抱有“野心”的人，才能在这个荒野上挑战梦想。 – 黑田砂雪</p>
-]]></content>
-      <categories>
-        <category>文章专柜</category>
-      </categories>
-      <tags>
-        <tag>八神鬼嗣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux 指令笔记（五）</title>
-    <url>/post/linux05/</url>
-    <content><![CDATA[<h3 id="解压缩-操作"><a href="#解压缩-操作" class="headerlink" title="解压缩 操作"></a>解压缩 操作</h3><h4 id="在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如-zip、rar、gz、xz、tar-gz、tar-xz等。"><a href="#在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如-zip、rar、gz、xz、tar-gz、tar-xz等。" class="headerlink" title="在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如 zip、rar、gz、xz、tar.gz、tar.xz等。"></a>在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如 zip、rar、gz、xz、tar.gz、tar.xz等。</h4><h4 id="比较常见的就是各种-tar、-tar-xz、-tar-gz、-tar-bz、-tar-bz2、-tar-Z-后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。"><a href="#比较常见的就是各种-tar、-tar-xz、-tar-gz、-tar-bz、-tar-bz2、-tar-Z-后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。" class="headerlink" title="比较常见的就是各种 .tar、.tar.xz、.tar.gz、.tar.bz、.tar.bz2、.tar.Z 后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。"></a>比较常见的就是各种 .tar、.tar.xz、.tar.gz、.tar.bz、.tar.bz2、.tar.Z 后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。</h4><h5 id="tar-本身只是一个打包的作用，而-tar-后面的-zx-gz-bz-等等才是压缩格式，也就是比如-log-tar-gz-压缩包，就是先用-tar-把指定文件-文件夹打包到一起，然后再用-gz-来压缩打包后的-tar-为-tar-gz-。"><a href="#tar-本身只是一个打包的作用，而-tar-后面的-zx-gz-bz-等等才是压缩格式，也就是比如-log-tar-gz-压缩包，就是先用-tar-把指定文件-文件夹打包到一起，然后再用-gz-来压缩打包后的-tar-为-tar-gz-。" class="headerlink" title="tar 本身只是一个打包的作用，而 .tar 后面的 .zx &#x2F; .gz &#x2F; .bz 等等才是压缩格式，也就是比如 log.tar.gz 压缩包，就是先用 .tar 把指定文件&#x2F;文件夹打包到一起，然后再用 gz 来压缩打包后的 .tar 为 .tar.gz 。"></a>tar 本身只是一个打包的作用，而 .tar 后面的 .zx &#x2F; .gz &#x2F; .bz 等等才是压缩格式，也就是比如 log.tar.gz 压缩包，就是先用 .tar 把指定文件&#x2F;文件夹打包到一起，然后再用 gz 来压缩打包后的 .tar 为 .tar.gz 。</h5><p><code>-x 是从压缩文件提取(解压)文件出来，所以在解压命令中都有这个参数。</code><br><code>-c ：创建一个新的压缩包文件，所以在压缩命令中都有这个参数。</code><br><code>-f ：指定要解压的压缩包文件或要压缩的文件/文件夹，所以这个参数必须放在 解压缩命令参数的最后，然后后面跟着 要解压到压缩包文件或要压缩的文件/文件夹。</code><br><code>-j ：解压缩 bz / bz2 格式的参数</code><br><code>-J ：解压缩 xz / lzip 格式的参数</code><br><code>-z ：解压缩 gz / tgz 格式的参数</code><br><code>-Z ：解压缩 Z 格式的参数</code><br><code>-v ：详细列出解压缩过程中处理的文件</code></p>
-<h4 id="更多的命令可以用-tar-–help-来查看。"><a href="#更多的命令可以用-tar-–help-来查看。" class="headerlink" title="更多的命令可以用 tar –help 来查看。"></a>更多的命令可以用 tar –help 来查看。</h4><hr>
-<h3 id="tar-gz-zip等-解压-压缩包-示例"><a href="#tar-gz-zip等-解压-压缩包-示例" class="headerlink" title="tar gz zip等 解压 压缩包 示例"></a>tar gz zip等 解压 压缩包 示例</h3><h4 id="解压压缩包说明"><a href="#解压压缩包说明" class="headerlink" title="解压压缩包说明"></a>解压压缩包说明</h4><h6 id="解压后缀为-tar-的压缩包"><a href="#解压后缀为-tar-的压缩包" class="headerlink" title="解压后缀为 .tar 的压缩包"></a>解压后缀为 .tar 的压缩包</h6><p><code>tar -xf log.tar</code></p>
-<h6 id="解压后缀为-tar-xz-的压缩包"><a href="#解压后缀为-tar-xz-的压缩包" class="headerlink" title="解压后缀为 .tar.xz 的压缩包"></a>解压后缀为 .tar.xz 的压缩包</h6><p><code>tar -xJf log.tar.xz</code></p>
-<h6 id="解压后缀为-tar-gz-的压缩包，两个方法"><a href="#解压后缀为-tar-gz-的压缩包，两个方法" class="headerlink" title="解压后缀为 .tar.gz 的压缩包，两个方法"></a>解压后缀为 .tar.gz 的压缩包，两个方法</h6><p><code>tar -xzf log.tar.gz</code></p>
-<h6 id="解压后缀为-gz-的压缩包，两个方法，如提示命令不存在，请安装-yum-install-gzip-y-apt-get-install-gzip-y"><a href="#解压后缀为-gz-的压缩包，两个方法，如提示命令不存在，请安装-yum-install-gzip-y-apt-get-install-gzip-y" class="headerlink" title="解压后缀为 .gz 的压缩包，两个方法，如提示命令不存在，请安装 yum install gzip -y &#x2F; apt-get install gzip -y"></a>解压后缀为 .gz 的压缩包，两个方法，如提示命令不存在，请安装 yum install gzip -y &#x2F; apt-get install gzip -y</h6><p><code>gzip -d log.gz</code><br><code>gunzip log.gz</code></p>
-<h6 id="解压后缀为-bz-bz2-tar-bz2-的压缩包，两个方法"><a href="#解压后缀为-bz-bz2-tar-bz2-的压缩包，两个方法" class="headerlink" title="解压后缀为 .bz &#x2F; .bz2 &#x2F; tar.bz2 的压缩包，两个方法"></a>解压后缀为 .bz &#x2F; .bz2 &#x2F; tar.bz2 的压缩包，两个方法</h6><p><code>bzip2 -d log.bz</code><br><code>bunzip2 log.bz</code><br><code>tar -jxf log.tar.bz</code></p>
-<p><code>bzip2 -d log.bz2</code><br><code>bunzip2 log.bz2</code><br><code>tar -jxf log.tar.bz2</code></p>
-<h6 id="解压后缀为-Z-tar-Z-的压缩包，两个方法"><a href="#解压后缀为-Z-tar-Z-的压缩包，两个方法" class="headerlink" title="解压后缀为 .Z &#x2F; tar.Z 的压缩包，两个方法"></a>解压后缀为 .Z &#x2F; tar.Z 的压缩包，两个方法</h6><p><code>uncompress log.Z log.txt</code><br><code>uncompress log.Z log</code></p>
-<p><code>tar xZf log.tar.Z log.txt</code><br><code>tar xZf log.tar.Z log</code></p>
-<h6 id="解压后缀为-rar-的压缩包，如提示命令不存在，请安装-yum-install-unrar-y-apt-get-install-unrar-y-，注意-rar-和-unrar-是分开的"><a href="#解压后缀为-rar-的压缩包，如提示命令不存在，请安装-yum-install-unrar-y-apt-get-install-unrar-y-，注意-rar-和-unrar-是分开的" class="headerlink" title="解压后缀为 .rar 的压缩包，如提示命令不存在，请安装 yum install unrar -y &#x2F; apt-get install unrar -y ，注意 rar 和 unrar 是分开的"></a>解压后缀为 .rar 的压缩包，如提示命令不存在，请安装 yum install unrar -y &#x2F; apt-get install unrar -y ，注意 rar 和 unrar 是分开的</h6><p><code>unrar x log.rar</code></p>
-<h6 id="解压后缀为-zip-的压缩包，如提示命令不存在，请安装-yum-install-unzip-y-apt-get-install-unzip-y，注意-zip-和-unzip-是分开的"><a href="#解压后缀为-zip-的压缩包，如提示命令不存在，请安装-yum-install-unzip-y-apt-get-install-unzip-y，注意-zip-和-unzip-是分开的" class="headerlink" title="解压后缀为 .zip 的压缩包，如提示命令不存在，请安装 yum install unzip -y &#x2F; apt-get install unzip -y，注意 zip 和 unzip 是分开的"></a>解压后缀为 .zip 的压缩包，如提示命令不存在，请安装 yum install unzip -y &#x2F; apt-get install unzip -y，注意 zip 和 unzip 是分开的</h6><p><code>unzip log.zip</code></p>
-<h4 id="更多的命令可以用-tar-–help-gzip-–help-unrar-–help-unzip-–help-来查看。"><a href="#更多的命令可以用-tar-–help-gzip-–help-unrar-–help-unzip-–help-来查看。" class="headerlink" title="更多的命令可以用 tar –help &#x2F; gzip –help &#x2F; unrar –help &#x2F; unzip –help 来查看。"></a>更多的命令可以用 tar –help &#x2F; gzip –help &#x2F; unrar –help &#x2F; unzip –help 来查看。</h4><hr>
-<h3 id="压缩-文件-文件夹-示例"><a href="#压缩-文件-文件夹-示例" class="headerlink" title="压缩 文件&#x2F;文件夹 示例"></a>压缩 文件&#x2F;文件夹 示例</h3><h4 id="压缩文件-文件夹说明"><a href="#压缩文件-文件夹说明" class="headerlink" title="压缩文件&#x2F;文件夹说明"></a>压缩文件&#x2F;文件夹说明</h4><h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar 压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar 压缩包</h6><p><code>tar -cf log.tar log.txt</code><br><code>tar -cf log.tar log</code></p>
-<h6 id="如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可"><a href="#如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可" class="headerlink" title="如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可"></a>如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可</h6><p><code>tar -cf log.tar log.txt doub.txt log bash</code></p>
-<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-xz-压缩包，以下的其他后缀压缩命令都是一样"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-xz-压缩包，以下的其他后缀压缩命令都是一样" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.xz 压缩包，以下的其他后缀压缩命令都是一样"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.xz 压缩包，以下的其他后缀压缩命令都是一样</h6><p><code>tar -cJf log.tar.xz log.txt</code><br><code>tar -cJf log.tar.xz log</code></p>
-<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-gz-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-gz-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.gz 压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.gz 压缩包</h6><p><code>tar -czf log.tar.gz log.txt</code><br><code>tar -czf log.tar.gz log</code></p>
-<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-gz-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-gz-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.gz 压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.gz 压缩包</h6><p><code>gzip log.gz log.txt</code><br><code>gzip log.gz log</code></p>
-<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-bz-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-bz-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.bz 压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.bz 压缩包</h6><p><code>暂时没找到解决方法</code></p>
-<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-bz-log-tar-bz-log-bz2-log-tar-bz2压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-bz-log-tar-bz-log-bz2-log-tar-bz2压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.bz &#x2F; log.tar.bz &#x2F; log.bz2 &#x2F; log.tar.bz2压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.bz &#x2F; log.tar.bz &#x2F; log.bz2 &#x2F; log.tar.bz2压缩包</h6><p><code>bzip2 -z log.txt</code><br><code>bzip2 -z log</code></p>
-<p><code>tar cjf log.tar.bz2 log.txt</code><br><code>tar cjf log.tar.bz2 log</code></p>
-<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-Z-log-tar-Z-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-Z-log-tar-Z-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.Z &#x2F; log.tar.Z 压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.Z &#x2F; log.tar.Z 压缩包</h6><p><code>compress log.txt</code><br><code>compress log</code></p>
-<p><code>tar cZf log.tar.Z log.txt</code><br><code>tar cZf log.tar.Z log</code></p>
-<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-rar-压缩包，如提示命令不存在，请安装-yum-install-rar-y-apt-get-install-rar-y-，注意-rar-和-unrar-是分开的"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-rar-压缩包，如提示命令不存在，请安装-yum-install-rar-y-apt-get-install-rar-y-，注意-rar-和-unrar-是分开的" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.rar 压缩包，如提示命令不存在，请安装 yum install rar -y &#x2F; apt-get install rar -y ，注意 rar 和 unrar 是分开的"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.rar 压缩包，如提示命令不存在，请安装 yum install rar -y &#x2F; apt-get install rar -y ，注意 rar 和 unrar 是分开的</h6><p><code>unrar a log.rar log.txt</code><br><code>unrar a log.rar log</code></p>
-<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-zip-压缩包，如提示命令不存在，请安装-yum-install-zip-y-apt-get-install-zip-y-，注意-zip-和-unzip-是分开的"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-zip-压缩包，如提示命令不存在，请安装-yum-install-zip-y-apt-get-install-zip-y-，注意-zip-和-unzip-是分开的" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.zip 压缩包，如提示命令不存在，请安装 yum install zip -y &#x2F; apt-get install zip -y ，注意 zip 和 unzip 是分开的"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.zip 压缩包，如提示命令不存在，请安装 yum install zip -y &#x2F; apt-get install zip -y ，注意 zip 和 unzip 是分开的</h6><p><code>zip log.zip log.txt</code><br><code>zip log.zip log</code></p>
-<h4 id="更多的命令可以用-tar-–help-gzip-–help-rar-–help-zip-–help-来查看。"><a href="#更多的命令可以用-tar-–help-gzip-–help-rar-–help-zip-–help-来查看。" class="headerlink" title="更多的命令可以用 tar –help &#x2F; gzip –help &#x2F; rar –help &#x2F; zip –help 来查看。"></a>更多的命令可以用 tar –help &#x2F; gzip –help &#x2F; rar –help &#x2F; zip –help 来查看。</h4>]]></content>
-      <categories>
-        <category>文章专柜</category>
-      </categories>
-      <tags>
-        <tag>八神鬼嗣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>借东西的小人阿莉埃蒂</title>
-    <url>/post/the-secret-world-of-arrietty/</url>
-    <content><![CDATA[<p>《借东西的小人阿莉埃蒂》（日语：借りぐらしのアリエッティ，英语：THE SECRET WORLD OF ARRIETTY），日语原意为借居的阿丽埃蒂。《借东西的小人阿莉埃蒂》是日本吉卜力工作室在2010年7月17日在日本上映的动画电影，原作为《地板下的小矮人》是小说家玛丽·诺顿于1952年发表的小说作品。在阅读过《地板下的小矮人》后的宫崎骏与高畑勋，引起了相当大的兴趣，并将此故事改编为动画电影。曾经被宫崎骏称赞为“世界通用的动画师”的米林宏昌，被制作人铃木敏夫提议下执起导演筒，这也是米林宏昌首次是执导的首部动画电影。</p>
-<p>一块方糖一个夹子的约定，不管阿莉埃蒂和翔两人之间萌生出的爱情还是友情，看完之后总有一种从心低里升起的温暖。或许有想知道翔的手术最后有成功吗？阿莉埃蒂搬家去哪里了呢？似乎这些都已不重要了，可能很快就会忘记曾经如何相识如何互生情愫如何在一起的时光。但是如果偶然收拾房间，也许看到那一个小夹子就会想起那时候的你，想起那段永远的留在的记忆中的时光。就如同那一句话一样“你是我心的一部分，我不会忘记的，永远…”</p>
-<p>可能《借东西的小人阿莉埃蒂》没能达到《千与千寻》那样高得高度，但是吉卜力工作室的优点都有在这一部动画电影里面很好的呈现出来。这部动画电影在看似浅显又充满童趣的剧情却从中不经意的透露出深沉而又现实的问题，人与自然的关系是怎么样的呢？ 人与大自然的关系干丝万缕，人类为了在大自然生活，便要克服各种限制, 我们就习以为常的在大自然借取资源，或许我们会感到质疑，我们所做的不正正和《借东西的小人阿莉埃蒂》的小人所作所为一样吗？</p>
-<p>也许借东西，可能只是一种“道德的”偷窃。也许借东西的小人阿莉埃蒂的“偷窃”很让人同情，可能由于自身的弱小，只能去依靠着比自己强大的物种生存下去，虽然这本身是没有错的，但是为了生存的偷窃就是正义的吗？就好像我们人类向大自然无偿地“借东西”呢？我们人类又何时归还过大自然？《借东西的小人阿莉埃蒂》这一部动画电影像极了对我们人类的说教，述说着我们人类只会为了自身的利益和私欲不断的去向大自然“借东西”，我们人类甚至不知道去敬畏自然，只会一味索取。是的，可能人类才是最坏的小偷。</p>
-<p>向来日本吉卜力工作室很难让人失望，总是为你奉献一部有色有声动画。细腻的情感，细致的手绘，充满异国风情却又不突兀的配乐，用那独特的微观视角把《借东西的小人阿莉埃蒂》呈现我们的眼前。虽然负责企划及剧本编写的是宫崎骏，但是真正担当导演的是初次执导的米林宏昌。尽管米林宏昌在细节、人设、风格、配乐等等都做得非常近似宫崎骏，但是整体叙事太过匆忙，就如同像蜻蜓点水般让人看完后心里有种很不是滋味的感觉。可能结局是世界上最美好的告别，但是又缺少了一种失去了打动人心的力量。</p>
-<p>不能被人类发现，是我们生存的定律──（人間に見られてはいけない，それが床下の小人たちの掟だった）</p>
+    <title>WLAN笔记（一）</title>
+    <url>/post/wifi01/</url>
+    <content><![CDATA[<p>WLAN的定义：<br>WLAN的全称是Wireless Local Area Network，中文含义是无线局域网，WLAN的定义有广义和狭义两种：广义上讲WLAN是以各种无线电波（如激光、红外线等）的无线信道来代替有线局域网中的部分或全部传输介质所构成的网络。WLAN的狭义定义是基于IEEE 802.11系列标准，利用高频无线射频（如2.4GHz或5GHz频段的无线电磁波）作为传输介质的无线局域网。我们日常生活中的WLAN，就是指的WLAN的狭义定义。现技术标准有很多，如蓝牙、802.11系列、HyperLAN2等。而802.11系列标准由于其实现技术相对简单、通信可靠、灵活性高和实现成本相对较低等特点，成为了WLAN的主流技术标准，且802.11系列标准也成为了WLAN技术标准的代名词。</p>
+<p>WLAN有两种基本架构</p>
+<p>FAT AP架构：<br>FAT AP架构又称自治式网络架构。FAT AP英文全称是FAT Access Point，中文称为胖接入点，也有很多人直接称为胖AP。FAT AP不仅可以发射射频提供无线信号供无线终端接入，还能独立完成安全加密、用户认证和用户管理等管控功能。密码WLAN设置，配置黑名单或白名单控制用户接入，管理接入的用户（如设置用户的接入速率）等这些都符合FAT AP的特征。FAT AP功能强大，独立性强，具备自治能力，因此FAT AP架构人们又称为自治式网络架构。不需要介入专门的管控设备，独自就可以完成无线用户的接入，业务数据的加密和业务数据报文的转发等功能。<br>独立自治是FAT AP的特点，也是FAT AP的缺点。当单个部署时，由于FAT AP具备较好的独立性，不需要另外部署管控设备，部署起来很方便，成本也较低廉，在类如家庭WLAN或者小企业WLAN的使用场景中，FAT AP往往是最适合的选择。给我们感受最深刻的就是我们在家里使用一个无线路由器就能享受WLAN带给我们的便捷。但是，在大的使用场景中，如我们上面提到的候车厅，FAT AP的独立自治就变成了自身的缺点。由于WLAN覆盖面积较大，接入用户较多，需要部署许多FAT AP设备，而每个FAT AP又是独立自治的，缺少统一的管控设备，管理这些设备就变得十分麻烦。不说别的，光为这些FAT AP升一次级就是一场灾难。所以，在大量部署的情况下，FAT AP会带来巨大的管理维护成本。而且由于独自控制用户的接入，FAT AP无法解决用户的漫游问题。</p>
+<p>AC+FIT AP架构：<br>AC+FIT AP又称集中式网络架构。FIT AP英文全称是FIT Access Point，中文称为瘦接入点，也有很多人直接称为瘦AP。和胖AP不同，瘦AP除了提供无线射频信号外，基本不具备管控功能。也正是因为这一点，它被称为瘦AP，而上面具备管控功能的AP被称为了胖AP。为了实现WLAN的功能，除了FIT AP外，还需要具备管理控制功能的设备——AC。AC英文全称是Access Controller，中文称为无线接入控制器。AC的主要功能是对WLAN中的所有FIT AP进行管理和控制，AC不具备射频（AC只是管理控制设备，不能发射无线射频信号），它和FIT AP配合共同完成WLAN功能。根据AC所管控的区域和吞吐量的不同，AC可以出现在汇聚层，也可以出现在核心层。而FIT AP一般部署在接入层和企业分支。这种层级分明的协同分工，更能体现出AC+FIT AP架构的集中控制的特点，这种架构又被大家称为集中式网络架构。使用AC+FIT AP架构为大型场所部署WLAN时，比使用FAT AP架构更经济、高效。在AC+FIT AP架构下，可以统一为FIT AP下发配置，统一为FIT AP进行软件升级，还可以按照时段控制FIT AP的工作数量等等，这些大大降低了WLAN的管控和维护的成本。而且，由于用户的接入认证可以由AC统一管理，解决用户漫游的问题就变得很容易。</p>
+<p>综上所述，AC+FIT AP架构适用于中大型使用场景，而FAT AP架构适用于小型使用场景。AP根据应用场景可分为室内AP、室分AP和室外AP。</p>
+<p>室内AP:室内放装型AP设备。对于建筑结构较简单、面积相对较小、用户相对集中的场合及对容量需求较大的区域，如小型会议室、酒吧、休闲中心等场景宜选用室内放装型AP设备，该类型设备可根据不同环境灵活实施分布，也可同时工作在AP和桥接等混合模式下。室内AP都有一个共同的特点，就是美观大方，因为它们要做到布放在室内不影响室内装潢的美观。</p>
+<p>室分AP：这里我们需要解释下什么叫室分AP，室分AP即室内分布型AP设备。对于建筑面积较大、用户分布较广且已建有多系统合用的室内分布系统的场合，如大型办公楼、商住楼、酒店、宾馆、机场、车站等场景宜选用室内分布型AP设备，该类型设备接入室内分布系统作为WLAN系统的信号源，以实现对室内WLAN信号的覆盖。</p>
+<p>室外AP：室外分布型AP设备。对于接入点多，用户量大，且用户分布较为集中的场合下，如学校、大型会展中心等大型场所，宜选用室外AP设备组网。室外AP都具有卓越的室外覆盖性能及超强的防护，以适应风吹雨淋的室外环境，具有IP67的防护等级。</p>
 ]]></content>
       <categories>
         <category>文章专柜</category>
@@ -837,16 +786,14 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
-    <title>WLAN笔记（一）</title>
-    <url>/post/wifi01/</url>
-    <content><![CDATA[<p>WLAN的定义：<br>WLAN的全称是Wireless Local Area Network，中文含义是无线局域网，WLAN的定义有广义和狭义两种：广义上讲WLAN是以各种无线电波（如激光、红外线等）的无线信道来代替有线局域网中的部分或全部传输介质所构成的网络。WLAN的狭义定义是基于IEEE 802.11系列标准，利用高频无线射频（如2.4GHz或5GHz频段的无线电磁波）作为传输介质的无线局域网。我们日常生活中的WLAN，就是指的WLAN的狭义定义。现技术标准有很多，如蓝牙、802.11系列、HyperLAN2等。而802.11系列标准由于其实现技术相对简单、通信可靠、灵活性高和实现成本相对较低等特点，成为了WLAN的主流技术标准，且802.11系列标准也成为了WLAN技术标准的代名词。</p>
-<p>WLAN有两种基本架构</p>
-<p>FAT AP架构：<br>FAT AP架构又称自治式网络架构。FAT AP英文全称是FAT Access Point，中文称为胖接入点，也有很多人直接称为胖AP。FAT AP不仅可以发射射频提供无线信号供无线终端接入，还能独立完成安全加密、用户认证和用户管理等管控功能。密码WLAN设置，配置黑名单或白名单控制用户接入，管理接入的用户（如设置用户的接入速率）等这些都符合FAT AP的特征。FAT AP功能强大，独立性强，具备自治能力，因此FAT AP架构人们又称为自治式网络架构。不需要介入专门的管控设备，独自就可以完成无线用户的接入，业务数据的加密和业务数据报文的转发等功能。<br>独立自治是FAT AP的特点，也是FAT AP的缺点。当单个部署时，由于FAT AP具备较好的独立性，不需要另外部署管控设备，部署起来很方便，成本也较低廉，在类如家庭WLAN或者小企业WLAN的使用场景中，FAT AP往往是最适合的选择。给我们感受最深刻的就是我们在家里使用一个无线路由器就能享受WLAN带给我们的便捷。但是，在大的使用场景中，如我们上面提到的候车厅，FAT AP的独立自治就变成了自身的缺点。由于WLAN覆盖面积较大，接入用户较多，需要部署许多FAT AP设备，而每个FAT AP又是独立自治的，缺少统一的管控设备，管理这些设备就变得十分麻烦。不说别的，光为这些FAT AP升一次级就是一场灾难。所以，在大量部署的情况下，FAT AP会带来巨大的管理维护成本。而且由于独自控制用户的接入，FAT AP无法解决用户的漫游问题。</p>
-<p>AC+FIT AP架构：<br>AC+FIT AP又称集中式网络架构。FIT AP英文全称是FIT Access Point，中文称为瘦接入点，也有很多人直接称为瘦AP。和胖AP不同，瘦AP除了提供无线射频信号外，基本不具备管控功能。也正是因为这一点，它被称为瘦AP，而上面具备管控功能的AP被称为了胖AP。为了实现WLAN的功能，除了FIT AP外，还需要具备管理控制功能的设备——AC。AC英文全称是Access Controller，中文称为无线接入控制器。AC的主要功能是对WLAN中的所有FIT AP进行管理和控制，AC不具备射频（AC只是管理控制设备，不能发射无线射频信号），它和FIT AP配合共同完成WLAN功能。根据AC所管控的区域和吞吐量的不同，AC可以出现在汇聚层，也可以出现在核心层。而FIT AP一般部署在接入层和企业分支。这种层级分明的协同分工，更能体现出AC+FIT AP架构的集中控制的特点，这种架构又被大家称为集中式网络架构。使用AC+FIT AP架构为大型场所部署WLAN时，比使用FAT AP架构更经济、高效。在AC+FIT AP架构下，可以统一为FIT AP下发配置，统一为FIT AP进行软件升级，还可以按照时段控制FIT AP的工作数量等等，这些大大降低了WLAN的管控和维护的成本。而且，由于用户的接入认证可以由AC统一管理，解决用户漫游的问题就变得很容易。</p>
-<p>综上所述，AC+FIT AP架构适用于中大型使用场景，而FAT AP架构适用于小型使用场景。AP根据应用场景可分为室内AP、室分AP和室外AP。</p>
-<p>室内AP:室内放装型AP设备。对于建筑结构较简单、面积相对较小、用户相对集中的场合及对容量需求较大的区域，如小型会议室、酒吧、休闲中心等场景宜选用室内放装型AP设备，该类型设备可根据不同环境灵活实施分布，也可同时工作在AP和桥接等混合模式下。室内AP都有一个共同的特点，就是美观大方，因为它们要做到布放在室内不影响室内装潢的美观。</p>
-<p>室分AP：这里我们需要解释下什么叫室分AP，室分AP即室内分布型AP设备。对于建筑面积较大、用户分布较广且已建有多系统合用的室内分布系统的场合，如大型办公楼、商住楼、酒店、宾馆、机场、车站等场景宜选用室内分布型AP设备，该类型设备接入室内分布系统作为WLAN系统的信号源，以实现对室内WLAN信号的覆盖。</p>
-<p>室外AP：室外分布型AP设备。对于接入点多，用户量大，且用户分布较为集中的场合下，如学校、大型会展中心等大型场所，宜选用室外AP设备组网。室外AP都具有卓越的室外覆盖性能及超强的防护，以适应风吹雨淋的室外环境，具有IP67的防护等级。</p>
+    <title>借东西的小人阿莉埃蒂</title>
+    <url>/post/the-secret-world-of-arrietty/</url>
+    <content><![CDATA[<p>《借东西的小人阿莉埃蒂》（日语：借りぐらしのアリエッティ，英语：THE SECRET WORLD OF ARRIETTY），日语原意为借居的阿丽埃蒂。《借东西的小人阿莉埃蒂》是日本吉卜力工作室在2010年7月17日在日本上映的动画电影，原作为《地板下的小矮人》是小说家玛丽·诺顿于1952年发表的小说作品。在阅读过《地板下的小矮人》后的宫崎骏与高畑勋，引起了相当大的兴趣，并将此故事改编为动画电影。曾经被宫崎骏称赞为“世界通用的动画师”的米林宏昌，被制作人铃木敏夫提议下执起导演筒，这也是米林宏昌首次是执导的首部动画电影。</p>
+<p>一块方糖一个夹子的约定，不管阿莉埃蒂和翔两人之间萌生出的爱情还是友情，看完之后总有一种从心低里升起的温暖。或许有想知道翔的手术最后有成功吗？阿莉埃蒂搬家去哪里了呢？似乎这些都已不重要了，可能很快就会忘记曾经如何相识如何互生情愫如何在一起的时光。但是如果偶然收拾房间，也许看到那一个小夹子就会想起那时候的你，想起那段永远的留在的记忆中的时光。就如同那一句话一样“你是我心的一部分，我不会忘记的，永远…”</p>
+<p>可能《借东西的小人阿莉埃蒂》没能达到《千与千寻》那样高得高度，但是吉卜力工作室的优点都有在这一部动画电影里面很好的呈现出来。这部动画电影在看似浅显又充满童趣的剧情却从中不经意的透露出深沉而又现实的问题，人与自然的关系是怎么样的呢？ 人与大自然的关系干丝万缕，人类为了在大自然生活，便要克服各种限制, 我们就习以为常的在大自然借取资源，或许我们会感到质疑，我们所做的不正正和《借东西的小人阿莉埃蒂》的小人所作所为一样吗？</p>
+<p>也许借东西，可能只是一种“道德的”偷窃。也许借东西的小人阿莉埃蒂的“偷窃”很让人同情，可能由于自身的弱小，只能去依靠着比自己强大的物种生存下去，虽然这本身是没有错的，但是为了生存的偷窃就是正义的吗？就好像我们人类向大自然无偿地“借东西”呢？我们人类又何时归还过大自然？《借东西的小人阿莉埃蒂》这一部动画电影像极了对我们人类的说教，述说着我们人类只会为了自身的利益和私欲不断的去向大自然“借东西”，我们人类甚至不知道去敬畏自然，只会一味索取。是的，可能人类才是最坏的小偷。</p>
+<p>向来日本吉卜力工作室很难让人失望，总是为你奉献一部有色有声动画。细腻的情感，细致的手绘，充满异国风情却又不突兀的配乐，用那独特的微观视角把《借东西的小人阿莉埃蒂》呈现我们的眼前。虽然负责企划及剧本编写的是宫崎骏，但是真正担当导演的是初次执导的米林宏昌。尽管米林宏昌在细节、人设、风格、配乐等等都做得非常近似宫崎骏，但是整体叙事太过匆忙，就如同像蜻蜓点水般让人看完后心里有种很不是滋味的感觉。可能结局是世界上最美好的告别，但是又缺少了一种失去了打动人心的力量。</p>
+<p>不能被人类发现，是我们生存的定律──（人間に見られてはいけない，それが床下の小人たちの掟だった）</p>
 ]]></content>
       <categories>
         <category>文章专柜</category>
@@ -870,6 +817,56 @@ Your browser does not support the video tag.
 <p>MAC层的报文聚合：在802.11的MAC层协议中，有很多固定的开销，尤其在两个帧之间的确认信息。在最高数据率的传输下，这些多余的开销甚至比需要传输的整个数据帧还要长。例如：802.11g理论传输速率为54Mbps，实际上却只有22Mbps，将近有一半多的速率浪费了。802.11n的MAC协议数据单元MPDU（MAC Protocol Data Unit）帧汇聚功能，可以将多个MPDU聚合为一个物理层报文，只需要进行一次信道竞争或退避，就可完成N个MPDU的同时发送，从而减少了发送N-1个MPDU报文所带来的信道资源消耗。执行命令80211n a-mpdu enable可以使能802.11n的MPDU帧汇聚功能，然后执行80211n a-mpdu max-length-exponent命令可以配置汇聚帧的最大长度，802.11n的汇聚帧最大长度为65535字节。</p>
 <p>注:并不是所有的环境都适合配置short GI。在复杂的空间环境里，射频遇到障碍物可能会产生反射等现象，会造成AP和STA之间的多路径传输（多径效应）。在多径环境中，前一个数据块还没有发送完成，后一个数据块可能通过不同的路径先到达了，合理的GI长度能够避免相互干扰。如果GI时长不合理，会降低链路的使用效率。</p>
 <p>802.11ac默认支持MPDU功能，且支持最大长度为1048575字节的汇聚帧。另外，802.11ac还支持MAC服务数据单元MSDU（Mac Service Data Units）汇聚，大大提高了数据的传输效率，除了802.11标准协议外，在WLAN领域还有一个更常见更常用的名词——Wi-Fi。WiFi是无线保真（Wireless Fidelity）的英文缩写。在802.11b时代，虽然所有的802.11b产品都使用相同的802.11b标准，但为了保证不同厂商的产品能够具有良好的兼容性，1999年一些WLAN设备生产厂商一起成立了一个工业联盟——无线以太网兼容性联盟WECA（Wireless Ethernet Compatibility Alliance），后更名为Wi-Fi联盟。Wi-Fi联盟建立了一套验证802.11b产品兼容性的测试程序，称为Wi-Fi认证，通过该程序认证的产品可以使用Wi-Fi认证标签。后来，Wi-Fi认证的范围逐步扩展到802.11a，802.11g和802.11n。另外，由于忍受不了802.11n漫长的标准化进程和市场需求的推动，Wi-Fi联盟以802.11n 2.0版草案作为产品认证的依据，在802.11n标准推出之前已经认证批准了数百个802.11n产品。</p>
+]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WLAN笔记（四）</title>
+    <url>/post/wifi04/</url>
+    <content><![CDATA[<p>WLAN术语SSID，SSID的全称是Service Set Identifier，也就是服务集标识符，用于标识一个服务集，按照大部分人的理解，也就是用来标识一个可用的网路。而所谓服务集，就是一组互相有联系的无线设备。在提供的无线网络中，我们的无线终端（在WLAN中称之为工作站STA，Station）只要连上AP，实际上就构成了一个服务集。在这个服务集内，只要终端和AP关联，终端就能够相互通信，也可以通过AP访问外部网络。如果只有一个AP，也就是说这个服务集中只有一个AP，那么这个服务集就可以被认为一个基本服务集BSS。BSS是无线网络的基本服务单元。所有的终端关联到一个AP上，该AP连接其他有线设备，并且控制和主导整个BSS中的全部数据的传输过程。如果存在多个AP，一个BSS所覆盖的地理范围有限，直径不超过100米，这个时候就会有一个扩展服务集ESS（Extend Service Set）的概念。</p>
+<p>ESS简单理解，就是多个使用相同SSID的BSS组成，但是这中间隐含2个条件：</p>
+<p>1.这些BSS是要比邻安置。<br>2.这些BSS通过各种分布系统互联，有线无线都可以，不过一般都是以太网。</p>
+<p>只有满足上述条件后，才认为这些BSS可以被统一为一个ESS。由于使用的是相同的SSID，我们根本感觉不到我们是接在多个BSS上，而是如同接在同一个AP上一样。终端在ESS内的通信和在BSS中类似，不过如果BSS中终端A想和另一个BSS中的终端B通信，则是需要经过2个接入点AP1和AP2，即A-&gt;AP1-&gt;AP2-&gt;B。特别的，在同一个ESS中的不同BSS之间切换的过程称为漫游。上图也画出了终端A从BSS1域漫游到BSS2（图上的A’的位置），此时A仍然可以保持和B的通信，不过A在漫游前后的接入点AP改变了。SSID通常是一个不超过32个字符的字符串，这个SSID又叫ESSID，是对ESS的标识。在同一个ESS中，我们是不知道接在哪个BSS上，但终端设备会用BSSID标识BSS得知你所在哪一个BSS，这个标识符是一个长度为48位的二进制标识符，通常是这个BSS里面AP的MAC地址。</p>
+<p>有些设备还可以配置VAP，为用户提供差异化的WLAN业务。所谓VAP就是在一个物理实体AP上虚拟出多个虚拟的AP，每一个被虚拟出的AP就是一个VAP，每个VAP提供和物理实体AP一样的功能。VAP的优势显而易见，多个虚拟的AP工作在同一个硬件平台，提高了硬件的利用率；网络管理员可以为不同VAP设置不同SSID，安全设置，QoS设置等策略和功能，也增加了网络的灵活性。那VAP在一个ESS中怎么区分BSS，其实VAP也是用BSSID来区分的，但是这是BSSID不是用的物理AP的MAC地址，而是用的VAP的MAC地址。而这个VAP的MAC地址实际上和物理AP的MAC地址是有影射关系的。一般第一个VAP的MAC是跟AP的MAC地址一样的，后面的VAP的MAC地址是在AP的MAC的最后一位顺序加一。当然BSSID没有ESSID来的好记，毕竟是一串无序数据，所以也会为VAP添加一个SSID来方便记忆。</p>
+<p>补充：<br>基本服务集BSS（Basic Service Set）无线网络的基本服务单元，通常由一个AP和若干无线终端组成。<br>扩展服务集ESS（Extend Service Set）由多个使用相同SSID的BSS组成，解决BSS覆盖范围有限的问题。<br>服务集标识符SSID（Service Set Identifier）用来区分不同的无线网络。<br>扩展服务集标识符ESSID（Extended Service Set Identifier）一个或一组无线网络的标识，和SSID是相同的。<br>基本服务集标识符BSSID（Basic Service Set Identifier）在链路层上用来区分同一个AP上的不同VAP，也可以用来区分同一个ESS中的BSS。<br>虚拟接入点VAP（Virtual Access Point）AP设备上虚拟出来的业务功能实体。用户可以在一个AP上创建不同的VAP来为不同的用户群体提供无线接入服务。</p>
+]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>少女们向荒野进发</title>
+    <url>/post/shojo-tachi-wa-koya-o-mezasu/</url>
+    <content><![CDATA[<p>《少女们向荒野进发》（日语：少女たちは荒野を目指す）是由タカヒロ企划，MINATOSOFT开发制作的一款WINDOWS电脑游戏。2015年10月宣布电视动画化，并在2016年1月开始动画播放，日文简称“しょこめざ”（SHOKOMEZA）。于2016年3月25日发售。《少女们向荒野进发》和MINATOSOFT的第一作《你是主人我是仆》以及第二作《认真和我谈恋爱！》略有不同。因为该《少女们向荒野进发》不是成人向作品，是以美少女游戏制作社团题材的校园恋爱作品。</p>
+<p>《少女们向荒野进发》在题材方面虽然是后宫番，但是并没有那种老套的剧情，而是以创业为题材的后宫番，在当时来说可以说是一种比较新奇的剧情。剧情中主要突出并不是技术层面的东西，而且在实际制作过程中人与人之间各种各样的问题，让人感到时而轻松又时而让人着急。就比如拿《不起眼女主角培育法》这一相似题材的动画来说，给人的感受确是完全不同的。但是《少女们向荒野进发》可能只是把原作（游戏）某些精彩的部分展现出来，从而显露出不足剧情上面有些美中不足。</p>
+<p>我们应该如何面对未来，应怀着一颗怎么样的心态去迎接未来？面对现在的生活，不但没有企业家的野心，而且也没有出众的一技之长，内心怀着的焦躁。似乎看着《少女们向荒野进发》这样的男主角，内心也许想到的是这可能是曾经的你，或许是现在的你，与朋友过着的每一天中都还在摸索自己的将来，没有明确的梦想，似乎只能见一步走一步。并不知道将来的自己想要做些什么，也并不知道将来自己会变成什么样，就像是制作者在哭述自己曾经遭遇的事情，可能还有在制作游戏上的种种困难与艰辛。</p>
+<p>可能大家都在关注《少女们向荒野进发》的他们向着无尽的荒野迈出了脚步，游戏能成功地制作出来吗？能卖得出去吗？也许这只是表面的信息，剧中真的就只是在说他们向着无尽的荒野迈出了脚步吗？在无尽的荒野是残酷的，人为了赚钱，出卖良知，抛弃善良，惟利是图，甚至可以不择手段。可能我们生存在大千世界里，求生存是万物的本能，也是我们人的本能，人为了活下去使出任何手段，可能这都正常的，是不可耻的。虽然这样的剧情有着不小的说服力，但是难免有点正剧与喜剧两不沾，使整部动画显得有点尴尬。</p>
+<p>以创业为题材的后宫番的动画，的确是挺新鲜的，但是矛盾化解得显得太过僵硬，可能第一次看的时候会感觉很无趣，但是如果你用另外一种眼光去看的话可能是另一部能让人琢磨的动画。在最后我只想说：将吾之人生，祭献给二次元。</p>
+<p>这个世界是个荒野，太单纯会被弱肉强食，只靠爱好是无法存活下去的，只有内心抱有“野心”的人，才能在这个荒野上挑战梦想。 – 黑田砂雪</p>
+]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你的名字。</title>
+    <url>/post/your-name-8/</url>
+    <content><![CDATA[<p>《你的名字。》（日语：君の名は。）是由日本动画家新海诚第一次采用制作委员会方式的作品，并亲自编剧和执导该影片。虽然新海诚一度对于“你的名字。”和同样原名为“君の名は”的名影剧《请问芳名》撞名而无法决定，在重读多次剧本下才确定此片名与内容相符，并要求要加上句号与《请问芳名》有别。该影片于2016年8月26日在日本首映，上映后连霸日本数周票房冠军，是目前唯一除吉卜力工作室作品以外超越百亿日圆票房的日本动画电影，并获得西班牙锡切斯电影节最佳动画长片奖等电影奖荣誉。</p>
+<p>《你的名字。》被日媒称“一秒钟都不觉得无聊”可不是浪得虚名的，相比之前的动画来说，剧情的这一方面可谓是下足了功夫，就比如动画中不少有趣的生活细节，男女身体差异上等等，使男女主角的行为举止等等都非常符合学生的思想逻辑。新海诚重视现实，更重视一些难以存在但是又实际存在的悲欢离合，相知相遇。善于提取美感与古文句加深作品的深度还有幻想感，轻度幻想。从虚幻中体现现实，使整部作品与众不同。</p>
+<p>被称为壁纸狂魔的新海诚，让整部《你的名字。》每一帧都变得如此细腻。再加上通过无数的细节为接下来的剧情埋下伏笔。以种种主线剧情以外的事情与情感来衬托，不但没有使剧情变得杂乱无章，反而巧妙的烘托了整部动画的剧情。其中有一个细节值得注意的是《你的名字》中的阿雪老师，虽然本名不详，但是似乎在样貌、穿着等等的方面上，都让人感觉《你的名字》中的阿雪老师就是《言叶之庭》中的雪野百香里。恰巧上一部作品《言叶之庭》中的结局里，女主角雪野百香里决定回到乡下，并且声优也同样是花泽香菜。虽然不知道新海诚的用意是什么，但是这个问题真的是令人值得思考。</p>
+<p>当然《你的名字。》这部动画的成功，也离不开由摇滚乐团RADWIMPS所担当的音乐，据了解男女主角互换身体，彼此针锋相对这一幕，两人通过手上写“别自恋了”、在脸上写“笨蛋”来交流的片段，是新海诚听着RADWIMPS的《君と羊と青》借助这首歌曲的疾走感和气势，才构思出如此精彩的剧本。可能在新海诚的的心里，RADWIMPS的音乐已经是与《你的名字。》这一部动画中的一个关键点，相互结合，缺一不可。</p>
+<p>有人曾经问我，新海诚会成为下一个宫崎骏吗？我得回答是：NO 。 因为我觉得宫崎骏和新海诚根本就是两个不同的导演，虽然新海诚的动画可以几乎说每一帧都是一张精美的壁纸，但是却做不到宫崎骏的艺术高度。新海诚是运用动画讲了好故事的人，那么宫崎骏是展现了动画的最高点的人。但是我还是相信不久得将来新海诚还是会达到新的高度，因为这些都只是目前看来，未来的事谁也说不准。</p>
 ]]></content>
       <categories>
         <category>文章专柜</category>
@@ -932,31 +929,34 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
-    <title>你的名字。</title>
-    <url>/post/your-name-8/</url>
-    <content><![CDATA[<p>《你的名字。》（日语：君の名は。）是由日本动画家新海诚第一次采用制作委员会方式的作品，并亲自编剧和执导该影片。虽然新海诚一度对于“你的名字。”和同样原名为“君の名は”的名影剧《请问芳名》撞名而无法决定，在重读多次剧本下才确定此片名与内容相符，并要求要加上句号与《请问芳名》有别。该影片于2016年8月26日在日本首映，上映后连霸日本数周票房冠军，是目前唯一除吉卜力工作室作品以外超越百亿日圆票房的日本动画电影，并获得西班牙锡切斯电影节最佳动画长片奖等电影奖荣誉。</p>
-<p>《你的名字。》被日媒称“一秒钟都不觉得无聊”可不是浪得虚名的，相比之前的动画来说，剧情的这一方面可谓是下足了功夫，就比如动画中不少有趣的生活细节，男女身体差异上等等，使男女主角的行为举止等等都非常符合学生的思想逻辑。新海诚重视现实，更重视一些难以存在但是又实际存在的悲欢离合，相知相遇。善于提取美感与古文句加深作品的深度还有幻想感，轻度幻想。从虚幻中体现现实，使整部作品与众不同。</p>
-<p>被称为壁纸狂魔的新海诚，让整部《你的名字。》每一帧都变得如此细腻。再加上通过无数的细节为接下来的剧情埋下伏笔。以种种主线剧情以外的事情与情感来衬托，不但没有使剧情变得杂乱无章，反而巧妙的烘托了整部动画的剧情。其中有一个细节值得注意的是《你的名字》中的阿雪老师，虽然本名不详，但是似乎在样貌、穿着等等的方面上，都让人感觉《你的名字》中的阿雪老师就是《言叶之庭》中的雪野百香里。恰巧上一部作品《言叶之庭》中的结局里，女主角雪野百香里决定回到乡下，并且声优也同样是花泽香菜。虽然不知道新海诚的用意是什么，但是这个问题真的是令人值得思考。</p>
-<p>当然《你的名字。》这部动画的成功，也离不开由摇滚乐团RADWIMPS所担当的音乐，据了解男女主角互换身体，彼此针锋相对这一幕，两人通过手上写“别自恋了”、在脸上写“笨蛋”来交流的片段，是新海诚听着RADWIMPS的《君と羊と青》借助这首歌曲的疾走感和气势，才构思出如此精彩的剧本。可能在新海诚的的心里，RADWIMPS的音乐已经是与《你的名字。》这一部动画中的一个关键点，相互结合，缺一不可。</p>
-<p>有人曾经问我，新海诚会成为下一个宫崎骏吗？我得回答是：NO 。 因为我觉得宫崎骏和新海诚根本就是两个不同的导演，虽然新海诚的动画可以几乎说每一帧都是一张精美的壁纸，但是却做不到宫崎骏的艺术高度。新海诚是运用动画讲了好故事的人，那么宫崎骏是展现了动画的最高点的人。但是我还是相信不久得将来新海诚还是会达到新的高度，因为这些都只是目前看来，未来的事谁也说不准。</p>
-]]></content>
-      <categories>
-        <category>文章专柜</category>
-      </categories>
-      <tags>
-        <tag>八神鬼嗣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WLAN笔记（四）</title>
-    <url>/post/wifi04/</url>
-    <content><![CDATA[<p>WLAN术语SSID，SSID的全称是Service Set Identifier，也就是服务集标识符，用于标识一个服务集，按照大部分人的理解，也就是用来标识一个可用的网路。而所谓服务集，就是一组互相有联系的无线设备。在提供的无线网络中，我们的无线终端（在WLAN中称之为工作站STA，Station）只要连上AP，实际上就构成了一个服务集。在这个服务集内，只要终端和AP关联，终端就能够相互通信，也可以通过AP访问外部网络。如果只有一个AP，也就是说这个服务集中只有一个AP，那么这个服务集就可以被认为一个基本服务集BSS。BSS是无线网络的基本服务单元。所有的终端关联到一个AP上，该AP连接其他有线设备，并且控制和主导整个BSS中的全部数据的传输过程。如果存在多个AP，一个BSS所覆盖的地理范围有限，直径不超过100米，这个时候就会有一个扩展服务集ESS（Extend Service Set）的概念。</p>
-<p>ESS简单理解，就是多个使用相同SSID的BSS组成，但是这中间隐含2个条件：</p>
-<p>1.这些BSS是要比邻安置。<br>2.这些BSS通过各种分布系统互联，有线无线都可以，不过一般都是以太网。</p>
-<p>只有满足上述条件后，才认为这些BSS可以被统一为一个ESS。由于使用的是相同的SSID，我们根本感觉不到我们是接在多个BSS上，而是如同接在同一个AP上一样。终端在ESS内的通信和在BSS中类似，不过如果BSS中终端A想和另一个BSS中的终端B通信，则是需要经过2个接入点AP1和AP2，即A-&gt;AP1-&gt;AP2-&gt;B。特别的，在同一个ESS中的不同BSS之间切换的过程称为漫游。上图也画出了终端A从BSS1域漫游到BSS2（图上的A’的位置），此时A仍然可以保持和B的通信，不过A在漫游前后的接入点AP改变了。SSID通常是一个不超过32个字符的字符串，这个SSID又叫ESSID，是对ESS的标识。在同一个ESS中，我们是不知道接在哪个BSS上，但终端设备会用BSSID标识BSS得知你所在哪一个BSS，这个标识符是一个长度为48位的二进制标识符，通常是这个BSS里面AP的MAC地址。</p>
-<p>有些设备还可以配置VAP，为用户提供差异化的WLAN业务。所谓VAP就是在一个物理实体AP上虚拟出多个虚拟的AP，每一个被虚拟出的AP就是一个VAP，每个VAP提供和物理实体AP一样的功能。VAP的优势显而易见，多个虚拟的AP工作在同一个硬件平台，提高了硬件的利用率；网络管理员可以为不同VAP设置不同SSID，安全设置，QoS设置等策略和功能，也增加了网络的灵活性。那VAP在一个ESS中怎么区分BSS，其实VAP也是用BSSID来区分的，但是这是BSSID不是用的物理AP的MAC地址，而是用的VAP的MAC地址。而这个VAP的MAC地址实际上和物理AP的MAC地址是有影射关系的。一般第一个VAP的MAC是跟AP的MAC地址一样的，后面的VAP的MAC地址是在AP的MAC的最后一位顺序加一。当然BSSID没有ESSID来的好记，毕竟是一串无序数据，所以也会为VAP添加一个SSID来方便记忆。</p>
-<p>补充：<br>基本服务集BSS（Basic Service Set）无线网络的基本服务单元，通常由一个AP和若干无线终端组成。<br>扩展服务集ESS（Extend Service Set）由多个使用相同SSID的BSS组成，解决BSS覆盖范围有限的问题。<br>服务集标识符SSID（Service Set Identifier）用来区分不同的无线网络。<br>扩展服务集标识符ESSID（Extended Service Set Identifier）一个或一组无线网络的标识，和SSID是相同的。<br>基本服务集标识符BSSID（Basic Service Set Identifier）在链路层上用来区分同一个AP上的不同VAP，也可以用来区分同一个ESS中的BSS。<br>虚拟接入点VAP（Virtual Access Point）AP设备上虚拟出来的业务功能实体。用户可以在一个AP上创建不同的VAP来为不同的用户群体提供无线接入服务。</p>
-]]></content>
+    <title>Linux 指令笔记（五）</title>
+    <url>/post/linux05/</url>
+    <content><![CDATA[<h3 id="解压缩-操作"><a href="#解压缩-操作" class="headerlink" title="解压缩 操作"></a>解压缩 操作</h3><h4 id="在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如-zip、rar、gz、xz、tar-gz、tar-xz等。"><a href="#在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如-zip、rar、gz、xz、tar-gz、tar-xz等。" class="headerlink" title="在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如 zip、rar、gz、xz、tar.gz、tar.xz等。"></a>在Linux中经常会下载到压缩文件，而压缩文件的格式有很多，比如 zip、rar、gz、xz、tar.gz、tar.xz等。</h4><h4 id="比较常见的就是各种-tar、-tar-xz、-tar-gz、-tar-bz、-tar-bz2、-tar-Z-后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。"><a href="#比较常见的就是各种-tar、-tar-xz、-tar-gz、-tar-bz、-tar-bz2、-tar-Z-后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。" class="headerlink" title="比较常见的就是各种 .tar、.tar.xz、.tar.gz、.tar.bz、.tar.bz2、.tar.Z 后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。"></a>比较常见的就是各种 .tar、.tar.xz、.tar.gz、.tar.bz、.tar.bz2、.tar.Z 后缀压缩包，这几个的解压缩命令基本一样，说明一下参数的意义。</h4><h5 id="tar-本身只是一个打包的作用，而-tar-后面的-zx-gz-bz-等等才是压缩格式，也就是比如-log-tar-gz-压缩包，就是先用-tar-把指定文件-文件夹打包到一起，然后再用-gz-来压缩打包后的-tar-为-tar-gz-。"><a href="#tar-本身只是一个打包的作用，而-tar-后面的-zx-gz-bz-等等才是压缩格式，也就是比如-log-tar-gz-压缩包，就是先用-tar-把指定文件-文件夹打包到一起，然后再用-gz-来压缩打包后的-tar-为-tar-gz-。" class="headerlink" title="tar 本身只是一个打包的作用，而 .tar 后面的 .zx &#x2F; .gz &#x2F; .bz 等等才是压缩格式，也就是比如 log.tar.gz 压缩包，就是先用 .tar 把指定文件&#x2F;文件夹打包到一起，然后再用 gz 来压缩打包后的 .tar 为 .tar.gz 。"></a>tar 本身只是一个打包的作用，而 .tar 后面的 .zx &#x2F; .gz &#x2F; .bz 等等才是压缩格式，也就是比如 log.tar.gz 压缩包，就是先用 .tar 把指定文件&#x2F;文件夹打包到一起，然后再用 gz 来压缩打包后的 .tar 为 .tar.gz 。</h5><p><code>-x 是从压缩文件提取(解压)文件出来，所以在解压命令中都有这个参数。</code><br><code>-c ：创建一个新的压缩包文件，所以在压缩命令中都有这个参数。</code><br><code>-f ：指定要解压的压缩包文件或要压缩的文件/文件夹，所以这个参数必须放在 解压缩命令参数的最后，然后后面跟着 要解压到压缩包文件或要压缩的文件/文件夹。</code><br><code>-j ：解压缩 bz / bz2 格式的参数</code><br><code>-J ：解压缩 xz / lzip 格式的参数</code><br><code>-z ：解压缩 gz / tgz 格式的参数</code><br><code>-Z ：解压缩 Z 格式的参数</code><br><code>-v ：详细列出解压缩过程中处理的文件</code></p>
+<h4 id="更多的命令可以用-tar-–help-来查看。"><a href="#更多的命令可以用-tar-–help-来查看。" class="headerlink" title="更多的命令可以用 tar –help 来查看。"></a>更多的命令可以用 tar –help 来查看。</h4><hr>
+<h3 id="tar-gz-zip等-解压-压缩包-示例"><a href="#tar-gz-zip等-解压-压缩包-示例" class="headerlink" title="tar gz zip等 解压 压缩包 示例"></a>tar gz zip等 解压 压缩包 示例</h3><h4 id="解压压缩包说明"><a href="#解压压缩包说明" class="headerlink" title="解压压缩包说明"></a>解压压缩包说明</h4><h6 id="解压后缀为-tar-的压缩包"><a href="#解压后缀为-tar-的压缩包" class="headerlink" title="解压后缀为 .tar 的压缩包"></a>解压后缀为 .tar 的压缩包</h6><p><code>tar -xf log.tar</code></p>
+<h6 id="解压后缀为-tar-xz-的压缩包"><a href="#解压后缀为-tar-xz-的压缩包" class="headerlink" title="解压后缀为 .tar.xz 的压缩包"></a>解压后缀为 .tar.xz 的压缩包</h6><p><code>tar -xJf log.tar.xz</code></p>
+<h6 id="解压后缀为-tar-gz-的压缩包，两个方法"><a href="#解压后缀为-tar-gz-的压缩包，两个方法" class="headerlink" title="解压后缀为 .tar.gz 的压缩包，两个方法"></a>解压后缀为 .tar.gz 的压缩包，两个方法</h6><p><code>tar -xzf log.tar.gz</code></p>
+<h6 id="解压后缀为-gz-的压缩包，两个方法，如提示命令不存在，请安装-yum-install-gzip-y-apt-get-install-gzip-y"><a href="#解压后缀为-gz-的压缩包，两个方法，如提示命令不存在，请安装-yum-install-gzip-y-apt-get-install-gzip-y" class="headerlink" title="解压后缀为 .gz 的压缩包，两个方法，如提示命令不存在，请安装 yum install gzip -y &#x2F; apt-get install gzip -y"></a>解压后缀为 .gz 的压缩包，两个方法，如提示命令不存在，请安装 yum install gzip -y &#x2F; apt-get install gzip -y</h6><p><code>gzip -d log.gz</code><br><code>gunzip log.gz</code></p>
+<h6 id="解压后缀为-bz-bz2-tar-bz2-的压缩包，两个方法"><a href="#解压后缀为-bz-bz2-tar-bz2-的压缩包，两个方法" class="headerlink" title="解压后缀为 .bz &#x2F; .bz2 &#x2F; tar.bz2 的压缩包，两个方法"></a>解压后缀为 .bz &#x2F; .bz2 &#x2F; tar.bz2 的压缩包，两个方法</h6><p><code>bzip2 -d log.bz</code><br><code>bunzip2 log.bz</code><br><code>tar -jxf log.tar.bz</code></p>
+<p><code>bzip2 -d log.bz2</code><br><code>bunzip2 log.bz2</code><br><code>tar -jxf log.tar.bz2</code></p>
+<h6 id="解压后缀为-Z-tar-Z-的压缩包，两个方法"><a href="#解压后缀为-Z-tar-Z-的压缩包，两个方法" class="headerlink" title="解压后缀为 .Z &#x2F; tar.Z 的压缩包，两个方法"></a>解压后缀为 .Z &#x2F; tar.Z 的压缩包，两个方法</h6><p><code>uncompress log.Z log.txt</code><br><code>uncompress log.Z log</code></p>
+<p><code>tar xZf log.tar.Z log.txt</code><br><code>tar xZf log.tar.Z log</code></p>
+<h6 id="解压后缀为-rar-的压缩包，如提示命令不存在，请安装-yum-install-unrar-y-apt-get-install-unrar-y-，注意-rar-和-unrar-是分开的"><a href="#解压后缀为-rar-的压缩包，如提示命令不存在，请安装-yum-install-unrar-y-apt-get-install-unrar-y-，注意-rar-和-unrar-是分开的" class="headerlink" title="解压后缀为 .rar 的压缩包，如提示命令不存在，请安装 yum install unrar -y &#x2F; apt-get install unrar -y ，注意 rar 和 unrar 是分开的"></a>解压后缀为 .rar 的压缩包，如提示命令不存在，请安装 yum install unrar -y &#x2F; apt-get install unrar -y ，注意 rar 和 unrar 是分开的</h6><p><code>unrar x log.rar</code></p>
+<h6 id="解压后缀为-zip-的压缩包，如提示命令不存在，请安装-yum-install-unzip-y-apt-get-install-unzip-y，注意-zip-和-unzip-是分开的"><a href="#解压后缀为-zip-的压缩包，如提示命令不存在，请安装-yum-install-unzip-y-apt-get-install-unzip-y，注意-zip-和-unzip-是分开的" class="headerlink" title="解压后缀为 .zip 的压缩包，如提示命令不存在，请安装 yum install unzip -y &#x2F; apt-get install unzip -y，注意 zip 和 unzip 是分开的"></a>解压后缀为 .zip 的压缩包，如提示命令不存在，请安装 yum install unzip -y &#x2F; apt-get install unzip -y，注意 zip 和 unzip 是分开的</h6><p><code>unzip log.zip</code></p>
+<h4 id="更多的命令可以用-tar-–help-gzip-–help-unrar-–help-unzip-–help-来查看。"><a href="#更多的命令可以用-tar-–help-gzip-–help-unrar-–help-unzip-–help-来查看。" class="headerlink" title="更多的命令可以用 tar –help &#x2F; gzip –help &#x2F; unrar –help &#x2F; unzip –help 来查看。"></a>更多的命令可以用 tar –help &#x2F; gzip –help &#x2F; unrar –help &#x2F; unzip –help 来查看。</h4><hr>
+<h3 id="压缩-文件-文件夹-示例"><a href="#压缩-文件-文件夹-示例" class="headerlink" title="压缩 文件&#x2F;文件夹 示例"></a>压缩 文件&#x2F;文件夹 示例</h3><h4 id="压缩文件-文件夹说明"><a href="#压缩文件-文件夹说明" class="headerlink" title="压缩文件&#x2F;文件夹说明"></a>压缩文件&#x2F;文件夹说明</h4><h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar 压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar 压缩包</h6><p><code>tar -cf log.tar log.txt</code><br><code>tar -cf log.tar log</code></p>
+<h6 id="如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可"><a href="#如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可" class="headerlink" title="如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可"></a>如果要压缩多个文件和文件夹，那么只需要在后面一直加下去即可</h6><p><code>tar -cf log.tar log.txt doub.txt log bash</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-xz-压缩包，以下的其他后缀压缩命令都是一样"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-xz-压缩包，以下的其他后缀压缩命令都是一样" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.xz 压缩包，以下的其他后缀压缩命令都是一样"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.xz 压缩包，以下的其他后缀压缩命令都是一样</h6><p><code>tar -cJf log.tar.xz log.txt</code><br><code>tar -cJf log.tar.xz log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-gz-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-gz-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.gz 压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.gz 压缩包</h6><p><code>tar -czf log.tar.gz log.txt</code><br><code>tar -czf log.tar.gz log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-gz-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-gz-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.gz 压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.gz 压缩包</h6><p><code>gzip log.gz log.txt</code><br><code>gzip log.gz log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-bz-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-tar-bz-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.bz 压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.tar.bz 压缩包</h6><p><code>暂时没找到解决方法</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-bz-log-tar-bz-log-bz2-log-tar-bz2压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-bz-log-tar-bz-log-bz2-log-tar-bz2压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.bz &#x2F; log.tar.bz &#x2F; log.bz2 &#x2F; log.tar.bz2压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.bz &#x2F; log.tar.bz &#x2F; log.bz2 &#x2F; log.tar.bz2压缩包</h6><p><code>bzip2 -z log.txt</code><br><code>bzip2 -z log</code></p>
+<p><code>tar cjf log.tar.bz2 log.txt</code><br><code>tar cjf log.tar.bz2 log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-Z-log-tar-Z-压缩包"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-Z-log-tar-Z-压缩包" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.Z &#x2F; log.tar.Z 压缩包"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.Z &#x2F; log.tar.Z 压缩包</h6><p><code>compress log.txt</code><br><code>compress log</code></p>
+<p><code>tar cZf log.tar.Z log.txt</code><br><code>tar cZf log.tar.Z log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-rar-压缩包，如提示命令不存在，请安装-yum-install-rar-y-apt-get-install-rar-y-，注意-rar-和-unrar-是分开的"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-rar-压缩包，如提示命令不存在，请安装-yum-install-rar-y-apt-get-install-rar-y-，注意-rar-和-unrar-是分开的" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.rar 压缩包，如提示命令不存在，请安装 yum install rar -y &#x2F; apt-get install rar -y ，注意 rar 和 unrar 是分开的"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.rar 压缩包，如提示命令不存在，请安装 yum install rar -y &#x2F; apt-get install rar -y ，注意 rar 和 unrar 是分开的</h6><p><code>unrar a log.rar log.txt</code><br><code>unrar a log.rar log</code></p>
+<h6 id="分别压缩当前目录下的-log-txt文件-log文件夹为-log-zip-压缩包，如提示命令不存在，请安装-yum-install-zip-y-apt-get-install-zip-y-，注意-zip-和-unzip-是分开的"><a href="#分别压缩当前目录下的-log-txt文件-log文件夹为-log-zip-压缩包，如提示命令不存在，请安装-yum-install-zip-y-apt-get-install-zip-y-，注意-zip-和-unzip-是分开的" class="headerlink" title="分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.zip 压缩包，如提示命令不存在，请安装 yum install zip -y &#x2F; apt-get install zip -y ，注意 zip 和 unzip 是分开的"></a>分别压缩当前目录下的 log.txt文件 &#x2F; log文件夹为 log.zip 压缩包，如提示命令不存在，请安装 yum install zip -y &#x2F; apt-get install zip -y ，注意 zip 和 unzip 是分开的</h6><p><code>zip log.zip log.txt</code><br><code>zip log.zip log</code></p>
+<h4 id="更多的命令可以用-tar-–help-gzip-–help-rar-–help-zip-–help-来查看。"><a href="#更多的命令可以用-tar-–help-gzip-–help-rar-–help-zip-–help-来查看。" class="headerlink" title="更多的命令可以用 tar –help &#x2F; gzip –help &#x2F; rar –help &#x2F; zip –help 来查看。"></a>更多的命令可以用 tar –help &#x2F; gzip –help &#x2F; rar –help &#x2F; zip –help 来查看。</h4>]]></content>
       <categories>
         <category>文章专柜</category>
       </categories>
