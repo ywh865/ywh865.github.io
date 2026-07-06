@@ -59,21 +59,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Black Clover Ending 11 Full</title>
-    <url>/post/Answer-KAF_Lyrics/</url>
-    <content><![CDATA[<video width=100% height=100% controls>
-  <source src="/videos/movie/Answer-KAF_Lyrics/Answer-KAF_Lyrics.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-]]></content>
-      <categories>
-        <category>萌音收藏</category>
-      </categories>
-      <tags>
-        <tag>花譜</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>电源参数指标笔记</title>
     <url>/post/Computer-power-supply01/</url>
     <content><![CDATA[<p>1.电源参数</p>
@@ -120,34 +105,18 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
-    <title>电源内部笔记</title>
-    <url>/post/Computer-power-supply02/</url>
-    <content><![CDATA[<p>电源内部</p>
-<p>电源之所以难挑，就是因为他是一个黑盒子，零件全部在内部，有很多东西，比如输出稳定性、安全保护、用料等，在盒子外面是看不出来的。而且众所周知，还有虚标这个的问题。</p>
-<p>首先220v的电进来会先经过一次emi滤波，由圆形的电容(Y电容）和方形的电容（X电容）组成，主要用途如名字，就是滤掉市电中的杂波。作为输入的第一道屏障来说是非常重要的。 根据电源的设计，这部分可能放放在主板上，也有可能和二次合并。到达主板之后会进行第二次滤波，一般由几个电感（线圈）方形电容圆形电容组成。一般来说零件越多是越好的。同样保险丝或者自动恢复保险丝也在这附近，不过不用太在意，因为emi明显比保险丝贵多了，山寨电源有见过省EMI的但是保险丝还是会有。然后要达到整流桥，将220V的交流电变为直流，方便后面处理。然后到达PFC，这个主要是减少电网的供电需求，PFC目前来说分两种，主动PFC和被动PFC。</p>
-<p>被动PFC：<br>这个实际上就是一大块电感，然后用两根线接到主板上。国家3C认证的要求是主机电源不管被动还是主动，必须要有PFC。如果这玩意没有，那么说明这个电源八成就是作假实际上没过3C认证。更有严重的比如水泥PFC，那对于电源来说就是非常危险的。一般低于150块的全新电源用的都是被动PFC，因为这玩意制作成本较低，不需要芯片什么的，一个大线圈就行。</p>
-<p>主动pfc：<br>比较明显确定的就是在EMI滤波和大大的主电源中间的PFC电感。但是怎么确定是PFC电感而不是EMI的电感呢？自然就是找整流桥了，除非特殊设计的奇葩电路，不然主动PFC会设置在整流桥的后面。</p>
-<p>PFC再过来是主电容（也可以说是PFC电容），基本上电源内部最大的电容就是它了，根据电路设计会有一个或者多个主电容。它的作用一是滤波，二是把一定的电存起来，万一突然断电，它就持续供电一定的时候确保机器进行一些保护性的操作，也就是说前面的保持时间和他直接关联，容量过小的话保持时间自然达不到合格标准。电容主要分几个参数：耐压值、容量、耐高温。耐压如名字，能承认多大电压，我们市电是220v，但是滤波电容有个副作用会升压，实际上到达这里之后会变成300V多点（但是我没有找到任何资料说明主电容是专门为了升压而设置的），所以一般都会采用400V左右耐压的电容。容量指的是存电的量，一般来说450W的标准配置是270μf，600W大概450μf，到了850W、1000W以上，很多大牌子都是采用1W 1μf的配置。 按照比例算的话极限最低的数值是每瓦0.5μf，不过只要极个别电源这么低还能达标，实际要看电路设计，很多0.6μf &#x2F; W都不一定能过关。于是0.5都达不到的基本要boom。耐高温，这个不用说也是越高越好，主要有105度和85度。主电容是看电源拆解最容易看清楚参数的，本身也有较高的成本，所以对于电源用料如何、有没缩水来说，是一个很有参考价值的地方。除了上面说的容量以外，电容由谁生产也很重要，基本上是日本电容 &gt; 台湾电容 &gt; 大陆电容。当然主电容不缩不代表其他地方不缩，只不过是这个最容易看而已。很多时候你好不容易找到拆解，会发现只有这一个东西能看清楚。对于多个电容的，会有并联和串联两种方式（实际上还是作为一个来用）。两电容并联耐压为两者中耐压最低的那个值，容量为二者之和。两电容串联耐压为两者之和，容量为两者的倒数和分之一，实际上，在这里要变压之前要先将直流重新打为高频脉冲电流，而且频率要比市电220V的60hz高很多。这一点是使用开关管来实现的，这也是它们的完整名字叫作“开关电源”的原因。</p>
-<p>老式半桥：老式半桥的特征就是一大两小的三个变压器，是很老的一种电源结构，它的转换率不理想，但是生产简单，技术水平要求较低，成本也低，同时一般也会使用同样成本较低的被动PFC，或者因为出厂时间久远而没有PFC。自然也拿不到80plus认证。</p>
-<p>单管正激和双管正激：<br>它们最明显特征就是一大一小两个变压器。其中单管正激和双管正激实际说的并不是电压器的数量，而是开关管。正是通过它（们）的通断来实际直流到高频的变化。双管要强于单管。开管关会锁在散热片上面。双管正激架构对比老式半桥有明显提升，一般都能拿到80plus铜牌，甚至好一点的都会有银牌，但是要做到更高的金牌和白金就比较困难。正激结构也用一种叫有源钳位正激 的“加强版，做到金牌以上效率也没问题，但是实际使用可能因为成本或者效率或者其他原因，现在只有比较少的电源使用。这种在外观上普通的双管正激是很像的，还以评测为准。</p>
-<p>LLC半桥：<br>一大两小三个变压器，使用LLC半桥的电源很容易做到金牌以上的效率，LLC的弱点是动态性能不好，不过这几年随着技术发展，而且实际影响也不是那么大。在这方面正激结构反而有一定优势，所以做到高瓦数的正激结构也不是不可以的，LLC的外观和老式半桥有点像，不过使用这种结构的一般会和同步整流以及DC-DC配合这样的高配置，所以结合起来还是比较好判断的。</p>
-<p>LLC全桥：<br>而LLC全桥因为结构复杂，基本上没几个电源在用，看起来和LLC半桥很难区分</p>
-<p>最后就是输出部分。</p>
-<p>这里有几个步骤要做。一是整流，之前在变压的时候的高频脉冲电流显然是不能供给硬件用的，需要重新变回直流。二是稳压，确保输出电压稳定。三是滤波，和前面主电容的功能一样，整流之后不够干净的电流需要重新过滤一次。他们的顺序根据结构会有些差异。整流目前主要是两种方案：</p>
-<p>肖特基整流：<br>主要由锁在散热片上面的多枚肖特基二极管完成。</p>
-<p>同步整流：<br>简单来讲可以认为就是MOS管代替肖特基管来整流，使用这种的主要目的是为了提升转换效率，肖特基管的电阻还是要高一些的。</p>
-<p>这方面其实不用太在意，因为对于性能来说是直接体现在转换率上的，只要能达到金牌管他是啥了。另外一个部分就是稳压，目前主要有三个方案，单路磁放大、双路磁放大、DC-DC。这里要重点注意。</p>
-<p>单路磁放大：<br>这个实际上就是将3.3V单独一路输出，特征是一小两大三个线圈。而12V和5V都是由PWM芯片来管理，所以瓦数大了之后交叉负载会非常差，比如12V高负载之后5V就会电压过高或者过低这样，有可能你单机玩的正爽突然间硬盘就挂了或者特别快出坏道。单路磁的极限基本是在500W这样。</p>
-<p>双路磁放大：<br>这个就是将3.3v和5v都独立出来，稳定性对面上面的会更好一些，特征是两小三大 五个线圈。双路磁放大可以做到1000W以上，在dc-dc出来之前是高瓦数电源的标准方案。</p>
-<p>DC-DC（直流转直流）：<br>3.3v和5v都从12V转出来，这样12V可以做到最大，都是12V出来的，也不用担心交叉负载的问题了。特征是在输出侧会有一个竖起来的PCB版，上面有双线圈和一堆元件。</p>
-<p>输出的最后一个工序就简单了<br>通过电容进行滤波，电容容量大、牌子好、数量多，那自然出来的纹波就小，电源使用寿命也长。这边只要确认产地即可，实际输出性能直接参考纹波方面的评测就好了。</p>
-<p>总结：<br>无PFC &#x2F; 假PFC &lt; 被动PFC &lt; 主动PFC<br>老式半桥 &lt; 单管正激 &lt; 双管正激 、LLC半桥&#x2F;全桥 （效率成本动态响应等各方面互有胜负）<br>单路磁放大 &lt; 双路磁放大 &lt; DC-DC</p>
+    <title>Black Clover Ending 11 Full</title>
+    <url>/post/Answer-KAF_Lyrics/</url>
+    <content><![CDATA[<video width=100% height=100% controls>
+  <source src="/videos/movie/Answer-KAF_Lyrics/Answer-KAF_Lyrics.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 ]]></content>
       <categories>
-        <category>文章专柜</category>
+        <category>萌音收藏</category>
       </categories>
       <tags>
-        <tag>八神鬼嗣</tag>
+        <tag>花譜</tag>
       </tags>
   </entry>
   <entry>
@@ -166,6 +135,21 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
+    <title>ミカヅキBIGWAVE FRESH!!</title>
+    <url>/post/av21173145/</url>
+    <content><![CDATA[<video width=100% height=100% controls>
+  <source src="/videos/movie/av21173145/av21173145.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+]]></content>
+      <categories>
+        <category>萌音收藏</category>
+      </categories>
+      <tags>
+        <tag>Niko</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Promise Full Version</title>
     <url>/post/Promise_Full_Version/</url>
     <content><![CDATA[<video width=100% height=100% controls>
@@ -180,18 +164,44 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
-    <title>ミカヅキBIGWAVE FRESH!!</title>
-    <url>/post/av21173145/</url>
-    <content><![CDATA[<video width=100% height=100% controls>
-  <source src="/videos/movie/av21173145/av21173145.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-]]></content>
+    <title>Linux 指令笔记（三）</title>
+    <url>/post/linux03/</url>
+    <content><![CDATA[<h3 id="文件-文件夹-操作"><a href="#文件-文件夹-操作" class="headerlink" title="文件&#x2F;文件夹 操作"></a>文件&#x2F;文件夹 操作</h3><p><code>以下除特殊说明，都以当前目录为 /root 示例。</code></p>
+<h4 id="mkdir-新建-文件夹"><a href="#mkdir-新建-文件夹" class="headerlink" title="mkdir 新建 文件夹"></a>mkdir 新建 文件夹</h4><h6 id="在当前文件夹新建一个-bash-文件夹，完整的绝对路径就是-root-bash"><a href="#在当前文件夹新建一个-bash-文件夹，完整的绝对路径就是-root-bash" class="headerlink" title="在当前文件夹新建一个 bash 文件夹，完整的绝对路径就是 &#x2F;root&#x2F;bash"></a>在当前文件夹新建一个 bash 文件夹，完整的绝对路径就是 &#x2F;root&#x2F;bash</h6><p><code>mkdir bash</code></p>
+<h5 id="更多的命令可以用-mkdir-–help-查看。"><a href="#更多的命令可以用-mkdir-–help-查看。" class="headerlink" title="更多的命令可以用 mkdir –help 查看。"></a>更多的命令可以用 mkdir –help 查看。</h5><hr>
+<h4 id="cp-复制或重命名-文件-文件夹"><a href="#cp-复制或重命名-文件-文件夹" class="headerlink" title="cp 复制或重命名 文件&#x2F;文件夹"></a>cp 复制或重命名 文件&#x2F;文件夹</h4><h5 id="cp命令说明"><a href="#cp命令说明" class="headerlink" title="cp命令说明"></a>cp命令说明</h5><h6 id="复制当前目录内的-log-txt文件到-var目录"><a href="#复制当前目录内的-log-txt文件到-var目录" class="headerlink" title="复制当前目录内的 log.txt文件到 &#x2F;var目录"></a>复制当前目录内的 log.txt文件到 &#x2F;var目录</h6><p><code>cp log.txt /var/log.txt</code></p>
+<h6 id="复制当前目录内的-bash文件夹到-home目录"><a href="#复制当前目录内的-bash文件夹到-home目录" class="headerlink" title="复制当前目录内的 bash文件夹到 &#x2F;home目录"></a>复制当前目录内的 bash文件夹到 &#x2F;home目录</h6><p><code>cp -R bash /home/bash</code></p>
+<h6 id="复制当前目录内的所有-txt后缀的文件到-var-log目录"><a href="#复制当前目录内的所有-txt后缀的文件到-var-log目录" class="headerlink" title="复制当前目录内的所有.txt后缀的文件到 &#x2F;var&#x2F;log目录"></a>复制当前目录内的所有.txt后缀的文件到 &#x2F;var&#x2F;log目录</h6><p><code>cp *.txt /var/log</code></p>
+<h6 id="复制当前目录内的所有以-onioni开头的文件到-var-log目录"><a href="#复制当前目录内的所有以-onioni开头的文件到-var-log目录" class="headerlink" title="复制当前目录内的所有以 onioni开头的文件到 &#x2F;var&#x2F;log目录"></a>复制当前目录内的所有以 onioni开头的文件到 &#x2F;var&#x2F;log目录</h6><p><code>cp onioni* /var/log</code></p>
+<h6 id="复制当前目录内的所有以-onioni开头-以-txt后缀结尾的文件到-var-log目录"><a href="#复制当前目录内的所有以-onioni开头-以-txt后缀结尾的文件到-var-log目录" class="headerlink" title="复制当前目录内的所有以 onioni开头 以.txt后缀结尾的文件到 &#x2F;var&#x2F;log目录"></a>复制当前目录内的所有以 onioni开头 以.txt后缀结尾的文件到 &#x2F;var&#x2F;log目录</h6><p><code>cp onioni*.txt /var/log</code></p>
+<h6 id="假设当前目录是-root-onioni-log，要把这个目录中的所有-txt后缀的文件复制到上一级目录-root-onioni，那么这样做"><a href="#假设当前目录是-root-onioni-log，要把这个目录中的所有-txt后缀的文件复制到上一级目录-root-onioni，那么这样做" class="headerlink" title="假设当前目录是 &#x2F;root&#x2F;onioni&#x2F;log，要把这个目录中的所有.txt后缀的文件复制到上一级目录 &#x2F;root&#x2F;onioni，那么这样做"></a>假设当前目录是 &#x2F;root&#x2F;onioni&#x2F;log，要把这个目录中的所有.txt后缀的文件复制到上一级目录 &#x2F;root&#x2F;onioni，那么这样做</h6><p><code>cp *.txt ..</code></p>
+<h6 id="就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错"><a href="#就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错" class="headerlink" title=".. 就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错"></a>.. 就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错</h6><p><code>cp *.txt /root/onioni</code></p>
+<h6 id="重命名当前目录内的-log-txt文件为-log2-txt"><a href="#重命名当前目录内的-log-txt文件为-log2-txt" class="headerlink" title="重命名当前目录内的 log.txt文件为 log2.txt"></a>重命名当前目录内的 log.txt文件为 log2.txt</h6><p><code>cp log.txt log2.txt</code></p>
+<h6 id="复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt"><a href="#复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt" class="headerlink" title="复制当前目录内的 log.txt文件到 &#x2F;var目录并重命名为 log1.txt"></a>复制当前目录内的 log.txt文件到 &#x2F;var目录并重命名为 log1.txt</h6><p><code>cp log.txt /var/log1.txt</code></p>
+<h6 id="复制当前目录内的-bash文件夹到-home目录并重命名为-bash2"><a href="#复制当前目录内的-bash文件夹到-home目录并重命名为-bash2" class="headerlink" title="复制当前目录内的 bash文件夹到 &#x2F;home目录并重命名为 bash2"></a>复制当前目录内的 bash文件夹到 &#x2F;home目录并重命名为 bash2</h6><p><code>cp -R bash /home/bash2</code></p>
+<h6 id="复制当前目录内的-log-txt文件到-var目录，但是-var-目录中已经存着-log-txt，那么会提示-cp-overwrite-var-log-txt’-可以用-f-强制覆盖"><a href="#复制当前目录内的-log-txt文件到-var目录，但是-var-目录中已经存着-log-txt，那么会提示-cp-overwrite-var-log-txt’-可以用-f-强制覆盖" class="headerlink" title="复制当前目录内的 log.txt文件到 &#x2F;var目录，但是 &#x2F;var 目录中已经存着 log.txt，那么会提示 cp: overwrite &#96;&#x2F;var&#x2F;log.txt’? 可以用 -f 强制覆盖"></a>复制当前目录内的 log.txt文件到 &#x2F;var目录，但是 &#x2F;var 目录中已经存着 log.txt，那么会提示 cp: overwrite &#96;&#x2F;var&#x2F;log.txt’? 可以用 -f 强制覆盖</h6><p><code>cp -f log /var/log.txt</code></p>
+<h6 id="大家可能会发现，当你使用-cp-f-强制覆盖的时候，依然会询问你是否覆盖，这是因为-CP-为了避免你手误，默认加上了-i-参数（该参数代表每次覆盖必须询问）。"><a href="#大家可能会发现，当你使用-cp-f-强制覆盖的时候，依然会询问你是否覆盖，这是因为-CP-为了避免你手误，默认加上了-i-参数（该参数代表每次覆盖必须询问）。" class="headerlink" title="大家可能会发现，当你使用 cp -f 强制覆盖的时候，依然会询问你是否覆盖，这是因为 CP 为了避免你手误，默认加上了 -i 参数（该参数代表每次覆盖必须询问）。"></a>大家可能会发现，当你使用 cp -f 强制覆盖的时候，依然会询问你是否覆盖，这是因为 CP 为了避免你手误，默认加上了 -i 参数（该参数代表每次覆盖必须询问）。</h6><h6 id="所以想要避免-CP-默认的-i-参数，只需要在-CP-命令前面加上斜杠即可-“-”"><a href="#所以想要避免-CP-默认的-i-参数，只需要在-CP-命令前面加上斜杠即可-“-”" class="headerlink" title="所以想要避免 CP 默认的 -i 参数，只需要在 CP 命令前面加上斜杠即可 “&#x2F;”"></a>所以想要避免 CP 默认的 -i 参数，只需要在 CP 命令前面加上斜杠即可 “&#x2F;”</h6><p><code>/cp -f log /var/log.txt</code></p>
+<h6 id="复制当前目录内的-log-txt-log1-txt-log2-txt文件和-log233目录到-home-log目录中"><a href="#复制当前目录内的-log-txt-log1-txt-log2-txt文件和-log233目录到-home-log目录中" class="headerlink" title="复制当前目录内的 log.txt log1.txt log2.txt文件和 log233目录到 &#x2F;home&#x2F;log目录中"></a>复制当前目录内的 log.txt log1.txt log2.txt文件和 log233目录到 &#x2F;home&#x2F;log目录中</h6><p><code>cp -R log.txt log1.txt log2.txt log233 /home/log</code></p>
+<h4 id="更多的命令可以用-cp-–help-查看。"><a href="#更多的命令可以用-cp-–help-查看。" class="headerlink" title="更多的命令可以用 cp –help 查看。"></a>更多的命令可以用 cp –help 查看。</h4><hr>
+<h4 id="mv-移动或重命名-文件-文件夹"><a href="#mv-移动或重命名-文件-文件夹" class="headerlink" title="mv 移动或重命名 文件&#x2F;文件夹"></a>mv 移动或重命名 文件&#x2F;文件夹</h4><h5 id="mv命令说明"><a href="#mv命令说明" class="headerlink" title="mv命令说明"></a>mv命令说明</h5><h5 id="关于-mv-命令，可以参考上面-cp-的使用方法，没什么区别，只是一个是复制，一个是移动，把上面-cp-命令改成-mv-就能套用了。"><a href="#关于-mv-命令，可以参考上面-cp-的使用方法，没什么区别，只是一个是复制，一个是移动，把上面-cp-命令改成-mv-就能套用了。" class="headerlink" title="关于 mv 命令，可以参考上面 cp 的使用方法，没什么区别，只是一个是复制，一个是移动，把上面 cp 命令改成 mv 就能套用了。"></a>关于 mv 命令，可以参考上面 cp 的使用方法，没什么区别，只是一个是复制，一个是移动，把上面 cp 命令改成 mv 就能套用了。</h5><h6 id="移动当前目录内的-log-txt文件到-var目录"><a href="#移动当前目录内的-log-txt文件到-var目录" class="headerlink" title="移动当前目录内的 log.txt文件到 &#x2F;var目录"></a>移动当前目录内的 log.txt文件到 &#x2F;var目录</h6><p><code>mv log.txt /var/log.txt</code></p>
+<h6 id="移动当前目录内的-bash文件夹到-home目录"><a href="#移动当前目录内的-bash文件夹到-home目录" class="headerlink" title="移动当前目录内的 bash文件夹到 &#x2F;home目录"></a>移动当前目录内的 bash文件夹到 &#x2F;home目录</h6><p><code>mv bash /home/bash</code></p>
+<h6 id="重命名当前目录内的-log-txt文件为-log2-txt-1"><a href="#重命名当前目录内的-log-txt文件为-log2-txt-1" class="headerlink" title="重命名当前目录内的 log.txt文件为 log2.txt"></a>重命名当前目录内的 log.txt文件为 log2.txt</h6><p><code>mv log.txt log2.txt</code></p>
+<h6 id="复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt-1"><a href="#复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt-1" class="headerlink" title="复制当前目录内的 log.txt文件到 &#x2F;var目录并重命名为 log1.txt"></a>复制当前目录内的 log.txt文件到 &#x2F;var目录并重命名为 log1.txt</h6><p><code>mv log.txt /var/log1.txt</code></p>
+<h6 id="复制当前目录内的-bash文件夹到-home目录并重命名为-bash2-1"><a href="#复制当前目录内的-bash文件夹到-home目录并重命名为-bash2-1" class="headerlink" title="复制当前目录内的 bash文件夹到 &#x2F;home目录并重命名为 bash2"></a>复制当前目录内的 bash文件夹到 &#x2F;home目录并重命名为 bash2</h6><p><code>mv bash /home/bash2</code></p>
+<h4 id="更多的命令可以用-mv-–help-查看。"><a href="#更多的命令可以用-mv-–help-查看。" class="headerlink" title="更多的命令可以用 mv –help 查看。"></a>更多的命令可以用 mv –help 查看。</h4><hr>
+<h4 id="rm-删除-文件-文件夹"><a href="#rm-删除-文件-文件夹" class="headerlink" title="rm 删除 文件&#x2F;文件夹"></a>rm 删除 文件&#x2F;文件夹</h4><h5 id="rm命令说明"><a href="#rm命令说明" class="headerlink" title="rm命令说明"></a>rm命令说明</h5><h6 id="删除当前目录下的-log-txt文件"><a href="#删除当前目录下的-log-txt文件" class="headerlink" title="删除当前目录下的 log.txt文件"></a>删除当前目录下的 log.txt文件</h6><p><code>rm log.txt</code></p>
+<h6 id="删除当前目录下所有-txt后缀的文件"><a href="#删除当前目录下所有-txt后缀的文件" class="headerlink" title="删除当前目录下所有.txt后缀的文件"></a>删除当前目录下所有.txt后缀的文件</h6><p><code>rm *.txt</code></p>
+<h6 id="使用-rm-命令删除时，会提示你是否确定删除，输入-y-即删除，输入-n-则取消"><a href="#使用-rm-命令删除时，会提示你是否确定删除，输入-y-即删除，输入-n-则取消" class="headerlink" title="使用 rm 命令删除时，会提示你是否确定删除，输入 y 即删除，输入 n 则取消"></a>使用 rm 命令删除时，会提示你是否确定删除，输入 y 即删除，输入 n 则取消</h6><h6 id="rm-remove-regular-file-log-txt’-y"><a href="#rm-remove-regular-file-log-txt’-y" class="headerlink" title="rm: remove regular file &#96;log.txt’? y"></a>rm: remove regular file &#96;log.txt’? y</h6><h6 id="删除当前目录下所有-txt后缀的文件-1"><a href="#删除当前目录下所有-txt后缀的文件-1" class="headerlink" title="删除当前目录下所有.txt后缀的文件"></a>删除当前目录下所有.txt后缀的文件</h6><p><code>rm *.txt</code></p>
+<h6 id="删除当前目录下所有以-onioni开头的文件"><a href="#删除当前目录下所有以-onioni开头的文件" class="headerlink" title="删除当前目录下所有以 onioni开头的文件"></a>删除当前目录下所有以 onioni开头的文件</h6><p><code>rm onioni*</code></p>
+<h6 id="删除当前目录下所有以-onioni开头-以-txt后缀结尾的文件"><a href="#删除当前目录下所有以-onioni开头-以-txt后缀结尾的文件" class="headerlink" title="删除当前目录下所有以 onioni开头 以.txt后缀结尾的文件"></a>删除当前目录下所有以 onioni开头 以.txt后缀结尾的文件</h6><p><code>rm onioni*.txt</code></p>
+<h6 id="当你用-rm-删除目录的时候会发现提示这不是一个文件"><a href="#当你用-rm-删除目录的时候会发现提示这不是一个文件" class="headerlink" title="当你用 rm 删除目录的时候会发现提示这不是一个文件"></a>当你用 rm 删除目录的时候会发现提示这不是一个文件</h6><h6 id="rm-bash"><a href="#rm-bash" class="headerlink" title="rm bash"></a>rm bash</h6><h6 id="rm-cannot-remove-bash’-Is-a-directory"><a href="#rm-cannot-remove-bash’-Is-a-directory" class="headerlink" title="rm: cannot remove &#96;bash’: Is a directory"></a>rm: cannot remove &#96;bash’: Is a directory</h6><h6 id="可以加上-r-来归递删除目录及其目录下的内容"><a href="#可以加上-r-来归递删除目录及其目录下的内容" class="headerlink" title="可以加上 -r 来归递删除目录及其目录下的内容"></a>可以加上 -r 来归递删除目录及其目录下的内容</h6><p><code>rm -r bash</code></p>
+<h6 id="因为为了避免手误删除错误，rm默认加上了-i-的参数，每一次删除文件-目录都会提示，如果觉得烦可以用-rf-参数"><a href="#因为为了避免手误删除错误，rm默认加上了-i-的参数，每一次删除文件-目录都会提示，如果觉得烦可以用-rf-参数" class="headerlink" title="因为为了避免手误删除错误，rm默认加上了 -i 的参数，每一次删除文件&#x2F;目录都会提示，如果觉得烦可以用 -rf 参数"></a>因为为了避免手误删除错误，rm默认加上了 -i 的参数，每一次删除文件&#x2F;目录都会提示，如果觉得烦可以用 -rf 参数</h6><p><code>rm -rf bash</code></p>
+<h6 id="rm-rf-这个命令请慎重使用，而且千万不要使用-rm-rf-或者-rm-rf-之类的命令-系统自杀-，可能会让你直接跑路，所以使用请慎重！"><a href="#rm-rf-这个命令请慎重使用，而且千万不要使用-rm-rf-或者-rm-rf-之类的命令-系统自杀-，可能会让你直接跑路，所以使用请慎重！" class="headerlink" title="rm -rf 这个命令请慎重使用，而且千万不要使用 rm -rf &#x2F; 或者 rm -rf &#x2F;* 之类的命令(系统自杀)，可能会让你直接跑路，所以使用请慎重！"></a><font color="#dd0000">rm -rf 这个命令请慎重使用，而且千万不要使用 rm -rf &#x2F; 或者 rm -rf &#x2F;* 之类的命令(系统自杀)，可能会让你直接跑路，所以使用请慎重！</font></h6><h4 id="更多的命令可以用-rm-–help-查看。"><a href="#更多的命令可以用-rm-–help-查看。" class="headerlink" title="更多的命令可以用 rm –help 查看。"></a>更多的命令可以用 rm –help 查看。</h4>]]></content>
       <categories>
-        <category>萌音收藏</category>
+        <category>文章专柜</category>
       </categories>
       <tags>
-        <tag>Niko</tag>
+        <tag>八神鬼嗣</tag>
       </tags>
   </entry>
   <entry>
@@ -257,6 +267,72 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
+    <title>电源内部笔记</title>
+    <url>/post/Computer-power-supply02/</url>
+    <content><![CDATA[<p>电源内部</p>
+<p>电源之所以难挑，就是因为他是一个黑盒子，零件全部在内部，有很多东西，比如输出稳定性、安全保护、用料等，在盒子外面是看不出来的。而且众所周知，还有虚标这个的问题。</p>
+<p>首先220v的电进来会先经过一次emi滤波，由圆形的电容(Y电容）和方形的电容（X电容）组成，主要用途如名字，就是滤掉市电中的杂波。作为输入的第一道屏障来说是非常重要的。 根据电源的设计，这部分可能放放在主板上，也有可能和二次合并。到达主板之后会进行第二次滤波，一般由几个电感（线圈）方形电容圆形电容组成。一般来说零件越多是越好的。同样保险丝或者自动恢复保险丝也在这附近，不过不用太在意，因为emi明显比保险丝贵多了，山寨电源有见过省EMI的但是保险丝还是会有。然后要达到整流桥，将220V的交流电变为直流，方便后面处理。然后到达PFC，这个主要是减少电网的供电需求，PFC目前来说分两种，主动PFC和被动PFC。</p>
+<p>被动PFC：<br>这个实际上就是一大块电感，然后用两根线接到主板上。国家3C认证的要求是主机电源不管被动还是主动，必须要有PFC。如果这玩意没有，那么说明这个电源八成就是作假实际上没过3C认证。更有严重的比如水泥PFC，那对于电源来说就是非常危险的。一般低于150块的全新电源用的都是被动PFC，因为这玩意制作成本较低，不需要芯片什么的，一个大线圈就行。</p>
+<p>主动pfc：<br>比较明显确定的就是在EMI滤波和大大的主电源中间的PFC电感。但是怎么确定是PFC电感而不是EMI的电感呢？自然就是找整流桥了，除非特殊设计的奇葩电路，不然主动PFC会设置在整流桥的后面。</p>
+<p>PFC再过来是主电容（也可以说是PFC电容），基本上电源内部最大的电容就是它了，根据电路设计会有一个或者多个主电容。它的作用一是滤波，二是把一定的电存起来，万一突然断电，它就持续供电一定的时候确保机器进行一些保护性的操作，也就是说前面的保持时间和他直接关联，容量过小的话保持时间自然达不到合格标准。电容主要分几个参数：耐压值、容量、耐高温。耐压如名字，能承认多大电压，我们市电是220v，但是滤波电容有个副作用会升压，实际上到达这里之后会变成300V多点（但是我没有找到任何资料说明主电容是专门为了升压而设置的），所以一般都会采用400V左右耐压的电容。容量指的是存电的量，一般来说450W的标准配置是270μf，600W大概450μf，到了850W、1000W以上，很多大牌子都是采用1W 1μf的配置。 按照比例算的话极限最低的数值是每瓦0.5μf，不过只要极个别电源这么低还能达标，实际要看电路设计，很多0.6μf &#x2F; W都不一定能过关。于是0.5都达不到的基本要boom。耐高温，这个不用说也是越高越好，主要有105度和85度。主电容是看电源拆解最容易看清楚参数的，本身也有较高的成本，所以对于电源用料如何、有没缩水来说，是一个很有参考价值的地方。除了上面说的容量以外，电容由谁生产也很重要，基本上是日本电容 &gt; 台湾电容 &gt; 大陆电容。当然主电容不缩不代表其他地方不缩，只不过是这个最容易看而已。很多时候你好不容易找到拆解，会发现只有这一个东西能看清楚。对于多个电容的，会有并联和串联两种方式（实际上还是作为一个来用）。两电容并联耐压为两者中耐压最低的那个值，容量为二者之和。两电容串联耐压为两者之和，容量为两者的倒数和分之一，实际上，在这里要变压之前要先将直流重新打为高频脉冲电流，而且频率要比市电220V的60hz高很多。这一点是使用开关管来实现的，这也是它们的完整名字叫作“开关电源”的原因。</p>
+<p>老式半桥：老式半桥的特征就是一大两小的三个变压器，是很老的一种电源结构，它的转换率不理想，但是生产简单，技术水平要求较低，成本也低，同时一般也会使用同样成本较低的被动PFC，或者因为出厂时间久远而没有PFC。自然也拿不到80plus认证。</p>
+<p>单管正激和双管正激：<br>它们最明显特征就是一大一小两个变压器。其中单管正激和双管正激实际说的并不是电压器的数量，而是开关管。正是通过它（们）的通断来实际直流到高频的变化。双管要强于单管。开管关会锁在散热片上面。双管正激架构对比老式半桥有明显提升，一般都能拿到80plus铜牌，甚至好一点的都会有银牌，但是要做到更高的金牌和白金就比较困难。正激结构也用一种叫有源钳位正激 的“加强版，做到金牌以上效率也没问题，但是实际使用可能因为成本或者效率或者其他原因，现在只有比较少的电源使用。这种在外观上普通的双管正激是很像的，还以评测为准。</p>
+<p>LLC半桥：<br>一大两小三个变压器，使用LLC半桥的电源很容易做到金牌以上的效率，LLC的弱点是动态性能不好，不过这几年随着技术发展，而且实际影响也不是那么大。在这方面正激结构反而有一定优势，所以做到高瓦数的正激结构也不是不可以的，LLC的外观和老式半桥有点像，不过使用这种结构的一般会和同步整流以及DC-DC配合这样的高配置，所以结合起来还是比较好判断的。</p>
+<p>LLC全桥：<br>而LLC全桥因为结构复杂，基本上没几个电源在用，看起来和LLC半桥很难区分</p>
+<p>最后就是输出部分。</p>
+<p>这里有几个步骤要做。一是整流，之前在变压的时候的高频脉冲电流显然是不能供给硬件用的，需要重新变回直流。二是稳压，确保输出电压稳定。三是滤波，和前面主电容的功能一样，整流之后不够干净的电流需要重新过滤一次。他们的顺序根据结构会有些差异。整流目前主要是两种方案：</p>
+<p>肖特基整流：<br>主要由锁在散热片上面的多枚肖特基二极管完成。</p>
+<p>同步整流：<br>简单来讲可以认为就是MOS管代替肖特基管来整流，使用这种的主要目的是为了提升转换效率，肖特基管的电阻还是要高一些的。</p>
+<p>这方面其实不用太在意，因为对于性能来说是直接体现在转换率上的，只要能达到金牌管他是啥了。另外一个部分就是稳压，目前主要有三个方案，单路磁放大、双路磁放大、DC-DC。这里要重点注意。</p>
+<p>单路磁放大：<br>这个实际上就是将3.3V单独一路输出，特征是一小两大三个线圈。而12V和5V都是由PWM芯片来管理，所以瓦数大了之后交叉负载会非常差，比如12V高负载之后5V就会电压过高或者过低这样，有可能你单机玩的正爽突然间硬盘就挂了或者特别快出坏道。单路磁的极限基本是在500W这样。</p>
+<p>双路磁放大：<br>这个就是将3.3v和5v都独立出来，稳定性对面上面的会更好一些，特征是两小三大 五个线圈。双路磁放大可以做到1000W以上，在dc-dc出来之前是高瓦数电源的标准方案。</p>
+<p>DC-DC（直流转直流）：<br>3.3v和5v都从12V转出来，这样12V可以做到最大，都是12V出来的，也不用担心交叉负载的问题了。特征是在输出侧会有一个竖起来的PCB版，上面有双线圈和一堆元件。</p>
+<p>输出的最后一个工序就简单了<br>通过电容进行滤波，电容容量大、牌子好、数量多，那自然出来的纹波就小，电源使用寿命也长。这边只要确认产地即可，实际输出性能直接参考纹波方面的评测就好了。</p>
+<p>总结：<br>无PFC &#x2F; 假PFC &lt; 被动PFC &lt; 主动PFC<br>老式半桥 &lt; 单管正激 &lt; 双管正激 、LLC半桥&#x2F;全桥 （效率成本动态响应等各方面互有胜负）<br>单路磁放大 &lt; 双路磁放大 &lt; DC-DC</p>
+]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 指令笔记（二）</title>
+    <url>/post/linux02/</url>
+    <content><![CDATA[<h3 id="包管理器"><a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h3><h4 id="yum-CentOS系统包管理器"><a href="#yum-CentOS系统包管理器" class="headerlink" title="yum CentOS系统包管理器"></a>yum CentOS系统包管理器</h4><p><code>yum 是CentOS系统中 一个用于快速下载/安装的简单命令行管理工具！</code></p>
+<h4 id="yum-参数介绍"><a href="#yum-参数介绍" class="headerlink" title="yum 参数介绍"></a>yum 参数介绍</h4><h5 id="命令"><a href="#命令" class="headerlink" title="命令:"></a>命令:</h5><p><code>update - 检索 新的包列表</code><br><code>upgrade - 升级 软件包</code><br><code>search - 搜索 软件包</code><br><code>install - 安装 软件包</code><br><code>list - 列出 软件包或者软件包组</code><br><code>info - 显示软件包或者软件包组的详细信息</code><br><code>erase - 删除 软件包（这两个命令一样）</code><br><code>remove - 删除 软件包（这两个命令一样）</code><br><code>groupinfo - 显示 有关包组的详细信息</code><br><code>groupinstall - 安装 软件包组（就像一种软件合集）</code><br><code>grouplist - 列出 可用的软件包组</code><br><code>groupremove - 删除 软件包组</code><br><code>check - 检查 软件包</code><br><code>check-update - 检查 可更新的软件包</code><br><code>clean - 清除 缓存目录内的软件包</code><br><code>deplist - 列出 一个包的依赖关系</code><br><code>distribution-synchronization - 同步 已安装的软件包到最新的版本</code><br><code>downgrad - 降级 一个软件包</code><br><code>reinstall - 重新安装 软件包（自动删除重装）</code><br><code>repolist - 显示 配置的软件包仓库</code><br><code>resolvedep - 确定 软件包需要的依赖关系</code></p>
+<h5 id="选项："><a href="#选项：" class="headerlink" title="选项："></a>选项：</h5><p><code>-t ：容忍错误</code><br><code>-C ：完全从系统缓存运行，不要更新缓存</code><br><code>-R 分钟 ：最大命令等待时间</code><br><code>-q ：安静的操作</code><br><code>-y ：对于所有问题回答是</code><br><code>--nogpgcheck ：禁用gpg签名检查</code></p>
+<h5 id="更多的命令可以用-apt-get-–help-查看。"><a href="#更多的命令可以用-apt-get-–help-查看。" class="headerlink" title="更多的命令可以用 apt-get –help 查看。"></a>更多的命令可以用 apt-get –help 查看。</h5><hr>
+<h4 id="使用示例："><a href="#使用示例：" class="headerlink" title="使用示例："></a>使用示例：</h4><h6 id="检索-新的包列表"><a href="#检索-新的包列表" class="headerlink" title="检索 新的包列表"></a>检索 新的包列表</h6><p><code>yum update</code></p>
+<h6 id="安装-Nginx-软件包"><a href="#安装-Nginx-软件包" class="headerlink" title="安装 Nginx 软件包"></a>安装 Nginx 软件包</h6><p><code>yum install nginx</code></p>
+<h6 id="安装-Development-Tools-软件包组（这个软件包组中包含了编译所需的软件）"><a href="#安装-Development-Tools-软件包组（这个软件包组中包含了编译所需的软件）" class="headerlink" title="安装 Development Tools 软件包组（这个软件包组中包含了编译所需的软件）"></a>安装 Development Tools 软件包组（这个软件包组中包含了编译所需的软件）</h6><p><code>yum groupinstall &quot;Development Tools&quot;</code></p>
+<h6 id="卸载-Nginx-软件包"><a href="#卸载-Nginx-软件包" class="headerlink" title="卸载 Nginx 软件包"></a>卸载 Nginx 软件包</h6><p><code>yum erase nginx / yum remove nginx</code></p>
+<h6 id="卸载-Development-Tools-软件包组"><a href="#卸载-Development-Tools-软件包组" class="headerlink" title="卸载 Development Tools 软件包组"></a>卸载 Development Tools 软件包组</h6><p><code>yum groupremove &quot;Development Tools&quot;</code></p>
+<h6 id="升级-所有可更新的软件包"><a href="#升级-所有可更新的软件包" class="headerlink" title="升级 所有可更新的软件包"></a>升级 所有可更新的软件包</h6><p><code>yum upgrade</code></p>
+<h6 id="升级-Nginx-可更新的软件包"><a href="#升级-Nginx-可更新的软件包" class="headerlink" title="升级 Nginx 可更新的软件包"></a>升级 Nginx 可更新的软件包</h6><p><code>yum upgrade nginx</code></p>
+<h6 id="安装-Nginx-软件包-并不显示确定提示"><a href="#安装-Nginx-软件包-并不显示确定提示" class="headerlink" title="安装 Nginx 软件包 并不显示确定提示"></a>安装 Nginx 软件包 并不显示确定提示</h6><p><code>yum install nginx -y</code></p>
+<h6 id="卸载-Nginx-软件包-并不显示确定提示"><a href="#卸载-Nginx-软件包-并不显示确定提示" class="headerlink" title="卸载 Nginx 软件包 并不显示确定提示"></a>卸载 Nginx 软件包 并不显示确定提示</h6><p><code>yum erase nginx -y / yum remove nginx -y</code></p>
+<h6 id="搜索-Nginx-软件包是否存着"><a href="#搜索-Nginx-软件包是否存着" class="headerlink" title="搜索 Nginx 软件包是否存着"></a>搜索 Nginx 软件包是否存着</h6><p><code>yum search nginx</code></p>
+<h6 id="列出-可用的软件包"><a href="#列出-可用的软件包" class="headerlink" title="列出 可用的软件包"></a>列出 可用的软件包</h6><p><code>yum list</code></p>
+<h6 id="列出-可用的软件包组"><a href="#列出-可用的软件包组" class="headerlink" title="列出 可用的软件包组"></a>列出 可用的软件包组</h6><p><code>yum grouplist</code></p>
+<h6 id="清除-缓存目录中的所有软件包"><a href="#清除-缓存目录中的所有软件包" class="headerlink" title="清除 缓存目录中的所有软件包"></a>清除 缓存目录中的所有软件包</h6><p><code>yum clean</code></p>
+<h6 id="清除-缓存目录中的-Nginx-软件包"><a href="#清除-缓存目录中的-Nginx-软件包" class="headerlink" title="清除 缓存目录中的 Nginx 软件包"></a>清除 缓存目录中的 Nginx 软件包</h6><p><code>yum clean nginx</code></p>
+<h6 id="重装-Nginx-软件包"><a href="#重装-Nginx-软件包" class="headerlink" title="重装 Nginx 软件包"></a>重装 Nginx 软件包</h6><p><code>yum reinstall nginx</code></p>
+<h4 id="更多的命令可以用-yum-–help-查看。"><a href="#更多的命令可以用-yum-–help-查看。" class="headerlink" title="更多的命令可以用 yum –help 查看。"></a>更多的命令可以用 yum –help 查看。</h4><hr>
+<h3 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h3><ul>
+<li><h6 id="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数"><a href="#在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数" class="headerlink" title="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数"></a><font color="#dd0000">在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数</font></h6></li>
+<li><h6 id="当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！"><a href="#当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！" class="headerlink" title="当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！"></a><font color="#dd0000">当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！</font></h6></li>
+</ul>
+]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>日常生活中的異能戰鬥</title>
     <url>/post/ino-battle-nichijo-kei-no-haka-de/</url>
     <content><![CDATA[<p>《日常系的异能战斗》（日语：異能バトルは日常系のなかで）是由望公太著作，029绘制插画，SB CREATIVE的GA文库所发行的日本轻小说作品。2013年5月广播剧CD化，同年7月漫画化，漫画版由黑濑浩介作画。2014年3月宣布改编成电视动画，由TRIGGER制作，于2014年10月6日起东京电视台等播出。(以上来自维基百科)</p>
@@ -304,35 +380,27 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
-    <title>Linux 指令笔记（二）</title>
-    <url>/post/linux02/</url>
-    <content><![CDATA[<h3 id="包管理器"><a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h3><h4 id="yum-CentOS系统包管理器"><a href="#yum-CentOS系统包管理器" class="headerlink" title="yum CentOS系统包管理器"></a>yum CentOS系统包管理器</h4><p><code>yum 是CentOS系统中 一个用于快速下载/安装的简单命令行管理工具！</code></p>
-<h4 id="yum-参数介绍"><a href="#yum-参数介绍" class="headerlink" title="yum 参数介绍"></a>yum 参数介绍</h4><h5 id="命令"><a href="#命令" class="headerlink" title="命令:"></a>命令:</h5><p><code>update - 检索 新的包列表</code><br><code>upgrade - 升级 软件包</code><br><code>search - 搜索 软件包</code><br><code>install - 安装 软件包</code><br><code>list - 列出 软件包或者软件包组</code><br><code>info - 显示软件包或者软件包组的详细信息</code><br><code>erase - 删除 软件包（这两个命令一样）</code><br><code>remove - 删除 软件包（这两个命令一样）</code><br><code>groupinfo - 显示 有关包组的详细信息</code><br><code>groupinstall - 安装 软件包组（就像一种软件合集）</code><br><code>grouplist - 列出 可用的软件包组</code><br><code>groupremove - 删除 软件包组</code><br><code>check - 检查 软件包</code><br><code>check-update - 检查 可更新的软件包</code><br><code>clean - 清除 缓存目录内的软件包</code><br><code>deplist - 列出 一个包的依赖关系</code><br><code>distribution-synchronization - 同步 已安装的软件包到最新的版本</code><br><code>downgrad - 降级 一个软件包</code><br><code>reinstall - 重新安装 软件包（自动删除重装）</code><br><code>repolist - 显示 配置的软件包仓库</code><br><code>resolvedep - 确定 软件包需要的依赖关系</code></p>
-<h5 id="选项："><a href="#选项：" class="headerlink" title="选项："></a>选项：</h5><p><code>-t ：容忍错误</code><br><code>-C ：完全从系统缓存运行，不要更新缓存</code><br><code>-R 分钟 ：最大命令等待时间</code><br><code>-q ：安静的操作</code><br><code>-y ：对于所有问题回答是</code><br><code>--nogpgcheck ：禁用gpg签名检查</code></p>
-<h5 id="更多的命令可以用-apt-get-–help-查看。"><a href="#更多的命令可以用-apt-get-–help-查看。" class="headerlink" title="更多的命令可以用 apt-get –help 查看。"></a>更多的命令可以用 apt-get –help 查看。</h5><hr>
-<h4 id="使用示例："><a href="#使用示例：" class="headerlink" title="使用示例："></a>使用示例：</h4><h6 id="检索-新的包列表"><a href="#检索-新的包列表" class="headerlink" title="检索 新的包列表"></a>检索 新的包列表</h6><p><code>yum update</code></p>
-<h6 id="安装-Nginx-软件包"><a href="#安装-Nginx-软件包" class="headerlink" title="安装 Nginx 软件包"></a>安装 Nginx 软件包</h6><p><code>yum install nginx</code></p>
-<h6 id="安装-Development-Tools-软件包组（这个软件包组中包含了编译所需的软件）"><a href="#安装-Development-Tools-软件包组（这个软件包组中包含了编译所需的软件）" class="headerlink" title="安装 Development Tools 软件包组（这个软件包组中包含了编译所需的软件）"></a>安装 Development Tools 软件包组（这个软件包组中包含了编译所需的软件）</h6><p><code>yum groupinstall &quot;Development Tools&quot;</code></p>
-<h6 id="卸载-Nginx-软件包"><a href="#卸载-Nginx-软件包" class="headerlink" title="卸载 Nginx 软件包"></a>卸载 Nginx 软件包</h6><p><code>yum erase nginx / yum remove nginx</code></p>
-<h6 id="卸载-Development-Tools-软件包组"><a href="#卸载-Development-Tools-软件包组" class="headerlink" title="卸载 Development Tools 软件包组"></a>卸载 Development Tools 软件包组</h6><p><code>yum groupremove &quot;Development Tools&quot;</code></p>
-<h6 id="升级-所有可更新的软件包"><a href="#升级-所有可更新的软件包" class="headerlink" title="升级 所有可更新的软件包"></a>升级 所有可更新的软件包</h6><p><code>yum upgrade</code></p>
-<h6 id="升级-Nginx-可更新的软件包"><a href="#升级-Nginx-可更新的软件包" class="headerlink" title="升级 Nginx 可更新的软件包"></a>升级 Nginx 可更新的软件包</h6><p><code>yum upgrade nginx</code></p>
-<h6 id="安装-Nginx-软件包-并不显示确定提示"><a href="#安装-Nginx-软件包-并不显示确定提示" class="headerlink" title="安装 Nginx 软件包 并不显示确定提示"></a>安装 Nginx 软件包 并不显示确定提示</h6><p><code>yum install nginx -y</code></p>
-<h6 id="卸载-Nginx-软件包-并不显示确定提示"><a href="#卸载-Nginx-软件包-并不显示确定提示" class="headerlink" title="卸载 Nginx 软件包 并不显示确定提示"></a>卸载 Nginx 软件包 并不显示确定提示</h6><p><code>yum erase nginx -y / yum remove nginx -y</code></p>
-<h6 id="搜索-Nginx-软件包是否存着"><a href="#搜索-Nginx-软件包是否存着" class="headerlink" title="搜索 Nginx 软件包是否存着"></a>搜索 Nginx 软件包是否存着</h6><p><code>yum search nginx</code></p>
-<h6 id="列出-可用的软件包"><a href="#列出-可用的软件包" class="headerlink" title="列出 可用的软件包"></a>列出 可用的软件包</h6><p><code>yum list</code></p>
-<h6 id="列出-可用的软件包组"><a href="#列出-可用的软件包组" class="headerlink" title="列出 可用的软件包组"></a>列出 可用的软件包组</h6><p><code>yum grouplist</code></p>
-<h6 id="清除-缓存目录中的所有软件包"><a href="#清除-缓存目录中的所有软件包" class="headerlink" title="清除 缓存目录中的所有软件包"></a>清除 缓存目录中的所有软件包</h6><p><code>yum clean</code></p>
-<h6 id="清除-缓存目录中的-Nginx-软件包"><a href="#清除-缓存目录中的-Nginx-软件包" class="headerlink" title="清除 缓存目录中的 Nginx 软件包"></a>清除 缓存目录中的 Nginx 软件包</h6><p><code>yum clean nginx</code></p>
-<h6 id="重装-Nginx-软件包"><a href="#重装-Nginx-软件包" class="headerlink" title="重装 Nginx 软件包"></a>重装 Nginx 软件包</h6><p><code>yum reinstall nginx</code></p>
-<h4 id="更多的命令可以用-yum-–help-查看。"><a href="#更多的命令可以用-yum-–help-查看。" class="headerlink" title="更多的命令可以用 yum –help 查看。"></a>更多的命令可以用 yum –help 查看。</h4><hr>
-<h3 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h3><ul>
-<li><h6 id="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数"><a href="#在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入-y-来确定会很麻烦，可以加上-y-参数" class="headerlink" title="在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数"></a><font color="#dd0000">在安装软件和卸载的时候，为了避免误操作，都会询问是否继续，每次都要输入 y 来确定会很麻烦，可以加上 -y 参数</font></h6></li>
-<li><h6 id="当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！"><a href="#当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！" class="headerlink" title="当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！"></a><font color="#dd0000">当软件包或者软件包组的名字中包含空格的时候，软件包或软件包组需加上双引号！</font></h6></li>
-</ul>
+    <title>音乐</title>
+    <url>/post/music/</url>
+    <content><![CDATA[<style>
+    .aplayer {
+        margin: 0 auto;
+    }
+    @media screen and (max-device-width: 400px) {
+        .aplayer {
+            width: 100%;
+        }
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" ></script>
+<meting-js server="netease" type="playlist" id="7596696880"></meting-js>
+
 ]]></content>
       <categories>
-        <category>文章专柜</category>
+        <category>萌音收藏</category>
       </categories>
       <tags>
         <tag>八神鬼嗣</tag>
@@ -375,66 +443,49 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
-    <title>音乐</title>
-    <url>/post/music/</url>
-    <content><![CDATA[<style>
-    .aplayer {
-        margin: 0 auto;
-    }
-    @media screen and (max-device-width: 400px) {
-        .aplayer {
-            width: 100%;
-        }
-    }
-</style>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" ></script>
-<meting-js server="netease" type="playlist" id="7596696880"></meting-js>
-
+    <title>刀剑神域剧场版 -序列之争-</title>
+    <url>/post/sao-will-return/</url>
+    <content><![CDATA[<p>《刀剑神域剧场版 -序列之争 -》（日语：劇場版 ソードアート・オンライン -オーディナル・スケール-，英文：Sword Art Online The Movie Ordinal Scale）《刀剑神域剧场版 -序列之争 -》本作品为2017年上映动画版电影，由动漫的原班人马A-1 Pictures制作，伊藤智彦执导。《刀剑神域》轻小说作者川原砾与伊藤智彦共同依据《刀剑神域》小说第7卷圣母圣咏篇为基础的后续新的作品。继《AmuSphere》安全性强化版的机种问世之后，于2026年又一新机种问世，一款名为《Augma》的新机种，并号称采用安全的扩张现实 （AR）模式，装置取消“完全潜行”功能并将扩张现实功能发挥到极致进行游戏。</p>
+<p>许多人都认为《刀剑神域》是无可挑剔的神作，那是因为《刀剑神域》爱情故事的一切都是这么美好，打斗情节完美得无可挑剔，满足了众多人的中二心理，想必正是如此《刀剑神域》才会是作为众多人的入宅番吧。同时本次《刀剑神域剧场版 -序列之争 -》加入了偶像元素，原创人物偶像尤娜的灵感来源于虚拟歌姬，那位虚拟歌姬就是当今有名世界第一公主殿下的初音未来，另外考虑到剧本需要，还加入了约会电影的要素。</p>
+<p>《刀剑神域剧场版 -序列之争 -》从时间线来看，剧情主轴承接动画版第二季的时间序之后。剧场版以AR为主题展开的桐人与亚丝娜情侣故事，作为一部未来网络与现实科幻相互结合作品来展现给大家，桐人与亚丝娜情爱情故事还是一如往常的完美，动画的一切都是这么美好。“戰鬥”也同样是《刀剑神域剧场版 -序列之争 -》的看点之一，打斗情节的精彩是数一数二的完美，总能让人心头一震。战斗场面在这方面的制作，A-1 Pictures它向我们证明了他们是制作战斗场面的专家中的专家，就凭着这点来说，《刀剑神域剧场版 -序列之争 -》就有着跟其他动画不一样的地方。</p>
+<p>有人曾经问我刀剑神域是一部后宫番吗？至少我觉得刀剑神域这一部动画不像是后宫番，后宫番的男主一般来说都是跟身边所有妹子保持若即若离的关系，可是在《刀剑神域剧场版 -序列之争 -》中再次声明了桐人心中明日奈地位是不可侵犯。也正是桐人心中的明日奈地位是不可侵犯，使得整剧的爱情故事还是一如往常的完美，其实很多人都很清楚，这样的经历遇到的概率非常小，但是并不是不可能发生的，现实中也存在不少在游戏里相识结婚的人，也正因为这样的几率很小，这种爱情才是最令人羡慕的，刀剑神域正正是给了我们这一个假想。</p>
+<p>其实看完《刀剑神域剧场版 -序列之争 -》有所失望，当我看到提出AR这个概念的时候，感觉眼前有种眼前一亮的感觉，但是剧情却只是借用了AR的外壳，讲述了一个老旧的故事，甚至说感到有点无聊和乏味。虽然是已经出现的老套路，但是并不牵强，还是引申出许多让人值得思考的问题。VR和AR对现实生活的影响，虚拟和现实之间的界限等等，这些问题都是从桐人等人的身上引申出来种种疑团。</p>
+<p>在《刀剑神域剧场版 -序列之争 -》的末尾出现了一个彩蛋，提到了“《刀剑神域》将回归”等字眼，这说明《刀剑神域》还将推出新的动画，看到这个彩蛋真让人指日可待《刀剑神域》的下一部的作品。</p>
 ]]></content>
       <categories>
-        <category>萌音收藏</category>
+        <category>文章专柜</category>
       </categories>
       <tags>
         <tag>八神鬼嗣</tag>
       </tags>
   </entry>
   <entry>
-    <title>Linux 指令笔记（三）</title>
-    <url>/post/linux03/</url>
-    <content><![CDATA[<h3 id="文件-文件夹-操作"><a href="#文件-文件夹-操作" class="headerlink" title="文件&#x2F;文件夹 操作"></a>文件&#x2F;文件夹 操作</h3><p><code>以下除特殊说明，都以当前目录为 /root 示例。</code></p>
-<h4 id="mkdir-新建-文件夹"><a href="#mkdir-新建-文件夹" class="headerlink" title="mkdir 新建 文件夹"></a>mkdir 新建 文件夹</h4><h6 id="在当前文件夹新建一个-bash-文件夹，完整的绝对路径就是-root-bash"><a href="#在当前文件夹新建一个-bash-文件夹，完整的绝对路径就是-root-bash" class="headerlink" title="在当前文件夹新建一个 bash 文件夹，完整的绝对路径就是 &#x2F;root&#x2F;bash"></a>在当前文件夹新建一个 bash 文件夹，完整的绝对路径就是 &#x2F;root&#x2F;bash</h6><p><code>mkdir bash</code></p>
-<h5 id="更多的命令可以用-mkdir-–help-查看。"><a href="#更多的命令可以用-mkdir-–help-查看。" class="headerlink" title="更多的命令可以用 mkdir –help 查看。"></a>更多的命令可以用 mkdir –help 查看。</h5><hr>
-<h4 id="cp-复制或重命名-文件-文件夹"><a href="#cp-复制或重命名-文件-文件夹" class="headerlink" title="cp 复制或重命名 文件&#x2F;文件夹"></a>cp 复制或重命名 文件&#x2F;文件夹</h4><h5 id="cp命令说明"><a href="#cp命令说明" class="headerlink" title="cp命令说明"></a>cp命令说明</h5><h6 id="复制当前目录内的-log-txt文件到-var目录"><a href="#复制当前目录内的-log-txt文件到-var目录" class="headerlink" title="复制当前目录内的 log.txt文件到 &#x2F;var目录"></a>复制当前目录内的 log.txt文件到 &#x2F;var目录</h6><p><code>cp log.txt /var/log.txt</code></p>
-<h6 id="复制当前目录内的-bash文件夹到-home目录"><a href="#复制当前目录内的-bash文件夹到-home目录" class="headerlink" title="复制当前目录内的 bash文件夹到 &#x2F;home目录"></a>复制当前目录内的 bash文件夹到 &#x2F;home目录</h6><p><code>cp -R bash /home/bash</code></p>
-<h6 id="复制当前目录内的所有-txt后缀的文件到-var-log目录"><a href="#复制当前目录内的所有-txt后缀的文件到-var-log目录" class="headerlink" title="复制当前目录内的所有.txt后缀的文件到 &#x2F;var&#x2F;log目录"></a>复制当前目录内的所有.txt后缀的文件到 &#x2F;var&#x2F;log目录</h6><p><code>cp *.txt /var/log</code></p>
-<h6 id="复制当前目录内的所有以-onioni开头的文件到-var-log目录"><a href="#复制当前目录内的所有以-onioni开头的文件到-var-log目录" class="headerlink" title="复制当前目录内的所有以 onioni开头的文件到 &#x2F;var&#x2F;log目录"></a>复制当前目录内的所有以 onioni开头的文件到 &#x2F;var&#x2F;log目录</h6><p><code>cp onioni* /var/log</code></p>
-<h6 id="复制当前目录内的所有以-onioni开头-以-txt后缀结尾的文件到-var-log目录"><a href="#复制当前目录内的所有以-onioni开头-以-txt后缀结尾的文件到-var-log目录" class="headerlink" title="复制当前目录内的所有以 onioni开头 以.txt后缀结尾的文件到 &#x2F;var&#x2F;log目录"></a>复制当前目录内的所有以 onioni开头 以.txt后缀结尾的文件到 &#x2F;var&#x2F;log目录</h6><p><code>cp onioni*.txt /var/log</code></p>
-<h6 id="假设当前目录是-root-onioni-log，要把这个目录中的所有-txt后缀的文件复制到上一级目录-root-onioni，那么这样做"><a href="#假设当前目录是-root-onioni-log，要把这个目录中的所有-txt后缀的文件复制到上一级目录-root-onioni，那么这样做" class="headerlink" title="假设当前目录是 &#x2F;root&#x2F;onioni&#x2F;log，要把这个目录中的所有.txt后缀的文件复制到上一级目录 &#x2F;root&#x2F;onioni，那么这样做"></a>假设当前目录是 &#x2F;root&#x2F;onioni&#x2F;log，要把这个目录中的所有.txt后缀的文件复制到上一级目录 &#x2F;root&#x2F;onioni，那么这样做</h6><p><code>cp *.txt ..</code></p>
-<h6 id="就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错"><a href="#就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错" class="headerlink" title=".. 就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错"></a>.. 就是相对路径，代表上一级目录，当然你也可以用绝对路径，这样更不容易出错</h6><p><code>cp *.txt /root/onioni</code></p>
-<h6 id="重命名当前目录内的-log-txt文件为-log2-txt"><a href="#重命名当前目录内的-log-txt文件为-log2-txt" class="headerlink" title="重命名当前目录内的 log.txt文件为 log2.txt"></a>重命名当前目录内的 log.txt文件为 log2.txt</h6><p><code>cp log.txt log2.txt</code></p>
-<h6 id="复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt"><a href="#复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt" class="headerlink" title="复制当前目录内的 log.txt文件到 &#x2F;var目录并重命名为 log1.txt"></a>复制当前目录内的 log.txt文件到 &#x2F;var目录并重命名为 log1.txt</h6><p><code>cp log.txt /var/log1.txt</code></p>
-<h6 id="复制当前目录内的-bash文件夹到-home目录并重命名为-bash2"><a href="#复制当前目录内的-bash文件夹到-home目录并重命名为-bash2" class="headerlink" title="复制当前目录内的 bash文件夹到 &#x2F;home目录并重命名为 bash2"></a>复制当前目录内的 bash文件夹到 &#x2F;home目录并重命名为 bash2</h6><p><code>cp -R bash /home/bash2</code></p>
-<h6 id="复制当前目录内的-log-txt文件到-var目录，但是-var-目录中已经存着-log-txt，那么会提示-cp-overwrite-var-log-txt’-可以用-f-强制覆盖"><a href="#复制当前目录内的-log-txt文件到-var目录，但是-var-目录中已经存着-log-txt，那么会提示-cp-overwrite-var-log-txt’-可以用-f-强制覆盖" class="headerlink" title="复制当前目录内的 log.txt文件到 &#x2F;var目录，但是 &#x2F;var 目录中已经存着 log.txt，那么会提示 cp: overwrite &#96;&#x2F;var&#x2F;log.txt’? 可以用 -f 强制覆盖"></a>复制当前目录内的 log.txt文件到 &#x2F;var目录，但是 &#x2F;var 目录中已经存着 log.txt，那么会提示 cp: overwrite &#96;&#x2F;var&#x2F;log.txt’? 可以用 -f 强制覆盖</h6><p><code>cp -f log /var/log.txt</code></p>
-<h6 id="大家可能会发现，当你使用-cp-f-强制覆盖的时候，依然会询问你是否覆盖，这是因为-CP-为了避免你手误，默认加上了-i-参数（该参数代表每次覆盖必须询问）。"><a href="#大家可能会发现，当你使用-cp-f-强制覆盖的时候，依然会询问你是否覆盖，这是因为-CP-为了避免你手误，默认加上了-i-参数（该参数代表每次覆盖必须询问）。" class="headerlink" title="大家可能会发现，当你使用 cp -f 强制覆盖的时候，依然会询问你是否覆盖，这是因为 CP 为了避免你手误，默认加上了 -i 参数（该参数代表每次覆盖必须询问）。"></a>大家可能会发现，当你使用 cp -f 强制覆盖的时候，依然会询问你是否覆盖，这是因为 CP 为了避免你手误，默认加上了 -i 参数（该参数代表每次覆盖必须询问）。</h6><h6 id="所以想要避免-CP-默认的-i-参数，只需要在-CP-命令前面加上斜杠即可-“-”"><a href="#所以想要避免-CP-默认的-i-参数，只需要在-CP-命令前面加上斜杠即可-“-”" class="headerlink" title="所以想要避免 CP 默认的 -i 参数，只需要在 CP 命令前面加上斜杠即可 “&#x2F;”"></a>所以想要避免 CP 默认的 -i 参数，只需要在 CP 命令前面加上斜杠即可 “&#x2F;”</h6><p><code>/cp -f log /var/log.txt</code></p>
-<h6 id="复制当前目录内的-log-txt-log1-txt-log2-txt文件和-log233目录到-home-log目录中"><a href="#复制当前目录内的-log-txt-log1-txt-log2-txt文件和-log233目录到-home-log目录中" class="headerlink" title="复制当前目录内的 log.txt log1.txt log2.txt文件和 log233目录到 &#x2F;home&#x2F;log目录中"></a>复制当前目录内的 log.txt log1.txt log2.txt文件和 log233目录到 &#x2F;home&#x2F;log目录中</h6><p><code>cp -R log.txt log1.txt log2.txt log233 /home/log</code></p>
-<h4 id="更多的命令可以用-cp-–help-查看。"><a href="#更多的命令可以用-cp-–help-查看。" class="headerlink" title="更多的命令可以用 cp –help 查看。"></a>更多的命令可以用 cp –help 查看。</h4><hr>
-<h4 id="mv-移动或重命名-文件-文件夹"><a href="#mv-移动或重命名-文件-文件夹" class="headerlink" title="mv 移动或重命名 文件&#x2F;文件夹"></a>mv 移动或重命名 文件&#x2F;文件夹</h4><h5 id="mv命令说明"><a href="#mv命令说明" class="headerlink" title="mv命令说明"></a>mv命令说明</h5><h5 id="关于-mv-命令，可以参考上面-cp-的使用方法，没什么区别，只是一个是复制，一个是移动，把上面-cp-命令改成-mv-就能套用了。"><a href="#关于-mv-命令，可以参考上面-cp-的使用方法，没什么区别，只是一个是复制，一个是移动，把上面-cp-命令改成-mv-就能套用了。" class="headerlink" title="关于 mv 命令，可以参考上面 cp 的使用方法，没什么区别，只是一个是复制，一个是移动，把上面 cp 命令改成 mv 就能套用了。"></a>关于 mv 命令，可以参考上面 cp 的使用方法，没什么区别，只是一个是复制，一个是移动，把上面 cp 命令改成 mv 就能套用了。</h5><h6 id="移动当前目录内的-log-txt文件到-var目录"><a href="#移动当前目录内的-log-txt文件到-var目录" class="headerlink" title="移动当前目录内的 log.txt文件到 &#x2F;var目录"></a>移动当前目录内的 log.txt文件到 &#x2F;var目录</h6><p><code>mv log.txt /var/log.txt</code></p>
-<h6 id="移动当前目录内的-bash文件夹到-home目录"><a href="#移动当前目录内的-bash文件夹到-home目录" class="headerlink" title="移动当前目录内的 bash文件夹到 &#x2F;home目录"></a>移动当前目录内的 bash文件夹到 &#x2F;home目录</h6><p><code>mv bash /home/bash</code></p>
-<h6 id="重命名当前目录内的-log-txt文件为-log2-txt-1"><a href="#重命名当前目录内的-log-txt文件为-log2-txt-1" class="headerlink" title="重命名当前目录内的 log.txt文件为 log2.txt"></a>重命名当前目录内的 log.txt文件为 log2.txt</h6><p><code>mv log.txt log2.txt</code></p>
-<h6 id="复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt-1"><a href="#复制当前目录内的-log-txt文件到-var目录并重命名为-log1-txt-1" class="headerlink" title="复制当前目录内的 log.txt文件到 &#x2F;var目录并重命名为 log1.txt"></a>复制当前目录内的 log.txt文件到 &#x2F;var目录并重命名为 log1.txt</h6><p><code>mv log.txt /var/log1.txt</code></p>
-<h6 id="复制当前目录内的-bash文件夹到-home目录并重命名为-bash2-1"><a href="#复制当前目录内的-bash文件夹到-home目录并重命名为-bash2-1" class="headerlink" title="复制当前目录内的 bash文件夹到 &#x2F;home目录并重命名为 bash2"></a>复制当前目录内的 bash文件夹到 &#x2F;home目录并重命名为 bash2</h6><p><code>mv bash /home/bash2</code></p>
-<h4 id="更多的命令可以用-mv-–help-查看。"><a href="#更多的命令可以用-mv-–help-查看。" class="headerlink" title="更多的命令可以用 mv –help 查看。"></a>更多的命令可以用 mv –help 查看。</h4><hr>
-<h4 id="rm-删除-文件-文件夹"><a href="#rm-删除-文件-文件夹" class="headerlink" title="rm 删除 文件&#x2F;文件夹"></a>rm 删除 文件&#x2F;文件夹</h4><h5 id="rm命令说明"><a href="#rm命令说明" class="headerlink" title="rm命令说明"></a>rm命令说明</h5><h6 id="删除当前目录下的-log-txt文件"><a href="#删除当前目录下的-log-txt文件" class="headerlink" title="删除当前目录下的 log.txt文件"></a>删除当前目录下的 log.txt文件</h6><p><code>rm log.txt</code></p>
-<h6 id="删除当前目录下所有-txt后缀的文件"><a href="#删除当前目录下所有-txt后缀的文件" class="headerlink" title="删除当前目录下所有.txt后缀的文件"></a>删除当前目录下所有.txt后缀的文件</h6><p><code>rm *.txt</code></p>
-<h6 id="使用-rm-命令删除时，会提示你是否确定删除，输入-y-即删除，输入-n-则取消"><a href="#使用-rm-命令删除时，会提示你是否确定删除，输入-y-即删除，输入-n-则取消" class="headerlink" title="使用 rm 命令删除时，会提示你是否确定删除，输入 y 即删除，输入 n 则取消"></a>使用 rm 命令删除时，会提示你是否确定删除，输入 y 即删除，输入 n 则取消</h6><h6 id="rm-remove-regular-file-log-txt’-y"><a href="#rm-remove-regular-file-log-txt’-y" class="headerlink" title="rm: remove regular file &#96;log.txt’? y"></a>rm: remove regular file &#96;log.txt’? y</h6><h6 id="删除当前目录下所有-txt后缀的文件-1"><a href="#删除当前目录下所有-txt后缀的文件-1" class="headerlink" title="删除当前目录下所有.txt后缀的文件"></a>删除当前目录下所有.txt后缀的文件</h6><p><code>rm *.txt</code></p>
-<h6 id="删除当前目录下所有以-onioni开头的文件"><a href="#删除当前目录下所有以-onioni开头的文件" class="headerlink" title="删除当前目录下所有以 onioni开头的文件"></a>删除当前目录下所有以 onioni开头的文件</h6><p><code>rm onioni*</code></p>
-<h6 id="删除当前目录下所有以-onioni开头-以-txt后缀结尾的文件"><a href="#删除当前目录下所有以-onioni开头-以-txt后缀结尾的文件" class="headerlink" title="删除当前目录下所有以 onioni开头 以.txt后缀结尾的文件"></a>删除当前目录下所有以 onioni开头 以.txt后缀结尾的文件</h6><p><code>rm onioni*.txt</code></p>
-<h6 id="当你用-rm-删除目录的时候会发现提示这不是一个文件"><a href="#当你用-rm-删除目录的时候会发现提示这不是一个文件" class="headerlink" title="当你用 rm 删除目录的时候会发现提示这不是一个文件"></a>当你用 rm 删除目录的时候会发现提示这不是一个文件</h6><h6 id="rm-bash"><a href="#rm-bash" class="headerlink" title="rm bash"></a>rm bash</h6><h6 id="rm-cannot-remove-bash’-Is-a-directory"><a href="#rm-cannot-remove-bash’-Is-a-directory" class="headerlink" title="rm: cannot remove &#96;bash’: Is a directory"></a>rm: cannot remove &#96;bash’: Is a directory</h6><h6 id="可以加上-r-来归递删除目录及其目录下的内容"><a href="#可以加上-r-来归递删除目录及其目录下的内容" class="headerlink" title="可以加上 -r 来归递删除目录及其目录下的内容"></a>可以加上 -r 来归递删除目录及其目录下的内容</h6><p><code>rm -r bash</code></p>
-<h6 id="因为为了避免手误删除错误，rm默认加上了-i-的参数，每一次删除文件-目录都会提示，如果觉得烦可以用-rf-参数"><a href="#因为为了避免手误删除错误，rm默认加上了-i-的参数，每一次删除文件-目录都会提示，如果觉得烦可以用-rf-参数" class="headerlink" title="因为为了避免手误删除错误，rm默认加上了 -i 的参数，每一次删除文件&#x2F;目录都会提示，如果觉得烦可以用 -rf 参数"></a>因为为了避免手误删除错误，rm默认加上了 -i 的参数，每一次删除文件&#x2F;目录都会提示，如果觉得烦可以用 -rf 参数</h6><p><code>rm -rf bash</code></p>
-<h6 id="rm-rf-这个命令请慎重使用，而且千万不要使用-rm-rf-或者-rm-rf-之类的命令-系统自杀-，可能会让你直接跑路，所以使用请慎重！"><a href="#rm-rf-这个命令请慎重使用，而且千万不要使用-rm-rf-或者-rm-rf-之类的命令-系统自杀-，可能会让你直接跑路，所以使用请慎重！" class="headerlink" title="rm -rf 这个命令请慎重使用，而且千万不要使用 rm -rf &#x2F; 或者 rm -rf &#x2F;* 之类的命令(系统自杀)，可能会让你直接跑路，所以使用请慎重！"></a><font color="#dd0000">rm -rf 这个命令请慎重使用，而且千万不要使用 rm -rf &#x2F; 或者 rm -rf &#x2F;* 之类的命令(系统自杀)，可能会让你直接跑路，所以使用请慎重！</font></h6><h4 id="更多的命令可以用-rm-–help-查看。"><a href="#更多的命令可以用-rm-–help-查看。" class="headerlink" title="更多的命令可以用 rm –help 查看。"></a>更多的命令可以用 rm –help 查看。</h4>]]></content>
+    <title>少女们向荒野进发</title>
+    <url>/post/shojo-tachi-wa-koya-o-mezasu/</url>
+    <content><![CDATA[<p>《少女们向荒野进发》（日语：少女たちは荒野を目指す）是由タカヒロ企划，MINATOSOFT开发制作的一款WINDOWS电脑游戏。2015年10月宣布电视动画化，并在2016年1月开始动画播放，日文简称“しょこめざ”（SHOKOMEZA）。于2016年3月25日发售。《少女们向荒野进发》和MINATOSOFT的第一作《你是主人我是仆》以及第二作《认真和我谈恋爱！》略有不同。因为该《少女们向荒野进发》不是成人向作品，是以美少女游戏制作社团题材的校园恋爱作品。</p>
+<p>《少女们向荒野进发》在题材方面虽然是后宫番，但是并没有那种老套的剧情，而是以创业为题材的后宫番，在当时来说可以说是一种比较新奇的剧情。剧情中主要突出并不是技术层面的东西，而且在实际制作过程中人与人之间各种各样的问题，让人感到时而轻松又时而让人着急。就比如拿《不起眼女主角培育法》这一相似题材的动画来说，给人的感受确是完全不同的。但是《少女们向荒野进发》可能只是把原作（游戏）某些精彩的部分展现出来，从而显露出不足剧情上面有些美中不足。</p>
+<p>我们应该如何面对未来，应怀着一颗怎么样的心态去迎接未来？面对现在的生活，不但没有企业家的野心，而且也没有出众的一技之长，内心怀着的焦躁。似乎看着《少女们向荒野进发》这样的男主角，内心也许想到的是这可能是曾经的你，或许是现在的你，与朋友过着的每一天中都还在摸索自己的将来，没有明确的梦想，似乎只能见一步走一步。并不知道将来的自己想要做些什么，也并不知道将来自己会变成什么样，就像是制作者在哭述自己曾经遭遇的事情，可能还有在制作游戏上的种种困难与艰辛。</p>
+<p>可能大家都在关注《少女们向荒野进发》的他们向着无尽的荒野迈出了脚步，游戏能成功地制作出来吗？能卖得出去吗？也许这只是表面的信息，剧中真的就只是在说他们向着无尽的荒野迈出了脚步吗？在无尽的荒野是残酷的，人为了赚钱，出卖良知，抛弃善良，惟利是图，甚至可以不择手段。可能我们生存在大千世界里，求生存是万物的本能，也是我们人的本能，人为了活下去使出任何手段，可能这都正常的，是不可耻的。虽然这样的剧情有着不小的说服力，但是难免有点正剧与喜剧两不沾，使整部动画显得有点尴尬。</p>
+<p>以创业为题材的后宫番的动画，的确是挺新鲜的，但是矛盾化解得显得太过僵硬，可能第一次看的时候会感觉很无趣，但是如果你用另外一种眼光去看的话可能是另一部能让人琢磨的动画。在最后我只想说：将吾之人生，祭献给二次元。</p>
+<p>这个世界是个荒野，太单纯会被弱肉强食，只靠爱好是无法存活下去的，只有内心抱有“野心”的人，才能在这个荒野上挑战梦想。 – 黑田砂雪</p>
+]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>借东西的小人阿莉埃蒂</title>
+    <url>/post/the-secret-world-of-arrietty/</url>
+    <content><![CDATA[<p>《借东西的小人阿莉埃蒂》（日语：借りぐらしのアリエッティ，英语：THE SECRET WORLD OF ARRIETTY），日语原意为借居的阿丽埃蒂。《借东西的小人阿莉埃蒂》是日本吉卜力工作室在2010年7月17日在日本上映的动画电影，原作为《地板下的小矮人》是小说家玛丽·诺顿于1952年发表的小说作品。在阅读过《地板下的小矮人》后的宫崎骏与高畑勋，引起了相当大的兴趣，并将此故事改编为动画电影。曾经被宫崎骏称赞为“世界通用的动画师”的米林宏昌，被制作人铃木敏夫提议下执起导演筒，这也是米林宏昌首次是执导的首部动画电影。</p>
+<p>一块方糖一个夹子的约定，不管阿莉埃蒂和翔两人之间萌生出的爱情还是友情，看完之后总有一种从心低里升起的温暖。或许有想知道翔的手术最后有成功吗？阿莉埃蒂搬家去哪里了呢？似乎这些都已不重要了，可能很快就会忘记曾经如何相识如何互生情愫如何在一起的时光。但是如果偶然收拾房间，也许看到那一个小夹子就会想起那时候的你，想起那段永远的留在的记忆中的时光。就如同那一句话一样“你是我心的一部分，我不会忘记的，永远…”</p>
+<p>可能《借东西的小人阿莉埃蒂》没能达到《千与千寻》那样高得高度，但是吉卜力工作室的优点都有在这一部动画电影里面很好的呈现出来。这部动画电影在看似浅显又充满童趣的剧情却从中不经意的透露出深沉而又现实的问题，人与自然的关系是怎么样的呢？ 人与大自然的关系干丝万缕，人类为了在大自然生活，便要克服各种限制, 我们就习以为常的在大自然借取资源，或许我们会感到质疑，我们所做的不正正和《借东西的小人阿莉埃蒂》的小人所作所为一样吗？</p>
+<p>也许借东西，可能只是一种“道德的”偷窃。也许借东西的小人阿莉埃蒂的“偷窃”很让人同情，可能由于自身的弱小，只能去依靠着比自己强大的物种生存下去，虽然这本身是没有错的，但是为了生存的偷窃就是正义的吗？就好像我们人类向大自然无偿地“借东西”呢？我们人类又何时归还过大自然？《借东西的小人阿莉埃蒂》这一部动画电影像极了对我们人类的说教，述说着我们人类只会为了自身的利益和私欲不断的去向大自然“借东西”，我们人类甚至不知道去敬畏自然，只会一味索取。是的，可能人类才是最坏的小偷。</p>
+<p>向来日本吉卜力工作室很难让人失望，总是为你奉献一部有色有声动画。细腻的情感，细致的手绘，充满异国风情却又不突兀的配乐，用那独特的微观视角把《借东西的小人阿莉埃蒂》呈现我们的眼前。虽然负责企划及剧本编写的是宫崎骏，但是真正担当导演的是初次执导的米林宏昌。尽管米林宏昌在细节、人设、风格、配乐等等都做得非常近似宫崎骏，但是整体叙事太过匆忙，就如同像蜻蜓点水般让人看完后心里有种很不是滋味的感觉。可能结局是世界上最美好的告别，但是又缺少了一种失去了打动人心的力量。</p>
+<p>不能被人类发现，是我们生存的定律──（人間に見られてはいけない，それが床下の小人たちの掟だった）</p>
+]]></content>
       <categories>
         <category>文章专柜</category>
       </categories>
@@ -523,78 +574,6 @@ Your browser does not support the video tag.
 <h6 id="如果不需要编辑了，那么可以用这个-按键退出当前文件"><a href="#如果不需要编辑了，那么可以用这个-按键退出当前文件" class="headerlink" title="如果不需要编辑了，那么可以用这个 按键退出当前文件"></a>如果不需要编辑了，那么可以用这个 按键退出当前文件</h6><p><code>Ctrl+X</code></p>
 <h6 id="如果你在退出前已经修改但没有保存，那么会提醒你是否保存，如果保存就输入-y-，不保存输入-n"><a href="#如果你在退出前已经修改但没有保存，那么会提醒你是否保存，如果保存就输入-y-，不保存输入-n" class="headerlink" title="如果你在退出前已经修改但没有保存，那么会提醒你是否保存，如果保存就输入 y ，不保存输入 n"></a>如果你在退出前已经修改但没有保存，那么会提醒你是否保存，如果保存就输入 y ，不保存输入 n</h6><h6 id="然后就会让你输入要保存的文件名（默认原文件名，所以直接按-Enter回车即可，除非你要另存为其他文件名）"><a href="#然后就会让你输入要保存的文件名（默认原文件名，所以直接按-Enter回车即可，除非你要另存为其他文件名）" class="headerlink" title="然后就会让你输入要保存的文件名（默认原文件名，所以直接按 Enter回车即可，除非你要另存为其他文件名）"></a>然后就会让你输入要保存的文件名（默认原文件名，所以直接按 Enter回车即可，除非你要另存为其他文件名）</h6><p><code>Enter</code></p>
 <h4 id="更多的命令可以在-nano-编辑界面中按-F1键-查看。"><a href="#更多的命令可以在-nano-编辑界面中按-F1键-查看。" class="headerlink" title="更多的命令可以在 nano 编辑界面中按 F1键 查看。"></a>更多的命令可以在 nano 编辑界面中按 F1键 查看。</h4>]]></content>
-      <categories>
-        <category>文章专柜</category>
-      </categories>
-      <tags>
-        <tag>八神鬼嗣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>刀剑神域剧场版 -序列之争-</title>
-    <url>/post/sao-will-return/</url>
-    <content><![CDATA[<p>《刀剑神域剧场版 -序列之争 -》（日语：劇場版 ソードアート・オンライン -オーディナル・スケール-，英文：Sword Art Online The Movie Ordinal Scale）《刀剑神域剧场版 -序列之争 -》本作品为2017年上映动画版电影，由动漫的原班人马A-1 Pictures制作，伊藤智彦执导。《刀剑神域》轻小说作者川原砾与伊藤智彦共同依据《刀剑神域》小说第7卷圣母圣咏篇为基础的后续新的作品。继《AmuSphere》安全性强化版的机种问世之后，于2026年又一新机种问世，一款名为《Augma》的新机种，并号称采用安全的扩张现实 （AR）模式，装置取消“完全潜行”功能并将扩张现实功能发挥到极致进行游戏。</p>
-<p>许多人都认为《刀剑神域》是无可挑剔的神作，那是因为《刀剑神域》爱情故事的一切都是这么美好，打斗情节完美得无可挑剔，满足了众多人的中二心理，想必正是如此《刀剑神域》才会是作为众多人的入宅番吧。同时本次《刀剑神域剧场版 -序列之争 -》加入了偶像元素，原创人物偶像尤娜的灵感来源于虚拟歌姬，那位虚拟歌姬就是当今有名世界第一公主殿下的初音未来，另外考虑到剧本需要，还加入了约会电影的要素。</p>
-<p>《刀剑神域剧场版 -序列之争 -》从时间线来看，剧情主轴承接动画版第二季的时间序之后。剧场版以AR为主题展开的桐人与亚丝娜情侣故事，作为一部未来网络与现实科幻相互结合作品来展现给大家，桐人与亚丝娜情爱情故事还是一如往常的完美，动画的一切都是这么美好。“戰鬥”也同样是《刀剑神域剧场版 -序列之争 -》的看点之一，打斗情节的精彩是数一数二的完美，总能让人心头一震。战斗场面在这方面的制作，A-1 Pictures它向我们证明了他们是制作战斗场面的专家中的专家，就凭着这点来说，《刀剑神域剧场版 -序列之争 -》就有着跟其他动画不一样的地方。</p>
-<p>有人曾经问我刀剑神域是一部后宫番吗？至少我觉得刀剑神域这一部动画不像是后宫番，后宫番的男主一般来说都是跟身边所有妹子保持若即若离的关系，可是在《刀剑神域剧场版 -序列之争 -》中再次声明了桐人心中明日奈地位是不可侵犯。也正是桐人心中的明日奈地位是不可侵犯，使得整剧的爱情故事还是一如往常的完美，其实很多人都很清楚，这样的经历遇到的概率非常小，但是并不是不可能发生的，现实中也存在不少在游戏里相识结婚的人，也正因为这样的几率很小，这种爱情才是最令人羡慕的，刀剑神域正正是给了我们这一个假想。</p>
-<p>其实看完《刀剑神域剧场版 -序列之争 -》有所失望，当我看到提出AR这个概念的时候，感觉眼前有种眼前一亮的感觉，但是剧情却只是借用了AR的外壳，讲述了一个老旧的故事，甚至说感到有点无聊和乏味。虽然是已经出现的老套路，但是并不牵强，还是引申出许多让人值得思考的问题。VR和AR对现实生活的影响，虚拟和现实之间的界限等等，这些问题都是从桐人等人的身上引申出来种种疑团。</p>
-<p>在《刀剑神域剧场版 -序列之争 -》的末尾出现了一个彩蛋，提到了“《刀剑神域》将回归”等字眼，这说明《刀剑神域》还将推出新的动画，看到这个彩蛋真让人指日可待《刀剑神域》的下一部的作品。</p>
-]]></content>
-      <categories>
-        <category>文章专柜</category>
-      </categories>
-      <tags>
-        <tag>八神鬼嗣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>少女们向荒野进发</title>
-    <url>/post/shojo-tachi-wa-koya-o-mezasu/</url>
-    <content><![CDATA[<p>《少女们向荒野进发》（日语：少女たちは荒野を目指す）是由タカヒロ企划，MINATOSOFT开发制作的一款WINDOWS电脑游戏。2015年10月宣布电视动画化，并在2016年1月开始动画播放，日文简称“しょこめざ”（SHOKOMEZA）。于2016年3月25日发售。《少女们向荒野进发》和MINATOSOFT的第一作《你是主人我是仆》以及第二作《认真和我谈恋爱！》略有不同。因为该《少女们向荒野进发》不是成人向作品，是以美少女游戏制作社团题材的校园恋爱作品。</p>
-<p>《少女们向荒野进发》在题材方面虽然是后宫番，但是并没有那种老套的剧情，而是以创业为题材的后宫番，在当时来说可以说是一种比较新奇的剧情。剧情中主要突出并不是技术层面的东西，而且在实际制作过程中人与人之间各种各样的问题，让人感到时而轻松又时而让人着急。就比如拿《不起眼女主角培育法》这一相似题材的动画来说，给人的感受确是完全不同的。但是《少女们向荒野进发》可能只是把原作（游戏）某些精彩的部分展现出来，从而显露出不足剧情上面有些美中不足。</p>
-<p>我们应该如何面对未来，应怀着一颗怎么样的心态去迎接未来？面对现在的生活，不但没有企业家的野心，而且也没有出众的一技之长，内心怀着的焦躁。似乎看着《少女们向荒野进发》这样的男主角，内心也许想到的是这可能是曾经的你，或许是现在的你，与朋友过着的每一天中都还在摸索自己的将来，没有明确的梦想，似乎只能见一步走一步。并不知道将来的自己想要做些什么，也并不知道将来自己会变成什么样，就像是制作者在哭述自己曾经遭遇的事情，可能还有在制作游戏上的种种困难与艰辛。</p>
-<p>可能大家都在关注《少女们向荒野进发》的他们向着无尽的荒野迈出了脚步，游戏能成功地制作出来吗？能卖得出去吗？也许这只是表面的信息，剧中真的就只是在说他们向着无尽的荒野迈出了脚步吗？在无尽的荒野是残酷的，人为了赚钱，出卖良知，抛弃善良，惟利是图，甚至可以不择手段。可能我们生存在大千世界里，求生存是万物的本能，也是我们人的本能，人为了活下去使出任何手段，可能这都正常的，是不可耻的。虽然这样的剧情有着不小的说服力，但是难免有点正剧与喜剧两不沾，使整部动画显得有点尴尬。</p>
-<p>以创业为题材的后宫番的动画，的确是挺新鲜的，但是矛盾化解得显得太过僵硬，可能第一次看的时候会感觉很无趣，但是如果你用另外一种眼光去看的话可能是另一部能让人琢磨的动画。在最后我只想说：将吾之人生，祭献给二次元。</p>
-<p>这个世界是个荒野，太单纯会被弱肉强食，只靠爱好是无法存活下去的，只有内心抱有“野心”的人，才能在这个荒野上挑战梦想。 – 黑田砂雪</p>
-]]></content>
-      <categories>
-        <category>文章专柜</category>
-      </categories>
-      <tags>
-        <tag>八神鬼嗣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>借东西的小人阿莉埃蒂</title>
-    <url>/post/the-secret-world-of-arrietty/</url>
-    <content><![CDATA[<p>《借东西的小人阿莉埃蒂》（日语：借りぐらしのアリエッティ，英语：THE SECRET WORLD OF ARRIETTY），日语原意为借居的阿丽埃蒂。《借东西的小人阿莉埃蒂》是日本吉卜力工作室在2010年7月17日在日本上映的动画电影，原作为《地板下的小矮人》是小说家玛丽·诺顿于1952年发表的小说作品。在阅读过《地板下的小矮人》后的宫崎骏与高畑勋，引起了相当大的兴趣，并将此故事改编为动画电影。曾经被宫崎骏称赞为“世界通用的动画师”的米林宏昌，被制作人铃木敏夫提议下执起导演筒，这也是米林宏昌首次是执导的首部动画电影。</p>
-<p>一块方糖一个夹子的约定，不管阿莉埃蒂和翔两人之间萌生出的爱情还是友情，看完之后总有一种从心低里升起的温暖。或许有想知道翔的手术最后有成功吗？阿莉埃蒂搬家去哪里了呢？似乎这些都已不重要了，可能很快就会忘记曾经如何相识如何互生情愫如何在一起的时光。但是如果偶然收拾房间，也许看到那一个小夹子就会想起那时候的你，想起那段永远的留在的记忆中的时光。就如同那一句话一样“你是我心的一部分，我不会忘记的，永远…”</p>
-<p>可能《借东西的小人阿莉埃蒂》没能达到《千与千寻》那样高得高度，但是吉卜力工作室的优点都有在这一部动画电影里面很好的呈现出来。这部动画电影在看似浅显又充满童趣的剧情却从中不经意的透露出深沉而又现实的问题，人与自然的关系是怎么样的呢？ 人与大自然的关系干丝万缕，人类为了在大自然生活，便要克服各种限制, 我们就习以为常的在大自然借取资源，或许我们会感到质疑，我们所做的不正正和《借东西的小人阿莉埃蒂》的小人所作所为一样吗？</p>
-<p>也许借东西，可能只是一种“道德的”偷窃。也许借东西的小人阿莉埃蒂的“偷窃”很让人同情，可能由于自身的弱小，只能去依靠着比自己强大的物种生存下去，虽然这本身是没有错的，但是为了生存的偷窃就是正义的吗？就好像我们人类向大自然无偿地“借东西”呢？我们人类又何时归还过大自然？《借东西的小人阿莉埃蒂》这一部动画电影像极了对我们人类的说教，述说着我们人类只会为了自身的利益和私欲不断的去向大自然“借东西”，我们人类甚至不知道去敬畏自然，只会一味索取。是的，可能人类才是最坏的小偷。</p>
-<p>向来日本吉卜力工作室很难让人失望，总是为你奉献一部有色有声动画。细腻的情感，细致的手绘，充满异国风情却又不突兀的配乐，用那独特的微观视角把《借东西的小人阿莉埃蒂》呈现我们的眼前。虽然负责企划及剧本编写的是宫崎骏，但是真正担当导演的是初次执导的米林宏昌。尽管米林宏昌在细节、人设、风格、配乐等等都做得非常近似宫崎骏，但是整体叙事太过匆忙，就如同像蜻蜓点水般让人看完后心里有种很不是滋味的感觉。可能结局是世界上最美好的告别，但是又缺少了一种失去了打动人心的力量。</p>
-<p>不能被人类发现，是我们生存的定律──（人間に見られてはいけない，それが床下の小人たちの掟だった）</p>
-]]></content>
-      <categories>
-        <category>文章专柜</category>
-      </categories>
-      <tags>
-        <tag>八神鬼嗣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WLAN笔记（二）</title>
-    <url>/post/wifi02/</url>
-    <content><![CDATA[<p>WLAN跟日常生活中的无线广播、无线电视、手机通信一样，都是用射频作为载体。射频是频率介于3赫兹（Hz）和约300G赫兹（Hz）之间的电磁波，也可以称为射频电波或射电。人们为这段电磁波又定义了无线频谱，按照频率范围划分为极低频、超低频、中频、高频、超高频等，WLAN使用的射频频率范围是2.4GHz频段（2.4GHz～2.4835GHz）和5GHz频段（频率范围是5.150GHz～5.350GHz和5.725GHz～5.850GHz），分别属于特高频(300**z～3GHz)和超高频(3GHz～30GHz)，各个国家使用的频宽范围不一样，5GHz频段的5.150GHz～5.350GHz和5.725GHz～5.850GHz为中国使用。</p>
-<p>WLAN使用的2.4GHz频段和5GHz频段属于ISM频段。ISM，即工业（Industrial）、科学（Scientific）与医疗（Medical）。ISM频段主要开放给工业、科学、医疗三个机构使用，只要设备的功率符合限制，不需要申请许可证（Free License）即可使用这些频段。</p>
-<p>过射频传输信息的基本调制方式：调频、调相和调幅，发送端将信息调制到载波上，通过改变载波的频率、相位和振幅传递信息，接收端收到信息后，再解调还原信息。通过这样一个调制解调的过程，就实现了信息的传递。WLAN射频传输信息的基础也是调频、调相或调幅。只不过调频、调相和调幅通常用在模拟信号的传输，在数字通信领域射频的调制方式较为复杂，主要有：振幅键控、频率键控、相位键控和正交幅度调制（一种幅度、相位联合调制的技术，它同时利用了载波的幅度和相位来传递信息）。</p>
-<p>有线通信其实也是将信号调制成电脉冲或光脉冲，然后放到电缆或光缆上传输。只不过射频需要解决更多的问题，如射频的反射、衍射等问题。无论是使用射频通信还是使用有线媒介的通信，其过程都可以简单的看成是信源-&gt;信道-&gt;信宿，信源是信息的发送者，信宿是信息的接收者。那有线的信道我可以简单的理解为线缆，WLAN的信道是不是可以简单的理解为射频呢？根据“信源-&gt;信道-&gt;信宿”的描述，信道就是发送者和接收者的中间部分，那可不就是射频了。</p>
-<p>WLAN的信道是具有一定频宽的射频，以便可以承载要传输的信息。对于2.4GHz频段来说，2.4GHz频段的频宽是2.4835GHz-2.4GHz&#x3D;0.0835GHz&#x3D;83.5**z，WLAN不是使用全部的83.5**z的频宽作为一个信道，同一条波如果遇到频率相同的波会产生干扰，会根据相位差进行叠加或衰减（如：频率相同，相位相差180°的波彼此会抵消）。如果WLAN使用整个2.4GHz频段作为一个信道，当同一覆盖范围内有两个及两个以上的AP，大家都用相同的信道，会造成严重的干扰，两个AP都无法有效提供WLAN服务。所以，在WLAN标准协议里将2.4GHz频段划分出13个相互交叠的信道，每个信道的频宽是20**z（802.11g、802.11n每个信道占用20**z，802.11b每个信道占用22**z），每个信道都有自己的中心频率。</p>
-<p>14信道是特别针对日本定义的，各个国家2.4GHz频段开放的信道不一样，北美地区（美国，加拿大）开放1～11信道，欧洲开放1～13信道，中国同样开放1～13信道。一般，我们更多的讲述是2.4GHz频段分13个相互交叠的信道。这13个信道可以找出3个独立信道，即没有相互交叠的信道。独立信道由于没有频率的交叠区，相邻AP使用这3个独立信道不会彼此产生干扰。在部署WLAN时，为避免相邻AP产生同频干扰，多采用蜂窝式信道布局。蜂窝式布局中相邻AP间使用不交叠的独立信道，可以有效避免同频干扰。2.4GHz频段射频在各个国家已经放开使用，越来越多的无线设备都工作在2.4GHz频段（如蓝牙设备），使得2.4GHz频段日益拥挤，信道干扰严重，有时会影响WLAN用户的正常业务。</p>
-<p>华为AP产品2.4G射频默认使用1信道，如果用户在部署WLAN时忘了配置信道，可能会造成某些AP覆盖重合的区域产生同频干扰，使用户无法上线。但是，为众多AP配置信道也是件很累人的事情，华为产品支持射频信道的自动模式。AP上线后，AC会根据AP周围的无线环境，自动为AP射频设置信道，避免了用户为多个AP配置信道的繁杂工作。还支持射频调优功能，可以根据射频周围的无线环境自动调整信道和发射功率，保持整个无线网络处于一个最佳的状态。在WLAN初次部署完成后，建议执行一次射频调优。比如周围的卖场也有WLAN，很可能会和我们自己部署的WLAN有部分区域的射频冲突，射频调优可以让WLAN自己根据无线环境调整信道部署和发射功率，减少射频的冲突。而且无线环境可能是变化的，在低峰时段执行定期的射频调优也是有必要的。华为产品在V2R3C00版本开始支持频谱分析功能，频谱分析可以分析出AP周围存在的干扰设备，如婴儿监视器、微波炉、蓝牙设备等。</p>
-<p>WLAN 可以使用的另一个频段——5GHz频段，有更高的频率和频宽，可以提供更高的速率和更小的信道干扰。WLAN标准协议将5GHz频段分为24个20**z宽的信道，且每个信道都为独立信道。这为WLAN提供了丰富的信道资源，更多的独立信道也使得信道绑定更有价值，信道绑定是将两个信道绑定成一个信道使用，能提供更大的带宽。如两个20**z的独立信道绑定在一起可以获得20**z两倍的吞吐量，这好比将两条道路合并成一条使用，自然就提高了道路的通过能力。802.11n支持通过将相邻的两个20**z信道绑定成40**z，使传输速率成倍提高。802.11n也同时定义了2.4GHz频段的信道绑定，但由于2.4GHz频段较拥挤的信道资源，降低了2.4GHz频段信道绑定的实用性，一般不推荐使用2.4GHz频段的信道绑定。</p>
-<p>UNII-2e为5GHz新增频段，该频段中国尚未放开使用。目前中国已放开使用的信道有36, 40, 44, 48, 52, 56, 60, 64, 149, 153, 157, 161, 165。各个国家开放的信道不一样，可以参照国家信道顺从表。5GHz频段并非只有WLAN设备在使用，很多国家的军用雷达也在使用5GHz频段，使用该频段的民用无线设备很可能对雷达等重要设施产生干扰。为了解决这一安全顾虑，在一些国家出售的WLAN产品必须具备TPS和DFS这两个功能，即发射功率控制和动态频率选择。TPS是为了防止无线产品发放过大的功率来干扰军方雷达。DFS是为了使无线产品能主动探测军方使用的频率，如频率冲突并主动选择另一个频率，以避开军方频率。在这些国家这两个功能是属于强制性的，不符合标准的产品将不会获得这些国家的上市许可。</p>
-<p>dBm和dB的含义：<br>dBm的含义是分贝毫瓦，通俗的说就是每1毫瓦产生多少分贝能量。dB是个相对值是增益的意思，X (dBm) - Y (dBm) &#x3D; Z (dB)，如:10dB&#x3D;20dBm-10dBm。<br>dBm和毫瓦的换算关系是：P(dBm)&#x3D;10logP(mW)，也就是100mW&#x3D;10Log102&#x3D;20dBm。<br>功率减少10倍，换算出来的dBm降低10dB。功率减少一半，换算出来的dBm降低3dB。如：50mW&#x3D;17dBm，25mW&#x3D;14dBm，5mW&#x3D;7dBm。</p>
-]]></content>
       <categories>
         <category>文章专柜</category>
       </categories>
@@ -877,6 +856,27 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
+    <title>WLAN笔记（二）</title>
+    <url>/post/wifi02/</url>
+    <content><![CDATA[<p>WLAN跟日常生活中的无线广播、无线电视、手机通信一样，都是用射频作为载体。射频是频率介于3赫兹（Hz）和约300G赫兹（Hz）之间的电磁波，也可以称为射频电波或射电。人们为这段电磁波又定义了无线频谱，按照频率范围划分为极低频、超低频、中频、高频、超高频等，WLAN使用的射频频率范围是2.4GHz频段（2.4GHz～2.4835GHz）和5GHz频段（频率范围是5.150GHz～5.350GHz和5.725GHz～5.850GHz），分别属于特高频(300**z～3GHz)和超高频(3GHz～30GHz)，各个国家使用的频宽范围不一样，5GHz频段的5.150GHz～5.350GHz和5.725GHz～5.850GHz为中国使用。</p>
+<p>WLAN使用的2.4GHz频段和5GHz频段属于ISM频段。ISM，即工业（Industrial）、科学（Scientific）与医疗（Medical）。ISM频段主要开放给工业、科学、医疗三个机构使用，只要设备的功率符合限制，不需要申请许可证（Free License）即可使用这些频段。</p>
+<p>过射频传输信息的基本调制方式：调频、调相和调幅，发送端将信息调制到载波上，通过改变载波的频率、相位和振幅传递信息，接收端收到信息后，再解调还原信息。通过这样一个调制解调的过程，就实现了信息的传递。WLAN射频传输信息的基础也是调频、调相或调幅。只不过调频、调相和调幅通常用在模拟信号的传输，在数字通信领域射频的调制方式较为复杂，主要有：振幅键控、频率键控、相位键控和正交幅度调制（一种幅度、相位联合调制的技术，它同时利用了载波的幅度和相位来传递信息）。</p>
+<p>有线通信其实也是将信号调制成电脉冲或光脉冲，然后放到电缆或光缆上传输。只不过射频需要解决更多的问题，如射频的反射、衍射等问题。无论是使用射频通信还是使用有线媒介的通信，其过程都可以简单的看成是信源-&gt;信道-&gt;信宿，信源是信息的发送者，信宿是信息的接收者。那有线的信道我可以简单的理解为线缆，WLAN的信道是不是可以简单的理解为射频呢？根据“信源-&gt;信道-&gt;信宿”的描述，信道就是发送者和接收者的中间部分，那可不就是射频了。</p>
+<p>WLAN的信道是具有一定频宽的射频，以便可以承载要传输的信息。对于2.4GHz频段来说，2.4GHz频段的频宽是2.4835GHz-2.4GHz&#x3D;0.0835GHz&#x3D;83.5**z，WLAN不是使用全部的83.5**z的频宽作为一个信道，同一条波如果遇到频率相同的波会产生干扰，会根据相位差进行叠加或衰减（如：频率相同，相位相差180°的波彼此会抵消）。如果WLAN使用整个2.4GHz频段作为一个信道，当同一覆盖范围内有两个及两个以上的AP，大家都用相同的信道，会造成严重的干扰，两个AP都无法有效提供WLAN服务。所以，在WLAN标准协议里将2.4GHz频段划分出13个相互交叠的信道，每个信道的频宽是20**z（802.11g、802.11n每个信道占用20**z，802.11b每个信道占用22**z），每个信道都有自己的中心频率。</p>
+<p>14信道是特别针对日本定义的，各个国家2.4GHz频段开放的信道不一样，北美地区（美国，加拿大）开放1～11信道，欧洲开放1～13信道，中国同样开放1～13信道。一般，我们更多的讲述是2.4GHz频段分13个相互交叠的信道。这13个信道可以找出3个独立信道，即没有相互交叠的信道。独立信道由于没有频率的交叠区，相邻AP使用这3个独立信道不会彼此产生干扰。在部署WLAN时，为避免相邻AP产生同频干扰，多采用蜂窝式信道布局。蜂窝式布局中相邻AP间使用不交叠的独立信道，可以有效避免同频干扰。2.4GHz频段射频在各个国家已经放开使用，越来越多的无线设备都工作在2.4GHz频段（如蓝牙设备），使得2.4GHz频段日益拥挤，信道干扰严重，有时会影响WLAN用户的正常业务。</p>
+<p>华为AP产品2.4G射频默认使用1信道，如果用户在部署WLAN时忘了配置信道，可能会造成某些AP覆盖重合的区域产生同频干扰，使用户无法上线。但是，为众多AP配置信道也是件很累人的事情，华为产品支持射频信道的自动模式。AP上线后，AC会根据AP周围的无线环境，自动为AP射频设置信道，避免了用户为多个AP配置信道的繁杂工作。还支持射频调优功能，可以根据射频周围的无线环境自动调整信道和发射功率，保持整个无线网络处于一个最佳的状态。在WLAN初次部署完成后，建议执行一次射频调优。比如周围的卖场也有WLAN，很可能会和我们自己部署的WLAN有部分区域的射频冲突，射频调优可以让WLAN自己根据无线环境调整信道部署和发射功率，减少射频的冲突。而且无线环境可能是变化的，在低峰时段执行定期的射频调优也是有必要的。华为产品在V2R3C00版本开始支持频谱分析功能，频谱分析可以分析出AP周围存在的干扰设备，如婴儿监视器、微波炉、蓝牙设备等。</p>
+<p>WLAN 可以使用的另一个频段——5GHz频段，有更高的频率和频宽，可以提供更高的速率和更小的信道干扰。WLAN标准协议将5GHz频段分为24个20**z宽的信道，且每个信道都为独立信道。这为WLAN提供了丰富的信道资源，更多的独立信道也使得信道绑定更有价值，信道绑定是将两个信道绑定成一个信道使用，能提供更大的带宽。如两个20**z的独立信道绑定在一起可以获得20**z两倍的吞吐量，这好比将两条道路合并成一条使用，自然就提高了道路的通过能力。802.11n支持通过将相邻的两个20**z信道绑定成40**z，使传输速率成倍提高。802.11n也同时定义了2.4GHz频段的信道绑定，但由于2.4GHz频段较拥挤的信道资源，降低了2.4GHz频段信道绑定的实用性，一般不推荐使用2.4GHz频段的信道绑定。</p>
+<p>UNII-2e为5GHz新增频段，该频段中国尚未放开使用。目前中国已放开使用的信道有36, 40, 44, 48, 52, 56, 60, 64, 149, 153, 157, 161, 165。各个国家开放的信道不一样，可以参照国家信道顺从表。5GHz频段并非只有WLAN设备在使用，很多国家的军用雷达也在使用5GHz频段，使用该频段的民用无线设备很可能对雷达等重要设施产生干扰。为了解决这一安全顾虑，在一些国家出售的WLAN产品必须具备TPS和DFS这两个功能，即发射功率控制和动态频率选择。TPS是为了防止无线产品发放过大的功率来干扰军方雷达。DFS是为了使无线产品能主动探测军方使用的频率，如频率冲突并主动选择另一个频率，以避开军方频率。在这些国家这两个功能是属于强制性的，不符合标准的产品将不会获得这些国家的上市许可。</p>
+<p>dBm和dB的含义：<br>dBm的含义是分贝毫瓦，通俗的说就是每1毫瓦产生多少分贝能量。dB是个相对值是增益的意思，X (dBm) - Y (dBm) &#x3D; Z (dB)，如:10dB&#x3D;20dBm-10dBm。<br>dBm和毫瓦的换算关系是：P(dBm)&#x3D;10logP(mW)，也就是100mW&#x3D;10Log102&#x3D;20dBm。<br>功率减少10倍，换算出来的dBm降低10dB。功率减少一半，换算出来的dBm降低3dB。如：50mW&#x3D;17dBm，25mW&#x3D;14dBm，5mW&#x3D;7dBm。</p>
+]]></content>
+      <categories>
+        <category>文章专柜</category>
+      </categories>
+      <tags>
+        <tag>八神鬼嗣</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>你的名字。</title>
     <url>/post/your-name-8/</url>
     <content><![CDATA[<p>《你的名字。》（日语：君の名は。）是由日本动画家新海诚第一次采用制作委员会方式的作品，并亲自编剧和执导该影片。虽然新海诚一度对于“你的名字。”和同样原名为“君の名は”的名影剧《请问芳名》撞名而无法决定，在重读多次剧本下才确定此片名与内容相符，并要求要加上句号与《请问芳名》有别。该影片于2016年8月26日在日本首映，上映后连霸日本数周票房冠军，是目前唯一除吉卜力工作室作品以外超越百亿日圆票房的日本动画电影，并获得西班牙锡切斯电影节最佳动画长片奖等电影奖荣誉。</p>
@@ -893,14 +893,20 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
-    <title>WLAN笔记（四）</title>
-    <url>/post/wifi04/</url>
-    <content><![CDATA[<p>WLAN术语SSID，SSID的全称是Service Set Identifier，也就是服务集标识符，用于标识一个服务集，按照大部分人的理解，也就是用来标识一个可用的网路。而所谓服务集，就是一组互相有联系的无线设备。在提供的无线网络中，我们的无线终端（在WLAN中称之为工作站STA，Station）只要连上AP，实际上就构成了一个服务集。在这个服务集内，只要终端和AP关联，终端就能够相互通信，也可以通过AP访问外部网络。如果只有一个AP，也就是说这个服务集中只有一个AP，那么这个服务集就可以被认为一个基本服务集BSS。BSS是无线网络的基本服务单元。所有的终端关联到一个AP上，该AP连接其他有线设备，并且控制和主导整个BSS中的全部数据的传输过程。如果存在多个AP，一个BSS所覆盖的地理范围有限，直径不超过100米，这个时候就会有一个扩展服务集ESS（Extend Service Set）的概念。</p>
-<p>ESS简单理解，就是多个使用相同SSID的BSS组成，但是这中间隐含2个条件：</p>
-<p>1.这些BSS是要比邻安置。<br>2.这些BSS通过各种分布系统互联，有线无线都可以，不过一般都是以太网。</p>
-<p>只有满足上述条件后，才认为这些BSS可以被统一为一个ESS。由于使用的是相同的SSID，我们根本感觉不到我们是接在多个BSS上，而是如同接在同一个AP上一样。终端在ESS内的通信和在BSS中类似，不过如果BSS中终端A想和另一个BSS中的终端B通信，则是需要经过2个接入点AP1和AP2，即A-&gt;AP1-&gt;AP2-&gt;B。特别的，在同一个ESS中的不同BSS之间切换的过程称为漫游。上图也画出了终端A从BSS1域漫游到BSS2（图上的A’的位置），此时A仍然可以保持和B的通信，不过A在漫游前后的接入点AP改变了。SSID通常是一个不超过32个字符的字符串，这个SSID又叫ESSID，是对ESS的标识。在同一个ESS中，我们是不知道接在哪个BSS上，但终端设备会用BSSID标识BSS得知你所在哪一个BSS，这个标识符是一个长度为48位的二进制标识符，通常是这个BSS里面AP的MAC地址。</p>
-<p>有些设备还可以配置VAP，为用户提供差异化的WLAN业务。所谓VAP就是在一个物理实体AP上虚拟出多个虚拟的AP，每一个被虚拟出的AP就是一个VAP，每个VAP提供和物理实体AP一样的功能。VAP的优势显而易见，多个虚拟的AP工作在同一个硬件平台，提高了硬件的利用率；网络管理员可以为不同VAP设置不同SSID，安全设置，QoS设置等策略和功能，也增加了网络的灵活性。那VAP在一个ESS中怎么区分BSS，其实VAP也是用BSSID来区分的，但是这是BSSID不是用的物理AP的MAC地址，而是用的VAP的MAC地址。而这个VAP的MAC地址实际上和物理AP的MAC地址是有影射关系的。一般第一个VAP的MAC是跟AP的MAC地址一样的，后面的VAP的MAC地址是在AP的MAC的最后一位顺序加一。当然BSSID没有ESSID来的好记，毕竟是一串无序数据，所以也会为VAP添加一个SSID来方便记忆。</p>
-<p>补充：<br>基本服务集BSS（Basic Service Set）无线网络的基本服务单元，通常由一个AP和若干无线终端组成。<br>扩展服务集ESS（Extend Service Set）由多个使用相同SSID的BSS组成，解决BSS覆盖范围有限的问题。<br>服务集标识符SSID（Service Set Identifier）用来区分不同的无线网络。<br>扩展服务集标识符ESSID（Extended Service Set Identifier）一个或一组无线网络的标识，和SSID是相同的。<br>基本服务集标识符BSSID（Basic Service Set Identifier）在链路层上用来区分同一个AP上的不同VAP，也可以用来区分同一个ESS中的BSS。<br>虚拟接入点VAP（Virtual Access Point）AP设备上虚拟出来的业务功能实体。用户可以在一个AP上创建不同的VAP来为不同的用户群体提供无线接入服务。</p>
+    <title>WLAN笔记（三）</title>
+    <url>/post/wifi03/</url>
+    <content><![CDATA[<p>WLAN领域被大规模推广和商用是IEEE 802.11系列标准协议，WLAN也被定义成基于IEEE 802.11标准协议的无线局域网。802.11主要的具有里程碑意义的标准协议：802.11a、802.11b、802.11g、802.11n和802.11ac。WLAN和有线局域网最大的区别就是“无线”，WLAN通信媒介是射频，射频和有线局域网的媒介（电缆或光纤）相比具有完全不一样的物理特性，这就导致WLAN的物理层（PHY）和媒介访问控制层（MAC）不同于有线局域网。所以，802.11协议主要定义的就是WLAN的物理层和MAC层。</p>
+<p>在20世纪90年代初为了满足人们对WLAN日益增长的需求，IEEE成立了专门的802.11工作组，专门研究和定制WLAN的标准协议，并在1997年6月推出了第一代WLAN协议——IEEE 802.11-1997，协议定义了物理层工作在ISM的2.4G频段，数据传输速率设计为2Mbps。该协议由于在速率和传输距离上的设计不能满足人们的需求，并未被大规模使用。随后，IEEE在1999年推出了802.11a和802.11b。802.11a工作在5GHz的ISM频段上，并且选择了正交频分复用OFDM（Orthogonal Frequency Division Multiplexing）技术，能有效降低多路径衰减的影响和提高频谱的利用率，使802.11a的物理层速率可达54Mbps。802.11b则依然工作在2.4GHz的ISM频段，但在802.11的基础上进行了技术改进，使802.11b的通信速率达到11Mbps。OFMD是一种多载波调制技术，主要是将指定信道分成若干子信道，在每个子信道上使用一个子载波进行调制，并且各子载波是并行传输，可以有效提高信道的频谱利用率。虽然802.11b提供的接入速率比802.11a低，但当时5GHz芯片研制过慢，待芯片推出时802.11b已被广泛应用。由于802.11a不能兼容802.11b，再加上5GHz芯片价格较高和地方规定的限制等原因，使得802.11a没有被广泛采用。在2000年初，IEEE 802.11g工作组开始开发一项既能提供54Mbps速率，又能向下兼容802.11b的协议标准。并在2001年11月提出了第一个IEEE 802.11g草案，该草案在2003年正式成为标准。802.11g兼容了802.11b，继续使用2.4GHz频段。为了达到54Mbps的速率，802.11g借用了802.11a的成果，在2.4GHz频段采用了正交频分复用（OFDM）技术。IEEE 802.11g的推出。</p>
+<p>注：在1999年讨论802.11b的时候，OFDM技术确实被提出应用到802.11b标准中，但当时美国联邦通信协会（FCC）禁止在2.4GHz频段使用OFDM，这条禁令直到2001年5月才被撤销，6个月后，采用OFDM技术的802.11g草案才得以顺利出台。</p>
+<p>在急速发展的网络世界54Mbps的速率不会永远满用户需求。在2002年一个新的IEEE工作组——IEEE 802.11任务组N即TGn（Task Group n）成立，开始研究一种更快的WLAN技术，目标是达到100Mbps的速率。该目标的实现一波三折，由于小组内两个阵营对协议标准的争论不休，新的协议直到2009年9月才被敲定并批准，这个协议就是802.11n。在长达7年的制定过程中，802.11n的速率也从最初设计的100Mbps，完善到了最高可达600Mbps，802.11n采用了双频工作模式，支持2.4GHz和5GHz，且兼容802.11a&#x2F;b&#x2F;g。802.11n标准刚刚尘埃落定后， IEEE就开始了下一代的WLAN标准协议——802.11ac的制定工作。并在2013年正式推出了802.11ac标准协议，802.11ac工作在5GHz频段，向后兼容802.11n和802.11a，80.211ac沿用了802.11n的诸多技术并做了技术改进，使速率达到1.3Gbps。当前在802.11各协议中由于802.11ac刚推出，大众终端产品支持802.11ac的还不多，802.11n产品仍旧是主流产品。802.11n较之前的标准协议主要有如下优势：更多的子载波、更高的编码率、更短的GI（Guard Interval）、更宽的信道、更多的空间流和MAC层的报文聚合功能等，而获取这些优势的技术802.11ac也有沿用。</p>
+<p>更多的子载波：802.11n比802.11a&#x2F;g多了4个有效子载波（802.11b没有使用OFMD技术不做对比），用户无需配置只要使用802.11n通信即可获得802.11n的此项优势。下图中58.5Mbps是802.11n较之前的标准更多的子载波可以带来的理论速率。</p>
+<p>更高的编码率：WLAN使用射频传输数据时，除了用户的有效传输数据外，还需附有更错码FEC（Forward Error Correction），当有效数据在传递过程中因衰减、干扰等因素而导致数据错误时，通过更错码可将数据更正、还原成正确数据。802.11n将之前3&#x2F;4的有效编码率提高到5&#x2F;6，此项改进点使得802.11n的速率提升了11%。用户无需配置只要使用802.11n通信也可以直接获得802.11n的此项优势。</p>
+<p>更短的GI（Short Guard Interval）：使用802.11a&#x2F;b&#x2F;g发送数据时，必须要保证在数据之间存在800 ns的时间间隔以避免数据帧间的干扰，这个间隔被称为Guard Interval (GI)。802.11n缺省仍然使用800ns的GI，但在空间环境较好时，可以将该间隔配置为400ns，此项改进可以将吞吐提高近10%（约72.2Mbps）。</p>
+<p>更宽的信道：802.11n支持将相邻两个20MHz的信道绑定成40MHz的信道，信道更宽传输能力就更大，可以带来2倍以上的提升。在射频视图下执行命令channel命令可以配置40MHz信道。</p>
+<p>更多的空间流：802.11a&#x2F;b&#x2F;g技术的无线接入点和客户端是通过单个天线单个空间流以单入单出SISO（Single Input Single Output）的方式来实现数据传送的。在802.11n支持最大4个空间流的多入多出MIMO（Multiple Input and Multiple Output）方式传输数据（802.11ac最大支持8<em>8的MIMO）。华为多天线AP都支持MIMO，如AP5130、AP7110、AP5030支持3</em>3 MIMO，AP3010、AP6510、AP6610支持2*2 MIMO。</p>
+<p>MAC层的报文聚合：在802.11的MAC层协议中，有很多固定的开销，尤其在两个帧之间的确认信息。在最高数据率的传输下，这些多余的开销甚至比需要传输的整个数据帧还要长。例如：802.11g理论传输速率为54Mbps，实际上却只有22Mbps，将近有一半多的速率浪费了。802.11n的MAC协议数据单元MPDU（MAC Protocol Data Unit）帧汇聚功能，可以将多个MPDU聚合为一个物理层报文，只需要进行一次信道竞争或退避，就可完成N个MPDU的同时发送，从而减少了发送N-1个MPDU报文所带来的信道资源消耗。执行命令80211n a-mpdu enable可以使能802.11n的MPDU帧汇聚功能，然后执行80211n a-mpdu max-length-exponent命令可以配置汇聚帧的最大长度，802.11n的汇聚帧最大长度为65535字节。</p>
+<p>注:并不是所有的环境都适合配置short GI。在复杂的空间环境里，射频遇到障碍物可能会产生反射等现象，会造成AP和STA之间的多路径传输（多径效应）。在多径环境中，前一个数据块还没有发送完成，后一个数据块可能通过不同的路径先到达了，合理的GI长度能够避免相互干扰。如果GI时长不合理，会降低链路的使用效率。</p>
+<p>802.11ac默认支持MPDU功能，且支持最大长度为1048575字节的汇聚帧。另外，802.11ac还支持MAC服务数据单元MSDU（Mac Service Data Units）汇聚，大大提高了数据的传输效率，除了802.11标准协议外，在WLAN领域还有一个更常见更常用的名词——Wi-Fi。WiFi是无线保真（Wireless Fidelity）的英文缩写。在802.11b时代，虽然所有的802.11b产品都使用相同的802.11b标准，但为了保证不同厂商的产品能够具有良好的兼容性，1999年一些WLAN设备生产厂商一起成立了一个工业联盟——无线以太网兼容性联盟WECA（Wireless Ethernet Compatibility Alliance），后更名为Wi-Fi联盟。Wi-Fi联盟建立了一套验证802.11b产品兼容性的测试程序，称为Wi-Fi认证，通过该程序认证的产品可以使用Wi-Fi认证标签。后来，Wi-Fi认证的范围逐步扩展到802.11a，802.11g和802.11n。另外，由于忍受不了802.11n漫长的标准化进程和市场需求的推动，Wi-Fi联盟以802.11n 2.0版草案作为产品认证的依据，在802.11n标准推出之前已经认证批准了数百个802.11n产品。</p>
 ]]></content>
       <categories>
         <category>文章专柜</category>
@@ -942,20 +948,14 @@ Your browser does not support the video tag.
       </tags>
   </entry>
   <entry>
-    <title>WLAN笔记（三）</title>
-    <url>/post/wifi03/</url>
-    <content><![CDATA[<p>WLAN领域被大规模推广和商用是IEEE 802.11系列标准协议，WLAN也被定义成基于IEEE 802.11标准协议的无线局域网。802.11主要的具有里程碑意义的标准协议：802.11a、802.11b、802.11g、802.11n和802.11ac。WLAN和有线局域网最大的区别就是“无线”，WLAN通信媒介是射频，射频和有线局域网的媒介（电缆或光纤）相比具有完全不一样的物理特性，这就导致WLAN的物理层（PHY）和媒介访问控制层（MAC）不同于有线局域网。所以，802.11协议主要定义的就是WLAN的物理层和MAC层。</p>
-<p>在20世纪90年代初为了满足人们对WLAN日益增长的需求，IEEE成立了专门的802.11工作组，专门研究和定制WLAN的标准协议，并在1997年6月推出了第一代WLAN协议——IEEE 802.11-1997，协议定义了物理层工作在ISM的2.4G频段，数据传输速率设计为2Mbps。该协议由于在速率和传输距离上的设计不能满足人们的需求，并未被大规模使用。随后，IEEE在1999年推出了802.11a和802.11b。802.11a工作在5GHz的ISM频段上，并且选择了正交频分复用OFDM（Orthogonal Frequency Division Multiplexing）技术，能有效降低多路径衰减的影响和提高频谱的利用率，使802.11a的物理层速率可达54Mbps。802.11b则依然工作在2.4GHz的ISM频段，但在802.11的基础上进行了技术改进，使802.11b的通信速率达到11Mbps。OFMD是一种多载波调制技术，主要是将指定信道分成若干子信道，在每个子信道上使用一个子载波进行调制，并且各子载波是并行传输，可以有效提高信道的频谱利用率。虽然802.11b提供的接入速率比802.11a低，但当时5GHz芯片研制过慢，待芯片推出时802.11b已被广泛应用。由于802.11a不能兼容802.11b，再加上5GHz芯片价格较高和地方规定的限制等原因，使得802.11a没有被广泛采用。在2000年初，IEEE 802.11g工作组开始开发一项既能提供54Mbps速率，又能向下兼容802.11b的协议标准。并在2001年11月提出了第一个IEEE 802.11g草案，该草案在2003年正式成为标准。802.11g兼容了802.11b，继续使用2.4GHz频段。为了达到54Mbps的速率，802.11g借用了802.11a的成果，在2.4GHz频段采用了正交频分复用（OFDM）技术。IEEE 802.11g的推出。</p>
-<p>注：在1999年讨论802.11b的时候，OFDM技术确实被提出应用到802.11b标准中，但当时美国联邦通信协会（FCC）禁止在2.4GHz频段使用OFDM，这条禁令直到2001年5月才被撤销，6个月后，采用OFDM技术的802.11g草案才得以顺利出台。</p>
-<p>在急速发展的网络世界54Mbps的速率不会永远满用户需求。在2002年一个新的IEEE工作组——IEEE 802.11任务组N即TGn（Task Group n）成立，开始研究一种更快的WLAN技术，目标是达到100Mbps的速率。该目标的实现一波三折，由于小组内两个阵营对协议标准的争论不休，新的协议直到2009年9月才被敲定并批准，这个协议就是802.11n。在长达7年的制定过程中，802.11n的速率也从最初设计的100Mbps，完善到了最高可达600Mbps，802.11n采用了双频工作模式，支持2.4GHz和5GHz，且兼容802.11a&#x2F;b&#x2F;g。802.11n标准刚刚尘埃落定后， IEEE就开始了下一代的WLAN标准协议——802.11ac的制定工作。并在2013年正式推出了802.11ac标准协议，802.11ac工作在5GHz频段，向后兼容802.11n和802.11a，80.211ac沿用了802.11n的诸多技术并做了技术改进，使速率达到1.3Gbps。当前在802.11各协议中由于802.11ac刚推出，大众终端产品支持802.11ac的还不多，802.11n产品仍旧是主流产品。802.11n较之前的标准协议主要有如下优势：更多的子载波、更高的编码率、更短的GI（Guard Interval）、更宽的信道、更多的空间流和MAC层的报文聚合功能等，而获取这些优势的技术802.11ac也有沿用。</p>
-<p>更多的子载波：802.11n比802.11a&#x2F;g多了4个有效子载波（802.11b没有使用OFMD技术不做对比），用户无需配置只要使用802.11n通信即可获得802.11n的此项优势。下图中58.5Mbps是802.11n较之前的标准更多的子载波可以带来的理论速率。</p>
-<p>更高的编码率：WLAN使用射频传输数据时，除了用户的有效传输数据外，还需附有更错码FEC（Forward Error Correction），当有效数据在传递过程中因衰减、干扰等因素而导致数据错误时，通过更错码可将数据更正、还原成正确数据。802.11n将之前3&#x2F;4的有效编码率提高到5&#x2F;6，此项改进点使得802.11n的速率提升了11%。用户无需配置只要使用802.11n通信也可以直接获得802.11n的此项优势。</p>
-<p>更短的GI（Short Guard Interval）：使用802.11a&#x2F;b&#x2F;g发送数据时，必须要保证在数据之间存在800 ns的时间间隔以避免数据帧间的干扰，这个间隔被称为Guard Interval (GI)。802.11n缺省仍然使用800ns的GI，但在空间环境较好时，可以将该间隔配置为400ns，此项改进可以将吞吐提高近10%（约72.2Mbps）。</p>
-<p>更宽的信道：802.11n支持将相邻两个20MHz的信道绑定成40MHz的信道，信道更宽传输能力就更大，可以带来2倍以上的提升。在射频视图下执行命令channel命令可以配置40MHz信道。</p>
-<p>更多的空间流：802.11a&#x2F;b&#x2F;g技术的无线接入点和客户端是通过单个天线单个空间流以单入单出SISO（Single Input Single Output）的方式来实现数据传送的。在802.11n支持最大4个空间流的多入多出MIMO（Multiple Input and Multiple Output）方式传输数据（802.11ac最大支持8<em>8的MIMO）。华为多天线AP都支持MIMO，如AP5130、AP7110、AP5030支持3</em>3 MIMO，AP3010、AP6510、AP6610支持2*2 MIMO。</p>
-<p>MAC层的报文聚合：在802.11的MAC层协议中，有很多固定的开销，尤其在两个帧之间的确认信息。在最高数据率的传输下，这些多余的开销甚至比需要传输的整个数据帧还要长。例如：802.11g理论传输速率为54Mbps，实际上却只有22Mbps，将近有一半多的速率浪费了。802.11n的MAC协议数据单元MPDU（MAC Protocol Data Unit）帧汇聚功能，可以将多个MPDU聚合为一个物理层报文，只需要进行一次信道竞争或退避，就可完成N个MPDU的同时发送，从而减少了发送N-1个MPDU报文所带来的信道资源消耗。执行命令80211n a-mpdu enable可以使能802.11n的MPDU帧汇聚功能，然后执行80211n a-mpdu max-length-exponent命令可以配置汇聚帧的最大长度，802.11n的汇聚帧最大长度为65535字节。</p>
-<p>注:并不是所有的环境都适合配置short GI。在复杂的空间环境里，射频遇到障碍物可能会产生反射等现象，会造成AP和STA之间的多路径传输（多径效应）。在多径环境中，前一个数据块还没有发送完成，后一个数据块可能通过不同的路径先到达了，合理的GI长度能够避免相互干扰。如果GI时长不合理，会降低链路的使用效率。</p>
-<p>802.11ac默认支持MPDU功能，且支持最大长度为1048575字节的汇聚帧。另外，802.11ac还支持MAC服务数据单元MSDU（Mac Service Data Units）汇聚，大大提高了数据的传输效率，除了802.11标准协议外，在WLAN领域还有一个更常见更常用的名词——Wi-Fi。WiFi是无线保真（Wireless Fidelity）的英文缩写。在802.11b时代，虽然所有的802.11b产品都使用相同的802.11b标准，但为了保证不同厂商的产品能够具有良好的兼容性，1999年一些WLAN设备生产厂商一起成立了一个工业联盟——无线以太网兼容性联盟WECA（Wireless Ethernet Compatibility Alliance），后更名为Wi-Fi联盟。Wi-Fi联盟建立了一套验证802.11b产品兼容性的测试程序，称为Wi-Fi认证，通过该程序认证的产品可以使用Wi-Fi认证标签。后来，Wi-Fi认证的范围逐步扩展到802.11a，802.11g和802.11n。另外，由于忍受不了802.11n漫长的标准化进程和市场需求的推动，Wi-Fi联盟以802.11n 2.0版草案作为产品认证的依据，在802.11n标准推出之前已经认证批准了数百个802.11n产品。</p>
+    <title>WLAN笔记（四）</title>
+    <url>/post/wifi04/</url>
+    <content><![CDATA[<p>WLAN术语SSID，SSID的全称是Service Set Identifier，也就是服务集标识符，用于标识一个服务集，按照大部分人的理解，也就是用来标识一个可用的网路。而所谓服务集，就是一组互相有联系的无线设备。在提供的无线网络中，我们的无线终端（在WLAN中称之为工作站STA，Station）只要连上AP，实际上就构成了一个服务集。在这个服务集内，只要终端和AP关联，终端就能够相互通信，也可以通过AP访问外部网络。如果只有一个AP，也就是说这个服务集中只有一个AP，那么这个服务集就可以被认为一个基本服务集BSS。BSS是无线网络的基本服务单元。所有的终端关联到一个AP上，该AP连接其他有线设备，并且控制和主导整个BSS中的全部数据的传输过程。如果存在多个AP，一个BSS所覆盖的地理范围有限，直径不超过100米，这个时候就会有一个扩展服务集ESS（Extend Service Set）的概念。</p>
+<p>ESS简单理解，就是多个使用相同SSID的BSS组成，但是这中间隐含2个条件：</p>
+<p>1.这些BSS是要比邻安置。<br>2.这些BSS通过各种分布系统互联，有线无线都可以，不过一般都是以太网。</p>
+<p>只有满足上述条件后，才认为这些BSS可以被统一为一个ESS。由于使用的是相同的SSID，我们根本感觉不到我们是接在多个BSS上，而是如同接在同一个AP上一样。终端在ESS内的通信和在BSS中类似，不过如果BSS中终端A想和另一个BSS中的终端B通信，则是需要经过2个接入点AP1和AP2，即A-&gt;AP1-&gt;AP2-&gt;B。特别的，在同一个ESS中的不同BSS之间切换的过程称为漫游。上图也画出了终端A从BSS1域漫游到BSS2（图上的A’的位置），此时A仍然可以保持和B的通信，不过A在漫游前后的接入点AP改变了。SSID通常是一个不超过32个字符的字符串，这个SSID又叫ESSID，是对ESS的标识。在同一个ESS中，我们是不知道接在哪个BSS上，但终端设备会用BSSID标识BSS得知你所在哪一个BSS，这个标识符是一个长度为48位的二进制标识符，通常是这个BSS里面AP的MAC地址。</p>
+<p>有些设备还可以配置VAP，为用户提供差异化的WLAN业务。所谓VAP就是在一个物理实体AP上虚拟出多个虚拟的AP，每一个被虚拟出的AP就是一个VAP，每个VAP提供和物理实体AP一样的功能。VAP的优势显而易见，多个虚拟的AP工作在同一个硬件平台，提高了硬件的利用率；网络管理员可以为不同VAP设置不同SSID，安全设置，QoS设置等策略和功能，也增加了网络的灵活性。那VAP在一个ESS中怎么区分BSS，其实VAP也是用BSSID来区分的，但是这是BSSID不是用的物理AP的MAC地址，而是用的VAP的MAC地址。而这个VAP的MAC地址实际上和物理AP的MAC地址是有影射关系的。一般第一个VAP的MAC是跟AP的MAC地址一样的，后面的VAP的MAC地址是在AP的MAC的最后一位顺序加一。当然BSSID没有ESSID来的好记，毕竟是一串无序数据，所以也会为VAP添加一个SSID来方便记忆。</p>
+<p>补充：<br>基本服务集BSS（Basic Service Set）无线网络的基本服务单元，通常由一个AP和若干无线终端组成。<br>扩展服务集ESS（Extend Service Set）由多个使用相同SSID的BSS组成，解决BSS覆盖范围有限的问题。<br>服务集标识符SSID（Service Set Identifier）用来区分不同的无线网络。<br>扩展服务集标识符ESSID（Extended Service Set Identifier）一个或一组无线网络的标识，和SSID是相同的。<br>基本服务集标识符BSSID（Basic Service Set Identifier）在链路层上用来区分同一个AP上的不同VAP，也可以用来区分同一个ESS中的BSS。<br>虚拟接入点VAP（Virtual Access Point）AP设备上虚拟出来的业务功能实体。用户可以在一个AP上创建不同的VAP来为不同的用户群体提供无线接入服务。</p>
 ]]></content>
       <categories>
         <category>文章专柜</category>
