@@ -15,7 +15,7 @@
  * SCSS 混合宏与工具函数
  * 包含：FontAwesome 图标、自适应 padding、SVG URL 编码
  */
-@import 'https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css';
+@import 'font-awesome.min.css';
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 /*
  * Phantom by HTML5 UP
