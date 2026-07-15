@@ -1,0 +1,33 @@
+<!-- 顶部页眉 -->
+<header id="header">
+    <div class="inner">
+
+        <!-- 站点 Logo 与标题 -->
+        <a href="<%= url_for('/') %>" class="logo">
+            <span class="symbol">
+                <img src="<%= url_for(theme.logo_src) %>" alt="" />
+            </span>
+            <span class="title"><%= config.title || "" %></span>
+        </a>
+
+        <!-- 移动端菜单触发按钮 -->
+        <nav>
+            <ul>
+                <li><a href="#menu" aria-controls="menu" aria-expanded="false">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- 侧边栏菜单 -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        <% for (var label in theme.menu) { %>
+            <li>
+                <a href="<%= url_for(theme.menu[label]) %>"><%= label %></a>
+            </li>
+        <% } %>
+    </ul>
+</nav>

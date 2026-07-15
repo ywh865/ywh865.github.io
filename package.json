@@ -1,0 +1,40 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "hexo": {
+    "version": "8.1.2"
+  },
+  "scripts": {
+    "clean": "hexo clean",
+    "build": "hexo generate",
+    "rebuild": "hexo clean && hexo generate",
+    "server": "hexo server",
+    "server:port": "hexo server --port",
+    "deploy": "hexo clean && hexo generate && hexo deploy",
+    "dev": "hexo server --drafts",
+    "sync:vendor": "node tools/vendor-jquery.js --write",
+    "check:vendor": "node tools/vendor-jquery.js --check",
+    "check:quality": "node tools/quality-check.js",
+    "check:js": "node --check themes/phantom/source/js/main.js && node --check themes/phantom/source/js/search.js && node --check themes/phantom/source/js/like.js && node --check themes/phantom/source/js/util.js",
+    "check": "npm run check:vendor && npm run check:quality && npm run check:js && npm run rebuild",
+    "audit": "npm audit --audit-level=low"
+  },
+  "dependencies": {
+    "hexo": "8.1.2",
+    "hexo-deployer-git": "4.0.0",
+    "hexo-generator-archive": "2.0.0",
+    "hexo-generator-category": "2.0.0",
+    "hexo-generator-index": "4.0.0",
+    "hexo-generator-searchdb": "1.5.0",
+    "hexo-generator-tag": "2.0.0",
+    "hexo-renderer-dartsass": "1.2.0",
+    "hexo-renderer-ejs": "2.0.0",
+    "hexo-renderer-marked": "7.0.1",
+    "hexo-server": "3.0.0",
+    "jquery": "3.7.1"
+  }
+}

@@ -1,0 +1,72 @@
+---
+# 404 页面配置
+title: "404 NOT FOUND"
+permalink: /404.html
+comments: false
+layout: false          # 不使用主题布局，完全自定义 HTML
+---
+
+{% raw %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你要找的页面不存在呀</title>
+    <style>
+        /* 404 页面基础样式 */
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            text-align: center;
+            padding: 2em;
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- 404 提示图片 -->
+        <img src="/images/404/404-not-found.png" alt="404" />
+        <br />
+        找不到这个页面啊！是不是呆萌搞错啦!
+        <br />
+        預計將在約 <span id="timeout">5</span> 秒後返回首頁
+        <br /><br /><br /><br />
+        &copy; 八神鬼嗣 <a href="https://ywh865.github.io/">ywh865.github.io</a>
+    </div>
+
+    <script>
+        /**
+         * 404 页面倒计时自动跳转首页
+         */
+        (function () {
+            var countTime = 5;
+            var timeoutEl = document.getElementById('timeout');
+
+            function count() {
+                timeoutEl.textContent = countTime;
+                countTime -= 1;
+
+                // 倒计时结束后跳转首页（相对路径，本地和生产环境均适用）
+                if (countTime === -1) {
+                    location.href = '/';
+                    return;
+                }
+
+                setTimeout(count, 1000);
+            }
+
+            count();
+        })();
+    </script>
+</body>
+</html>
+{% endraw %}

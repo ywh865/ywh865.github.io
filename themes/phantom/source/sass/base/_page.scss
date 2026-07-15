@@ -1,0 +1,35 @@
+/**
+ * 页面基础样式
+ * 包括：视口、加载状态、最小宽度
+ */
+
+/* MSIE / IEMobile 视口设置 */
+@-ms-viewport {
+    width: device-width;
+}
+
+/* MSIE：防止滚动条覆盖内容 */
+body {
+    -ms-overflow-style: scrollbar;
+}
+
+/* 确保页面最小宽度为 320px，适配小屏设备 */
+@include breakpoint(xsmall) {
+    html, body {
+        min-width: 320px;
+    }
+}
+
+body {
+    background: _palette(bg);
+
+    // 页面加载时由 js/main.js 添加/移除，防止加载闪烁
+    &.is-loading {
+        *,
+        *:before,
+        *:after {
+            @include vendor('animation', 'none !important');
+            @include vendor('transition', 'none !important');
+        }
+    }
+}

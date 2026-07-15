@@ -1,0 +1,19 @@
+<%
+    // 文章卡片样式：循环使用 12 种预设样式
+    var cssClass = 'style' + (index % 12 + 1);
+%>
+
+<article class="<%= cssClass %>">
+    <!-- 封面图 -->
+    <span class="image">
+        <img src="<%= url_for(item.cover_index || theme.default_cover_index) %>" alt="" />
+    </span>
+
+    <!-- 文章标题与副标题链接 -->
+    <a href="<%= url_for(item.path) %>">
+        <h2><%= item.title || theme.default_post_title || "Untitled" %></h2>
+        <div class="content">
+            <p><%= item.subtitle || "" %></p>
+        </div>
+    </a>
+</article>

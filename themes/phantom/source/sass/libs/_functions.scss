@@ -1,0 +1,39 @@
+/**
+ * SCSS 取值函数
+ * 通过 key 路径从对应 map 变量中获取值
+ */
+
+/// 获取动画时长
+/// @param {string} $keys - 键路径
+/// @return {string} 对应的值
+@function _duration($keys...) {
+    @return val($duration, $keys...);
+}
+
+/// 获取字体配置
+/// @param {string} $keys - 键路径
+/// @return {string} 对应的值
+@function _font($keys...) {
+    @return val($font, $keys...);
+}
+
+/// 获取杂项配置
+/// @param {string} $keys - 键路径
+/// @return {string} 对应的值
+@function _misc($keys...) {
+    @return val($misc, $keys...);
+}
+
+/// 获取配色值
+/// @param {string} $keys - 键路径
+/// @return {color} 对应的颜色值
+@function _palette($keys...) {
+    @return val($palette, $keys...);
+}
+
+/// 获取尺寸值
+/// @param {string} $keys - 键路径
+/// @return {string} 对应的值
+@function _size($keys...) {
+    @return val($size, $keys...);
+}

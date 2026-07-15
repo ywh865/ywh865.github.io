@@ -1,0 +1,66 @@
+<!-- 页脚脚本：jQuery、主题主逻辑、灯箱、评论等 -->
+
+<!-- jQuery -->
+<%- js('js/jquery.min.js') %>
+
+<!-- Skel 响应式框架 -->
+<%- js('js/skel.min.js') %>
+
+<!-- 主题工具函数 -->
+<%- js('js/util.js') %>
+
+<!--[if lte IE 8]>
+    <%- js('js/ie/respond.min.js') %>
+<![endif]-->
+
+<!-- 主题主脚本 -->
+<%- js('js/main.js') %>
+
+<!-- 本地搜索脚本（依赖 jQuery，放在 jQuery 之后加载） -->
+<%- js('js/search.js') %>
+
+<!-- 图片灯箱脚本 -->
+<%- js('js/featherlight.min.js') %>
+
+<!-- Disqus 评论脚本 -->
+<% if (page.comments && theme.comments && theme.comments.disqus_shortname) { %>
+    <script type="text/javascript">
+        (function () {
+            var disqusShortname = <%- JSON.stringify(theme.comments.disqus_shortname) %>;
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = 'https://' + disqusShortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+<% } %>
+
+<!-- 本地 Live2D：资源固定在主题中，避免不受维护的构建插件依赖。 -->
+<% if (theme.live2d && theme.live2d.enable) { %>
+    <%- js('live2dw/lib/L2Dwidget.min.js') %>
+    <script type="text/javascript">
+        (function () {
+            if (typeof L2Dwidget === 'undefined') {
+                return;
+            }
+
+            L2Dwidget.init({
+                model: {
+                    jsonPath: <%- JSON.stringify(url_for(theme.live2d.model)) %>
+                },
+                display: {
+                    position: <%- JSON.stringify(theme.live2d.position || 'right') %>,
+                    width: <%= Number(theme.live2d.width) || 200 %>,
+                    height: <%= Number(theme.live2d.height) || 400 %>
+                },
+                mobile: {
+                    show: <%= Boolean(theme.live2d.mobile) %>
+                },
+                react: {
+                    opacity: <%= Number(theme.live2d.opacity) || 0.6 %>
+                }
+            });
+        })();
+    </script>
+<% } %>

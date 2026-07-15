@@ -1,0 +1,77 @@
+/**
+ * Phantom 主题 SCSS 入口
+ * 负责引入变量、函数、第三方样式以及各模块样式
+ */
+
+// 引入变量、函数、混合宏、网格框架
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+// 引入第三方字体与图标
+@import 'font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900');
+
+/*
+ * Phantom by HTML5 UP
+ * html5up.net | @n33co
+ * Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+ */
+
+// 响应式断点配置
+@include skel-breakpoints((
+    xlarge: '(max-width: 1680px)',
+    large:  '(max-width: 1280px)',
+    medium: '(max-width: 980px)',
+    small:  '(max-width: 736px)',
+    xsmall: '(max-width: 480px)',
+    xxsmall: '(max-width: 360px)'
+));
+
+// 网格与布局配置
+@include skel-layout((
+    reset: 'full',
+    boxModel: 'border',
+    grid: (
+        gutters: 2em
+    ),
+    breakpoints: (
+        medium: (
+            grid: (
+                gutters: 1.5em
+            )
+        ),
+        small: (
+            grid: (
+                gutters: 1em
+            )
+        )
+    )
+));
+
+// 基础样式
+@import 'base/page';
+@import 'base/typography';
+@import 'base/code';
+
+// 组件样式
+@import 'components/section';
+@import 'components/icon';
+@import 'components/list';
+@import 'components/form';
+@import 'components/box';
+@import 'components/image';
+@import 'components/table';
+@import 'components/button';
+@import 'components/tiles';
+@import 'components/archives';
+@import 'components/pagination';
+@import 'components/gallery';
+
+// 布局样式
+@import 'layout/header';
+@import 'layout/menu';
+@import 'layout/main';
+@import 'layout/footer';
+@import 'layout/wrapper';

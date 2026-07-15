@@ -1,0 +1,77 @@
+<head>
+    <!-- 基础 meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 站点 favicon -->
+    <link rel="icon" href="<%= url_for('/images/favicon.ico') %>" type="image/x-icon" />
+
+    <!-- 页面描述：优先使用 page.description，其次 config.description、摘要、正文前 150 字 -->
+    <% if (page.description) { %>
+        <meta name="description" content="<%= page.description %>">
+    <% } else if (config.description) { %>
+        <meta name="description" content="<%= config.description %>">
+    <% } else if (page.excerpt) { %>
+        <meta name="description" content="<%= strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, '') %>">
+    <% } else if (page.content) { %>
+        <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+    <% } %>
+
+    <!-- 作者信息 -->
+    <% if (config.author) { %>
+        <meta name="author" content="<%= config.author %>">
+    <% } %>
+
+    <!-- Open Graph 标题 -->
+    <% if (page.title) { %>
+        <meta property="og:title" content="<%= page.title %>"/>
+    <% } %>
+
+    <!-- Open Graph 站点名称 -->
+    <meta property="og:site_name" content="<%= config.title %>"/>
+
+    <!-- Open Graph 封面图 -->
+    <% var ogImage = page.cover || theme.cover || theme.default_cover_index || ''; %>
+    <% if (ogImage) { %>
+        <meta property="og:image" content="<%= full_url_for(ogImage) %>" />
+    <% } %>
+
+    <!-- 页面标题：按“分页/标题/分类/标签/归档/站点名”顺序组合 -->
+    <%
+        var title = [];
+        if (page.current > 1) title.push(__('page', page.current));
+        if (page.title) title.push(page.title);
+        if (page.category) title.push(page.category);
+        if (page.tag) title.push(page.tag);
+        if (page.archive) {
+            if (page.year) title.push(__('archive_b', page.year + (page.month ? '/' + page.month : '')));
+            else title.push(__('archive_a'));
+        }
+        title.push(config.title);
+    %>
+    <title><%= title.join(' - ') %></title>
+
+    <!-- 主题主样式表 -->
+    <%- css('sass/main.css') %>
+
+    <!-- IE 兼容样式与脚本 -->
+    <!--[if lt IE 8]>
+        <%- js('js/ie/html5shiv.js') %>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <%- css('sass/ie8.css') %>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <%- css('sass/ie9.css') %>
+    <![endif]-->
+
+    <!-- 图片灯箱样式 -->
+    <link href="<%= url_for('/css/featherlight.min.css') %>" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics 跟踪代码 -->
+    <%- partial('google-analytics') %>
+
+</head>

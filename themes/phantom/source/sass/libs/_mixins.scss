@@ -1,0 +1,53 @@
+/**
+ * SCSS 混合宏与工具函数
+ * 包含：FontAwesome 图标、自适应 padding、SVG URL 编码
+ */
+
+/// 将元素的伪元素设置为 FontAwesome 图标
+/// @param {string} $content [false] - 图标 Unicode 内容
+/// @param {string} $where [before] - 目标伪元素（before 或 after）
+@mixin icon($content: false, $where: before) {
+    text-decoration: none;
+
+    &:#{$where} {
+        @if $content {
+            content: $content;
+        }
+
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: none !important;
+    }
+}
+
+/// 根据当前 element-margin 计算 padding
+/// @param {mixed} $tb - 上下内边距
+/// @param {mixed} $lr - 左右内边距
+/// @param {list} $pad [(0,0,0,0)] - 额外内边距（上、右、下、左）
+/// @param {bool} $important [null] - 是否添加 !important
+@mixin padding($tb, $lr, $pad: (0, 0, 0, 0), $important: null) {
+    @if $important {
+        $important: '!important';
+    }
+
+    padding: ($tb + nth($pad, 1)) ($lr + nth($pad, 2)) max(0.1em, $tb - _size(element-margin) + nth($pad, 3)) ($lr + nth($pad, 4)) #{$important};
+}
+
+/// 编码 SVG 数据 URL，避免 IE 解析错误
+/// @param {string} $svg - SVG 原始字符串
+/// @return {string} 编码后的 data URL
+@function svg-url($svg) {
+    $svg: str-replace($svg, '"', '\'');
+    $svg: str-replace($svg, '<', '%3C');
+    $svg: str-replace($svg, '>', '%3E');
+    $svg: str-replace($svg, '&', '%26');
+    $svg: str-replace($svg, '#', '%23');
+    $svg: str-replace($svg, '{', '%7B');
+    $svg: str-replace($svg, '}', '%7D');
+    $svg: str-replace($svg, ';', '%3B');
+
+    @return url("data:image/svg+xml;charset=utf8,#{$svg}");
+}

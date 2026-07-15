@@ -1,0 +1,169 @@
+﻿# ==========================================
+# Hexo 站点配置文件
+# 官方文档：https://hexo.io/docs/configuration.html
+# 源码地址：https://github.com/hexojs/hexo/
+# ==========================================
+
+# ============================================================================
+# 站点信息
+# ============================================================================
+title: 八神鬼嗣の文庫          # 站点标题（浏览器标签、页眉显示）
+subtitle: 心之所愿 愿之所系     # 站点副标题
+description: 心之所愿 愿之所系  # 站点描述（用于 SEO / Open Graph）
+keywords: 八神鬼嗣, blog, Hexo, ACG, 技术笔记  # 站点关键词（SEO）
+author: ywh865                  # 作者名
+language: zh-CN                 # 站点语言
+timezone: ''                    # 时区，留空则使用系统默认时区
+
+# ============================================================================
+# URL 与路径设置
+# ============================================================================
+# 若站点部署在子目录，请改为 'http://yoursite.com/child' 并将 root 设为 '/child/'
+url: https://ywh865.github.io
+root: /
+permalink: post/:title/         # 文章永久链接格式
+permalink_defaults:             # 永久链接默认值
+pretty_urls:
+  trailing_index: false         # 是否在 URL 尾部保留 index.html
+  trailing_html: false          # 是否在 URL 尾部保留 .html
+
+# ============================================================================
+# 目录配置
+# ============================================================================
+source_dir: source              # 源文件目录
+public_dir: public              # 构建输出目录
+tag_dir: tags                   # 标签页目录
+archive_dir: archives           # 归档页目录
+category_dir: categories        # 分类页目录
+code_dir: downloads/code        # 代码下载目录
+i18n_dir: :lang                 # 国际化目录
+skip_render:                    # 不参与渲染的文件/目录
+  # - README.md
+  # - "source/pages/**"
+
+# ============================================================================
+# 写作配置
+# ============================================================================
+new_post_name: :title.md        # 新建文章文件名格式
+default_layout: post            # 默认布局
+titlecase: false                # 是否自动转换标题大小写
+external_link:
+  enable: true                  # 是否在新标签页打开外链
+  field: site                   # 应用范围：site（全站）/ post（仅文章）
+  exclude: ''                   # 不处理的链接，多个用逗号分隔
+filename_case: 0                # 文件名大小写转换：0 不转换，1 小写，2 大写
+render_drafts: false            # 是否渲染草稿
+post_asset_folder: true         # 是否为每篇文章创建资源文件夹（推荐开启，便于本地图片管理）
+relative_link: false            # 是否使用相对链接
+future: true                    # 是否渲染未来日期的文章
+# 是否对中文链接进行转义（false 可保持中文 URL 可读）
+# urlname:
+#   transliteration: false
+highlight:
+  enable: true                  # 是否开启代码高亮
+  line_number: true             # 是否显示行号
+  auto_detect: false            # 是否自动检测语言
+  tab_replace: '    '           # 制表符替换为空格（4 个空格）
+  wrap: true                    # 是否自动换行
+  hljs: false                   # 是否使用 highlight.js 的 CSS 类名
+prismjs:
+  enable: false                 # 是否使用 Prism.js 高亮
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# ============================================================================
+# 首页分页设置
+# ============================================================================
+index_generator:
+  path: ''                      # 首页路径
+  per_page: 12                  # 每页显示文章数，0 表示禁用分页
+  order_by: -date               # 文章排序方式：-date 按日期降序，date 按日期升序
+  pagination_dir: page          # 分页目录名
+
+# ============================================================================
+# 分类、标签与元数据
+# ============================================================================
+default_category: uncategorized # 默认分类
+category_map:                   # 分类别名映射
+tag_map:                        # 标签别名映射
+meta_generator: true            # 是否在 head 中生成 Hexo 版本 meta
+
+# ============================================================================
+# 日期时间格式
+# ============================================================================
+# Hexo 使用 Moment.js 解析与显示日期
+# 格式说明：http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: mtime           # 文章更新时间的取值：mtime / date / empty
+
+# ============================================================================
+# 分页配置
+# ============================================================================
+# per_page 设为 0 可禁用分页
+per_page: 12
+pagination_dir: page
+
+# ============================================================================
+# 扩展与主题
+# ============================================================================
+# 插件：https://hexo.io/plugins/
+# 主题：https://hexo.io/themes/
+theme: phantom
+
+# ============================================================================
+# 部署配置
+# ============================================================================
+# 文档：https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repository: git@github.com:ywh865/ywh865.github.io.git
+  branch: master
+  # message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"  # 自定义提交信息
+
+# ============================================================================
+# 本地服务器配置
+# ============================================================================
+server:
+  port: 4000                    # 默认本地预览端口
+  compress: true                # 是否启用 gzip 压缩
+  header: true                  # 是否输出 HTTP 响应头
+
+# ============================================================================
+# 本地搜索
+# 插件文档：https://www.npmjs.com/package/hexo-generator-searchdb
+# ============================================================================
+search:
+  path: search.xml              # 搜索索引文件路径
+  field: post                   # 搜索范围：post / page / all
+  content: true                 # 是否包含正文内容
+  format: html                  # 索引格式：html / raw
+
+# ============================================================================
+# 站点地图（可选）
+# 如需启用，请安装 hexo-generator-sitemap 并取消下面注释
+# ============================================================================
+# sitemap:
+#   path: sitemap.xml
+#   template: ./sitemap_template.xml
+#   rel: false
+#   tags: true
+#   categories: true
+
+# ============================================================================
+# RSS 订阅（可选）
+# 如需启用，请安装 hexo-generator-feed 并取消下面注释
+# ============================================================================
+# feed:
+#   type: atom
+#   path: atom.xml
+#   limit: 20
+#   hub:
+#   content:
+#   content_limit: 140
+#   content_limit_delim: ' '
+#   order_by: -date
+#   icon: icon.png
+#   autodiscovery: true
+#   template:

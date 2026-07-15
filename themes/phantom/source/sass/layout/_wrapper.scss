@@ -1,0 +1,31 @@
+/**
+ * 页面外层包装器样式
+ * 控制内容最大宽度与两侧内边距
+ */
+
+#wrapper {
+    > * {
+        > .inner {
+            $gutter: _size(gutter);
+
+            width: 100%;
+            max-width: _size(inner);
+            margin: 0 auto;
+            padding: 0 $gutter;
+
+            @include breakpoint(small) {
+                $gutter: _size(gutter) * 0.5;
+                padding: 0 $gutter;
+            }
+
+            // 标签云样式
+            .tags {
+                margin: 50px 0;
+
+                a.button {
+                    margin: 0 15px 0 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<!-- 分页导航：仅在存在上一页或下一页时显示 -->
+<% if (page.prev || page.next) { %>
+    <div class="pagination-container">
+        <!-- 上一页 -->
+        <div class="pagination<%= page.prev ? '' : ' disabled' %>">
+            <% if (page.prev) { %>
+                <a href="<%= url_for(page.prev_link) %>" aria-label="上一页">
+                    <i class="icon fa-caret-left" aria-hidden="true"></i>
+                </a>
+            <% } else { %>
+                <a aria-disabled="true" tabindex="-1">
+                    <i class="icon fa-caret-left" aria-hidden="true"></i>
+                </a>
+            <% } %>
+        </div>
+
+        <!-- 下一页 -->
+        <div class="pagination<%= page.next ? '' : ' disabled' %>">
+            <% if (page.next) { %>
+                <a href="<%= url_for(page.next_link) %>" aria-label="下一页">
+                    <i class="icon fa-caret-right" aria-hidden="true"></i>
+                </a>
+            <% } else { %>
+                <a aria-disabled="true" tabindex="-1">
+                    <i class="icon fa-caret-right" aria-hidden="true"></i>
+                </a>
+            <% } %>
+        </div>
+    </div>
+<% } %>

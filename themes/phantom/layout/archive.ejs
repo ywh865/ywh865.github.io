@@ -1,0 +1,26 @@
+<!-- 归档/分类/标签页布局 -->
+
+<%
+    // 页面标题；文章列表直接使用生成器提供的当前分页数据。
+    var title;
+    if (page.category) {
+        title = page.category;
+    } else if (page.tag) {
+        title = page.tag;
+    } else {
+        title = __('archive_a');
+    }
+%>
+
+<section class="archives">
+    <div class="archive-title"><%= title %></div>
+
+    <ul class="archive-list">
+        <% page.posts.forEach(function(item) { %>
+            <!-- 引入归档列表项片段 -->
+            <%- partial('_partial/article-archive', {item: item}) %>
+        <% }); %>
+    </ul>
+</section>
+
+<%- partial('_partial/pagination') %>

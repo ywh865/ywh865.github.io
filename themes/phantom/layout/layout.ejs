@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- 站点根布局：所有页面均继承自此模板 -->
+<html lang="<%= config.language || 'zh-CN' %>" data-root="<%= config.root || '/' %>">
+
+<!-- 引入 head 片段（meta、title、css、js 等） -->
+<%- partial('_partial/head') %>
+
+<body>
+    <!-- 页面外层容器 -->
+    <div id="wrapper">
+
+        <!-- 引入顶部菜单 -->
+        <%- partial('_partial/menu') %>
+
+        <!-- 主体内容区域 -->
+        <div id="main">
+            <div class="inner">
+                <!-- 各页面具体内容由 Hexo 注入 -->
+                <%- body %>
+            </div>
+        </div>
+
+        <!-- 引入页脚 -->
+        <%- partial('_partial/footer') %>
+    </div>
+
+    <!-- 引入页脚后的脚本（jQuery、主题 js、评论等） -->
+    <%- partial('_partial/after-footer') %>
+
+    <!-- 页面标题搞怪动画：切换标签页时改变标题 -->
+    <script type="text/javascript">
+        (function () {
+            var originTitle = document.title;
+            var timer;
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    document.title = 'Σ(°Д°;网站崩溃了！！！';
+                    clearTimeout(timer);
+                } else {
+                    document.title = '(๑¯ิε ¯ิ๑)好像自己又好了';
+                    timer = setTimeout(function () {
+                        document.title = originTitle;
+                    }, 3000);
+                }
+            });
+        })();
+    </script>
+
+    <!-- 页面点击小红心特效 -->
+    <%- js('js/like.js') %>
+</body>
+
+</html>

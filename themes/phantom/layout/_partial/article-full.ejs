@@ -1,0 +1,34 @@
+<!-- 文章详情页内容片段 -->
+
+<!-- 文章标题与日期 -->
+<% if (theme.show_dates) { %>
+    <h1 class="title"><%= item.title || theme.default_post_title || "Untitled" %></h1>
+    <div class="meta">
+        <%= item.date.format(config.date_format) %>
+    </div>
+<% } else { %>
+    <h1><%= item.title || theme.default_post_title || "Untitled" %></h1>
+<% } %>
+
+<!-- 文章顶部大图 -->
+<% if (item.cover_detail || theme.default_cover_detail) { %>
+    <span class="image main">
+        <img src="<%= url_for(item.cover_detail || theme.default_cover_detail) %>" alt="" />
+    </span>
+<% } %>
+
+<!-- 相册图集 -->
+<% if (item.photos && item.photos.length) { %>
+    <%- partial('gallery') %>
+<% } %>
+
+<!-- 正文内容 -->
+<%- item.content %>
+
+<!-- 标签 -->
+<%- partial('article-tags') %>
+
+<!-- 评论区域 -->
+<div>
+    <%- partial("_partial/comments") %>
+</div>

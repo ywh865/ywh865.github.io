@@ -1,0 +1,43 @@
+/**
+ * 分页导航样式
+ */
+
+.pagination-container {
+    text-align: center;
+    margin-top: 100px;
+
+    .pagination {
+        display: inline-block;
+
+        a {
+            text-decoration: none;
+            border: none;
+            font-size: 50px;
+            padding: 20px;
+        }
+
+        // 禁用状态（无上一页/下一页时）
+        &.disabled {
+            a {
+                cursor: default;
+                color: _palette(bg-alt);
+
+                &:hover {
+                    color: _palette(bg-alt) !important;
+                }
+            }
+        }
+    }
+
+    // 移动端分页箭头自动缩放
+    @include breakpoint(small) {
+        margin-top: 50px;
+
+        .pagination {
+            a {
+                font-size: 28px;
+                padding: 12px;
+            }
+        }
+    }
+}

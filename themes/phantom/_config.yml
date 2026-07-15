@@ -1,0 +1,78 @@
+# ==========================================
+# Phantom 主题配置文件
+# 用于控制站点外观、菜单、社交链接等
+# ==========================================
+
+# ---------------- 顶部导航菜单 ----------------
+# 格式：菜单名称: 链接路径
+menu:
+  书架首柜: /
+  目录搜索: /search/
+  文章专柜: /categories/文章专柜/
+  相册图集: /categories/相册图集/
+  萌音收藏: /categories/萌音收藏/
+  传送货架: /categories/传送货架/
+  友军链接: /links/
+
+# ---------------- Logo 图片 ----------------
+logo_src: /images/logo.svg
+
+# ---------------- 首页标题与副标题 ----------------
+subtitle_main: 「ダンタリアンの書架」
+
+# 主题二级副标题（首页 banner 下展示）
+subtitle_secondary: '“ああ シェオール，无慈悲な冥界の神 死の姿よ 私の声を闻きたまえ、叹く子供の悲しい行きを闻きたまえ。
+あなたが捕らえた蝶の死骸が、たとえ青ざめ破れようとも その鳞粉の一片を求め 命を赌してもがく者がここにいる。见よ、猛々しい虫けらを 再び高く天空に舞い上る様を。溃えようとするのなら 自分の夕日の惨死さよ 目映い光に変换して，微笑みを口に移す 飒爽と羽を広げろ。”'
+
+# ---------------- 页脚 About 区域 ----------------
+about_footer: Hi，欢迎来到「八神鬼嗣 文庫」の「ダンタリアンの書架」。
+
+# ---------------- 默认文章标题 ----------------
+default_post_title:
+
+# ---------------- 默认封面图 ----------------
+# 通用默认封面（用于 Open Graph 等）
+cover: "/images/404/404-not-found.png"
+# 首页文章卡片默认封面
+default_cover_index: "/images/404/404-not-found.png"
+# 文章详情页默认封面（可选）
+default_cover_detail:
+
+# ---------------- 是否显示日期 ----------------
+show_dates: true
+
+# ---------------- 评论系统 ----------------
+# 目前支持 Disqus 与 Facebook，按需填写
+comments:
+  # Disqus 评论
+  disqus_shortname: onioni-net
+  # Facebook 评论
+  facebook:
+    appid:
+    comment_count: 5
+    comment_colorscheme: light
+
+# ---------------- Google Analytics 跟踪 ID ----------------
+google_analytics:
+
+# ---------------- 社交媒体链接 ----------------
+# 留空则不显示对应图标
+twitter_url: https://twitter.com/ywh865
+github_url: https://github.com/ywh865
+telegram_url: https://t.me/ywh865
+
+# ---------------- 本地搜索 ----------------
+# 依赖 hexo-generator-searchdb
+local_search:
+  enable: true
+
+# ---------------- Live2D 看板娘 ----------------
+# 静态资源已固定到主题目录，不依赖已停止维护的 Hexo 插件。
+live2d:
+  enable: true
+  model: /live2dw/assets/shizuku.model.json
+  position: right
+  width: 200
+  height: 400
+  mobile: false
+  opacity: 0.6
