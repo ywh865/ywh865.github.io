@@ -6,6 +6,18 @@
 
     'use strict';
 
+    function escapeHtml(value) {
+        return String(value).replace(/[&<>"']/g, function (character) {
+            return {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[character];
+        });
+    }
+
     /**
      * 将导航菜单转换为带缩进的链接列表
      * 通常与 panel() 配合使用
@@ -25,11 +37,11 @@
             links.push(
                 '<a ' +
                     'class="link depth-' + indent + '"' +
-                    (typeof target !== 'undefined' && target !== '' ? ' target="' + target + '"' : '') +
-                    (typeof href !== 'undefined' && href !== '' ? ' href="' + href + '"' : '') +
+                    (typeof target !== 'undefined' && target !== '' ? ' target="' + escapeHtml(target) + '"' : '') +
+                    (typeof href !== 'undefined' && href !== '' ? ' href="' + escapeHtml(href) + '"' : '') +
                 '>' +
                     '<span class="indent-' + indent + '"></span>' +
-                    $item.text() +
+                    escapeHtml($item.text()) +
                 '</a>'
             );
         });
@@ -134,7 +146,10 @@
 
                 window.setTimeout(function () {
                     if (target === '_blank') {
-                        window.open(href);
+                        var openedWindow = window.open(href, '_blank', 'noopener');
+                        if (openedWindow) {
+                            openedWindow.opener = null;
+                        }
                     } else {
                         window.location.href = href;
                     }

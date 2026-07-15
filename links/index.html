@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- 站点根布局：所有页面均继承自此模板 -->
-<html lang="zh-CN">
+<html lang="zh-CN" data-root="/">
 
 <!-- 引入 head 片段（meta、title、css、js 等） -->
 <head>
@@ -33,7 +33,7 @@
     <!-- Open Graph 封面图 -->
     
     
-        <meta property="og:image" content="/images/404/404-not-found.png" />
+        <meta property="og:image" content="https://ywh865.github.io/images/404/404-not-found.png" />
     
 
     <!-- 页面标题：按“分页/标题/分类/标签/归档/站点名”顺序组合 -->
@@ -95,7 +95,7 @@
         <!-- 移动端菜单触发按钮 -->
         <nav>
             <ul>
-                <li><a href="#menu">Menu</a></li>
+                <li><a href="#menu" aria-controls="menu" aria-expanded="false">Menu</a></li>
             </ul>
         </nav>
 
@@ -256,7 +256,7 @@
             <ul class="icons">
                 
                     <li>
-                        <a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank">
+                        <a href="https://twitter.com/ywh865" class="icon style2 fa-twitter" target="_blank" rel="noopener noreferrer">
                             <span class="label">Twitter</span>
                         </a>
                     </li>
@@ -264,7 +264,7 @@
 
                 
                     <li>
-                        <a href="https://t.me/ywh865" class="icon style2 fa-paper-plane" target="_blank">
+                        <a href="https://t.me/ywh865" class="icon style2 fa-paper-plane" target="_blank" rel="noopener noreferrer">
                             <span class="label">Telegram</span>
                         </a>
                     </li>
@@ -282,7 +282,7 @@
 
                 
                     <li>
-                        <a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank">
+                        <a href="https://github.com/ywh865" class="icon style2 fa-github" target="_blank" rel="noopener noreferrer">
                             <span class="label">GitHub</span>
                         </a>
                     </li>
@@ -345,18 +345,40 @@
 
 
 <!-- 图片灯箱脚本 -->
-<script src="/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="/js/featherlight.min.js"></script>
+
 
 <!-- Disqus 评论脚本 -->
 
+
+<!-- 本地 Live2D：资源固定在主题中，避免不受维护的构建插件依赖。 -->
+
+    
+<script src="/live2dw/lib/L2Dwidget.min.js"></script>
+
     <script type="text/javascript">
         (function () {
-            var disqus_shortname = 'onioni-net';
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            if (typeof L2Dwidget === 'undefined') {
+                return;
+            }
+
+            L2Dwidget.init({
+                model: {
+                    jsonPath: "/live2dw/assets/shizuku.model.json"
+                },
+                display: {
+                    position: "right",
+                    width: 200,
+                    height: 400
+                },
+                mobile: {
+                    show: false
+                },
+                react: {
+                    opacity: 0.6
+                }
+            });
         })();
     </script>
 
@@ -382,7 +404,9 @@
     </script>
 
     <!-- 页面点击小红心特效 -->
-    <script type="text/javascript" src="/js/like.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.6},"log":false});</script></body>
+    
+<script src="/js/like.js"></script>
+
+</body>
 
 </html>

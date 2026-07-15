@@ -1,59 +1,80 @@
 /**
- * 页面点击小红心特效
- * 点击页面任意位置时在鼠标处生成一个逐渐飘升、淡出的心形元素
+ * 页面点击心形动效。仅在存在心形元素时运行动画循环。
  */
 (function (window, document) {
-
     'use strict';
 
-    // 所有活跃心形元素的集合
     var hearts = [];
+    var isAnimating = false;
+    var reduceMotion = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /**
-     * 生成随机 RGB 颜色
-     * @returns {string} RGB 颜色字符串
-     */
     function randomColor() {
-        return 'rgb(' + ~~(255 * Math.random()) + ',' + ~~(255 * Math.random()) + ',' + ~~(255 * Math.random()) + ')';
+        return 'rgb(' + ~~(255 * Math.random()) + ',' +
+            ~~(255 * Math.random()) + ',' +
+            ~~(255 * Math.random()) + ')';
     }
 
-    /**
-     * 在页面 head 中插入心形元素的样式
-     */
     function injectStyle() {
         var style = document.createElement('style');
-        style.type = 'text/css';
-
-        var css = '.heart{' +
-            'width:10px;height:10px;position:fixed;background:#f00;' +
-            'transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);' +
+        style.textContent =
+            '.heart{' +
+                'width:10px;height:10px;position:fixed;pointer-events:none;' +
+                'background:#f00;transform:rotate(45deg);will-change:transform,opacity,top;' +
             '}' +
-            '.heart:after,.heart:before{' +
-            "content:'';width:inherit;height:inherit;background:inherit;border-radius:50%;" +
-            '-webkit-border-radius:50%;-moz-border-radius:50%;position:fixed;' +
+            '.heart::after,.heart::before{' +
+                "content:'';width:inherit;height:inherit;background:inherit;" +
+                'border-radius:50%;position:absolute;' +
             '}' +
-            '.heart:after{top:-5px;}' +
-            '.heart:before{left:-5px;}';
-
-        try {
-            style.appendChild(document.createTextNode(css));
-        } catch (e) {
-            style.styleSheet.cssText = css;
-        }
-
-        document.getElementsByTagName('head')[0].appendChild(style);
+            '.heart::after{top:-5px;left:0;}' +
+            '.heart::before{top:0;left:-5px;}';
+        document.head.appendChild(style);
     }
 
-    /**
-     * 创建一个新的心形元素
-     * @param {MouseEvent} event 鼠标点击事件
-     */
+    function animate() {
+        for (var index = hearts.length - 1; index >= 0; index--) {
+            var heart = hearts[index];
+
+            heart.y--;
+            heart.scale += 0.004;
+            heart.alpha -= 0.013;
+
+            if (heart.alpha <= 0) {
+                if (heart.element.parentNode) {
+                    heart.element.parentNode.removeChild(heart.element);
+                }
+                hearts.splice(index, 1);
+                continue;
+            }
+
+            heart.element.style.cssText =
+                'left:' + heart.x + 'px;' +
+                'top:' + heart.y + 'px;' +
+                'opacity:' + heart.alpha + ';' +
+                'transform:scale(' + heart.scale + ') rotate(45deg);' +
+                'background:' + heart.color + ';' +
+                'z-index:99999';
+        }
+
+        if (hearts.length > 0) {
+            window.requestAnimationFrame(animate);
+        } else {
+            isAnimating = false;
+        }
+    }
+
     function createHeart(event) {
-        var heart = document.createElement('div');
-        heart.className = 'heart';
+        if (reduceMotion || (typeof event.button === 'number' && event.button !== 0)) {
+            return;
+        }
+
+        var element = document.createElement('span');
+        element.className = 'heart';
+        element.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(element);
 
         hearts.push({
-            el: heart,
+            element: element,
             x: event.clientX - 5,
             y: event.clientY - 5,
             scale: 1,
@@ -61,72 +82,12 @@
             color: randomColor()
         });
 
-        document.body.appendChild(heart);
-    }
-
-    /**
-     * 绑定点击事件，保留原有 onclick 逻辑
-     */
-    function bindClick() {
-        var originalClick = window.onclick;
-
-        window.onclick = function (event) {
-            if (typeof originalClick === 'function') {
-                originalClick(event);
-            }
-            createHeart(event);
-        };
-    }
-
-    /**
-     * 动画循环：更新并移除已消失的心形
-     */
-    function animate() {
-        for (var i = 0; i < hearts.length; i++) {
-            var heart = hearts[i];
-
-            if (heart.alpha <= 0) {
-                // 完全透明后从 DOM 与数组中移除
-                document.body.removeChild(heart.el);
-                hearts.splice(i, 1);
-                i--;
-            } else {
-                // 向上飘升、放大、淡出
-                heart.y--;
-                heart.scale += 0.004;
-                heart.alpha -= 0.013;
-
-                heart.el.style.cssText =
-                    'left:' + heart.x + 'px;' +
-                    'top:' + heart.y + 'px;' +
-                    'opacity:' + heart.alpha + ';' +
-                    'transform:scale(' + heart.scale + ',' + heart.scale + ') rotate(45deg);' +
-                    'background:' + heart.color + ';' +
-                    'z-index:99999';
-            }
+        if (!isAnimating) {
+            isAnimating = true;
+            window.requestAnimationFrame(animate);
         }
-
-        requestAnimationFrame(animate);
     }
 
-    /**
-     * 初始化：兼容不同浏览器的 requestAnimationFrame
-     */
-    function init() {
-        window.requestAnimationFrame = window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame ||
-            window.oRequestAnimationFrame ||
-            window.msRequestAnimationFrame ||
-            function (callback) {
-                setTimeout(callback, 1000 / 60);
-            };
-
-        injectStyle();
-        bindClick();
-        animate();
-    }
-
-    init();
-
+    injectStyle();
+    document.addEventListener('click', createHeart, false);
 })(window, document);

@@ -39,8 +39,7 @@
         $form.find('textarea').each(function () {
 
             var $this = $(this),
-                $wrapper = $('<div class="textarea-wrapper"></div>'),
-                $submits = $this.find('input[type="submit"]');
+                $wrapper = $('<div class="textarea-wrapper"></div>');
 
             $this
                 .wrap($wrapper)
@@ -54,9 +53,6 @@
                         event.stopPropagation();
                         $(this).blur();
                     }
-                })
-                .on('blur focus', function () {
-                    $this.val($.trim($this.val()));
                 })
                 .on('input blur focus --init', function () {
                     // 根据内容滚动高度自适应
@@ -94,7 +90,8 @@
         });
 
         // 菜单交互
-        var $menu = $('#menu');
+        var $menu = $('#menu'),
+            $menuTriggers = $('a[href="#menu"]');
 
         $menu.wrapInner('<div class="inner"></div>');
 
@@ -115,18 +112,21 @@
         $menu._show = function () {
             if ($menu._lock()) {
                 $body.addClass('is-menu-visible');
+                $menuTriggers.attr('aria-expanded', 'true');
             }
         };
 
         $menu._hide = function () {
             if ($menu._lock()) {
                 $body.removeClass('is-menu-visible');
+                $menuTriggers.attr('aria-expanded', 'false');
             }
         };
 
         $menu._toggle = function () {
             if ($menu._lock()) {
                 $body.toggleClass('is-menu-visible');
+                $menuTriggers.attr('aria-expanded', $body.hasClass('is-menu-visible') ? 'true' : 'false');
             }
         };
 
