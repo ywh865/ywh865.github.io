@@ -141,7 +141,7 @@ comments: false
 ```yaml
 deploy:
   type: git
-  repository: git@github.com:ywh865/ywh865.github.io.git
+  repository: https://github.com/ywh865/ywh865.github.io.git
   branch: master
 ```
 
