@@ -2,6 +2,9 @@
 title: "本站停止更新及迁移公告"
 subtitle: "旧页在此留存，新的故事移步 onioni.cn"
 date: 2026-07-16 00:39:03
+cover: /images/site-migration-to-onioni-cn/cover-1920x1080.png
+cover_index: /images/site-migration-to-onioni-cn/cover-1920x1080.png
+cover_detail: /images/site-migration-to-onioni-cn/cover-1920x1080.png
 categories:
   - "文章专柜"
 tags:
